@@ -32,17 +32,17 @@ const QA = {
       .sort()
   },
 
-  async checklist() {
+  async checklist(filename = 'checklist.md') {
     await this._init()
     const lines = Object.keys(this._byMod).sort().map(mod =>
       `- [ ] ${mod} (${this._byMod[mod].length})`
     )
     const md = "# Node Pack QA Checklist\n\n" + lines.join("\n")
-    await navigator.clipboard.writeText(md)
+    this._download(md, filename)
     return md
   },
 
-  async detailedChecklist() {
+  async detailedChecklist(filename = 'checklist-detailed.md') {
     await this._init()
     const sections = Object.keys(this._byMod).sort().map(mod => {
       const nodes = this._byMod[mod].map(n =>
@@ -51,7 +51,7 @@ const QA = {
       return `## ${mod}\n\n${nodes.join("\n")}`
     })
     const md = "# Node Pack QA Checklist\n\n" + sections.join("\n\n")
-    await navigator.clipboard.writeText(md)
+    this._download(md, filename)
     return md
   },
 
@@ -115,8 +115,8 @@ const QA = {
   help() {
     console.log(`
 QA.listPacks()              - list all packs
-QA.checklist()              - markdown checklist (copies to clipboard)
-QA.detailedChecklist()      - with individual nodes
+QA.checklist()              - download markdown checklist
+QA.detailedChecklist()      - download with individual nodes
 QA.testPack("comfyui-impact-pack")  - clear, add all, save
 QA.testPacks([...])         - test multiple
 QA.testAllPacks()           - test every pack
