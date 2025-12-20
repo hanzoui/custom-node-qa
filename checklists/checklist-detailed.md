@@ -2,373 +2,414 @@
 
 ## ComfyUI-Lotus
 
-- [ ] Load Lotus Model
-- [ ] Lotus Sampler
+- [✓] Load Lotus Model
+- [✓] Lotus Sampler
 
 ## ComfyUI-NormalCrafterWrapper
 
-- [ ] NormalCrafter (Process Video)
-- [ ] Detail Transfer
+- [✓] NormalCrafter (Process Video)
+- [✓] Detail Transfer
 
 ## ComfyUI-WanAnimatePreprocess
 
-- [ ] ONNX Detection Model Loader
-- [ ] Pose and Face Detection
-- [ ] Draw ViT Pose
-- [ ] Pose Retarget Prompt Helper
+- [✓] ONNX Detection Model Loader
+- [✓] Pose and Face Detection
+- [✓] Draw ViT Pose
+- [✓] Pose Retarget Prompt Helper
 
 ## ComfyUI-WanVideoWrapper
 
-- [ ] WanVideo Decode
-- [ ] WanVideo TextEncode
-- [ ] WanVideo TextEncodeSingle
-- [ ] WanVideo ClipVision Encode
-- [ ] WanVideo ImageToVideo Encode
-- [ ] WanVideo Encode
-- [ ] WanVideo Encode Latent Batch
-- [ ] WanVideo Empty Embeds
-- [ ] WanVideo Enhance-A-Video
-- [ ] WanVideo Context Options
-- [ ] WanVideo TextEmbed Bridge
-- [ ] WanVideo FlowEdit
-- [ ] WanVideo Control Embeds
-- [ ] WanVideo SLG
-- [ ] WanVideo Loop Args
-- [ ] WanVideo Experimental Args
-- [ ] WanVideo VACE Encode
-- [ ] WanVideo Phantom Embeds
-- [ ] WanVideo RealisDance Latents
-- [ ] WanVideo Apply NAG
-- [ ] WanVideo MiniMax Remover Embeds
-- [ ] WanVideo Free Init Args
-- [ ] WanVideo Set Radial Attention
-- [ ] WanVideo Block List
-- [ ] WanVideo TextEncode Cached
-- [ ] WanVideo Add Extra Latent
-- [ ] WanVideoScheduler
-- [ ] WanVideo Add StandIn Latent
-- [ ] WanVideo Add Control Embeds
-- [ ] WanVideo MTV Crafter Motion
-- [ ] WanVideo RoPE Function
-- [ ] WanVideo Add Pusa Noise
-- [ ] WanVideo Animate Embeds
-- [ ] WanVideo Add LucyEdit Latents
-- [ ] WanVideo Scheduler SA-ODE
-- [ ] WanVideo Add Bindweave Embeds
-- [ ] TextImageEncodeQwenVL
-- [ ] WanVideo UniLumos Embeds
-- [ ] WanVideo Add TTMLatents
-- [ ] WanVideo Sampler
-- [ ] WanVideo Sampler Settings
-- [ ] WanVideo Sampler From Settings
-- [ ] WanVideo Model Loader
-- [ ] WanVideo VAE Loader
-- [ ] WanVideo Lora Select
-- [ ] WanVideo Set LoRAs
-- [ ] WanVideo Lora Block Edit
-- [ ] WanVideo Tiny VAE Loader
-- [ ] WanVideo VACE Module Select
-- [ ] WanVideo Extra Model Select
-- [ ] WanVideo Lora Select Multi
-- [ ] WanVideo Torch Compile Settings
-- [ ] WanVideo T5 Text Encoder Loader
-- [ ] WanVideo CLIP Text Encoder Loader
-- [ ] WanVideo Image Resize To Closest
-- [ ] WanVideo VACE Start To End Frame
-- [ ] Extract Start Frames For Continuations
-- [ ] Create CFG Schedule Float List
-- [ ] Dummy Comfy Wan Model Object
-- [ ] WanVideo Latent ReScale
-- [ ] Create Schedule Float List
-- [ ] WanVideo Sigma To Step
-- [ ] Normalize Audio Loudness
-- [ ] WanVideo Pass Images From Samples
-- [ ] Face Mask From Pose Keypoints
-- [ ] Draw Gaussian Noise On Image
-- [ ] WanVideo Preview Embeds
-- [ ] WanVideo TeaCache
-- [ ] WanVideo MagCache
-- [ ] WanVideo EasyCache
-- [ ] WanVideo ImageClip Encode (Deprecated) ~~DEPRECATED~~
-- [ ] WanVideo Add S2V Embeds
-- [ ] WanVideo Add FlashVSR Input
-- [ ] WanVideo FlashVSR Decoder Loader
-- [ ] Mocha Embeds
-- [ ] WanVideo FunCamera Embeds
-- [ ] WanVideo Uni3C Controlnet Loader
-- [ ] WanVideo Uni3C Embeds
-- [ ] WanVideo Controlnet Loader
-- [ ] WanVideo Controlnet Apply
-- [ ] WanVideo ATI Tracks
-- [ ] WanVideo ATI Tracks Visualize
-- [ ] WanVideo ATI Comfy
-- [ ] Multi/InfiniteTalk Model Loader
-- [ ] Multi/InfiniteTalk Wav2vec2 Embeds
-- [ ] WanVideo Long I2V Multi/InfiniteTalk
-- [ ] Wav2vec2 Model Loader
-- [ ] MultiTalk Silent Embeds
-- [ ] WanVideo ReCamMaster Camera Embed
-- [ ] ReCamMaster Pose Visualizer
-- [ ] WanVideo ReCamMaster Generate Orbit Camera
-- [ ] WanVideo ReCamMaster Default Camera
-- [ ] WanVideo Diffusion Forcing Sampler
-- [ ] (Down)load Wav2Vec Model
-- [ ] FantasyTalking Model Loader
-- [ ] FantasyTalking Wav2Vec Embeds
-- [ ] Qwen Loader
-- [ ] Wan Video Prompt Extender
-- [ ] Wan Video Prompt Extender Select
-- [ ] FantasyPortrait Model Loader
-- [ ] FantasyPortrait Face Detector
-- [ ] WanVideo Add Fantasy Portrait
-- [ ] Landmarks to Image
-- [ ] WanVideo UniAnimate Pose Input
-- [ ] WanVideo UniAnimate DWPose Detector
-- [ ] NLF Predict
-- [ ] Draw NLF Poses
-- [ ] Load VQVAE
-- [ ] MTV Crafter Encode Poses
-- [ ] Whisper Model Loader
-- [ ] HuMo Embeds
-- [ ] WanVideo Combine Embeds
-- [ ] Load Lynx Resampler
-- [ ] Lynx Encode Face IP
-- [ ] Draw ArcFace Landmarks
-- [ ] WanVideo Add Lynx Embeds
-- [ ] Lynx InsightFace Crop
-- [ ] Ovi MMAudio VAE Loader
-- [ ] WanVideo Decode Ovi Audio
-- [ ] WanVideo Encode Ovi Audio
-- [ ] WanVideo Ovi CFG
-- [ ] WanVideo Add MMAudio To Latents
-- [ ] WanVideo Empty MMAudio Latents
-- [ ] WanVideo Add SteadyDancer Embeds
-- [ ] WanVideo Add OneToAll Reference Embeds
-- [ ] WanVideo Add OneToAll Pose Embeds
-- [ ] WanVideo Add OneToAll Extend Embeds
-- [ ] WanVideo Add WanMove Tracks
-- [ ] WanVideo Draw WanMove Tracks
-- [ ] WanMove Native
+- [✓] WanVideo Decode
+- [✓] WanVideo TextEncode
+- [✓] WanVideo TextEncodeSingle
+- [✓] WanVideo ClipVision Encode
+- [✓] WanVideo ImageToVideo Encode
+- [✓] WanVideo Encode
+- [✓] WanVideo Encode Latent Batch
+- [✓] WanVideo Empty Embeds
+- [✓] WanVideo Enhance-A-Video
+- [✓] WanVideo Context Options
+- [✓] WanVideo TextEmbed Bridge
+- [✓] WanVideo FlowEdit
+- [✓] WanVideo Control Embeds
+- [✓] WanVideo SLG
+- [✓] WanVideo Loop Args
+- [✓] WanVideo Experimental Args
+- [✓] WanVideo VACE Encode
+- [✓] WanVideo Phantom Embeds
+- [✓] WanVideo RealisDance Latents
+- [✓] WanVideo Apply NAG
+- [✓] WanVideo MiniMax Remover Embeds
+- [✓] WanVideo Free Init Args
+- [✓] WanVideo Set Radial Attention
+- [✓] WanVideo Block List
+- [✓] WanVideo TextEncode Cached
+- [✓] WanVideo Add Extra Latent
+- [✓] WanVideoScheduler
+- [✓] WanVideo Add StandIn Latent
+- [✓] WanVideo Add Control Embeds
+- [✓] WanVideo MTV Crafter Motion
+- [✓] WanVideo RoPE Function
+- [✓] WanVideo Add Pusa Noise
+- [✓] WanVideo Animate Embeds
+- [✓] WanVideo Add LucyEdit Latents
+- [✓] WanVideo Scheduler SA-ODE
+- [✓] WanVideo Add Bindweave Embeds
+- [✓] TextImageEncodeQwenVL
+- [✓] WanVideo UniLumos Embeds
+- [✓] WanVideo Add TTMLatents
+- [✓] WanVideo Sampler
+- [✓] WanVideo Sampler Settings
+- [✓] WanVideo Sampler From Settings
+- [✓] WanVideo Model Loader
+- [✓] WanVideo VAE Loader
+- [✓] WanVideo Lora Select
+- [✓] WanVideo Set LoRAs
+- [✓] WanVideo Lora Block Edit
+
+- [✓] WanVideo Tiny VAE Loader
+- Description: No model available to select in the dropdown — the loader shows no options.
+
+- [✓] WanVideo VACE Module Select
+- [✓] WanVideo Extra Model Select
+- [✓] WanVideo Lora Select Multi
+- [✓] WanVideo Torch Compile Settings
+- [✓] WanVideo T5 Text Encoder Loader
+- [✓] WanVideo CLIP Text Encoder Loader
+- [✓] WanVideo Image Resize To Closest
+- [✓] WanVideo VACE Start To End Frame
+- [✓] Extract Start Frames For Continuations
+- [✓] Create CFG Schedule Float List
+- [✓] Dummy Comfy Wan Model Object
+- [✓] WanVideo Latent ReScale
+- [✓] Create Schedule Float List
+- [✓] WanVideo Sigma To Step
+- [✓] Normalize Audio Loudness
+- [✓] WanVideo Pass Images From Samples
+- [✓] Face Mask From Pose Keypoints
+- [✓] Draw Gaussian Noise On Image
+- [✓] WanVideo Preview Embeds
+- [✓] WanVideo TeaCache
+- [✓] WanVideo MagCache
+- [✓] WanVideo EasyCache
+- [✓] WanVideo Add S2V Embeds
+- [✓] WanVideo Add FlashVSR Input
+- [✓] WanVideo FlashVSR Decoder Loader
+- [✓] Mocha Embeds
+- [✓] WanVideo FunCamera Embeds
+- [✓] WanVideo Uni3C Controlnet Loader
+- [✓] WanVideo Uni3C Embeds
+- [✓] WanVideo Controlnet Loader
+- [✓] WanVideo Controlnet Apply
+- [✓] WanVideo ATI Tracks
+- [✓] WanVideo ATI Tracks Visualize
+- [✓] WanVideo ATI Comfy
+- [✓] Multi/InfiniteTalk Model Loader
+- [✓] Multi/InfiniteTalk Wav2vec2 Embeds
+- [✓] WanVideo Long I2V Multi/InfiniteTalk
+
+- [✓] Wav2vec2 Model Loader
+- Description: No model available to select in the dropdown — the loader shows no options.
+
+- [✓] MultiTalk Silent Embeds
+- [✓] WanVideo ReCamMaster Camera Embed
+- [✓] ReCamMaster Pose Visualizer
+- [✓] WanVideo ReCamMaster Generate Orbit Camera
+- [✓] WanVideo ReCamMaster Default Camera
+- [✓] WanVideo Diffusion Forcing Sampler
+- [✓] (Down)load Wav2Vec Model
+- [✓] FantasyTalking Model Loader
+- [✓] FantasyTalking Wav2Vec Embeds
+- [✓] Qwen Loader
+- [✓] Wan Video Prompt Extender
+- [✓] Wan Video Prompt Extender Select
+- [✓] FantasyPortrait Model Loader
+- [✓] FantasyPortrait Face Detector
+- [✓] WanVideo Add Fantasy Portrait
+- [✓] Landmarks to Image
+- [✓] WanVideo UniAnimate Pose Input
+- [✓] WanVideo UniAnimate DWPose Detector
+- [✓] NLF Predict
+- [✓] Draw NLF Poses
+- [✓] Load VQVAE
+- [✓] MTV Crafter Encode Poses
+- [✓] Whisper Model Loader
+- [✓] HuMo Embeds
+- [✓] WanVideo Combine Embeds
+- [✓] Load Lynx Resampler
+- [✓] Lynx Encode Face IP
+- [✓] Draw ArcFace Landmarks
+- [✓] WanVideo Add Lynx Embeds
+- [✓] Lynx InsightFace Crop
+- [✓] Ovi MMAudio VAE Loader
+- [✓] WanVideo Decode Ovi Audio
+- [✓] WanVideo Encode Ovi Audio
+- [✓] WanVideo Ovi CFG
+- [✓] WanVideo Add MMAudio To Latents
+- [✓] WanVideo Empty MMAudio Latents
+- [✓] WanVideo Add SteadyDancer Embeds
+- [✓] WanVideo Add OneToAll Reference Embeds
+- [✓] WanVideo Add OneToAll Pose Embeds
+- [✓] WanVideo Add OneToAll Extend Embeds
+- [✓] WanVideo Add WanMove Tracks
+- [✓] WanVideo Draw WanMove Tracks
+- [✓] WanMove Native
 
 ## ComfyUI_AudioTools
-
-- [ ] Amplify / Gain
-- [ ] Normalize Audio
-- [ ] Standardize Audio (Format/Channels)
-- [ ] Remove Silence
-- [ ] De-Esser
-- [ ] De-Plosive (Low Cut)
-- [ ] Parametric EQ for Voice
-- [ ] Vocal Compressor
-- [ ] De-Hum (50/60Hz)
-- [ ] Noise Gate
-- [ ] Reverb
-- [ ] Delay / Echo
-- [ ] Pitch Shift / Time Stretch
-- [ ] Fade In
-- [ ] Fade Out
-- [ ] Mix Audio Tracks
-- [ ] Trim Audio
-- [ ] Stereo Panner
-- [ ] Pad With Silence
-- [ ] Stem Separator (AI)
-- [ ] Speech Denoise (AI)
-- [ ] Speech-to-Text + SRT (Whisper)
-- [ ] Loudness Meter (LUFS)
-- [ ] BPM Detector / Reactive
-- [ ] Audio-Reactive Envelope
-- [ ] Display Waveform
-- [ ] Compare Waveforms
-- [ ] Show Audio Info
+- [✓] Amplify / Gain
+- [✓] Normalize Audio
+- [✓] Standardize Audio (Format/Channels)
+- [✓] Remove Silence
+- [✓] De-Esser
+- [✓] De-Plosive (Low Cut)
+- [✓] Parametric EQ for Voice
+- [✓] Vocal Compressor
+- [✓] De-Hum (50/60Hz)
+- [✓] Noise Gate
+- [✓] Reverb
+- [✓] Delay / Echo
+- [✓] Pitch Shift / Time Stretch
+- [✓] Fade In
+- [✓] Fade Out
+- [✓] Mix Audio Tracks
+- [✓] Trim Audio
+- [✓] Stereo Panner
+- [✓] Pad With Silence
+- [✓] Stem Separator (AI)
+- [✓] Speech Denoise (AI)
+- [✓] Speech-to-Text + SRT (Whisper)
+- [✓] Loudness Meter (LUFS)
+- [✓] BPM Detector / Reactive
+- [✓] Audio-Reactive Envelope
+- [✓] Display Waveform
+- [✓] Compare Waveforms
+- [✓] Show Audio Info
 
 ## CustomNodeComfyMath
 
-- [ ] BoolToInt
-- [ ] IntToBool
-- [ ] FloatToInt
-- [ ] IntToFloat
-- [ ] IntToNumber
-- [ ] NumberToInt
-- [ ] FloatToNumber
-- [ ] NumberToFloat
-- [ ] ComposeVec2
-- [ ] ComposeVec3
-- [ ] ComposeVec4
-- [ ] BreakoutVec2
-- [ ] BreakoutVec3
-- [ ] BreakoutVec4
-- [ ] BoolUnaryOperation
-- [ ] BoolBinaryOperation
-- [ ] IntUnaryOperation
-- [ ] IntUnaryCondition
-- [ ] IntBinaryOperation
-- [ ] IntBinaryCondition
-- [ ] FloatUnaryOperation
-- [ ] FloatUnaryCondition
-- [ ] FloatBinaryOperation
-- [ ] FloatBinaryCondition
-- [ ] NumberUnaryOperation
-- [ ] NumberUnaryCondition
-- [ ] NumberBinaryOperation
-- [ ] NumberBinaryCondition
-- [ ] Vec2UnaryOperation
-- [ ] Vec2UnaryCondition
-- [ ] Vec2ToScalarUnaryOperation
-- [ ] Vec2BinaryOperation
-- [ ] Vec2BinaryCondition
-- [ ] Vec2ToScalarBinaryOperation
-- [ ] Vec2ScalarOperation
-- [ ] Vec3UnaryOperation
-- [ ] Vec3UnaryCondition
-- [ ] Vec3ToScalarUnaryOperation
-- [ ] Vec3BinaryOperation
-- [ ] Vec3BinaryCondition
-- [ ] Vec3ToScalarBinaryOperation
-- [ ] Vec3ScalarOperation
-- [ ] Vec4UnaryOperation
-- [ ] Vec4UnaryCondition
-- [ ] Vec4ToScalarUnaryOperation
-- [ ] Vec4BinaryOperation
-- [ ] Vec4BinaryCondition
-- [ ] Vec4ToScalarBinaryOperation
-- [ ] Vec4ScalarOperation
-- [ ] SDXLResolution
-- [ ] NearestSDXLResolution
-- [ ] SDXLExtendedResolution
-- [ ] NearestSDXLExtendedResolution
+- [✓] BoolToInt
 
+- Description: On Vue-based node layout the `BoolToInt` node's true/false value does not display when toggling the widget; the older (non-Vue) layout shows `true`/`false` correctly.
+
+- [✓] IntToBool
+- [✓] FloatToInt
+- [✓] IntToFloat
+- [✓] IntToNumber
+- [✓] NumberToInt
+- [✓] FloatToNumber
+- [✓] NumberToFloat
+- [✓] ComposeVec2
+- [✓] ComposeVec3
+- [✓] ComposeVec4
+- [✓] BreakoutVec2
+- [✓] BreakoutVec3
+- [✓] BreakoutVec4
+- [✓] BoolUnaryOperation
+- Description: On Vue-based node layout the `BoolUnaryOperation` node's true/false value does not display when toggling the widget; the older (non-Vue) layout shows `true`/`false` correctly.
+
+- [✓] BoolBinaryOperation
+- Description: On Vue-based node layout the `BoolBinaryOperation` node's true/false value does not display when toggling the widget; the older (non-Vue) layout shows `true`/`false` correctly.
+
+- [✓] IntUnaryOperation
+- [✓] IntUnaryCondition
+- [✓] IntBinaryOperation
+- [✓] IntBinaryCondition
+- [✓] FloatUnaryOperation
+- [✓] FloatUnaryCondition
+- [✓] FloatBinaryOperation
+- [✓] FloatBinaryCondition
+- [✓] NumberUnaryOperation
+- [✓] NumberUnaryCondition
+- [✓] NumberBinaryOperation
+- [✓] NumberBinaryCondition
+- [✓] Vec2UnaryOperation
+- [✓] Vec2UnaryCondition
+- [✓] Vec2ToScalarUnaryOperation
+- [✓] Vec2BinaryOperation
+- [✓] Vec2BinaryCondition
+- [✓] Vec2ToScalarBinaryOperation
+- [✓] Vec2ScalarOperation
+- [✓] Vec3UnaryOperation
+- [✓] Vec3UnaryCondition
+- [✓] Vec3ToScalarUnaryOperation
+- [✓] Vec3BinaryOperation
+- [✓] Vec3BinaryCondition
+- [✓] Vec3ToScalarBinaryOperation
+- [✓] Vec3ScalarOperation
+- [✓] Vec4UnaryOperation
+- [✓] Vec4UnaryCondition
+- [✓] Vec4ToScalarUnaryOperation
+- [✓] Vec4BinaryOperation
+- [✓] Vec4BinaryCondition
+- [✓] Vec4ToScalarBinaryOperation
+- [✓] Vec4ScalarOperation
+- [✓] SDXLResolution
+- [✓] NearestSDXLResolution
+- [✓] SDXLExtendedResolution
+- [✓] NearestSDXLExtendedResolution
 ## audio-separation-nodes-comfyui
 
-- [ ] AudioSeparation
-- [ ] AudioCrop
-- [ ] AudioCombine
-- [ ] AudioTempoMatch
-- [ ] AudioVideoCombine
-- [ ] AudioSpeedShift
-- [ ] AudioGetTempo
+- [✓] AudioSeparation
+- [✓] AudioCrop
+- [✓] AudioCombine
+- [✓] AudioTempoMatch
+- [✓] AudioVideoCombine
+- Cannot retrieve video path for widget/upload video directly.
 
+- [✓] AudioSpeedShift
+- [✓] AudioGetTempo
 ## comfy_api_nodes
 
-- [ ] Ideogram V1
-- [ ] Ideogram V2
-- [ ] Ideogram V3
-- [ ] OpenAI DALL·E 2
-- [ ] OpenAI DALL·E 3
-- [ ] OpenAI GPT Image 1
-- [ ] OpenAI ChatGPT
-- [ ] OpenAI ChatGPT Input Files
-- [ ] OpenAI ChatGPT Advanced Options
-- [ ] MiniMax Text to Video
-- [ ] MiniMax Image to Video
-- [ ] MiniMax Hailuo Video
-- [ ] Google Veo 2 Video Generation
-- [ ] Google Veo 3 Video Generation
-- [ ] Google Veo 3 First-Last-Frame to Video
-- [ ] Kling Camera Controls
-- [ ] Kling Text to Video
-- [ ] Kling Image(First Frame) to Video
-- [ ] Kling Image to Video (Camera Control)
-- [ ] Kling Text to Video (Camera Control)
-- [ ] Kling Start-End Frame to Video
-- [ ] Kling Video Extend
-- [ ] Kling Lip Sync Video with Audio
-- [ ] Kling Lip Sync Video with Text
-- [ ] Kling Virtual Try On
-- [ ] Kling Image Generation
-- [ ] Kling Video Effects
-- [ ] Kling Dual Character Video Effects
-- [ ] Kling Omni Text to Video (Pro)
-- [ ] Kling Omni First-Last-Frame to Video (Pro)
-- [ ] Kling Omni Image to Video (Pro)
-- [ ] Kling Omni Video to Video (Pro)
-- [ ] Kling Omni Edit Video (Pro)
-- [ ] Kling Omni Image (Pro)
-- [ ] Kling Text to Video with Audio
-- [ ] Kling Image(First Frame) to Video with Audio
-- [ ] Flux 1.1 [pro] Ultra Image
-- [ ] Flux.1 Kontext [pro] Image
-- [ ] Flux.1 Kontext [max] Image
-- [ ] Flux.1 Expand Image
-- [ ] Flux.1 Fill Image
-- [ ] Flux.2 [pro] Image
-- [ ] ByteDance Image
-- [ ] ByteDance Image Edit
-- [ ] ByteDance Seedream 4
-- [ ] ByteDance Text to Video
-- [ ] ByteDance Image to Video
-- [ ] ByteDance First-Last-Frame to Video
-- [ ] ByteDance Reference Images to Video
-- [ ] LTXV Text To Video
-- [ ] LTXV Image To Video
-- [ ] Luma Text to Image
-- [ ] Luma Image to Image
-- [ ] Luma Text to Video
-- [ ] Luma Image to Video
-- [ ] Luma Reference
-- [ ] Luma Concepts
-- [ ] Recraft Text to Image
-- [ ] Recraft Image to Image
-- [ ] Recraft Image Inpainting
-- [ ] Recraft Text to Vector
-- [ ] Recraft Vectorize Image
-- [ ] Recraft Remove Background
-- [ ] Recraft Replace Background
-- [ ] Recraft Crisp Upscale Image
-- [ ] Recraft Creative Upscale Image
-- [ ] Recraft Style - Realistic Image
-- [ ] Recraft Style - Digital Illustration
-- [ ] Recraft Style - Logo Raster
-- [ ] Recraft Style - Infinite Style Library
-- [ ] Recraft Color RGB
-- [ ] Recraft Controls
-- [ ] PixVerse Text to Video
-- [ ] PixVerse Image to Video
-- [ ] PixVerse Transition Video
-- [ ] PixVerse Template
-- [ ] Stability AI Stable Image Ultra
-- [ ] Stability AI Stable Diffusion 3.5 Image
-- [ ] Stability AI Upscale Conservative
-- [ ] Stability AI Upscale Creative
-- [ ] Stability AI Upscale Fast
-- [ ] Stability AI Text To Audio
-- [ ] Stability AI Audio To Audio
-- [ ] Stability AI Audio Inpaint
-- [ ] Runway First-Last-Frame to Video
-- [ ] Runway Image to Video (Gen3a Turbo)
-- [ ] Runway Image to Video (Gen4 Turbo)
-- [ ] Runway Text to Image
-- [ ] OpenAI Sora - Video
-- [ ] Topaz Image Enhance
-- [ ] Topaz Video Enhance
-- [ ] Tripo: Text to Model
-- [ ] Tripo: Image to Model
-- [ ] Tripo: Multiview to Model
-- [ ] Tripo: Texture model
-- [ ] Tripo: Refine Draft model
-- [ ] Tripo: Rig model
-- [ ] Tripo: Retarget rigged model
-- [ ] Tripo: Convert model
-- [ ] Moonvalley Marey Image to Video
-- [ ] Moonvalley Marey Text to Video
-- [ ] Moonvalley Marey Video to Video
-- [ ] Rodin 3D Generate - Regular Generate
-- [ ] Rodin 3D Generate - Detail Generate
-- [ ] Rodin 3D Generate - Smooth Generate
-- [ ] Rodin 3D Generate - Sketch Generate
-- [ ] Rodin 3D Generate - Gen-2 Generate
-- [ ] Google Gemini
-- [ ] Nano Banana (Google Gemini Image)
-- [ ] Nano Banana Pro (Google Gemini Image)
-- [ ] Gemini Input Files
-- [ ] Vidu Text To Video Generation
-- [ ] Vidu Image To Video Generation
-- [ ] Vidu Reference To Video Generation
-- [ ] Vidu Start End To Video Generation
-- [ ] Wan Text to Image
-- [ ] Wan Image to Image
-- [ ] Wan Text to Video
-- [ ] Wan Image to Video
+- [✓] Ideogram V1  
+- [✓] Ideogram V2  
+- [✓] Ideogram V3  
+- [✓] OpenAI DALL·E 2  
+- [✓] OpenAI DALL·E 3  
+- [✓] OpenAI GPT Image 1  
+- [✓] OpenAI ChatGPT  
+- [✓] OpenAI ChatGPT Input Files  
+- [✓] OpenAI ChatGPT Advanced Options  
+- [✓] MiniMax Text to Video  
+- [✓] MiniMax Image to Video  
+- [✓] MiniMax Hailuo Video  
+- [✓] Google Veo 2 Video Generation  
+- [✓] Google Veo 3 Video Generation  
+- [✓] Google Veo 3 First-Last-Frame to Video  
+- [✓] Kling Camera Controls  
+- [✓] Kling Text to Video  
+- [✓] Kling Image(First Frame) to Video  
+- [✓] Kling Image to Video (Camera Control)  
+- [✓] Kling Text to Video (Camera Control)  
+- [✓] Kling Start-End Frame to Video  
+- [✓] Kling Video Extend  
+- [✓] Kling Lip Sync Video with Audio  
+- [✓] Kling Lip Sync Video with Text  
+- [✓] Kling Virtual Try On  
+- [✓] Kling Image Generation  
+- [✓] Kling Video Effects  
+- [✓] Kling Dual Character Video Effects  
+- [✓] Kling Omni Text to Video (Pro)  
+- [✓] Kling Omni First-Last-Frame to Video (Pro)  
+- [✓] Kling Omni Image to Video (Pro)  
+- [✓] Kling Omni Video to Video (Pro)  
+- [✓] Kling Omni Edit Video (Pro)  
+- [✓] Kling Omni Image (Pro)  
+- [✓] Kling Text to Video with Audio  
+- [✓] Kling Image(First Frame) to Video with Audio  
+- [✓] Flux 1.1 [pro] Ultra Image  
+- User needs to type 'aspect ratio' manually instead of being presented with drop-down size presets.
+- [✓] Flux.1 Kontext [pro] Image  
+- User needs to type 'aspect ratio' manually instead of being presented with drop-down size presets.
+- [✓] Flux.1 Kontext [max] Image  
+- User needs to type 'aspect ratio' manually instead of being presented with drop-down size presets.
+- [✓] Flux.1 Expand Image  
+- [✓] Flux.1 Fill Image  
+- [✓] Flux.2 [pro] Image  
+- [✓] ByteDance Image  
+- [✓] ByteDance Image Edit  
+- [✓] ByteDance Seedream 4  
+- [✓] ByteDance Text to Video  
+- [✓] ByteDance Image to Video  
+- [✓] ByteDance First-Last-Frame to Video  
+- [✓] ByteDance Reference Images to Video  
+- [✓] LTXV Text To Video  
+- [✓] LTXV Image To Video  
+- [✓] Luma Text to Image  
+- [✓] Luma Image to Image  
+- [✓] Luma Text to Video  
+- [✓] Luma Image to Video  
+- [✓] Luma Reference  
+- [✓] Luma Concepts  
+- [✓] Recraft Text to Image  
+- [✓] Recraft Image to Image  
+- [✓] Recraft Image Inpainting  
+- [✓] Recraft Text to Vector  
+- [✓] Recraft Vectorize Image  
+- [✓] Recraft Remove Background  
+- [✓] Recraft Replace Background  
+- [✓] Recraft Crisp Upscale Image  
+- [✓] Recraft Creative Upscale Image  
+- [✓] Recraft Style - Realistic Image  
+- [✓] Recraft Style - Digital Illustration  
+- [✓] Recraft Style - Logo Raster  
+- [✓] Recraft Style - Infinite Style Library  
+- Description: Unable to use node; unclear how to retrieve or use a `style_id`.
 
+- [✓] Recraft Color RGB  
+- [✓] Recraft Controls  
+- [✓] PixVerse Text to Video  
+- [✓] PixVerse Image to Video  
+- [✓] PixVerse Transition Video  
+- [✓] PixVerse Template  
+- [✓] Stability AI Stable Image Ultra  
+- [✓] Stability AI Stable Diffusion 3.5 Image  
+- [✓] Stability AI Upscale Conservative  
+- [✓] Stability AI Upscale Creative  
+- [✓] Stability AI Upscale Fast  
+- [✓] Stability AI Text To Audio  
+- Would be easier if user can adjust duration by seconds, not number of frames.
+
+- [✓] Stability AI Audio To Audio  
+- Would be easier if user can adjust duration by seconds, not number of frames.
+
+- [✓] Stability AI Audio Inpaint  
+- Would be easier if user can adjust duration by seconds, not number of frames.
+
+- [✓] Runway First-Last-Frame to Video  
+- [✓] Runway Image to Video (Gen3a Turbo)  
+- [✓] Runway Image to Video (Gen4 Turbo)  
+- [✓] Runway Text to Image  
+- [✓] OpenAI Sora - Video  
+- [✓] Topaz Image Enhance  
+- [✓] Topaz Video Enhance  
+- [✓] Tripo: Text to Model  
+- Doesn't contain Vue node 'seed' button layout/controls on corresponding widgets.
+
+- [✓] Tripo: Image to Model  
+- Doesn't contain Vue node 'seed' button layout/controls on corresponding widgets.
+
+- [✓] Tripo: Multiview to Model  
+- Doesn't contain Vue node 'seed' button layout/controls on corresponding widgets.
+
+- [✓] Tripo: Texture model  
+- Doesn't contain Vue node 'seed' button layout/controls on corresponding widgets.
+
+- [✓] Tripo: Refine Draft model  
+- [✓] Tripo: Rig model  
+- [✓] Tripo: Retarget rigged model  
+- [✓] Tripo: Convert model  
+- [✓] Moonvalley Marey Image to Video  
+- [✓] Moonvalley Marey Text to Video  
+- [✓] Moonvalley Marey Video to Video  
+- Doesn't contain Vue node 'seed' button layout/controls on corresponding widgets.
+
+- [✓] Rodin 3D Generate - Regular Generate  
+- Doesn't contain Vue node 'seed' button layout/controls on corresponding widgets.
+
+- [✓] Rodin 3D Generate - Detail Generate  
+- Doesn't contain Vue node 'seed' button layout/controls on corresponding widgets.
+
+- [✓] Rodin 3D Generate - Smooth Generate  
+- Doesn't contain Vue node 'seed' button layout/controls on corresponding widgets.
+
+- [✓] Rodin 3D Generate - Sketch Generate  
+- Doesn't contain Vue node 'seed' button layout/controls on corresponding widgets.
+
+- [✓] Rodin 3D Generate - Gen-2 Generate  
+- Doesn't contain Vue node 'seed' button layout/controls on corresponding widgets.
+
+- [✓] Google Gemini  
+- [✓] Nano Banana (Google Gemini Image)  
+- [✓] Nano Banana Pro (Google Gemini Image)  
+- [✓] Gemini Input Files  
+- [✓] Vidu Text To Video Generation  
+- [✓] Vidu Image To Video Generation  
+- [✓] Vidu Reference To Video Generation  
+- [✓] Vidu Start End To Video Generation  
+- [✓] Wan Text to Image  
+- [✓] Wan Image to Image  
+- [✓] Wan Text to Video  
+- [✓] Wan Image to Video  
 ## comfy_extras
 
 - [ ] LatentAdd
@@ -1647,4 +1688,5 @@
 
 ## websocket_image_save
 
-- [ ] SaveImageWebsocket
+- [✓] SaveImageWebsocket
+
