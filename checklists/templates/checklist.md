@@ -1,13 +1,13 @@
 # Node Pack QA Checklist
 
-- [ ] ComfyUI-Lotus (2)
-- [ ] ComfyUI-NormalCrafterWrapper (2)
-- [ ] ComfyUI-WanAnimatePreprocess (4)
-- [ ] ComfyUI-WanVideoWrapper (130)
-- [ ] ComfyUI_AudioTools (28)
-- [ ] CustomNodeComfyMath (53)
-- [ ] audio-separation-nodes-comfyui (7)
-- [ ] comfy_api_nodes (119)
+- [✓] ComfyUI-Lotus (2)
+- [✓] ComfyUI-NormalCrafterWrapper (2)
+- [✓] ComfyUI-WanAnimatePreprocess (4)
+- [✓] ComfyUI-WanVideoWrapper (130)
+- [✓] ComfyUI_AudioTools (28)
+- [✓] CustomNodeComfyMath (53)
+- [✓] audio-separation-nodes-comfyui (7)
+- [✓] comfy_api_nodes (119)
 - [ ] comfy_extras (349)
 - [ ] comfyui-advanced-controlnet (43)
 - [ ] comfyui-animatediff-evolved (145)
@@ -28,4 +28,5 @@
 - [ ] comfyui_ipadapter_plus (29)
 - [ ] comfyui_ultimatesdupscale (3)
 - [ ] core (64)
-- [ ] websocket_image_save (1)
+- [✓] websocket_image_save (1)
+- No anomalies found.
