@@ -156,6 +156,7 @@
 - [✓] WanMove Native
 
 ## ComfyUI_AudioTools
+
 - [✓] Amplify / Gain
 - [✓] Normalize Audio
 - [✓] Standardize Audio (Format/Channels)
@@ -247,6 +248,7 @@
 - [✓] NearestSDXLResolution
 - [✓] SDXLExtendedResolution
 - [✓] NearestSDXLExtendedResolution
+
 ## audio-separation-nodes-comfyui
 
 - [✓] AudioSeparation
@@ -258,158 +260,160 @@
 
 - [✓] AudioSpeedShift
 - [✓] AudioGetTempo
+
 ## comfy_api_nodes
 
-- [✓] Ideogram V1  
-- [✓] Ideogram V2  
-- [✓] Ideogram V3  
-- [✓] OpenAI DALL·E 2  
-- [✓] OpenAI DALL·E 3  
-- [✓] OpenAI GPT Image 1  
-- [✓] OpenAI ChatGPT  
-- [✓] OpenAI ChatGPT Input Files  
-- [✓] OpenAI ChatGPT Advanced Options  
-- [✓] MiniMax Text to Video  
-- [✓] MiniMax Image to Video  
-- [✓] MiniMax Hailuo Video  
-- [✓] Google Veo 2 Video Generation  
-- [✓] Google Veo 3 Video Generation  
-- [✓] Google Veo 3 First-Last-Frame to Video  
-- [✓] Kling Camera Controls  
-- [✓] Kling Text to Video  
-- [✓] Kling Image(First Frame) to Video  
-- [✓] Kling Image to Video (Camera Control)  
-- [✓] Kling Text to Video (Camera Control)  
-- [✓] Kling Start-End Frame to Video  
-- [✓] Kling Video Extend  
-- [✓] Kling Lip Sync Video with Audio  
-- [✓] Kling Lip Sync Video with Text  
-- [✓] Kling Virtual Try On  
-- [✓] Kling Image Generation  
-- [✓] Kling Video Effects  
-- [✓] Kling Dual Character Video Effects  
-- [✓] Kling Omni Text to Video (Pro)  
-- [✓] Kling Omni First-Last-Frame to Video (Pro)  
-- [✓] Kling Omni Image to Video (Pro)  
-- [✓] Kling Omni Video to Video (Pro)  
-- [✓] Kling Omni Edit Video (Pro)  
-- [✓] Kling Omni Image (Pro)  
-- [✓] Kling Text to Video with Audio  
-- [✓] Kling Image(First Frame) to Video with Audio  
-- [✓] Flux 1.1 [pro] Ultra Image  
+- [✓] Ideogram V1
+- [✓] Ideogram V2
+- [✓] Ideogram V3
+- [✓] OpenAI DALL·E 2
+- [✓] OpenAI DALL·E 3
+- [✓] OpenAI GPT Image 1
+- [✓] OpenAI ChatGPT
+- [✓] OpenAI ChatGPT Input Files
+- [✓] OpenAI ChatGPT Advanced Options
+- [✓] MiniMax Text to Video
+- [✓] MiniMax Image to Video
+- [✓] MiniMax Hailuo Video
+- [✓] Google Veo 2 Video Generation
+- [✓] Google Veo 3 Video Generation
+- [✓] Google Veo 3 First-Last-Frame to Video
+- [✓] Kling Camera Controls
+- [✓] Kling Text to Video
+- [✓] Kling Image(First Frame) to Video
+- [✓] Kling Image to Video (Camera Control)
+- [✓] Kling Text to Video (Camera Control)
+- [✓] Kling Start-End Frame to Video
+- [✓] Kling Video Extend
+- [✓] Kling Lip Sync Video with Audio
+- [✓] Kling Lip Sync Video with Text
+- [✓] Kling Virtual Try On
+- [✓] Kling Image Generation
+- [✓] Kling Video Effects
+- [✓] Kling Dual Character Video Effects
+- [✓] Kling Omni Text to Video (Pro)
+- [✓] Kling Omni First-Last-Frame to Video (Pro)
+- [✓] Kling Omni Image to Video (Pro)
+- [✓] Kling Omni Video to Video (Pro)
+- [✓] Kling Omni Edit Video (Pro)
+- [✓] Kling Omni Image (Pro)
+- [✓] Kling Text to Video with Audio
+- [✓] Kling Image(First Frame) to Video with Audio
+- [✓] Flux 1.1 [pro] Ultra Image
 - User needs to type 'aspect ratio' manually instead of being presented with drop-down size presets.
-- [✓] Flux.1 Kontext [pro] Image  
+- [✓] Flux.1 Kontext [pro] Image
 - User needs to type 'aspect ratio' manually instead of being presented with drop-down size presets.
-- [✓] Flux.1 Kontext [max] Image  
+- [✓] Flux.1 Kontext [max] Image
 - User needs to type 'aspect ratio' manually instead of being presented with drop-down size presets.
-- [✓] Flux.1 Expand Image  
-- [✓] Flux.1 Fill Image  
-- [✓] Flux.2 [pro] Image  
-- [✓] ByteDance Image  
-- [✓] ByteDance Image Edit  
-- [✓] ByteDance Seedream 4  
-- [✓] ByteDance Text to Video  
-- [✓] ByteDance Image to Video  
-- [✓] ByteDance First-Last-Frame to Video  
-- [✓] ByteDance Reference Images to Video  
-- [✓] LTXV Text To Video  
-- [✓] LTXV Image To Video  
-- [✓] Luma Text to Image  
-- [✓] Luma Image to Image  
-- [✓] Luma Text to Video  
-- [✓] Luma Image to Video  
-- [✓] Luma Reference  
-- [✓] Luma Concepts  
-- [✓] Recraft Text to Image  
-- [✓] Recraft Image to Image  
-- [✓] Recraft Image Inpainting  
-- [✓] Recraft Text to Vector  
-- [✓] Recraft Vectorize Image  
-- [✓] Recraft Remove Background  
-- [✓] Recraft Replace Background  
-- [✓] Recraft Crisp Upscale Image  
-- [✓] Recraft Creative Upscale Image  
-- [✓] Recraft Style - Realistic Image  
-- [✓] Recraft Style - Digital Illustration  
-- [✓] Recraft Style - Logo Raster  
-- [✓] Recraft Style - Infinite Style Library  
+- [✓] Flux.1 Expand Image
+- [✓] Flux.1 Fill Image
+- [✓] Flux.2 [pro] Image
+- [✓] ByteDance Image
+- [✓] ByteDance Image Edit
+- [✓] ByteDance Seedream 4
+- [✓] ByteDance Text to Video
+- [✓] ByteDance Image to Video
+- [✓] ByteDance First-Last-Frame to Video
+- [✓] ByteDance Reference Images to Video
+- [✓] LTXV Text To Video
+- [✓] LTXV Image To Video
+- [✓] Luma Text to Image
+- [✓] Luma Image to Image
+- [✓] Luma Text to Video
+- [✓] Luma Image to Video
+- [✓] Luma Reference
+- [✓] Luma Concepts
+- [✓] Recraft Text to Image
+- [✓] Recraft Image to Image
+- [✓] Recraft Image Inpainting
+- [✓] Recraft Text to Vector
+- [✓] Recraft Vectorize Image
+- [✓] Recraft Remove Background
+- [✓] Recraft Replace Background
+- [✓] Recraft Crisp Upscale Image
+- [✓] Recraft Creative Upscale Image
+- [✓] Recraft Style - Realistic Image
+- [✓] Recraft Style - Digital Illustration
+- [✓] Recraft Style - Logo Raster
+- [✓] Recraft Style - Infinite Style Library
 - Description: Unable to use node; unclear how to retrieve or use a `style_id`.
 
-- [✓] Recraft Color RGB  
-- [✓] Recraft Controls  
-- [✓] PixVerse Text to Video  
-- [✓] PixVerse Image to Video  
-- [✓] PixVerse Transition Video  
-- [✓] PixVerse Template  
-- [✓] Stability AI Stable Image Ultra  
-- [✓] Stability AI Stable Diffusion 3.5 Image  
-- [✓] Stability AI Upscale Conservative  
-- [✓] Stability AI Upscale Creative  
-- [✓] Stability AI Upscale Fast  
-- [✓] Stability AI Text To Audio  
+- [✓] Recraft Color RGB
+- [✓] Recraft Controls
+- [✓] PixVerse Text to Video
+- [✓] PixVerse Image to Video
+- [✓] PixVerse Transition Video
+- [✓] PixVerse Template
+- [✓] Stability AI Stable Image Ultra
+- [✓] Stability AI Stable Diffusion 3.5 Image
+- [✓] Stability AI Upscale Conservative
+- [✓] Stability AI Upscale Creative
+- [✓] Stability AI Upscale Fast
+- [✓] Stability AI Text To Audio
 - Would be easier if user can adjust duration by seconds, not number of frames.
 
-- [✓] Stability AI Audio To Audio  
+- [✓] Stability AI Audio To Audio
 - Would be easier if user can adjust duration by seconds, not number of frames.
 
-- [✓] Stability AI Audio Inpaint  
+- [✓] Stability AI Audio Inpaint
 - Would be easier if user can adjust duration by seconds, not number of frames.
 
-- [✓] Runway First-Last-Frame to Video  
-- [✓] Runway Image to Video (Gen3a Turbo)  
-- [✓] Runway Image to Video (Gen4 Turbo)  
-- [✓] Runway Text to Image  
-- [✓] OpenAI Sora - Video  
-- [✓] Topaz Image Enhance  
-- [✓] Topaz Video Enhance  
-- [✓] Tripo: Text to Model  
+- [✓] Runway First-Last-Frame to Video
+- [✓] Runway Image to Video (Gen3a Turbo)
+- [✓] Runway Image to Video (Gen4 Turbo)
+- [✓] Runway Text to Image
+- [✓] OpenAI Sora - Video
+- [✓] Topaz Image Enhance
+- [✓] Topaz Video Enhance
+- [✓] Tripo: Text to Model
 - Doesn't contain Vue node 'seed' button layout/controls on corresponding widgets.
 
-- [✓] Tripo: Image to Model  
+- [✓] Tripo: Image to Model
 - Doesn't contain Vue node 'seed' button layout/controls on corresponding widgets.
 
-- [✓] Tripo: Multiview to Model  
+- [✓] Tripo: Multiview to Model
 - Doesn't contain Vue node 'seed' button layout/controls on corresponding widgets.
 
-- [✓] Tripo: Texture model  
+- [✓] Tripo: Texture model
 - Doesn't contain Vue node 'seed' button layout/controls on corresponding widgets.
 
-- [✓] Tripo: Refine Draft model  
-- [✓] Tripo: Rig model  
-- [✓] Tripo: Retarget rigged model  
-- [✓] Tripo: Convert model  
-- [✓] Moonvalley Marey Image to Video  
-- [✓] Moonvalley Marey Text to Video  
-- [✓] Moonvalley Marey Video to Video  
+- [✓] Tripo: Refine Draft model
+- [✓] Tripo: Rig model
+- [✓] Tripo: Retarget rigged model
+- [✓] Tripo: Convert model
+- [✓] Moonvalley Marey Image to Video
+- [✓] Moonvalley Marey Text to Video
+- [✓] Moonvalley Marey Video to Video
 - Doesn't contain Vue node 'seed' button layout/controls on corresponding widgets.
 
-- [✓] Rodin 3D Generate - Regular Generate  
+- [✓] Rodin 3D Generate - Regular Generate
 - Doesn't contain Vue node 'seed' button layout/controls on corresponding widgets.
 
-- [✓] Rodin 3D Generate - Detail Generate  
+- [✓] Rodin 3D Generate - Detail Generate
 - Doesn't contain Vue node 'seed' button layout/controls on corresponding widgets.
 
-- [✓] Rodin 3D Generate - Smooth Generate  
+- [✓] Rodin 3D Generate - Smooth Generate
 - Doesn't contain Vue node 'seed' button layout/controls on corresponding widgets.
 
-- [✓] Rodin 3D Generate - Sketch Generate  
+- [✓] Rodin 3D Generate - Sketch Generate
 - Doesn't contain Vue node 'seed' button layout/controls on corresponding widgets.
 
-- [✓] Rodin 3D Generate - Gen-2 Generate  
+- [✓] Rodin 3D Generate - Gen-2 Generate
 - Doesn't contain Vue node 'seed' button layout/controls on corresponding widgets.
 
-- [✓] Google Gemini  
-- [✓] Nano Banana (Google Gemini Image)  
-- [✓] Nano Banana Pro (Google Gemini Image)  
-- [✓] Gemini Input Files  
-- [✓] Vidu Text To Video Generation  
-- [✓] Vidu Image To Video Generation  
-- [✓] Vidu Reference To Video Generation  
-- [✓] Vidu Start End To Video Generation  
-- [✓] Wan Text to Image  
-- [✓] Wan Image to Image  
-- [✓] Wan Text to Video  
-- [✓] Wan Image to Video  
+- [✓] Google Gemini
+- [✓] Nano Banana (Google Gemini Image)
+- [✓] Nano Banana Pro (Google Gemini Image)
+- [✓] Gemini Input Files
+- [✓] Vidu Text To Video Generation
+- [✓] Vidu Image To Video Generation
+- [✓] Vidu Reference To Video Generation
+- [✓] Vidu Start End To Video Generation
+- [✓] Wan Text to Image
+- [✓] Wan Image to Image
+- [✓] Wan Text to Video
+- [✓] Wan Image to Video
+
 ## comfy_extras
 
 - [ ] LatentAdd
@@ -1689,4 +1693,3 @@
 ## websocket_image_save
 
 - [✓] SaveImageWebsocket
-
