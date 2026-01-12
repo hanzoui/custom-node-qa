@@ -1,7 +1,5 @@
 # Node Pack QA Checklist
 
-# Node Pack QA Checklist
-
 ## ComfyUI-Lotus
 - [✓] Load Lotus Model
 - [✓] Lotus Sampler
