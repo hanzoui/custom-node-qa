@@ -10,6 +10,12 @@
 - [x] NormalCrafter (Process Video)
 - [x] Detail Transfer
 
+## ComfyUI-SCAIL-Pose
+
+- [x] Pose Detection VitPose to DWPose
+- [x] Render NLF Poses
+- [x] Convert OpenPose Keypoints to DWPose
+
 ## ComfyUI-WanAnimatePreprocess
 
 - [x] ONNX Detection Model Loader
@@ -180,6 +186,38 @@
 - [x] Compare Waveforms
 - [x] Show Audio Info
 
+## ComfyUI_Fill-ChatterBox
+
+- [x] FL Chatterbox TTS
+- [x] FL Chatterbox Turbo TTS
+- [x] FL Chatterbox Multilingual TTS
+- [x] FL Chatterbox VC
+- [x] FL Chatterbox Dialog TTS
+
+## ControlAltAI-Nodes
+
+- [x] Flux Resolution Calc
+- [x] Flux Sampler
+- [x] Flux Union ControlNet Apply
+- [x] Boolean Basic
+- [x] Boolean Reverse
+- [x] Get Image Size Ratio
+- [x] Noise Plus Blend
+- [x] Integer Settings
+- [x] Integer Settings Advanced
+- [x] Choose Upscale Model
+- [x] Region Mask Generator
+- [x] Region Mask Validator
+- [x] Region Mask Processor
+- [x] Region Mask Conditioning
+- [x] Region Overlay Visualizer
+- [x] Flux Attention Cleanup
+- [x] HiDream Resolution
+- [x] Perturbation Texture
+- [x] Text Bridge
+- [x] Switch (Two Way)
+- [x] Switch (Three Way)
+
 ## CustomNodeComfyMath
 
 - [x] BoolToInt
@@ -235,6 +273,300 @@
 - [x] NearestSDXLResolution
 - [x] SDXLExtendedResolution
 - [x] NearestSDXLExtendedResolution
+
+## RES4LYF
+
+- [x] FluxLoader
+- [x] SD35Loader
+- [x] ClownModelLoader
+- [x] TextBox1
+- [x] TextBox2
+- [x] TextBox3
+- [x] TextConcatenate
+- [x] TextBoxConcatenate
+- [x] TextLoadFile
+- [x] TextShuffle
+- [x] TextShuffleAndTruncate
+- [x] TextTruncateTokens
+- [x] SeedGenerator
+- [x] ClownRegionalConditioning
+- [x] ClownRegionalConditionings
+- [x] ClownRegionalConditioning2
+- [x] ClownRegionalConditioning3
+- [x] ClownRegionalConditioning_AB
+- [x] ClownRegionalConditioning_ABC
+- [x] CLIPTextEncodeFluxUnguided
+- [x] ConditioningOrthoCollin
+- [x] ConditioningAverageScheduler
+- [x] ConditioningMultiply
+- [x] ConditioningAdd
+- [x] Conditioning Recast FP64
+- [x] StableCascade_StageB_Conditioning64
+- [x] ConditioningZeroAndTruncate
+- [x] ConditioningTruncate
+- [x] StyleModelApplyStyle
+- [x] CrossAttn_EraseReplace_HiDream
+- [x] ConditioningDownsample (T5)
+- [x] ConditioningBatch4
+- [x] ConditioningBatch8
+- [x] TemporalMaskGenerator
+- [x] TemporalSplitAttnMask
+- [x] TemporalSplitAttnMask (Midframe)
+- [x] TemporalCrossAttnMask
+- [x] Set Precision
+- [x] Set Precision Universal
+- [x] Set Precision Advanced
+- [x] LatentUpscaleWithVAE
+- [x] LatentNoised
+- [x] LatentNoiseList
+- [x] AdvancedNoise
+- [x] LatentNoiseBatch_perlin
+- [x] LatentNoiseBatch_fractal
+- [x] LatentNoiseBatch_gaussian
+- [x] LatentNoiseBatch_gaussian_channels
+- [x] LatentBatch_channels
+- [x] LatentBatch_channels_16
+- [x] Latent Get Channel Means
+- [x] Latent Match Channelwise
+- [x] Latent to RawX
+- [x] Latent Clear State Info
+- [x] Latent Replace State Info
+- [x] Latent Display State Info
+- [x] Latent Transfer State Info
+- [x] Latent TrimVideo State Info
+- [x] Latent to Cuda
+- [x] Latent Batcher
+- [x] Latent Normalize Channels
+- [x] Latent Channels From To
+- [x] LatentPhaseMagnitude
+- [x] LatentPhaseMagnitudeMultiply
+- [x] LatentPhaseMagnitudeOffset
+- [x] LatentPhaseMagnitudePower
+- [x] MaskFloatToBoolean
+- [x] MaskToggle
+- [x] MaskEdge
+- [x] Frames Masks Uninterpolate
+- [x] Frames Masks ZeroOut
+- [x] Frames Latent ReverseOrder
+- [x] EmptyLatentImage64
+- [x] EmptyLatentImageCustom
+- [x] StableCascade_StageC_VAEEncode_Exact
+- [x] PrepForUnsampling
+- [x] VAEEncodeAdvanced
+- [x] VAEStyleTransferLatent
+- [x] SigmasPreview
+- [x] SigmasSchedulePreview
+- [x] TorchCompileModelFluxAdv
+- [x] TorchCompileModelAura
+- [x] TorchCompileModelSD35
+- [x] TorchCompileModels
+- [x] ClownpileModelWanVideo
+- [x] ModelTimestepPatcher
+- [x] ModelSamplingAdvanced
+- [x] ModelSamplingAdvancedResolution
+- [x] FluxGuidanceDisable
+- [x] ReWanPatcher
+- [x] ReFluxPatcher
+- [x] ReChromaPatcher
+- [x] ReSD35Patcher
+- [x] ReAuraPatcher
+- [x] ReLTXVPatcher
+- [x] ReHiDreamPatcher
+- [x] ReSDPatcher
+- [x] ReReduxPatcher
+- [x] ReWanPatcherAdvanced
+- [x] ReFluxPatcherAdvanced
+- [x] ReChromaPatcherAdvanced
+- [x] ReSD35PatcherAdvanced
+- [x] ReAuraPatcherAdvanced
+- [x] ReLTXVPatcherAdvanced
+- [x] ReHiDreamPatcherAdvanced
+- [x] LayerPatcher
+- [x] FluxOrthoCFGPatcher
+- [x] Sigmas Recast
+- [x] Sigmas Noise Inversion
+- [x] Sigmas From Text
+- [x] Sigmas Variance Floor
+- [x] Sigmas Truncate
+- [x] Sigmas Start
+- [x] Sigmas Split
+- [x] Sigmas Split Value
+- [x] Sigmas Concat
+- [x] Sigmas Pad
+- [x] Sigmas Unpad
+- [x] Sigmas SetFloor
+- [x] Sigmas DeleteBelowFloor
+- [x] Sigmas DeleteDuplicates
+- [x] Sigmas Cleanup
+- [x] Sigmas Mult
+- [x] Sigmas Modulus
+- [x] Sigmas Quotient
+- [x] Sigmas Add
+- [x] Sigmas Power
+- [x] Sigmas Abs
+- [x] Sigmas2 Mult
+- [x] Sigmas2 Add
+- [x] Sigmas Rescale
+- [x] Sigmas Count
+- [x] Sigmas Resample
+- [x] Sigmas Math1
+- [x] Sigmas Math3
+- [x] Sigmas Iteration Karras
+- [x] Sigmas Iteration Polyexp
+- [x] Sigmas Lerp
+- [x] Sigmas InvLerp
+- [x] Sigmas ArcSine
+- [x] Sigmas LinearSine
+- [x] Sigmas Append
+- [x] Sigmas ArcCosine
+- [x] Sigmas ArcTangent
+- [x] Sigmas CrossProduct
+- [x] Sigmas DotProduct
+- [x] Sigmas Fmod
+- [x] Sigmas Frac
+- [x] Sigmas If
+- [x] Sigmas Logarithm2
+- [x] Sigmas SmoothStep
+- [x] Sigmas SquareRoot
+- [x] Sigmas TimeStep
+- [x] Sigmas Sigmoid
+- [x] Sigmas Easing
+- [x] Sigmas Hyperbolic
+- [x] Sigmas Gaussian
+- [x] Sigmas Percentile
+- [x] Sigmas KernelSmooth
+- [x] Sigmas QuantileNorm
+- [x] Sigmas AdaptiveStep
+- [x] Sigmas Chaos
+- [x] Sigmas ReactionDiffusion
+- [x] Sigmas Attractor
+- [x] Sigmas CatmullRom
+- [x] Sigmas LambertW
+- [x] Sigmas ZetaEta
+- [x] Sigmas GammaBeta
+- [x] Sigmas GaussianCDF
+- [x] Sigmas StepwiseMultirate
+- [x] Sigmas HarmonicDecay
+- [x] Sigmas AdaptiveNoiseFloor
+- [x] Sigmas CollatzIteration
+- [x] Sigmas ConwaySequence
+- [x] Sigmas GilbreathSequence
+- [x] Sigmas CNFInverse
+- [x] Sigmas RiemannianFlow
+- [x] Sigmas LangevinDynamics
+- [x] Sigmas PersistentHomology
+- [x] Sigmas NormalizingFlows
+- [x] ClownScheduler
+- [x] Tan Scheduler
+- [x] Tan Scheduler 2
+- [x] Tan Scheduler 2 Simple
+- [x] Constant Scheduler
+- [x] Linear Quadratic Advanced
+- [x] SetImageSizeWithScale
+- [x] SetImageSize
+- [x] Mask Bounding Box Aspect Ratio
+- [x] Image Get Color Swatches
+- [x] Masks From Color Swatches
+- [x] Masks From Colors
+- [x] Masks Unpack 4
+- [x] Masks Unpack 8
+- [x] Masks Unpack 16
+- [x] Image Sharpen FS
+- [x] Image Channels LAB
+- [x] Image Median Blur
+- [x] Image Gaussian Blur
+- [x] Image Pair Split
+- [x] Image Crop Location Exact
+- [x] Film Grain
+- [x] Frequency Separation Linear Light
+- [x] Frequency Separation Hard Light
+- [x] Frequency Separation Hard Light LAB
+- [x] Frame Select
+- [x] Frames Slice
+- [x] Frames Concat
+- [x] Mask Sketch
+- [x] Image Grain Add
+- [x] Image Repeat Tile To Size
+- [x] Frames Concat Masks
+- [x] Frame Select Latent
+- [x] Frames Slice Latent
+- [x] Frames Concat Latent
+- [x] Frame Select Latent Raw
+- [x] Frames Slice Latent Raw
+- [x] Frames Concat Latent Raw
+- [x] SharkOptions
+- [x] ClownOptions SDE
+- [x] ClownOptions Detail Boost
+- [x] ClownGuide Style
+- [x] ClownGuide_Style_EdgeWidth
+- [x] ClownGuide_Style_TileSize
+- [x] ClownGuide
+- [x] ClownGuides
+- [x] ClownGuidesAB
+- [x] ClownGuides Sync
+- [x] ClownGuides Sync_Advanced
+- [x] ClownGuide_FrequencySeparation
+- [x] SharkOptions Guider Input
+- [x] ClownOptions Implicit Steps
+- [x] ClownOptions Cycles
+- [x] SharkOptions Guide Cond
+- [x] SharkOptions Guide Conds
+- [x] ClownOptions Tile
+- [x] ClownOptions Tile Advanced
+- [x] ClownGuide Mean
+- [x] ClownGuide AdaIN (HiDream)
+- [x] ClownGuide AttnInj (HiDream)
+- [x] ClownGuide_StyleNorm_Advanced_HiDream
+- [x] ClownOptions SDE Mask
+- [x] ClownOptions Step Size
+- [x] ClownOptions Sigma Scaling
+- [x] ClownOptions Momentum
+- [x] ClownOptions Swap Sampler
+- [x] ClownOptions Extra Options
+- [x] ClownOptions Automation
+- [x] SharkOptions UltraCascade Latent
+- [x] SharkOptions Start Step
+- [x] ClownOptions Combine
+- [x] ClownOptions Frameweights
+- [x] ClownOptions_FlowGuide
+- [x] ClownStyle_Block_MMDiT
+- [x] ClownStyle_MMDiT
+- [x] ClownStyle_Attn_MMDiT
+- [x] ClownStyle_Boost
+- [x] ClownStyle_UNet
+- [x] ClownStyle_Block_UNet
+- [x] ClownStyle_Attn_UNet
+- [x] ClownStyle_ResBlock_UNet
+- [x] ClownStyle_SpatialBlock_UNet
+- [x] ClownStyle_TransformerBlock_UNet
+- [x] ClownSamplerSelector
+- [x] SharkSampler
+- [x] SharkChainsampler
+- [x] ClownsharKSampler
+- [x] ClownsharkChainsampler
+- [x] ClownSampler
+- [x] ClownSamplerAdvanced
+- [x] BongSampler
+- [x] Legacy_ClownSampler ~~DEPRECATED~~
+- [x] Legacy_SharkSampler ~~DEPRECATED~~
+- [x] Legacy_ClownsharKSampler ~~DEPRECATED~~
+- [x] Legacy_ClownsharKSamplerGuides ~~DEPRECATED~~
+- [x] Legacy2_ClownSampler ~~DEPRECATED~~
+- [x] Legacy2_ClownSamplerAdvanced ~~DEPRECATED~~
+- [x] Legacy2_ClownsharKSampler ~~DEPRECATED~~
+- [x] Legacy2_ClownsharKSamplerGuides ~~DEPRECATED~~
+- [x] Legacy2_ClownsharKSamplerGuide ~~DEPRECATED~~
+- [x] Legacy2_ClownOptions_SDE_Noise ~~DEPRECATED~~
+- [x] Legacy2_ClownOptions_FrameWeights ~~DEPRECATED~~
+- [x] Legacy2_ClownInpaint ~~DEPRECATED~~
+- [x] Legacy2_ClownInpaintSimple ~~DEPRECATED~~
+- [x] Legacy2_ClownsharKSamplerOptions ~~DEPRECATED~~
+- [x] Legacy2_ClownsharKSamplerAutomation ~~DEPRECATED~~
+- [x] Legacy2_ClownsharKSamplerAutomation_Advanced ~~DEPRECATED~~
+- [x] Legacy2_SamplerOptions_TimestepScaling ~~DEPRECATED~~
+- [x] Legacy2_SamplerOptions_GarbageCollection ~~DEPRECATED~~
+- [x] Legacy2_UltraSharkSampler ~~DEPRECATED~~
+- [x] UltraSharkSampler Tiled ~~DEPRECATED~~
 
 ## audio-separation-nodes-comfyui
 
@@ -1689,6 +2021,166 @@
 - [x] Prompt Schedule From Weights Strategy
 - [x] IPAdapter Regional Conditioning
 - [x] IPAdapter Combine Params
+
+## comfyui_layerstyle
+
+- [x] LayerUtility: Switch Case
+- [x] LayerUtility: If
+- [x] LayerUtility: String Condition
+- [x] LayerUtility: Boolean Operator
+- [x] LayerUtility: Number Calculator
+- [x] LayerUtility: Boolean Operator V2
+- [x] LayerUtility: Number Calculator V2
+- [x] LayerUtility: TextBox
+- [x] LayerUtility: String
+- [x] LayerUtility: Integer
+- [x] LayerUtility: Float
+- [x] LayerUtility: Boolean
+- [x] LayerUtility: Seed
+- [x] LayerColor: Brightness & Contrast
+- [x] LayerColor: Brightness Contrast V2
+- [x] LayerMask: MaskStroke
+- [x] LayerUtility: CropByMask V2
+- [x] LayerStyle: InnerGlow V2
+- [x] LayerUtility: ColorPicker
+- [x] LayerUtility: LayerMaskTransform
+- [x] LayerFilter: SkinBeauty
+- [x] LayerFilter: SoftLight
+- [x] LayerUtility: TextImage V2
+- [x] LayerUtility: CropBoxResolve
+- [x] LayerUtility: Check Mask
+- [x] LayerStyle: GradientOverlay V2
+- [x] LayerFilter: Film
+- [x] LayerUtility: VQA Prompt
+- [x] LayerUtility: Load VQA Model
+- [x] LayerUtility: PrintInfo
+- [x] LayerUtility: RGB Value
+- [x] LayerMask: CreateGradientMask
+- [x] LayerFilter: Sharp & Soft
+- [x] LayerUtility: HSV Value
+- [x] LayerFilter: MotionBlur
+- [x] LayerStyle: ColorOverlay V2
+- [x] LayerColor: ColorTemperature
+- [x] LayerFilter: Film V2
+- [x] LayerUtility: Image Mask Scale As
+- [x] LayerUtility: Image Mask Scale As V2
+- [x] LayerStyle: Stroke
+- [x] LayerUtility: ImageRemoveAlpha
+- [x] LayerUtility: ImageHub
+- [x] LayerUtility: ImageChannelSplit
+- [x] LayerColor: LAB
+- [x] LayerUtility: ImageBlendAdvance V2
+- [x] LayerColor: Color of Shadow & Highlight
+- [x] LayerColor: Colorof Shadow Highlight V2
+- [x] LayerUtility: ImageBlend V2
+- [x] LayerMask: MaskPreview
+- [x] LayerUtility: ExtendCanvas
+- [x] LayerStyle: ColorOverlay
+- [x] LayerColor: Gamma
+- [x] LayerUtility: Check Mask V2
+- [x] LayerColor: AutoAdjust V2
+- [x] LayerUtility: ImageShift
+- [x] LayerColor: HSV
+- [x] LayerFilter: ColorMap
+- [x] LayerColor: LUT Apply
+- [x] LayerFilter: LightLeak
+- [x] LayerColor: YUV
+- [x] LayerMask: Mask Box Detect
+- [x] LayerMask: Mask Box Extend
+- [x] LayerUtility: TextJoin
+- [x] LayerUtility: TextJoinV2
+- [x] LayerColor: Negative
+- [x] LayerStyle: Stroke V2
+- [x] LayerUtility: H/L Frequency Detail Restore
+- [x] LayerColor: RGB
+- [x] LayerFilter: ChannelShake
+- [x] LayerStyle: DropShadow
+- [x] LayerColor: ColorAdapter
+- [x] LayerMask: MaskInvert
+- [x] LayerUtility: Random Generator
+- [x] LayerUtility: Random Generator V2
+- [x] LayerMask: MaskEdgeShrink
+- [x] LayerUtility: ImageBlendAdvance V3
+- [x] LayerStyle: GradientOverlay
+- [x] LayerUtility: Flux Kontext Image Scale
+- [x] LayerMask: Mask by Color
+- [x] LayerStyle: DropShadow V2
+- [x] LayerUtility: ImageScaleRestore
+- [x] LayerUtility: GradientImage V2
+- [x] LayerFilter: HalfTone
+- [x] LayerStyle: OuterGlow
+- [x] LayerUtility: IC Mask
+- [x] LayerUtility: IC Mask Crop Back
+- [x] LayerMask: PixelSpread
+- [x] LayerMask: MaskGrow
+- [x] LayerUtility: RoundedRectangle
+- [x] LayerUtility: Get Main Colors
+- [x] LayerUtility: Get Main Colors V2
+- [x] LayerStyle: InnerShadow
+- [x] LayerUtility: Any Rerouter
+- [x] LayerColor: ColorBalance
+- [x] LayerStyle: InnerShadow V2
+- [x] LayerMask: MaskEdgeUltraDetail
+- [x] LayerUtility: ImageScaleByAspectRatio V2
+- [x] LayerFilter: HDR Effects
+- [x] LayerUtility: Gray Value
+- [x] LayerMask: Mask Grain
+- [x] LayerFilter: GaussianBlur
+- [x] LayerFilter: Gaussian Blur V2
+- [x] LayerUtility: Color Name
+- [x] LayerUtility: Name To Color
+- [x] LayerUtility: GradientImage
+- [x] LayerColor: Levels
+- [x] LayerUtility: TextImage
+- [x] LayerFilter: WaterColor
+- [x] LayerUtility: XY to Percent
+- [x] LayerUtility: LayerImageTransform
+- [x] LayerStyle: DropShadow V3
+- [x] LayerMask: BlendIf Mask
+- [x] LayerUtility: ImageBlendAdvance
+- [x] LayerMask: MaskMotionBlur
+- [x] LayerUtility: CropByMask V3
+- [x] LayerUtility: Nano Banana Image Scale
+- [x] LayerUtility: SimpleTextImage
+- [x] LayerMask: MaskEdgeUltraDetail V2
+- [x] LayerUtility: ColorImage V2
+- [x] LayerUtility: ImageCombineAlpha
+- [x] LayerColor: AutoBrightness
+- [x] LayerStyle: OuterGlow V2
+- [x] LayerMask: Image To Mask
+- [x] LayerUtility: ImageScaleRestore V2
+- [x] LayerUtility: Choice Text Preset
+- [x] LayerUtility: Text Preseter
+- [x] LayerUtility: ImageScaleByAspectRatio
+- [x] LayerUtility: ImageChannelMerge
+- [x] LayerMask: MaskGradient
+- [x] LayerUtility: CropByMask
+- [x] LayerUtility: ImageOpacity
+- [x] LayerUtility: Image Composite Handle Mask
+- [x] LayerFilter: Add Grain
+- [x] LayerMask: Shadow & Highlight Mask
+- [x] LayerMask: Shadow Highlight Mask V2
+- [x] LayerStyle: InnerGlow
+- [x] LayerMask: DrawRoundedRectangle
+- [x] LayerUtility: RestoreCropBox
+- [x] LayerUtility: ExtendCanvas V2
+- [x] LayerUtility: ColorImage
+- [x] LayerMask: Segformer B2 Clothes Ultra
+- [x] LayerMask: Segformer Ultra V2
+- [x] LayerMask: Segformer Clothes Pipeline
+- [x] LayerMask: Segformer Fashion Pipeline
+- [x] LayerMask: Segformer Ultra V3
+- [x] LayerMask: Segformer Clothes Setting
+- [x] LayerMask: Segformer Fashion Setting
+- [x] LayerMask: Load Segformer Model
+- [x] LayerUtility: Image Reel
+- [x] LayerUtility: Image Reel Composit
+- [x] LayerColor: Exposure
+- [x] LayerUtility: ImageBlend
+- [x] LayerColor: AutoAdjust
+- [x] LayerUtility: GetImageSize
+- [x] LayerUtility: Batch Selector
+- [x] LayerStyle: Gradient Map
 
 ## comfyui_ultimatesdupscale
 
