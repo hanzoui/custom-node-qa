@@ -2,417 +2,712 @@
 
 ## ComfyUI-Lotus
 
-- [✓] Load Lotus Model
-- [✓] Lotus Sampler
+- [ ] Load Lotus Model
+- [ ] Lotus Sampler
 
 ## ComfyUI-NormalCrafterWrapper
 
-- [✓] NormalCrafter (Process Video)
-- [✓] Detail Transfer
+- [ ] NormalCrafter (Process Video)
+- [ ] Detail Transfer
+
+## ComfyUI-SCAIL-Pose
+
+- [ ] Pose Detection VitPose to DWPose
+- [ ] Render NLF Poses
+- [ ] Convert OpenPose Keypoints to DWPose
 
 ## ComfyUI-WanAnimatePreprocess
 
-- [✓] ONNX Detection Model Loader
-- [✓] Pose and Face Detection
-- [✓] Draw ViT Pose
-- [✓] Pose Retarget Prompt Helper
+- [ ] ONNX Detection Model Loader
+- [ ] Pose and Face Detection
+- [ ] Draw ViT Pose
+- [ ] Pose Retarget Prompt Helper
 
 ## ComfyUI-WanVideoWrapper
 
-- [✓] WanVideo Decode
-- [✓] WanVideo TextEncode
-- [✓] WanVideo TextEncodeSingle
-- [✓] WanVideo ClipVision Encode
-- [✓] WanVideo ImageToVideo Encode
-- [✓] WanVideo Encode
-- [✓] WanVideo Encode Latent Batch
-- [✓] WanVideo Empty Embeds
-- [✓] WanVideo Enhance-A-Video
-- [✓] WanVideo Context Options
-- [✓] WanVideo TextEmbed Bridge
-- [✓] WanVideo FlowEdit
-- [✓] WanVideo Control Embeds
-- [✓] WanVideo SLG
-- [✓] WanVideo Loop Args
-- [✓] WanVideo Experimental Args
-- [✓] WanVideo VACE Encode
-- [✓] WanVideo Phantom Embeds
-- [✓] WanVideo RealisDance Latents
-- [✓] WanVideo Apply NAG
-- [✓] WanVideo MiniMax Remover Embeds
-- [✓] WanVideo Free Init Args
-- [✓] WanVideo Set Radial Attention
-- [✓] WanVideo Block List
-- [✓] WanVideo TextEncode Cached
-- [✓] WanVideo Add Extra Latent
-- [✓] WanVideoScheduler
-- [✓] WanVideo Add StandIn Latent
-- [✓] WanVideo Add Control Embeds
-- [✓] WanVideo MTV Crafter Motion
-- [✓] WanVideo RoPE Function
-- [✓] WanVideo Add Pusa Noise
-- [✓] WanVideo Animate Embeds
-- [✓] WanVideo Add LucyEdit Latents
-- [✓] WanVideo Scheduler SA-ODE
-- [✓] WanVideo Add Bindweave Embeds
-- [✓] TextImageEncodeQwenVL
-- [✓] WanVideo UniLumos Embeds
-- [✓] WanVideo Add TTMLatents
-- [✓] WanVideo Sampler
-- [✓] WanVideo Sampler Settings
-- [✓] WanVideo Sampler From Settings
-- [✓] WanVideo Model Loader
-- [✓] WanVideo VAE Loader
-- [✓] WanVideo Lora Select
-- [✓] WanVideo Set LoRAs
-- [✓] WanVideo Lora Block Edit
-
-- [✓] WanVideo Tiny VAE Loader
-- Description: No model available to select in the dropdown — the loader shows no options.
-
-- [✓] WanVideo VACE Module Select
-- [✓] WanVideo Extra Model Select
-- [✓] WanVideo Lora Select Multi
-- [✓] WanVideo Torch Compile Settings
-- [✓] WanVideo T5 Text Encoder Loader
-- [✓] WanVideo CLIP Text Encoder Loader
-- [✓] WanVideo Image Resize To Closest
-- [✓] WanVideo VACE Start To End Frame
-- [✓] Extract Start Frames For Continuations
-- [✓] Create CFG Schedule Float List
-- [✓] Dummy Comfy Wan Model Object
-- [✓] WanVideo Latent ReScale
-- [✓] Create Schedule Float List
-- [✓] WanVideo Sigma To Step
-- [✓] Normalize Audio Loudness
-- [✓] WanVideo Pass Images From Samples
-- [✓] Face Mask From Pose Keypoints
-- [✓] Draw Gaussian Noise On Image
-- [✓] WanVideo Preview Embeds
-- [✓] WanVideo TeaCache
-- [✓] WanVideo MagCache
-- [✓] WanVideo EasyCache
-- [✓] WanVideo Add S2V Embeds
-- [✓] WanVideo Add FlashVSR Input
-- [✓] WanVideo FlashVSR Decoder Loader
-- [✓] Mocha Embeds
-- [✓] WanVideo FunCamera Embeds
-- [✓] WanVideo Uni3C Controlnet Loader
-- [✓] WanVideo Uni3C Embeds
-- [✓] WanVideo Controlnet Loader
-- [✓] WanVideo Controlnet Apply
-- [✓] WanVideo ATI Tracks
-- [✓] WanVideo ATI Tracks Visualize
-- [✓] WanVideo ATI Comfy
-- [✓] Multi/InfiniteTalk Model Loader
-- [✓] Multi/InfiniteTalk Wav2vec2 Embeds
-- [✓] WanVideo Long I2V Multi/InfiniteTalk
-
-- [✓] Wav2vec2 Model Loader
-- Description: No model available to select in the dropdown — the loader shows no options.
-
-- [✓] MultiTalk Silent Embeds
-- [✓] WanVideo ReCamMaster Camera Embed
-- [✓] ReCamMaster Pose Visualizer
-- [✓] WanVideo ReCamMaster Generate Orbit Camera
-- [✓] WanVideo ReCamMaster Default Camera
-- [✓] WanVideo Diffusion Forcing Sampler
-- [✓] (Down)load Wav2Vec Model
-- [✓] FantasyTalking Model Loader
-- [✓] FantasyTalking Wav2Vec Embeds
-- [✓] Qwen Loader
-- [✓] Wan Video Prompt Extender
-- [✓] Wan Video Prompt Extender Select
-- [✓] FantasyPortrait Model Loader
-- [✓] FantasyPortrait Face Detector
-- [✓] WanVideo Add Fantasy Portrait
-- [✓] Landmarks to Image
-- [✓] WanVideo UniAnimate Pose Input
-- [✓] WanVideo UniAnimate DWPose Detector
-- [✓] NLF Predict
-- [✓] Draw NLF Poses
-- [✓] Load VQVAE
-- [✓] MTV Crafter Encode Poses
-- [✓] Whisper Model Loader
-- [✓] HuMo Embeds
-- [✓] WanVideo Combine Embeds
-- [✓] Load Lynx Resampler
-- [✓] Lynx Encode Face IP
-- [✓] Draw ArcFace Landmarks
-- [✓] WanVideo Add Lynx Embeds
-- [✓] Lynx InsightFace Crop
-- [✓] Ovi MMAudio VAE Loader
-- [✓] WanVideo Decode Ovi Audio
-- [✓] WanVideo Encode Ovi Audio
-- [✓] WanVideo Ovi CFG
-- [✓] WanVideo Add MMAudio To Latents
-- [✓] WanVideo Empty MMAudio Latents
-- [✓] WanVideo Add SteadyDancer Embeds
-- [✓] WanVideo Add OneToAll Reference Embeds
-- [✓] WanVideo Add OneToAll Pose Embeds
-- [✓] WanVideo Add OneToAll Extend Embeds
-- [✓] WanVideo Add WanMove Tracks
-- [✓] WanVideo Draw WanMove Tracks
-- [✓] WanMove Native
+- [ ] WanVideo Decode
+- [ ] WanVideo TextEncode
+- [ ] WanVideo TextEncodeSingle
+- [ ] WanVideo ClipVision Encode
+- [ ] WanVideo ImageToVideo Encode
+- [ ] WanVideo Encode
+- [ ] WanVideo Encode Latent Batch
+- [ ] WanVideo Empty Embeds
+- [ ] WanVideo Enhance-A-Video
+- [ ] WanVideo Context Options
+- [ ] WanVideo TextEmbed Bridge
+- [ ] WanVideo FlowEdit
+- [ ] WanVideo Control Embeds
+- [ ] WanVideo SLG
+- [ ] WanVideo Loop Args
+- [ ] WanVideo Experimental Args
+- [ ] WanVideo VACE Encode
+- [ ] WanVideo Phantom Embeds
+- [ ] WanVideo RealisDance Latents
+- [ ] WanVideo Apply NAG
+- [ ] WanVideo MiniMax Remover Embeds
+- [ ] WanVideo Free Init Args
+- [ ] WanVideo Set Radial Attention
+- [ ] WanVideo Block List
+- [ ] WanVideo TextEncode Cached
+- [ ] WanVideo Add Extra Latent
+- [ ] WanVideo Add StandIn Latent
+- [ ] WanVideo Add Control Embeds
+- [ ] WanVideo MTV Crafter Motion
+- [ ] WanVideo RoPE Function
+- [ ] WanVideo Add Pusa Noise
+- [ ] WanVideo Animate Embeds
+- [ ] WanVideo Add LucyEdit Latents
+- [ ] WanVideo Add Bindweave Embeds
+- [ ] TextImageEncodeQwenVL
+- [ ] WanVideo UniLumos Embeds
+- [ ] WanVideo Add TTMLatents
+- [ ] WanVideo Sampler
+- [ ] WanVideo Sampler Settings
+- [ ] WanVideo Sampler From Settings
+- [ ] WanVideo Sampler v2
+- [ ] WanVideoSampler v2 Extra Args
+- [ ] WanVideo Scheduler
+- [ ] WanVideo Scheduler v2
+- [ ] WanVideo Model Loader
+- [ ] WanVideo VAE Loader
+- [ ] WanVideo Lora Select
+- [ ] WanVideo Set LoRAs
+- [ ] WanVideo Lora Block Edit
+- [ ] WanVideo Tiny VAE Loader
+- [ ] WanVideo VACE Module Select
+- [ ] WanVideo Extra Model Select
+- [ ] WanVideo Lora Select Multi
+- [ ] WanVideo Torch Compile Settings
+- [ ] WanVideo T5 Text Encoder Loader
+- [ ] WanVideo CLIP Text Encoder Loader
+- [ ] WanVideo Image Resize To Closest
+- [ ] WanVideo VACE Start To End Frame
+- [ ] Extract Start Frames For Continuations
+- [ ] Create CFG Schedule Float List
+- [ ] Dummy Comfy Wan Model Object
+- [ ] WanVideo Latent ReScale
+- [ ] Create Schedule Float List
+- [ ] WanVideo Sigma To Step
+- [ ] Normalize Audio Loudness
+- [ ] WanVideo Pass Images From Samples
+- [ ] Face Mask From Pose Keypoints
+- [ ] Draw Gaussian Noise On Image
+- [ ] WanVideo Preview Embeds
+- [ ] WanVideo TeaCache
+- [ ] WanVideo MagCache
+- [ ] WanVideo EasyCache
+- [ ] WanVideo ImageClip Encode (Deprecated) ~~DEPRECATED~~
+- [ ] WanVideo Add S2V Embeds
+- [ ] WanVideo Add FlashVSR Input
+- [ ] WanVideo FlashVSR Decoder Loader
+- [ ] Mocha Embeds
+- [ ] WanVideo FunCamera Embeds
+- [ ] WanVideo Uni3C Controlnet Loader
+- [ ] WanVideo Uni3C Embeds
+- [ ] WanVideo Controlnet Loader
+- [ ] WanVideo Controlnet Apply
+- [ ] WanVideo ATI Tracks
+- [ ] WanVideo ATI Tracks Visualize
+- [ ] WanVideo ATI Comfy
+- [ ] Multi/InfiniteTalk Model Loader
+- [ ] Multi/InfiniteTalk Wav2vec2 Embeds
+- [ ] WanVideo Long I2V Multi/InfiniteTalk
+- [ ] Wav2vec2 Model Loader
+- [ ] MultiTalk Silent Embeds
+- [ ] WanVideo ReCamMaster Camera Embed
+- [ ] ReCamMaster Pose Visualizer
+- [ ] WanVideo ReCamMaster Generate Orbit Camera
+- [ ] WanVideo ReCamMaster Default Camera
+- [ ] WanVideo Diffusion Forcing Sampler
+- [ ] (Down)load Wav2Vec Model
+- [ ] FantasyTalking Model Loader
+- [ ] FantasyTalking Wav2Vec Embeds
+- [ ] Qwen Loader
+- [ ] Wan Video Prompt Extender
+- [ ] Wan Video Prompt Extender Select
+- [ ] FantasyPortrait Model Loader
+- [ ] FantasyPortrait Face Detector
+- [ ] WanVideo Add Fantasy Portrait
+- [ ] Landmarks to Image
+- [ ] WanVideo UniAnimate Pose Input
+- [ ] WanVideo UniAnimate DWPose Detector
+- [ ] Load NLF Model
+- [ ] NLF Predict
+- [ ] Draw NLF Poses
+- [ ] Load VQVAE
+- [ ] MTV Crafter Encode Poses
+- [ ] Whisper Model Loader
+- [ ] HuMo Embeds
+- [ ] WanVideo Combine Embeds
+- [ ] Load Lynx Resampler
+- [ ] Lynx Encode Face IP
+- [ ] Draw ArcFace Landmarks
+- [ ] WanVideo Add Lynx Embeds
+- [ ] Lynx InsightFace Crop
+- [ ] Ovi MMAudio VAE Loader
+- [ ] WanVideo Decode Ovi Audio
+- [ ] WanVideo Encode Ovi Audio
+- [ ] WanVideo Ovi CFG
+- [ ] WanVideo Add MMAudio To Latents
+- [ ] WanVideo Empty MMAudio Latents
+- [ ] WanVideo Add SteadyDancer Embeds
+- [ ] WanVideo Add OneToAll Reference Embeds
+- [ ] WanVideo Add OneToAll Pose Embeds
+- [ ] WanVideo Add OneToAll Extend Embeds
+- [ ] WanVideo Add WanMove Tracks
+- [ ] WanVideo Draw WanMove Tracks
+- [ ] WanMove Native ~~DEPRECATED~~
+- [ ] WanVideo Add SCAIL Pose Embeds
+- [ ] WanVideo Add SCAIL Reference Embeds
 
 ## ComfyUI_AudioTools
 
-- [✓] Amplify / Gain
-- [✓] Normalize Audio
-- [✓] Standardize Audio (Format/Channels)
-- [✓] Remove Silence
-- [✓] De-Esser
-- [✓] De-Plosive (Low Cut)
-- [✓] Parametric EQ for Voice
-- [✓] Vocal Compressor
-- [✓] De-Hum (50/60Hz)
-- [✓] Noise Gate
-- [✓] Reverb
-- [✓] Delay / Echo
-- [✓] Pitch Shift / Time Stretch
-- [✓] Fade In
-- [✓] Fade Out
-- [✓] Mix Audio Tracks
-- [✓] Trim Audio
-- [✓] Stereo Panner
-- [✓] Pad With Silence
-- [✓] Stem Separator (AI)
-- [✓] Speech Denoise (AI)
-- [✓] Speech-to-Text + SRT (Whisper)
-- [✓] Loudness Meter (LUFS)
-- [✓] BPM Detector / Reactive
-- [✓] Audio-Reactive Envelope
-- [✓] Display Waveform
-- [✓] Compare Waveforms
-- [✓] Show Audio Info
+- [ ] Amplify / Gain
+- [ ] Normalize Audio
+- [ ] Standardize Audio (Format/Channels)
+- [ ] Remove Silence
+- [ ] De-Esser
+- [ ] De-Plosive (Low Cut)
+- [ ] Parametric EQ for Voice
+- [ ] Vocal Compressor
+- [ ] De-Hum (50/60Hz)
+- [ ] Noise Gate
+- [ ] Reverb
+- [ ] Delay / Echo
+- [ ] Pitch Shift / Time Stretch
+- [ ] Fade In
+- [ ] Fade Out
+- [ ] Mix Audio Tracks
+- [ ] Trim Audio
+- [ ] Stereo Panner
+- [ ] Pad With Silence
+- [ ] Stem Separator (AI)
+- [ ] Speech Denoise (AI)
+- [ ] Speech-to-Text + SRT (Whisper)
+- [ ] Loudness Meter (LUFS)
+- [ ] BPM Detector / Reactive
+- [ ] Audio-Reactive Envelope
+- [ ] Display Waveform
+- [ ] Compare Waveforms
+- [ ] Show Audio Info
+
+## ComfyUI_Fill-ChatterBox
+
+- [ ] FL Chatterbox TTS
+- [ ] FL Chatterbox Turbo TTS
+- [ ] FL Chatterbox Multilingual TTS
+- [ ] FL Chatterbox VC
+- [ ] FL Chatterbox Dialog TTS
+
+## ControlAltAI-Nodes
+
+- [ ] Flux Resolution Calc
+- [ ] Flux Sampler
+- [ ] Flux Union ControlNet Apply
+- [ ] Boolean Basic
+- [ ] Boolean Reverse
+- [ ] Get Image Size Ratio
+- [ ] Noise Plus Blend
+- [ ] Integer Settings
+- [ ] Integer Settings Advanced
+- [ ] Choose Upscale Model
+- [ ] Region Mask Generator
+- [ ] Region Mask Validator
+- [ ] Region Mask Processor
+- [ ] Region Mask Conditioning
+- [ ] Region Overlay Visualizer
+- [ ] Flux Attention Cleanup
+- [ ] HiDream Resolution
+- [ ] Perturbation Texture
+- [ ] Text Bridge
+- [ ] Switch (Two Way)
+- [ ] Switch (Three Way)
 
 ## CustomNodeComfyMath
 
-- [✓] BoolToInt
+- [ ] BoolToInt
+- [ ] IntToBool
+- [ ] FloatToInt
+- [ ] IntToFloat
+- [ ] IntToNumber
+- [ ] NumberToInt
+- [ ] FloatToNumber
+- [ ] NumberToFloat
+- [ ] ComposeVec2
+- [ ] ComposeVec3
+- [ ] ComposeVec4
+- [ ] BreakoutVec2
+- [ ] BreakoutVec3
+- [ ] BreakoutVec4
+- [ ] BoolUnaryOperation
+- [ ] BoolBinaryOperation
+- [ ] IntUnaryOperation
+- [ ] IntUnaryCondition
+- [ ] IntBinaryOperation
+- [ ] IntBinaryCondition
+- [ ] FloatUnaryOperation
+- [ ] FloatUnaryCondition
+- [ ] FloatBinaryOperation
+- [ ] FloatBinaryCondition
+- [ ] NumberUnaryOperation
+- [ ] NumberUnaryCondition
+- [ ] NumberBinaryOperation
+- [ ] NumberBinaryCondition
+- [ ] Vec2UnaryOperation
+- [ ] Vec2UnaryCondition
+- [ ] Vec2ToScalarUnaryOperation
+- [ ] Vec2BinaryOperation
+- [ ] Vec2BinaryCondition
+- [ ] Vec2ToScalarBinaryOperation
+- [ ] Vec2ScalarOperation
+- [ ] Vec3UnaryOperation
+- [ ] Vec3UnaryCondition
+- [ ] Vec3ToScalarUnaryOperation
+- [ ] Vec3BinaryOperation
+- [ ] Vec3BinaryCondition
+- [ ] Vec3ToScalarBinaryOperation
+- [ ] Vec3ScalarOperation
+- [ ] Vec4UnaryOperation
+- [ ] Vec4UnaryCondition
+- [ ] Vec4ToScalarUnaryOperation
+- [ ] Vec4BinaryOperation
+- [ ] Vec4BinaryCondition
+- [ ] Vec4ToScalarBinaryOperation
+- [ ] Vec4ScalarOperation
+- [ ] SDXLResolution
+- [ ] NearestSDXLResolution
+- [ ] SDXLExtendedResolution
+- [ ] NearestSDXLExtendedResolution
 
-- Description: On Vue-based node layout the `BoolToInt` node's true/false value does not display when toggling the widget; the older (non-Vue) layout shows `true`/`false` correctly.
+## RES4LYF
 
-- [✓] IntToBool
-- [✓] FloatToInt
-- [✓] IntToFloat
-- [✓] IntToNumber
-- [✓] NumberToInt
-- [✓] FloatToNumber
-- [✓] NumberToFloat
-- [✓] ComposeVec2
-- [✓] ComposeVec3
-- [✓] ComposeVec4
-- [✓] BreakoutVec2
-- [✓] BreakoutVec3
-- [✓] BreakoutVec4
-- [✓] BoolUnaryOperation
-- Description: On Vue-based node layout the `BoolUnaryOperation` node's true/false value does not display when toggling the widget; the older (non-Vue) layout shows `true`/`false` correctly.
-
-- [✓] BoolBinaryOperation
-- Description: On Vue-based node layout the `BoolBinaryOperation` node's true/false value does not display when toggling the widget; the older (non-Vue) layout shows `true`/`false` correctly.
-
-- [✓] IntUnaryOperation
-- [✓] IntUnaryCondition
-- [✓] IntBinaryOperation
-- [✓] IntBinaryCondition
-- [✓] FloatUnaryOperation
-- [✓] FloatUnaryCondition
-- [✓] FloatBinaryOperation
-- [✓] FloatBinaryCondition
-- [✓] NumberUnaryOperation
-- [✓] NumberUnaryCondition
-- [✓] NumberBinaryOperation
-- [✓] NumberBinaryCondition
-- [✓] Vec2UnaryOperation
-- [✓] Vec2UnaryCondition
-- [✓] Vec2ToScalarUnaryOperation
-- [✓] Vec2BinaryOperation
-- [✓] Vec2BinaryCondition
-- [✓] Vec2ToScalarBinaryOperation
-- [✓] Vec2ScalarOperation
-- [✓] Vec3UnaryOperation
-- [✓] Vec3UnaryCondition
-- [✓] Vec3ToScalarUnaryOperation
-- [✓] Vec3BinaryOperation
-- [✓] Vec3BinaryCondition
-- [✓] Vec3ToScalarBinaryOperation
-- [✓] Vec3ScalarOperation
-- [✓] Vec4UnaryOperation
-- [✓] Vec4UnaryCondition
-- [✓] Vec4ToScalarUnaryOperation
-- [✓] Vec4BinaryOperation
-- [✓] Vec4BinaryCondition
-- [✓] Vec4ToScalarBinaryOperation
-- [✓] Vec4ScalarOperation
-- [✓] SDXLResolution
-- [✓] NearestSDXLResolution
-- [✓] SDXLExtendedResolution
-- [✓] NearestSDXLExtendedResolution
+- [ ] FluxLoader
+- [ ] SD35Loader
+- [ ] ClownModelLoader
+- [ ] TextBox1
+- [ ] TextBox2
+- [ ] TextBox3
+- [ ] TextConcatenate
+- [ ] TextBoxConcatenate
+- [ ] TextLoadFile
+- [ ] TextShuffle
+- [ ] TextShuffleAndTruncate
+- [ ] TextTruncateTokens
+- [ ] SeedGenerator
+- [ ] ClownRegionalConditioning
+- [ ] ClownRegionalConditionings
+- [ ] ClownRegionalConditioning2
+- [ ] ClownRegionalConditioning3
+- [ ] ClownRegionalConditioning_AB
+- [ ] ClownRegionalConditioning_ABC
+- [ ] CLIPTextEncodeFluxUnguided
+- [ ] ConditioningOrthoCollin
+- [ ] ConditioningAverageScheduler
+- [ ] ConditioningMultiply
+- [ ] ConditioningAdd
+- [ ] Conditioning Recast FP64
+- [ ] StableCascade_StageB_Conditioning64
+- [ ] ConditioningZeroAndTruncate
+- [ ] ConditioningTruncate
+- [ ] StyleModelApplyStyle
+- [ ] CrossAttn_EraseReplace_HiDream
+- [ ] ConditioningDownsample (T5)
+- [ ] ConditioningBatch4
+- [ ] ConditioningBatch8
+- [ ] TemporalMaskGenerator
+- [ ] TemporalSplitAttnMask
+- [ ] TemporalSplitAttnMask (Midframe)
+- [ ] TemporalCrossAttnMask
+- [ ] Set Precision
+- [ ] Set Precision Universal
+- [ ] Set Precision Advanced
+- [ ] LatentUpscaleWithVAE
+- [ ] LatentNoised
+- [ ] LatentNoiseList
+- [ ] AdvancedNoise
+- [ ] LatentNoiseBatch_perlin
+- [ ] LatentNoiseBatch_fractal
+- [ ] LatentNoiseBatch_gaussian
+- [ ] LatentNoiseBatch_gaussian_channels
+- [ ] LatentBatch_channels
+- [ ] LatentBatch_channels_16
+- [ ] Latent Get Channel Means
+- [ ] Latent Match Channelwise
+- [ ] Latent to RawX
+- [ ] Latent Clear State Info
+- [ ] Latent Replace State Info
+- [ ] Latent Display State Info
+- [ ] Latent Transfer State Info
+- [ ] Latent TrimVideo State Info
+- [ ] Latent to Cuda
+- [ ] Latent Batcher
+- [ ] Latent Normalize Channels
+- [ ] Latent Channels From To
+- [ ] LatentPhaseMagnitude
+- [ ] LatentPhaseMagnitudeMultiply
+- [ ] LatentPhaseMagnitudeOffset
+- [ ] LatentPhaseMagnitudePower
+- [ ] MaskFloatToBoolean
+- [ ] MaskToggle
+- [ ] MaskEdge
+- [ ] Frames Masks Uninterpolate
+- [ ] Frames Masks ZeroOut
+- [ ] Frames Latent ReverseOrder
+- [ ] EmptyLatentImage64
+- [ ] EmptyLatentImageCustom
+- [ ] StableCascade_StageC_VAEEncode_Exact
+- [ ] PrepForUnsampling
+- [ ] VAEEncodeAdvanced
+- [ ] VAEStyleTransferLatent
+- [ ] SigmasPreview
+- [ ] SigmasSchedulePreview
+- [ ] TorchCompileModelFluxAdv
+- [ ] TorchCompileModelAura
+- [ ] TorchCompileModelSD35
+- [ ] TorchCompileModels
+- [ ] ClownpileModelWanVideo
+- [ ] ModelTimestepPatcher
+- [ ] ModelSamplingAdvanced
+- [ ] ModelSamplingAdvancedResolution
+- [ ] FluxGuidanceDisable
+- [ ] ReWanPatcher
+- [ ] ReFluxPatcher
+- [ ] ReChromaPatcher
+- [ ] ReSD35Patcher
+- [ ] ReAuraPatcher
+- [ ] ReLTXVPatcher
+- [ ] ReHiDreamPatcher
+- [ ] ReSDPatcher
+- [ ] ReReduxPatcher
+- [ ] ReWanPatcherAdvanced
+- [ ] ReFluxPatcherAdvanced
+- [ ] ReChromaPatcherAdvanced
+- [ ] ReSD35PatcherAdvanced
+- [ ] ReAuraPatcherAdvanced
+- [ ] ReLTXVPatcherAdvanced
+- [ ] ReHiDreamPatcherAdvanced
+- [ ] LayerPatcher
+- [ ] FluxOrthoCFGPatcher
+- [ ] Sigmas Recast
+- [ ] Sigmas Noise Inversion
+- [ ] Sigmas From Text
+- [ ] Sigmas Variance Floor
+- [ ] Sigmas Truncate
+- [ ] Sigmas Start
+- [ ] Sigmas Split
+- [ ] Sigmas Split Value
+- [ ] Sigmas Concat
+- [ ] Sigmas Pad
+- [ ] Sigmas Unpad
+- [ ] Sigmas SetFloor
+- [ ] Sigmas DeleteBelowFloor
+- [ ] Sigmas DeleteDuplicates
+- [ ] Sigmas Cleanup
+- [ ] Sigmas Mult
+- [ ] Sigmas Modulus
+- [ ] Sigmas Quotient
+- [ ] Sigmas Add
+- [ ] Sigmas Power
+- [ ] Sigmas Abs
+- [ ] Sigmas2 Mult
+- [ ] Sigmas2 Add
+- [ ] Sigmas Rescale
+- [ ] Sigmas Count
+- [ ] Sigmas Resample
+- [ ] Sigmas Math1
+- [ ] Sigmas Math3
+- [ ] Sigmas Iteration Karras
+- [ ] Sigmas Iteration Polyexp
+- [ ] Sigmas Lerp
+- [ ] Sigmas InvLerp
+- [ ] Sigmas ArcSine
+- [ ] Sigmas LinearSine
+- [ ] Sigmas Append
+- [ ] Sigmas ArcCosine
+- [ ] Sigmas ArcTangent
+- [ ] Sigmas CrossProduct
+- [ ] Sigmas DotProduct
+- [ ] Sigmas Fmod
+- [ ] Sigmas Frac
+- [ ] Sigmas If
+- [ ] Sigmas Logarithm2
+- [ ] Sigmas SmoothStep
+- [ ] Sigmas SquareRoot
+- [ ] Sigmas TimeStep
+- [ ] Sigmas Sigmoid
+- [ ] Sigmas Easing
+- [ ] Sigmas Hyperbolic
+- [ ] Sigmas Gaussian
+- [ ] Sigmas Percentile
+- [ ] Sigmas KernelSmooth
+- [ ] Sigmas QuantileNorm
+- [ ] Sigmas AdaptiveStep
+- [ ] Sigmas Chaos
+- [ ] Sigmas ReactionDiffusion
+- [ ] Sigmas Attractor
+- [ ] Sigmas CatmullRom
+- [ ] Sigmas LambertW
+- [ ] Sigmas ZetaEta
+- [ ] Sigmas GammaBeta
+- [ ] Sigmas GaussianCDF
+- [ ] Sigmas StepwiseMultirate
+- [ ] Sigmas HarmonicDecay
+- [ ] Sigmas AdaptiveNoiseFloor
+- [ ] Sigmas CollatzIteration
+- [ ] Sigmas ConwaySequence
+- [ ] Sigmas GilbreathSequence
+- [ ] Sigmas CNFInverse
+- [ ] Sigmas RiemannianFlow
+- [ ] Sigmas LangevinDynamics
+- [ ] Sigmas PersistentHomology
+- [ ] Sigmas NormalizingFlows
+- [ ] ClownScheduler
+- [ ] Tan Scheduler
+- [ ] Tan Scheduler 2
+- [ ] Tan Scheduler 2 Simple
+- [ ] Constant Scheduler
+- [ ] Linear Quadratic Advanced
+- [ ] SetImageSizeWithScale
+- [ ] SetImageSize
+- [ ] Mask Bounding Box Aspect Ratio
+- [ ] Image Get Color Swatches
+- [ ] Masks From Color Swatches
+- [ ] Masks From Colors
+- [ ] Masks Unpack 4
+- [ ] Masks Unpack 8
+- [ ] Masks Unpack 16
+- [ ] Image Sharpen FS
+- [ ] Image Channels LAB
+- [ ] Image Median Blur
+- [ ] Image Gaussian Blur
+- [ ] Image Pair Split
+- [ ] Image Crop Location Exact
+- [ ] Film Grain
+- [ ] Frequency Separation Linear Light
+- [ ] Frequency Separation Hard Light
+- [ ] Frequency Separation Hard Light LAB
+- [ ] Frame Select
+- [ ] Frames Slice
+- [ ] Frames Concat
+- [ ] Mask Sketch
+- [ ] Image Grain Add
+- [ ] Image Repeat Tile To Size
+- [ ] Frames Concat Masks
+- [ ] Frame Select Latent
+- [ ] Frames Slice Latent
+- [ ] Frames Concat Latent
+- [ ] Frame Select Latent Raw
+- [ ] Frames Slice Latent Raw
+- [ ] Frames Concat Latent Raw
+- [ ] SharkOptions
+- [ ] ClownOptions SDE
+- [ ] ClownOptions Detail Boost
+- [ ] ClownGuide Style
+- [ ] ClownGuide_Style_EdgeWidth
+- [ ] ClownGuide_Style_TileSize
+- [ ] ClownGuide
+- [ ] ClownGuides
+- [ ] ClownGuidesAB
+- [ ] ClownGuides Sync
+- [ ] ClownGuides Sync_Advanced
+- [ ] ClownGuide_FrequencySeparation
+- [ ] SharkOptions Guider Input
+- [ ] ClownOptions Implicit Steps
+- [ ] ClownOptions Cycles
+- [ ] SharkOptions Guide Cond
+- [ ] SharkOptions Guide Conds
+- [ ] ClownOptions Tile
+- [ ] ClownOptions Tile Advanced
+- [ ] ClownGuide Mean
+- [ ] ClownGuide AdaIN (HiDream)
+- [ ] ClownGuide AttnInj (HiDream)
+- [ ] ClownGuide_StyleNorm_Advanced_HiDream
+- [ ] ClownOptions SDE Mask
+- [ ] ClownOptions Step Size
+- [ ] ClownOptions Sigma Scaling
+- [ ] ClownOptions Momentum
+- [ ] ClownOptions Swap Sampler
+- [ ] ClownOptions Extra Options
+- [ ] ClownOptions Automation
+- [ ] SharkOptions UltraCascade Latent
+- [ ] SharkOptions Start Step
+- [ ] ClownOptions Combine
+- [ ] ClownOptions Frameweights
+- [ ] ClownOptions_FlowGuide
+- [ ] ClownStyle_Block_MMDiT
+- [ ] ClownStyle_MMDiT
+- [ ] ClownStyle_Attn_MMDiT
+- [ ] ClownStyle_Boost
+- [ ] ClownStyle_UNet
+- [ ] ClownStyle_Block_UNet
+- [ ] ClownStyle_Attn_UNet
+- [ ] ClownStyle_ResBlock_UNet
+- [ ] ClownStyle_SpatialBlock_UNet
+- [ ] ClownStyle_TransformerBlock_UNet
+- [ ] ClownSamplerSelector
+- [ ] SharkSampler
+- [ ] SharkChainsampler
+- [ ] ClownsharKSampler
+- [ ] ClownsharkChainsampler
+- [ ] ClownSampler
+- [ ] ClownSamplerAdvanced
+- [ ] BongSampler
+- [ ] Legacy_ClownSampler ~~DEPRECATED~~
+- [ ] Legacy_SharkSampler ~~DEPRECATED~~
+- [ ] Legacy_ClownsharKSampler ~~DEPRECATED~~
+- [ ] Legacy_ClownsharKSamplerGuides ~~DEPRECATED~~
+- [ ] Legacy2_ClownSampler ~~DEPRECATED~~
+- [ ] Legacy2_ClownSamplerAdvanced ~~DEPRECATED~~
+- [ ] Legacy2_ClownsharKSampler ~~DEPRECATED~~
+- [ ] Legacy2_ClownsharKSamplerGuides ~~DEPRECATED~~
+- [ ] Legacy2_ClownsharKSamplerGuide ~~DEPRECATED~~
+- [ ] Legacy2_ClownOptions_SDE_Noise ~~DEPRECATED~~
+- [ ] Legacy2_ClownOptions_FrameWeights ~~DEPRECATED~~
+- [ ] Legacy2_ClownInpaint ~~DEPRECATED~~
+- [ ] Legacy2_ClownInpaintSimple ~~DEPRECATED~~
+- [ ] Legacy2_ClownsharKSamplerOptions ~~DEPRECATED~~
+- [ ] Legacy2_ClownsharKSamplerAutomation ~~DEPRECATED~~
+- [ ] Legacy2_ClownsharKSamplerAutomation_Advanced ~~DEPRECATED~~
+- [ ] Legacy2_SamplerOptions_TimestepScaling ~~DEPRECATED~~
+- [ ] Legacy2_SamplerOptions_GarbageCollection ~~DEPRECATED~~
+- [ ] Legacy2_UltraSharkSampler ~~DEPRECATED~~
+- [ ] UltraSharkSampler Tiled ~~DEPRECATED~~
 
 ## audio-separation-nodes-comfyui
 
-- [✓] AudioSeparation
-- [✓] AudioCrop
-- [✓] AudioCombine
-- [✓] AudioTempoMatch
-- [✓] AudioVideoCombine
-- Cannot retrieve video path for widget/upload video directly.
-
-- [✓] AudioSpeedShift
-- [✓] AudioGetTempo
+- [ ] AudioSeparation
+- [ ] AudioCrop
+- [ ] AudioCombine
+- [ ] AudioTempoMatch
+- [ ] AudioVideoCombine
+- [ ] AudioSpeedShift
+- [ ] AudioGetTempo
 
 ## comfy_api_nodes
 
-- [✓] Ideogram V1
-- [✓] Ideogram V2
-- [✓] Ideogram V3
-- [✓] OpenAI DALL·E 2
-- [✓] OpenAI DALL·E 3
-- [✓] OpenAI GPT Image 1
-- [✓] OpenAI ChatGPT
-- [✓] OpenAI ChatGPT Input Files
-- [✓] OpenAI ChatGPT Advanced Options
-- [✓] MiniMax Text to Video
-- [✓] MiniMax Image to Video
-- [✓] MiniMax Hailuo Video
-- [✓] Google Veo 2 Video Generation
-- [✓] Google Veo 3 Video Generation
-- [✓] Google Veo 3 First-Last-Frame to Video
-- [✓] Kling Camera Controls
-- [✓] Kling Text to Video
-- [✓] Kling Image(First Frame) to Video
-- [✓] Kling Image to Video (Camera Control)
-- [✓] Kling Text to Video (Camera Control)
-- [✓] Kling Start-End Frame to Video
-- [✓] Kling Video Extend
-- [✓] Kling Lip Sync Video with Audio
-- [✓] Kling Lip Sync Video with Text
-- [✓] Kling Virtual Try On
-- [✓] Kling Image Generation
-- [✓] Kling Video Effects
-- [✓] Kling Dual Character Video Effects
-- [✓] Kling Omni Text to Video (Pro)
-- [✓] Kling Omni First-Last-Frame to Video (Pro)
-- [✓] Kling Omni Image to Video (Pro)
-- [✓] Kling Omni Video to Video (Pro)
-- [✓] Kling Omni Edit Video (Pro)
-- [✓] Kling Omni Image (Pro)
-- [✓] Kling Text to Video with Audio
-- [✓] Kling Image(First Frame) to Video with Audio
-- [✓] Flux 1.1 [pro] Ultra Image
-- User needs to type 'aspect ratio' manually instead of being presented with drop-down size presets.
-- [✓] Flux.1 Kontext [pro] Image
-- User needs to type 'aspect ratio' manually instead of being presented with drop-down size presets.
-- [✓] Flux.1 Kontext [max] Image
-- User needs to type 'aspect ratio' manually instead of being presented with drop-down size presets.
-- [✓] Flux.1 Expand Image
-- [✓] Flux.1 Fill Image
-- [✓] Flux.2 [pro] Image
-- [✓] ByteDance Image
-- [✓] ByteDance Image Edit
-- [✓] ByteDance Seedream 4
-- [✓] ByteDance Text to Video
-- [✓] ByteDance Image to Video
-- [✓] ByteDance First-Last-Frame to Video
-- [✓] ByteDance Reference Images to Video
-- [✓] LTXV Text To Video
-- [✓] LTXV Image To Video
-- [✓] Luma Text to Image
-- [✓] Luma Image to Image
-- [✓] Luma Text to Video
-- [✓] Luma Image to Video
-- [✓] Luma Reference
-- [✓] Luma Concepts
-- [✓] Recraft Text to Image
-- [✓] Recraft Image to Image
-- [✓] Recraft Image Inpainting
-- [✓] Recraft Text to Vector
-- [✓] Recraft Vectorize Image
-- [✓] Recraft Remove Background
-- [✓] Recraft Replace Background
-- [✓] Recraft Crisp Upscale Image
-- [✓] Recraft Creative Upscale Image
-- [✓] Recraft Style - Realistic Image
-- [✓] Recraft Style - Digital Illustration
-- [✓] Recraft Style - Logo Raster
-- [✓] Recraft Style - Infinite Style Library
-- Description: Unable to use node; unclear how to retrieve or use a `style_id`.
-
-- [✓] Recraft Color RGB
-- [✓] Recraft Controls
-- [✓] PixVerse Text to Video
-- [✓] PixVerse Image to Video
-- [✓] PixVerse Transition Video
-- [✓] PixVerse Template
-- [✓] Stability AI Stable Image Ultra
-- [✓] Stability AI Stable Diffusion 3.5 Image
-- [✓] Stability AI Upscale Conservative
-- [✓] Stability AI Upscale Creative
-- [✓] Stability AI Upscale Fast
-- [✓] Stability AI Text To Audio
-- Would be easier if user can adjust duration by seconds, not number of frames.
-
-- [✓] Stability AI Audio To Audio
-- Would be easier if user can adjust duration by seconds, not number of frames.
-
-- [✓] Stability AI Audio Inpaint
-- Would be easier if user can adjust duration by seconds, not number of frames.
-
-- [✓] Runway First-Last-Frame to Video
-- [✓] Runway Image to Video (Gen3a Turbo)
-- [✓] Runway Image to Video (Gen4 Turbo)
-- [✓] Runway Text to Image
-- [✓] OpenAI Sora - Video
-- [✓] Topaz Image Enhance
-- [✓] Topaz Video Enhance
-- [✓] Tripo: Text to Model
-- Doesn't contain Vue node 'seed' button layout/controls on corresponding widgets.
-
-- [✓] Tripo: Image to Model
-- Doesn't contain Vue node 'seed' button layout/controls on corresponding widgets.
-
-- [✓] Tripo: Multiview to Model
-- Doesn't contain Vue node 'seed' button layout/controls on corresponding widgets.
-
-- [✓] Tripo: Texture model
-- Doesn't contain Vue node 'seed' button layout/controls on corresponding widgets.
-
-- [✓] Tripo: Refine Draft model
-- [✓] Tripo: Rig model
-- [✓] Tripo: Retarget rigged model
-- [✓] Tripo: Convert model
-- [✓] Moonvalley Marey Image to Video
-- [✓] Moonvalley Marey Text to Video
-- [✓] Moonvalley Marey Video to Video
-- Doesn't contain Vue node 'seed' button layout/controls on corresponding widgets.
-
-- [✓] Rodin 3D Generate - Regular Generate
-- Doesn't contain Vue node 'seed' button layout/controls on corresponding widgets.
-
-- [✓] Rodin 3D Generate - Detail Generate
-- Doesn't contain Vue node 'seed' button layout/controls on corresponding widgets.
-
-- [✓] Rodin 3D Generate - Smooth Generate
-- Doesn't contain Vue node 'seed' button layout/controls on corresponding widgets.
-
-- [✓] Rodin 3D Generate - Sketch Generate
-- Doesn't contain Vue node 'seed' button layout/controls on corresponding widgets.
-
-- [✓] Rodin 3D Generate - Gen-2 Generate
-- Doesn't contain Vue node 'seed' button layout/controls on corresponding widgets.
-
-- [✓] Google Gemini
-- [✓] Nano Banana (Google Gemini Image)
-- [✓] Nano Banana Pro (Google Gemini Image)
-- [✓] Gemini Input Files
-- [✓] Vidu Text To Video Generation
-- [✓] Vidu Image To Video Generation
-- [✓] Vidu Reference To Video Generation
-- [✓] Vidu Start End To Video Generation
-- [✓] Wan Text to Image
-- [✓] Wan Image to Image
-- [✓] Wan Text to Video
-- [✓] Wan Image to Video
+- [ ] Ideogram V1
+- [ ] Ideogram V2
+- [ ] Ideogram V3
+- [ ] OpenAI DALL·E 2
+- [ ] OpenAI DALL·E 3
+- [ ] OpenAI GPT Image 1
+- [ ] OpenAI ChatGPT
+- [ ] OpenAI ChatGPT Input Files
+- [ ] OpenAI ChatGPT Advanced Options
+- [ ] MiniMax Text to Video
+- [ ] MiniMax Image to Video
+- [ ] MiniMax Hailuo Video
+- [ ] Google Veo 2 Video Generation
+- [ ] Google Veo 3 Video Generation
+- [ ] Google Veo 3 First-Last-Frame to Video
+- [ ] Kling Camera Controls
+- [ ] Kling Text to Video
+- [ ] Kling Image(First Frame) to Video
+- [ ] Kling Image to Video (Camera Control)
+- [ ] Kling Text to Video (Camera Control)
+- [ ] Kling Start-End Frame to Video
+- [ ] Kling Video Extend
+- [ ] Kling Lip Sync Video with Audio
+- [ ] Kling Lip Sync Video with Text
+- [ ] Kling Virtual Try On
+- [ ] Kling Image Generation
+- [ ] Kling Video Effects
+- [ ] Kling Dual Character Video Effects
+- [ ] Kling Omni Text to Video (Pro)
+- [ ] Kling Omni First-Last-Frame to Video (Pro)
+- [ ] Kling Omni Image to Video (Pro)
+- [ ] Kling Omni Video to Video (Pro)
+- [ ] Kling Omni Edit Video (Pro)
+- [ ] Kling Omni Image (Pro)
+- [ ] Kling Text to Video with Audio
+- [ ] Kling Image(First Frame) to Video with Audio
+- [ ] Kling Motion Control
+- [ ] Flux 1.1 [pro] Ultra Image
+- [ ] Flux.1 Kontext [pro] Image
+- [ ] Flux.1 Kontext [max] Image
+- [ ] Flux.1 Expand Image
+- [ ] Flux.1 Fill Image
+- [ ] Flux.2 [pro] Image
+- [ ] Flux.2 [max] Image
+- [ ] ByteDance Image
+- [ ] ByteDance Image Edit ~~DEPRECATED~~
+- [ ] ByteDance Seedream 4
+- [ ] ByteDance Text to Video
+- [ ] ByteDance Image to Video
+- [ ] ByteDance First-Last-Frame to Video
+- [ ] ByteDance Reference Images to Video
+- [ ] LTXV Text To Video
+- [ ] LTXV Image To Video
+- [ ] Luma Text to Image
+- [ ] Luma Image to Image
+- [ ] Luma Text to Video
+- [ ] Luma Image to Video
+- [ ] Luma Reference
+- [ ] Luma Concepts
+- [ ] Recraft Text to Image
+- [ ] Recraft Image to Image
+- [ ] Recraft Image Inpainting
+- [ ] Recraft Text to Vector
+- [ ] Recraft Vectorize Image
+- [ ] Recraft Remove Background
+- [ ] Recraft Replace Background
+- [ ] Recraft Crisp Upscale Image
+- [ ] Recraft Creative Upscale Image
+- [ ] Recraft Style - Realistic Image
+- [ ] Recraft Style - Digital Illustration
+- [ ] Recraft Style - Logo Raster
+- [ ] Recraft Style - Infinite Style Library
+- [ ] Recraft Color RGB
+- [ ] Recraft Controls
+- [ ] PixVerse Text to Video
+- [ ] PixVerse Image to Video
+- [ ] PixVerse Transition Video
+- [ ] PixVerse Template
+- [ ] Stability AI Stable Image Ultra
+- [ ] Stability AI Stable Diffusion 3.5 Image
+- [ ] Stability AI Upscale Conservative
+- [ ] Stability AI Upscale Creative
+- [ ] Stability AI Upscale Fast
+- [ ] Stability AI Text To Audio
+- [ ] Stability AI Audio To Audio
+- [ ] Stability AI Audio Inpaint
+- [ ] Runway First-Last-Frame to Video
+- [ ] Runway Image to Video (Gen3a Turbo)
+- [ ] Runway Image to Video (Gen4 Turbo)
+- [ ] Runway Text to Image
+- [ ] OpenAI Sora - Video
+- [ ] Topaz Image Enhance
+- [ ] Topaz Video Enhance
+- [ ] Tripo: Text to Model
+- [ ] Tripo: Image to Model
+- [ ] Tripo: Multiview to Model
+- [ ] Tripo: Texture model
+- [ ] Tripo: Refine Draft model
+- [ ] Tripo: Rig model
+- [ ] Tripo: Retarget rigged model
+- [ ] Tripo: Convert model
+- [ ] Moonvalley Marey Image to Video
+- [ ] Moonvalley Marey Text to Video
+- [ ] Moonvalley Marey Video to Video
+- [ ] Rodin 3D Generate - Regular Generate
+- [ ] Rodin 3D Generate - Detail Generate
+- [ ] Rodin 3D Generate - Smooth Generate
+- [ ] Rodin 3D Generate - Sketch Generate
+- [ ] Rodin 3D Generate - Gen-2 Generate
+- [ ] Google Gemini
+- [ ] Nano Banana (Google Gemini Image)
+- [ ] Nano Banana Pro (Google Gemini Image)
+- [ ] Gemini Input Files
+- [ ] Vidu Text To Video Generation
+- [ ] Vidu Image To Video Generation
+- [ ] Vidu Reference To Video Generation
+- [ ] Vidu Start End To Video Generation
+- [ ] Wan Text to Image
+- [ ] Wan Image to Image
+- [ ] Wan Text to Video
+- [ ] Wan Image to Video
+- [ ] Wan Reference to Video
 
 ## comfy_extras
 
@@ -422,7 +717,8 @@
 - [ ] LatentInterpolate
 - [ ] LatentConcat
 - [ ] LatentCut
-- [ ] LatentBatch
+- [ ] LatentCutToBatch
+- [ ] LatentBatch ~~DEPRECATED~~
 - [ ] LatentBatchSeedBehavior
 - [ ] LatentApplyOperation
 - [ ] LatentApplyOperationCFG
@@ -437,6 +733,10 @@
 - [ ] ImageQuantize
 - [ ] ImageSharpen
 - [ ] ImageScaleToTotalPixels
+- [ ] Resize Image/Mask
+- [ ] Batch Images
+- [ ] Batch Masks
+- [ ] Batch Latents
 - [ ] LatentCompositeMasked
 - [ ] ImageCompositeMasked
 - [ ] Convert Mask to Image
@@ -502,6 +802,7 @@
 - [ ] DisableNoise
 - [ ] AddNoise
 - [ ] SamplerCustomAdvanced
+- [ ] ManualSigmas
 - [ ] HyperTile
 - [ ] ModelSamplingDiscrete
 - [ ] ModelSamplingContinuousEDM
@@ -555,6 +856,7 @@
 - [ ] Merge Image Lists
 - [ ] Merge Text Lists
 - [ ] Make Training Dataset
+- [ ] Resolution Bucket
 - [ ] Self-Attention Guidance
 - [ ] Perp-Neg (DEPRECATED by PerpNegGuider) ~~DEPRECATED~~
 - [ ] PerpNegGuider
@@ -641,7 +943,7 @@
 - [ ] FluxGuidance
 - [ ] FluxDisableGuidance
 - [ ] FluxKontextImageScale
-- [ ] FluxKontextMultiReferenceLatentMethod
+- [ ] Edit Model Reference Method
 - [ ] Empty Flux 2 Latent
 - [ ] Flux2Scheduler
 - [ ] TorchCompileModel
@@ -649,14 +951,23 @@
 - [ ] SkipLayerGuidanceDiT
 - [ ] SkipLayerGuidanceDiTSimple
 - [ ] Mahiro is so cute that she deserves a better guidance function!! (。・ω・。)
+- [ ] LTXVLatentUpsampler
+- [ ] LTXV Audio VAE Loader
+- [ ] LTXV Audio VAE Encode
+- [ ] LTXV Audio VAE Decode
+- [ ] LTXV Empty Latent Audio
+- [ ] LTXV Audio Text Encoder Loader
 - [ ] EmptyLTXVLatentVideo
 - [ ] LTXVImgToVideo
+- [ ] LTXVImgToVideoInplace
 - [ ] ModelSamplingLTXV
 - [ ] LTXVConditioning
 - [ ] LTXVScheduler
 - [ ] LTXVAddGuide
 - [ ] LTXVPreprocess
 - [ ] LTXVCropGuides
+- [ ] LTXVConcatAVLatent
+- [ ] LTXVSeparateAVLatent
 - [ ] Create Hook LoRA
 - [ ] Create Hook LoRA (MO)
 - [ ] Create Hook Model as LoRA
@@ -745,6 +1056,7 @@
 - [ ] WAN Context Windows (Manual)
 - [ ] TextEncodeQwenImageEdit
 - [ ] TextEncodeQwenImageEditPlus
+- [ ] Empty Qwen Image Layered Latent
 - [ ] EmptyChromaRadianceLatentImage
 - [ ] ChromaRadianceOptions
 - [ ] ModelPatchLoader
@@ -756,6 +1068,8 @@
 - [ ] AudioEncoderLoader
 - [ ] AudioEncoderEncode
 - [ ] ScaleROPE
+- [ ] Switch
+- [ ] Custom Combo
 - [ ] wanBlockSwap ~~DEPRECATED~~
 - [ ] Kandinsky5ImageToVideo
 - [ ] NormalizeVideoLatentStart
@@ -1617,6 +1931,166 @@
 - [ ] IPAdapter Regional Conditioning
 - [ ] IPAdapter Combine Params
 
+## comfyui_layerstyle
+
+- [ ] LayerUtility: Switch Case
+- [ ] LayerUtility: If
+- [ ] LayerUtility: String Condition
+- [ ] LayerUtility: Boolean Operator
+- [ ] LayerUtility: Number Calculator
+- [ ] LayerUtility: Boolean Operator V2
+- [ ] LayerUtility: Number Calculator V2
+- [ ] LayerUtility: TextBox
+- [ ] LayerUtility: String
+- [ ] LayerUtility: Integer
+- [ ] LayerUtility: Float
+- [ ] LayerUtility: Boolean
+- [ ] LayerUtility: Seed
+- [ ] LayerColor: Brightness & Contrast
+- [ ] LayerColor: Brightness Contrast V2
+- [ ] LayerMask: MaskStroke
+- [ ] LayerUtility: CropByMask V2
+- [ ] LayerStyle: InnerGlow V2
+- [ ] LayerUtility: ColorPicker
+- [ ] LayerUtility: LayerMaskTransform
+- [ ] LayerFilter: SkinBeauty
+- [ ] LayerFilter: SoftLight
+- [ ] LayerUtility: TextImage V2
+- [ ] LayerUtility: CropBoxResolve
+- [ ] LayerUtility: Check Mask
+- [ ] LayerStyle: GradientOverlay V2
+- [ ] LayerFilter: Film
+- [ ] LayerUtility: VQA Prompt
+- [ ] LayerUtility: Load VQA Model
+- [ ] LayerUtility: PrintInfo
+- [ ] LayerUtility: RGB Value
+- [ ] LayerMask: CreateGradientMask
+- [ ] LayerFilter: Sharp & Soft
+- [ ] LayerUtility: HSV Value
+- [ ] LayerFilter: MotionBlur
+- [ ] LayerStyle: ColorOverlay V2
+- [ ] LayerColor: ColorTemperature
+- [ ] LayerFilter: Film V2
+- [ ] LayerUtility: Image Mask Scale As
+- [ ] LayerUtility: Image Mask Scale As V2
+- [ ] LayerStyle: Stroke
+- [ ] LayerUtility: ImageRemoveAlpha
+- [ ] LayerUtility: ImageHub
+- [ ] LayerUtility: ImageChannelSplit
+- [ ] LayerColor: LAB
+- [ ] LayerUtility: ImageBlendAdvance V2
+- [ ] LayerColor: Color of Shadow & Highlight
+- [ ] LayerColor: Colorof Shadow Highlight V2
+- [ ] LayerUtility: ImageBlend V2
+- [ ] LayerMask: MaskPreview
+- [ ] LayerUtility: ExtendCanvas
+- [ ] LayerStyle: ColorOverlay
+- [ ] LayerColor: Gamma
+- [ ] LayerUtility: Check Mask V2
+- [ ] LayerColor: AutoAdjust V2
+- [ ] LayerUtility: ImageShift
+- [ ] LayerColor: HSV
+- [ ] LayerFilter: ColorMap
+- [ ] LayerColor: LUT Apply
+- [ ] LayerFilter: LightLeak
+- [ ] LayerColor: YUV
+- [ ] LayerMask: Mask Box Detect
+- [ ] LayerMask: Mask Box Extend
+- [ ] LayerUtility: TextJoin
+- [ ] LayerUtility: TextJoinV2
+- [ ] LayerColor: Negative
+- [ ] LayerStyle: Stroke V2
+- [ ] LayerUtility: H/L Frequency Detail Restore
+- [ ] LayerColor: RGB
+- [ ] LayerFilter: ChannelShake
+- [ ] LayerStyle: DropShadow
+- [ ] LayerColor: ColorAdapter
+- [ ] LayerMask: MaskInvert
+- [ ] LayerUtility: Random Generator
+- [ ] LayerUtility: Random Generator V2
+- [ ] LayerMask: MaskEdgeShrink
+- [ ] LayerUtility: ImageBlendAdvance V3
+- [ ] LayerStyle: GradientOverlay
+- [ ] LayerUtility: Flux Kontext Image Scale
+- [ ] LayerMask: Mask by Color
+- [ ] LayerStyle: DropShadow V2
+- [ ] LayerUtility: ImageScaleRestore
+- [ ] LayerUtility: GradientImage V2
+- [ ] LayerFilter: HalfTone
+- [ ] LayerStyle: OuterGlow
+- [ ] LayerUtility: IC Mask
+- [ ] LayerUtility: IC Mask Crop Back
+- [ ] LayerMask: PixelSpread
+- [ ] LayerMask: MaskGrow
+- [ ] LayerUtility: RoundedRectangle
+- [ ] LayerUtility: Get Main Colors
+- [ ] LayerUtility: Get Main Colors V2
+- [ ] LayerStyle: InnerShadow
+- [ ] LayerUtility: Any Rerouter
+- [ ] LayerColor: ColorBalance
+- [ ] LayerStyle: InnerShadow V2
+- [ ] LayerMask: MaskEdgeUltraDetail
+- [ ] LayerUtility: ImageScaleByAspectRatio V2
+- [ ] LayerFilter: HDR Effects
+- [ ] LayerUtility: Gray Value
+- [ ] LayerMask: Mask Grain
+- [ ] LayerFilter: GaussianBlur
+- [ ] LayerFilter: Gaussian Blur V2
+- [ ] LayerUtility: Color Name
+- [ ] LayerUtility: Name To Color
+- [ ] LayerUtility: GradientImage
+- [ ] LayerColor: Levels
+- [ ] LayerUtility: TextImage
+- [ ] LayerFilter: WaterColor
+- [ ] LayerUtility: XY to Percent
+- [ ] LayerUtility: LayerImageTransform
+- [ ] LayerStyle: DropShadow V3
+- [ ] LayerMask: BlendIf Mask
+- [ ] LayerUtility: ImageBlendAdvance
+- [ ] LayerMask: MaskMotionBlur
+- [ ] LayerUtility: CropByMask V3
+- [ ] LayerUtility: Nano Banana Image Scale
+- [ ] LayerUtility: SimpleTextImage
+- [ ] LayerMask: MaskEdgeUltraDetail V2
+- [ ] LayerUtility: ColorImage V2
+- [ ] LayerUtility: ImageCombineAlpha
+- [ ] LayerColor: AutoBrightness
+- [ ] LayerStyle: OuterGlow V2
+- [ ] LayerMask: Image To Mask
+- [ ] LayerUtility: ImageScaleRestore V2
+- [ ] LayerUtility: Choice Text Preset
+- [ ] LayerUtility: Text Preseter
+- [ ] LayerUtility: ImageScaleByAspectRatio
+- [ ] LayerUtility: ImageChannelMerge
+- [ ] LayerMask: MaskGradient
+- [ ] LayerUtility: CropByMask
+- [ ] LayerUtility: ImageOpacity
+- [ ] LayerUtility: Image Composite Handle Mask
+- [ ] LayerFilter: Add Grain
+- [ ] LayerMask: Shadow & Highlight Mask
+- [ ] LayerMask: Shadow Highlight Mask V2
+- [ ] LayerStyle: InnerGlow
+- [ ] LayerMask: DrawRoundedRectangle
+- [ ] LayerUtility: RestoreCropBox
+- [ ] LayerUtility: ExtendCanvas V2
+- [ ] LayerUtility: ColorImage
+- [ ] LayerMask: Segformer B2 Clothes Ultra
+- [ ] LayerMask: Segformer Ultra V2
+- [ ] LayerMask: Segformer Clothes Pipeline
+- [ ] LayerMask: Segformer Fashion Pipeline
+- [ ] LayerMask: Segformer Ultra V3
+- [ ] LayerMask: Segformer Clothes Setting
+- [ ] LayerMask: Segformer Fashion Setting
+- [ ] LayerMask: Load Segformer Model
+- [ ] LayerUtility: Image Reel
+- [ ] LayerUtility: Image Reel Composit
+- [ ] LayerColor: Exposure
+- [ ] LayerUtility: ImageBlend
+- [ ] LayerColor: AutoAdjust
+- [ ] LayerUtility: GetImageSize
+- [ ] LayerUtility: Batch Selector
+- [ ] LayerStyle: Gradient Map
+
 ## comfyui_ultimatesdupscale
 
 - [ ] Ultimate SD Upscale
@@ -1646,7 +2120,7 @@
 - [ ] Upscale Image
 - [ ] Upscale Image By
 - [ ] Invert Image
-- [ ] Batch Images
+- [ ] Batch Images ~~DEPRECATED~~
 - [ ] Pad Image for Outpainting
 - [ ] EmptyImage
 - [ ] ConditioningAverage
@@ -1692,4 +2166,4 @@
 
 ## websocket_image_save
 
-- [✓] SaveImageWebsocket
+- [ ] SaveImageWebsocket
