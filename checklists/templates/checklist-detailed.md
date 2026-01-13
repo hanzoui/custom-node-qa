@@ -10,6 +10,12 @@
 - [ ] NormalCrafter (Process Video)
 - [ ] Detail Transfer
 
+## ComfyUI-SCAIL-Pose
+
+- [ ] Pose Detection VitPose to DWPose
+- [ ] Render NLF Poses
+- [ ] Convert OpenPose Keypoints to DWPose
+
 ## ComfyUI-WanAnimatePreprocess
 
 - [ ] ONNX Detection Model Loader
@@ -45,7 +51,6 @@
 - [ ] WanVideo Block List
 - [ ] WanVideo TextEncode Cached
 - [ ] WanVideo Add Extra Latent
-- [ ] WanVideoScheduler
 - [ ] WanVideo Add StandIn Latent
 - [ ] WanVideo Add Control Embeds
 - [ ] WanVideo MTV Crafter Motion
@@ -53,7 +58,6 @@
 - [ ] WanVideo Add Pusa Noise
 - [ ] WanVideo Animate Embeds
 - [ ] WanVideo Add LucyEdit Latents
-- [ ] WanVideo Scheduler SA-ODE
 - [ ] WanVideo Add Bindweave Embeds
 - [ ] TextImageEncodeQwenVL
 - [ ] WanVideo UniLumos Embeds
@@ -61,6 +65,10 @@
 - [ ] WanVideo Sampler
 - [ ] WanVideo Sampler Settings
 - [ ] WanVideo Sampler From Settings
+- [ ] WanVideo Sampler v2
+- [ ] WanVideoSampler v2 Extra Args
+- [ ] WanVideo Scheduler
+- [ ] WanVideo Scheduler v2
 - [ ] WanVideo Model Loader
 - [ ] WanVideo VAE Loader
 - [ ] WanVideo Lora Select
@@ -89,6 +97,7 @@
 - [ ] WanVideo TeaCache
 - [ ] WanVideo MagCache
 - [ ] WanVideo EasyCache
+- [ ] WanVideo ImageClip Encode (Deprecated) ~~DEPRECATED~~
 - [ ] WanVideo Add S2V Embeds
 - [ ] WanVideo Add FlashVSR Input
 - [ ] WanVideo FlashVSR Decoder Loader
@@ -123,6 +132,7 @@
 - [ ] Landmarks to Image
 - [ ] WanVideo UniAnimate Pose Input
 - [ ] WanVideo UniAnimate DWPose Detector
+- [ ] Load NLF Model
 - [ ] NLF Predict
 - [ ] Draw NLF Poses
 - [ ] Load VQVAE
@@ -147,7 +157,9 @@
 - [ ] WanVideo Add OneToAll Extend Embeds
 - [ ] WanVideo Add WanMove Tracks
 - [ ] WanVideo Draw WanMove Tracks
-- [ ] WanMove Native
+- [ ] WanMove Native ~~DEPRECATED~~
+- [ ] WanVideo Add SCAIL Pose Embeds
+- [ ] WanVideo Add SCAIL Reference Embeds
 
 ## ComfyUI_AudioTools
 
@@ -179,6 +191,38 @@
 - [ ] Display Waveform
 - [ ] Compare Waveforms
 - [ ] Show Audio Info
+
+## ComfyUI_Fill-ChatterBox
+
+- [ ] FL Chatterbox TTS
+- [ ] FL Chatterbox Turbo TTS
+- [ ] FL Chatterbox Multilingual TTS
+- [ ] FL Chatterbox VC
+- [ ] FL Chatterbox Dialog TTS
+
+## ControlAltAI-Nodes
+
+- [ ] Flux Resolution Calc
+- [ ] Flux Sampler
+- [ ] Flux Union ControlNet Apply
+- [ ] Boolean Basic
+- [ ] Boolean Reverse
+- [ ] Get Image Size Ratio
+- [ ] Noise Plus Blend
+- [ ] Integer Settings
+- [ ] Integer Settings Advanced
+- [ ] Choose Upscale Model
+- [ ] Region Mask Generator
+- [ ] Region Mask Validator
+- [ ] Region Mask Processor
+- [ ] Region Mask Conditioning
+- [ ] Region Overlay Visualizer
+- [ ] Flux Attention Cleanup
+- [ ] HiDream Resolution
+- [ ] Perturbation Texture
+- [ ] Text Bridge
+- [ ] Switch (Two Way)
+- [ ] Switch (Three Way)
 
 ## CustomNodeComfyMath
 
@@ -236,6 +280,300 @@
 - [ ] SDXLExtendedResolution
 - [ ] NearestSDXLExtendedResolution
 
+## RES4LYF
+
+- [ ] FluxLoader
+- [ ] SD35Loader
+- [ ] ClownModelLoader
+- [ ] TextBox1
+- [ ] TextBox2
+- [ ] TextBox3
+- [ ] TextConcatenate
+- [ ] TextBoxConcatenate
+- [ ] TextLoadFile
+- [ ] TextShuffle
+- [ ] TextShuffleAndTruncate
+- [ ] TextTruncateTokens
+- [ ] SeedGenerator
+- [ ] ClownRegionalConditioning
+- [ ] ClownRegionalConditionings
+- [ ] ClownRegionalConditioning2
+- [ ] ClownRegionalConditioning3
+- [ ] ClownRegionalConditioning_AB
+- [ ] ClownRegionalConditioning_ABC
+- [ ] CLIPTextEncodeFluxUnguided
+- [ ] ConditioningOrthoCollin
+- [ ] ConditioningAverageScheduler
+- [ ] ConditioningMultiply
+- [ ] ConditioningAdd
+- [ ] Conditioning Recast FP64
+- [ ] StableCascade_StageB_Conditioning64
+- [ ] ConditioningZeroAndTruncate
+- [ ] ConditioningTruncate
+- [ ] StyleModelApplyStyle
+- [ ] CrossAttn_EraseReplace_HiDream
+- [ ] ConditioningDownsample (T5)
+- [ ] ConditioningBatch4
+- [ ] ConditioningBatch8
+- [ ] TemporalMaskGenerator
+- [ ] TemporalSplitAttnMask
+- [ ] TemporalSplitAttnMask (Midframe)
+- [ ] TemporalCrossAttnMask
+- [ ] Set Precision
+- [ ] Set Precision Universal
+- [ ] Set Precision Advanced
+- [ ] LatentUpscaleWithVAE
+- [ ] LatentNoised
+- [ ] LatentNoiseList
+- [ ] AdvancedNoise
+- [ ] LatentNoiseBatch_perlin
+- [ ] LatentNoiseBatch_fractal
+- [ ] LatentNoiseBatch_gaussian
+- [ ] LatentNoiseBatch_gaussian_channels
+- [ ] LatentBatch_channels
+- [ ] LatentBatch_channels_16
+- [ ] Latent Get Channel Means
+- [ ] Latent Match Channelwise
+- [ ] Latent to RawX
+- [ ] Latent Clear State Info
+- [ ] Latent Replace State Info
+- [ ] Latent Display State Info
+- [ ] Latent Transfer State Info
+- [ ] Latent TrimVideo State Info
+- [ ] Latent to Cuda
+- [ ] Latent Batcher
+- [ ] Latent Normalize Channels
+- [ ] Latent Channels From To
+- [ ] LatentPhaseMagnitude
+- [ ] LatentPhaseMagnitudeMultiply
+- [ ] LatentPhaseMagnitudeOffset
+- [ ] LatentPhaseMagnitudePower
+- [ ] MaskFloatToBoolean
+- [ ] MaskToggle
+- [ ] MaskEdge
+- [ ] Frames Masks Uninterpolate
+- [ ] Frames Masks ZeroOut
+- [ ] Frames Latent ReverseOrder
+- [ ] EmptyLatentImage64
+- [ ] EmptyLatentImageCustom
+- [ ] StableCascade_StageC_VAEEncode_Exact
+- [ ] PrepForUnsampling
+- [ ] VAEEncodeAdvanced
+- [ ] VAEStyleTransferLatent
+- [ ] SigmasPreview
+- [ ] SigmasSchedulePreview
+- [ ] TorchCompileModelFluxAdv
+- [ ] TorchCompileModelAura
+- [ ] TorchCompileModelSD35
+- [ ] TorchCompileModels
+- [ ] ClownpileModelWanVideo
+- [ ] ModelTimestepPatcher
+- [ ] ModelSamplingAdvanced
+- [ ] ModelSamplingAdvancedResolution
+- [ ] FluxGuidanceDisable
+- [ ] ReWanPatcher
+- [ ] ReFluxPatcher
+- [ ] ReChromaPatcher
+- [ ] ReSD35Patcher
+- [ ] ReAuraPatcher
+- [ ] ReLTXVPatcher
+- [ ] ReHiDreamPatcher
+- [ ] ReSDPatcher
+- [ ] ReReduxPatcher
+- [ ] ReWanPatcherAdvanced
+- [ ] ReFluxPatcherAdvanced
+- [ ] ReChromaPatcherAdvanced
+- [ ] ReSD35PatcherAdvanced
+- [ ] ReAuraPatcherAdvanced
+- [ ] ReLTXVPatcherAdvanced
+- [ ] ReHiDreamPatcherAdvanced
+- [ ] LayerPatcher
+- [ ] FluxOrthoCFGPatcher
+- [ ] Sigmas Recast
+- [ ] Sigmas Noise Inversion
+- [ ] Sigmas From Text
+- [ ] Sigmas Variance Floor
+- [ ] Sigmas Truncate
+- [ ] Sigmas Start
+- [ ] Sigmas Split
+- [ ] Sigmas Split Value
+- [ ] Sigmas Concat
+- [ ] Sigmas Pad
+- [ ] Sigmas Unpad
+- [ ] Sigmas SetFloor
+- [ ] Sigmas DeleteBelowFloor
+- [ ] Sigmas DeleteDuplicates
+- [ ] Sigmas Cleanup
+- [ ] Sigmas Mult
+- [ ] Sigmas Modulus
+- [ ] Sigmas Quotient
+- [ ] Sigmas Add
+- [ ] Sigmas Power
+- [ ] Sigmas Abs
+- [ ] Sigmas2 Mult
+- [ ] Sigmas2 Add
+- [ ] Sigmas Rescale
+- [ ] Sigmas Count
+- [ ] Sigmas Resample
+- [ ] Sigmas Math1
+- [ ] Sigmas Math3
+- [ ] Sigmas Iteration Karras
+- [ ] Sigmas Iteration Polyexp
+- [ ] Sigmas Lerp
+- [ ] Sigmas InvLerp
+- [ ] Sigmas ArcSine
+- [ ] Sigmas LinearSine
+- [ ] Sigmas Append
+- [ ] Sigmas ArcCosine
+- [ ] Sigmas ArcTangent
+- [ ] Sigmas CrossProduct
+- [ ] Sigmas DotProduct
+- [ ] Sigmas Fmod
+- [ ] Sigmas Frac
+- [ ] Sigmas If
+- [ ] Sigmas Logarithm2
+- [ ] Sigmas SmoothStep
+- [ ] Sigmas SquareRoot
+- [ ] Sigmas TimeStep
+- [ ] Sigmas Sigmoid
+- [ ] Sigmas Easing
+- [ ] Sigmas Hyperbolic
+- [ ] Sigmas Gaussian
+- [ ] Sigmas Percentile
+- [ ] Sigmas KernelSmooth
+- [ ] Sigmas QuantileNorm
+- [ ] Sigmas AdaptiveStep
+- [ ] Sigmas Chaos
+- [ ] Sigmas ReactionDiffusion
+- [ ] Sigmas Attractor
+- [ ] Sigmas CatmullRom
+- [ ] Sigmas LambertW
+- [ ] Sigmas ZetaEta
+- [ ] Sigmas GammaBeta
+- [ ] Sigmas GaussianCDF
+- [ ] Sigmas StepwiseMultirate
+- [ ] Sigmas HarmonicDecay
+- [ ] Sigmas AdaptiveNoiseFloor
+- [ ] Sigmas CollatzIteration
+- [ ] Sigmas ConwaySequence
+- [ ] Sigmas GilbreathSequence
+- [ ] Sigmas CNFInverse
+- [ ] Sigmas RiemannianFlow
+- [ ] Sigmas LangevinDynamics
+- [ ] Sigmas PersistentHomology
+- [ ] Sigmas NormalizingFlows
+- [ ] ClownScheduler
+- [ ] Tan Scheduler
+- [ ] Tan Scheduler 2
+- [ ] Tan Scheduler 2 Simple
+- [ ] Constant Scheduler
+- [ ] Linear Quadratic Advanced
+- [ ] SetImageSizeWithScale
+- [ ] SetImageSize
+- [ ] Mask Bounding Box Aspect Ratio
+- [ ] Image Get Color Swatches
+- [ ] Masks From Color Swatches
+- [ ] Masks From Colors
+- [ ] Masks Unpack 4
+- [ ] Masks Unpack 8
+- [ ] Masks Unpack 16
+- [ ] Image Sharpen FS
+- [ ] Image Channels LAB
+- [ ] Image Median Blur
+- [ ] Image Gaussian Blur
+- [ ] Image Pair Split
+- [ ] Image Crop Location Exact
+- [ ] Film Grain
+- [ ] Frequency Separation Linear Light
+- [ ] Frequency Separation Hard Light
+- [ ] Frequency Separation Hard Light LAB
+- [ ] Frame Select
+- [ ] Frames Slice
+- [ ] Frames Concat
+- [ ] Mask Sketch
+- [ ] Image Grain Add
+- [ ] Image Repeat Tile To Size
+- [ ] Frames Concat Masks
+- [ ] Frame Select Latent
+- [ ] Frames Slice Latent
+- [ ] Frames Concat Latent
+- [ ] Frame Select Latent Raw
+- [ ] Frames Slice Latent Raw
+- [ ] Frames Concat Latent Raw
+- [ ] SharkOptions
+- [ ] ClownOptions SDE
+- [ ] ClownOptions Detail Boost
+- [ ] ClownGuide Style
+- [ ] ClownGuide_Style_EdgeWidth
+- [ ] ClownGuide_Style_TileSize
+- [ ] ClownGuide
+- [ ] ClownGuides
+- [ ] ClownGuidesAB
+- [ ] ClownGuides Sync
+- [ ] ClownGuides Sync_Advanced
+- [ ] ClownGuide_FrequencySeparation
+- [ ] SharkOptions Guider Input
+- [ ] ClownOptions Implicit Steps
+- [ ] ClownOptions Cycles
+- [ ] SharkOptions Guide Cond
+- [ ] SharkOptions Guide Conds
+- [ ] ClownOptions Tile
+- [ ] ClownOptions Tile Advanced
+- [ ] ClownGuide Mean
+- [ ] ClownGuide AdaIN (HiDream)
+- [ ] ClownGuide AttnInj (HiDream)
+- [ ] ClownGuide_StyleNorm_Advanced_HiDream
+- [ ] ClownOptions SDE Mask
+- [ ] ClownOptions Step Size
+- [ ] ClownOptions Sigma Scaling
+- [ ] ClownOptions Momentum
+- [ ] ClownOptions Swap Sampler
+- [ ] ClownOptions Extra Options
+- [ ] ClownOptions Automation
+- [ ] SharkOptions UltraCascade Latent
+- [ ] SharkOptions Start Step
+- [ ] ClownOptions Combine
+- [ ] ClownOptions Frameweights
+- [ ] ClownOptions_FlowGuide
+- [ ] ClownStyle_Block_MMDiT
+- [ ] ClownStyle_MMDiT
+- [ ] ClownStyle_Attn_MMDiT
+- [ ] ClownStyle_Boost
+- [ ] ClownStyle_UNet
+- [ ] ClownStyle_Block_UNet
+- [ ] ClownStyle_Attn_UNet
+- [ ] ClownStyle_ResBlock_UNet
+- [ ] ClownStyle_SpatialBlock_UNet
+- [ ] ClownStyle_TransformerBlock_UNet
+- [ ] ClownSamplerSelector
+- [ ] SharkSampler
+- [ ] SharkChainsampler
+- [ ] ClownsharKSampler
+- [ ] ClownsharkChainsampler
+- [ ] ClownSampler
+- [ ] ClownSamplerAdvanced
+- [ ] BongSampler
+- [ ] Legacy_ClownSampler ~~DEPRECATED~~
+- [ ] Legacy_SharkSampler ~~DEPRECATED~~
+- [ ] Legacy_ClownsharKSampler ~~DEPRECATED~~
+- [ ] Legacy_ClownsharKSamplerGuides ~~DEPRECATED~~
+- [ ] Legacy2_ClownSampler ~~DEPRECATED~~
+- [ ] Legacy2_ClownSamplerAdvanced ~~DEPRECATED~~
+- [ ] Legacy2_ClownsharKSampler ~~DEPRECATED~~
+- [ ] Legacy2_ClownsharKSamplerGuides ~~DEPRECATED~~
+- [ ] Legacy2_ClownsharKSamplerGuide ~~DEPRECATED~~
+- [ ] Legacy2_ClownOptions_SDE_Noise ~~DEPRECATED~~
+- [ ] Legacy2_ClownOptions_FrameWeights ~~DEPRECATED~~
+- [ ] Legacy2_ClownInpaint ~~DEPRECATED~~
+- [ ] Legacy2_ClownInpaintSimple ~~DEPRECATED~~
+- [ ] Legacy2_ClownsharKSamplerOptions ~~DEPRECATED~~
+- [ ] Legacy2_ClownsharKSamplerAutomation ~~DEPRECATED~~
+- [ ] Legacy2_ClownsharKSamplerAutomation_Advanced ~~DEPRECATED~~
+- [ ] Legacy2_SamplerOptions_TimestepScaling ~~DEPRECATED~~
+- [ ] Legacy2_SamplerOptions_GarbageCollection ~~DEPRECATED~~
+- [ ] Legacy2_UltraSharkSampler ~~DEPRECATED~~
+- [ ] UltraSharkSampler Tiled ~~DEPRECATED~~
+
 ## audio-separation-nodes-comfyui
 
 - [ ] AudioSeparation
@@ -284,14 +622,16 @@
 - [ ] Kling Omni Image (Pro)
 - [ ] Kling Text to Video with Audio
 - [ ] Kling Image(First Frame) to Video with Audio
+- [ ] Kling Motion Control
 - [ ] Flux 1.1 [pro] Ultra Image
 - [ ] Flux.1 Kontext [pro] Image
 - [ ] Flux.1 Kontext [max] Image
 - [ ] Flux.1 Expand Image
 - [ ] Flux.1 Fill Image
 - [ ] Flux.2 [pro] Image
+- [ ] Flux.2 [max] Image
 - [ ] ByteDance Image
-- [ ] ByteDance Image Edit
+- [ ] ByteDance Image Edit ~~DEPRECATED~~
 - [ ] ByteDance Seedream 4
 - [ ] ByteDance Text to Video
 - [ ] ByteDance Image to Video
@@ -367,6 +707,7 @@
 - [ ] Wan Image to Image
 - [ ] Wan Text to Video
 - [ ] Wan Image to Video
+- [ ] Wan Reference to Video
 
 ## comfy_extras
 
@@ -376,7 +717,8 @@
 - [ ] LatentInterpolate
 - [ ] LatentConcat
 - [ ] LatentCut
-- [ ] LatentBatch
+- [ ] LatentCutToBatch
+- [ ] LatentBatch ~~DEPRECATED~~
 - [ ] LatentBatchSeedBehavior
 - [ ] LatentApplyOperation
 - [ ] LatentApplyOperationCFG
@@ -391,6 +733,10 @@
 - [ ] ImageQuantize
 - [ ] ImageSharpen
 - [ ] ImageScaleToTotalPixels
+- [ ] Resize Image/Mask
+- [ ] Batch Images
+- [ ] Batch Masks
+- [ ] Batch Latents
 - [ ] LatentCompositeMasked
 - [ ] ImageCompositeMasked
 - [ ] Convert Mask to Image
@@ -456,6 +802,7 @@
 - [ ] DisableNoise
 - [ ] AddNoise
 - [ ] SamplerCustomAdvanced
+- [ ] ManualSigmas
 - [ ] HyperTile
 - [ ] ModelSamplingDiscrete
 - [ ] ModelSamplingContinuousEDM
@@ -509,6 +856,7 @@
 - [ ] Merge Image Lists
 - [ ] Merge Text Lists
 - [ ] Make Training Dataset
+- [ ] Resolution Bucket
 - [ ] Self-Attention Guidance
 - [ ] Perp-Neg (DEPRECATED by PerpNegGuider) ~~DEPRECATED~~
 - [ ] PerpNegGuider
@@ -595,7 +943,7 @@
 - [ ] FluxGuidance
 - [ ] FluxDisableGuidance
 - [ ] FluxKontextImageScale
-- [ ] FluxKontextMultiReferenceLatentMethod
+- [ ] Edit Model Reference Method
 - [ ] Empty Flux 2 Latent
 - [ ] Flux2Scheduler
 - [ ] TorchCompileModel
@@ -603,14 +951,23 @@
 - [ ] SkipLayerGuidanceDiT
 - [ ] SkipLayerGuidanceDiTSimple
 - [ ] Mahiro is so cute that she deserves a better guidance function!! (。・ω・。)
+- [ ] LTXVLatentUpsampler
+- [ ] LTXV Audio VAE Loader
+- [ ] LTXV Audio VAE Encode
+- [ ] LTXV Audio VAE Decode
+- [ ] LTXV Empty Latent Audio
+- [ ] LTXV Audio Text Encoder Loader
 - [ ] EmptyLTXVLatentVideo
 - [ ] LTXVImgToVideo
+- [ ] LTXVImgToVideoInplace
 - [ ] ModelSamplingLTXV
 - [ ] LTXVConditioning
 - [ ] LTXVScheduler
 - [ ] LTXVAddGuide
 - [ ] LTXVPreprocess
 - [ ] LTXVCropGuides
+- [ ] LTXVConcatAVLatent
+- [ ] LTXVSeparateAVLatent
 - [ ] Create Hook LoRA
 - [ ] Create Hook LoRA (MO)
 - [ ] Create Hook Model as LoRA
@@ -699,6 +1056,7 @@
 - [ ] WAN Context Windows (Manual)
 - [ ] TextEncodeQwenImageEdit
 - [ ] TextEncodeQwenImageEditPlus
+- [ ] Empty Qwen Image Layered Latent
 - [ ] EmptyChromaRadianceLatentImage
 - [ ] ChromaRadianceOptions
 - [ ] ModelPatchLoader
@@ -710,6 +1068,8 @@
 - [ ] AudioEncoderLoader
 - [ ] AudioEncoderEncode
 - [ ] ScaleROPE
+- [ ] Switch
+- [ ] Custom Combo
 - [ ] wanBlockSwap ~~DEPRECATED~~
 - [ ] Kandinsky5ImageToVideo
 - [ ] NormalizeVideoLatentStart
@@ -1571,6 +1931,166 @@
 - [ ] IPAdapter Regional Conditioning
 - [ ] IPAdapter Combine Params
 
+## comfyui_layerstyle
+
+- [ ] LayerUtility: Switch Case
+- [ ] LayerUtility: If
+- [ ] LayerUtility: String Condition
+- [ ] LayerUtility: Boolean Operator
+- [ ] LayerUtility: Number Calculator
+- [ ] LayerUtility: Boolean Operator V2
+- [ ] LayerUtility: Number Calculator V2
+- [ ] LayerUtility: TextBox
+- [ ] LayerUtility: String
+- [ ] LayerUtility: Integer
+- [ ] LayerUtility: Float
+- [ ] LayerUtility: Boolean
+- [ ] LayerUtility: Seed
+- [ ] LayerColor: Brightness & Contrast
+- [ ] LayerColor: Brightness Contrast V2
+- [ ] LayerMask: MaskStroke
+- [ ] LayerUtility: CropByMask V2
+- [ ] LayerStyle: InnerGlow V2
+- [ ] LayerUtility: ColorPicker
+- [ ] LayerUtility: LayerMaskTransform
+- [ ] LayerFilter: SkinBeauty
+- [ ] LayerFilter: SoftLight
+- [ ] LayerUtility: TextImage V2
+- [ ] LayerUtility: CropBoxResolve
+- [ ] LayerUtility: Check Mask
+- [ ] LayerStyle: GradientOverlay V2
+- [ ] LayerFilter: Film
+- [ ] LayerUtility: VQA Prompt
+- [ ] LayerUtility: Load VQA Model
+- [ ] LayerUtility: PrintInfo
+- [ ] LayerUtility: RGB Value
+- [ ] LayerMask: CreateGradientMask
+- [ ] LayerFilter: Sharp & Soft
+- [ ] LayerUtility: HSV Value
+- [ ] LayerFilter: MotionBlur
+- [ ] LayerStyle: ColorOverlay V2
+- [ ] LayerColor: ColorTemperature
+- [ ] LayerFilter: Film V2
+- [ ] LayerUtility: Image Mask Scale As
+- [ ] LayerUtility: Image Mask Scale As V2
+- [ ] LayerStyle: Stroke
+- [ ] LayerUtility: ImageRemoveAlpha
+- [ ] LayerUtility: ImageHub
+- [ ] LayerUtility: ImageChannelSplit
+- [ ] LayerColor: LAB
+- [ ] LayerUtility: ImageBlendAdvance V2
+- [ ] LayerColor: Color of Shadow & Highlight
+- [ ] LayerColor: Colorof Shadow Highlight V2
+- [ ] LayerUtility: ImageBlend V2
+- [ ] LayerMask: MaskPreview
+- [ ] LayerUtility: ExtendCanvas
+- [ ] LayerStyle: ColorOverlay
+- [ ] LayerColor: Gamma
+- [ ] LayerUtility: Check Mask V2
+- [ ] LayerColor: AutoAdjust V2
+- [ ] LayerUtility: ImageShift
+- [ ] LayerColor: HSV
+- [ ] LayerFilter: ColorMap
+- [ ] LayerColor: LUT Apply
+- [ ] LayerFilter: LightLeak
+- [ ] LayerColor: YUV
+- [ ] LayerMask: Mask Box Detect
+- [ ] LayerMask: Mask Box Extend
+- [ ] LayerUtility: TextJoin
+- [ ] LayerUtility: TextJoinV2
+- [ ] LayerColor: Negative
+- [ ] LayerStyle: Stroke V2
+- [ ] LayerUtility: H/L Frequency Detail Restore
+- [ ] LayerColor: RGB
+- [ ] LayerFilter: ChannelShake
+- [ ] LayerStyle: DropShadow
+- [ ] LayerColor: ColorAdapter
+- [ ] LayerMask: MaskInvert
+- [ ] LayerUtility: Random Generator
+- [ ] LayerUtility: Random Generator V2
+- [ ] LayerMask: MaskEdgeShrink
+- [ ] LayerUtility: ImageBlendAdvance V3
+- [ ] LayerStyle: GradientOverlay
+- [ ] LayerUtility: Flux Kontext Image Scale
+- [ ] LayerMask: Mask by Color
+- [ ] LayerStyle: DropShadow V2
+- [ ] LayerUtility: ImageScaleRestore
+- [ ] LayerUtility: GradientImage V2
+- [ ] LayerFilter: HalfTone
+- [ ] LayerStyle: OuterGlow
+- [ ] LayerUtility: IC Mask
+- [ ] LayerUtility: IC Mask Crop Back
+- [ ] LayerMask: PixelSpread
+- [ ] LayerMask: MaskGrow
+- [ ] LayerUtility: RoundedRectangle
+- [ ] LayerUtility: Get Main Colors
+- [ ] LayerUtility: Get Main Colors V2
+- [ ] LayerStyle: InnerShadow
+- [ ] LayerUtility: Any Rerouter
+- [ ] LayerColor: ColorBalance
+- [ ] LayerStyle: InnerShadow V2
+- [ ] LayerMask: MaskEdgeUltraDetail
+- [ ] LayerUtility: ImageScaleByAspectRatio V2
+- [ ] LayerFilter: HDR Effects
+- [ ] LayerUtility: Gray Value
+- [ ] LayerMask: Mask Grain
+- [ ] LayerFilter: GaussianBlur
+- [ ] LayerFilter: Gaussian Blur V2
+- [ ] LayerUtility: Color Name
+- [ ] LayerUtility: Name To Color
+- [ ] LayerUtility: GradientImage
+- [ ] LayerColor: Levels
+- [ ] LayerUtility: TextImage
+- [ ] LayerFilter: WaterColor
+- [ ] LayerUtility: XY to Percent
+- [ ] LayerUtility: LayerImageTransform
+- [ ] LayerStyle: DropShadow V3
+- [ ] LayerMask: BlendIf Mask
+- [ ] LayerUtility: ImageBlendAdvance
+- [ ] LayerMask: MaskMotionBlur
+- [ ] LayerUtility: CropByMask V3
+- [ ] LayerUtility: Nano Banana Image Scale
+- [ ] LayerUtility: SimpleTextImage
+- [ ] LayerMask: MaskEdgeUltraDetail V2
+- [ ] LayerUtility: ColorImage V2
+- [ ] LayerUtility: ImageCombineAlpha
+- [ ] LayerColor: AutoBrightness
+- [ ] LayerStyle: OuterGlow V2
+- [ ] LayerMask: Image To Mask
+- [ ] LayerUtility: ImageScaleRestore V2
+- [ ] LayerUtility: Choice Text Preset
+- [ ] LayerUtility: Text Preseter
+- [ ] LayerUtility: ImageScaleByAspectRatio
+- [ ] LayerUtility: ImageChannelMerge
+- [ ] LayerMask: MaskGradient
+- [ ] LayerUtility: CropByMask
+- [ ] LayerUtility: ImageOpacity
+- [ ] LayerUtility: Image Composite Handle Mask
+- [ ] LayerFilter: Add Grain
+- [ ] LayerMask: Shadow & Highlight Mask
+- [ ] LayerMask: Shadow Highlight Mask V2
+- [ ] LayerStyle: InnerGlow
+- [ ] LayerMask: DrawRoundedRectangle
+- [ ] LayerUtility: RestoreCropBox
+- [ ] LayerUtility: ExtendCanvas V2
+- [ ] LayerUtility: ColorImage
+- [ ] LayerMask: Segformer B2 Clothes Ultra
+- [ ] LayerMask: Segformer Ultra V2
+- [ ] LayerMask: Segformer Clothes Pipeline
+- [ ] LayerMask: Segformer Fashion Pipeline
+- [ ] LayerMask: Segformer Ultra V3
+- [ ] LayerMask: Segformer Clothes Setting
+- [ ] LayerMask: Segformer Fashion Setting
+- [ ] LayerMask: Load Segformer Model
+- [ ] LayerUtility: Image Reel
+- [ ] LayerUtility: Image Reel Composit
+- [ ] LayerColor: Exposure
+- [ ] LayerUtility: ImageBlend
+- [ ] LayerColor: AutoAdjust
+- [ ] LayerUtility: GetImageSize
+- [ ] LayerUtility: Batch Selector
+- [ ] LayerStyle: Gradient Map
+
 ## comfyui_ultimatesdupscale
 
 - [ ] Ultimate SD Upscale
@@ -1600,7 +2120,7 @@
 - [ ] Upscale Image
 - [ ] Upscale Image By
 - [ ] Invert Image
-- [ ] Batch Images
+- [ ] Batch Images ~~DEPRECATED~~
 - [ ] Pad Image for Outpainting
 - [ ] EmptyImage
 - [ ] ConditioningAverage
@@ -1646,4 +2166,4 @@
 
 ## websocket_image_save
 
-- [✓] SaveImageWebsocket
+- [ ] SaveImageWebsocket
