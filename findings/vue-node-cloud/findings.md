@@ -2,15 +2,6 @@
 
 # Findings
 
-## ControlAltAI-Nodes
-
-- [ ] Boolean Basic: true/false widget value for 'value' is hidden in Vue node (shows correctly in LiteGraph)
-- [ ] Boolean Reverse: true/false widget value for 'value' is hidden in Vue node (shows correctly in LiteGraph)
-
-## comfyui_layerstyle
-
-- [ ] LayerUtility: Boolean: true/false widget value for 'value' is hidden in Vue node (shows correctly in LiteGraph)
-
 ## comfyui_controlnet_aux
 
 - [ ] AIO Aux Preprocessor: 'preprocessor' widget defaults to 'none' despite having available options in the dropdown; suggest using 'undefined' (LiteGraph) or 'no available options' (Vue node) only when models are genuinely unavailable, as a 'none' option seems inappropriate here.
@@ -163,4 +154,3 @@
 - [x] unable to set seed to a 'fixed' option with the options available in the new seed layout for Vue node.
 
   Austin - Fixed
-
