@@ -5,3 +5,24 @@ Thumbs.db
 .vscode/
 node_modules/
 *.log
+
+# Development/implementation notes (local only)
+TODO.md
+INTERACTIVE_UX_IMPROVEMENTS.md
+FINAL.md
+FINAL_DESIGN.md
+FOR_QA_TESTERS.md
+IMPLEMENTATION_SUMMARY.md
+QUICK_START.md
+REDESIGN_NOTES.md
+TEST_SETUP.md
+UX_IMPROVEMENTS.md
+EXAMPLES.md
+INSTALLATION.md
+
+# Rust build artifacts
+cli/target/
+*.pdb
+
+# Generated workflows (local only)
+workflows/generated-local/
