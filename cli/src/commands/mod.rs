@@ -1,6 +1,7 @@
 pub mod app;
 pub mod check;
 pub mod diff;
+pub mod generate;
 pub mod import;
 pub mod list;
 pub mod new_project;
