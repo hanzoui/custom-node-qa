@@ -73,8 +73,11 @@ fn run_dashboard_menu(initial_project: Option<String>) -> Result<()> {
         // Show dashboard
         show_dashboard(&project_name)?;
 
+        // Check if git is available
+        let git_available = crate::git::check_git_installed() && crate::git::check_in_repo();
+
         // Main menu
-        let options = vec![
+        let mut options = vec![
             "Check testing progress",
             "Get browser script",
             "View all packs",
@@ -82,12 +85,22 @@ fn run_dashboard_menu(initial_project: Option<String>) -> Result<()> {
             "Run validation",
             "Sync checklists",
             "Generate workflow from search",
+        ];
+
+        if git_available {
+            options.push("");
+            options.push("🔄 Pull latest from team");
+            options.push("📝 Review my changes");
+            options.push("📤 Commit and share my work");
+        }
+
+        options.extend_from_slice(&[
             "",
             "📖 Help - How does this work?",
             "Switch project",
             "Cleanup projects",
             "Exit",
-        ];
+        ]);
 
         println!();
         let choice = Select::new()
@@ -96,42 +109,57 @@ fn run_dashboard_menu(initial_project: Option<String>) -> Result<()> {
             .default(0)
             .interact()?;
 
-        match choice {
-            0 => {
+        // Handle menu selection
+        let selected_option = options[choice];
+
+        match selected_option {
+            "Check testing progress" => {
                 crate::commands::check::run(project_name.clone())?;
                 pause();
             }
-            1 => {
+            "Get browser script" => {
                 show_browser_script(&project_name)?;
                 pause();
             }
-            2 => {
+            "View all packs" => {
                 show_pack_list(&project_name)?;
                 pause();
             }
-            3 => {
+            "Compare with repo" => {
                 run_diff_interactive(&project_name)?;
             }
-            4 => {
+            "Run validation" => {
                 run_validate_interactive(&project_name)?;
             }
-            5 => {
+            "Sync checklists" => {
                 run_sync_interactive(&project_name)?;
             }
-            6 => {
+            "Generate workflow from search" => {
                 crate::commands::generate::run(None)?;
             }
-            8 => {
+            "🔄 Pull latest from team" => {
+                crate::git::git_pull()?;
+                pause();
+            }
+            "📝 Review my changes" => {
+                crate::git::git_status()?;
+                pause();
+            }
+            "📤 Commit and share my work" => {
+                crate::git::git_commit_and_push()?;
+                pause();
+            }
+            "📖 Help - How does this work?" => {
                 show_help_guide()?;
             }
-            9 => {
+            "Switch project" => {
                 current_project = None;
             }
-            10 => {
+            "Cleanup projects" => {
                 run_cleanup()?;
                 pause();
             }
-            11 => break,
+            "Exit" => break,
             _ => {}
         }
     }
@@ -248,6 +276,11 @@ fn show_dashboard(project: &str) -> Result<()> {
         } else {
             println!("  {}", style("No packs yet").dim());
         }
+    }
+
+    // Show git status if available
+    if let Some(status) = crate::git::get_repo_status_summary() {
+        println!("  Git: {}", style(status).dim());
     }
 
     println!();
