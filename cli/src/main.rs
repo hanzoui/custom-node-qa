@@ -1,11 +1,6 @@
 use anyhow::Result;
 use clap::{Parser, Subcommand};
-
-mod commands;
-mod generators;
-mod models;
-mod parsers;
-mod validators;
+use comfy_qa::commands;
 
 #[derive(Parser)]
 #[command(name = "comfy-qa")]

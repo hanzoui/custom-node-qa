@@ -1,5 +1,6 @@
 pub mod commands;
 pub mod generators;
+pub mod git;
 pub mod models;
 pub mod parsers;
 pub mod validators;
