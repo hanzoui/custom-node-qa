@@ -96,4 +96,11 @@ impl Workflow {
 
         Ok(workflows)
     }
+
+    pub fn get_unique_node_types(&self) -> Vec<String> {
+        let mut types: Vec<String> = self.nodes.iter().map(|n| n.node_type.clone()).collect();
+        types.sort();
+        types.dedup();
+        types
+    }
 }
