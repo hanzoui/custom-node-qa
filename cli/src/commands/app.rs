@@ -753,12 +753,7 @@ fn run_diff_interactive(project: &str) -> Result<()> {
 
         if !count_mismatches.is_empty() {
             if selection == option_index {
-                let items: Vec<_> = count_mismatches.iter().map(|(name, checklist_count, workflow_count)| {
-                    let delta = *workflow_count as i64 - *checklist_count as i64;
-                    let sign = if delta > 0 { "+" } else { "" };
-                    (name.clone(), Some(format!("checklist: {}, workflow: {} ({}{})", checklist_count, workflow_count, sign, delta)))
-                }).collect();
-                show_diff_category("Count Mismatches", &[], Some(items))?;
+                show_count_mismatches_interactive(project, &count_mismatches, &workflows, &project_dir)?;
                 option_index += 1;
                 continue;
             }
@@ -812,6 +807,126 @@ fn show_diff_category(
     }
 
     println!();
+    pause();
+    Ok(())
+}
+
+fn show_count_mismatches_interactive(
+    project: &str,
+    count_mismatches: &[(String, usize, usize)],
+    workflows: &std::collections::HashMap<String, crate::models::Workflow>,
+    project_dir: &std::path::Path,
+) -> Result<()> {
+    let detailed_checklist_path = project_dir.join("checklist-detailed.md");
+    let detailed_checklist = if detailed_checklist_path.exists() {
+        Some(crate::models::DetailedChecklist::from_file(&detailed_checklist_path)?)
+    } else {
+        None
+    };
+
+    loop {
+        clear_screen();
+        println!("\n{}", style(format!("Count Mismatches ({})", count_mismatches.len())).bold());
+        println!("{}", style("─".repeat(70)).dim());
+        println!();
+
+        let mut items: Vec<String> = count_mismatches.iter().map(|(name, checklist_count, workflow_count)| {
+            let delta = *workflow_count as i64 - *checklist_count as i64;
+            let sign = if delta > 0 { "+" } else { "" };
+            format!("{} - checklist: {}, workflow: {} ({}{})",
+                style(name).yellow(),
+                checklist_count,
+                workflow_count,
+                sign,
+                delta
+            )
+        }).collect();
+
+        items.push(style("← Back").dim().to_string());
+
+        let selection = Select::new()
+            .with_prompt("Select a pack to see detailed node diff")
+            .items(&items)
+            .default(0)
+            .interact()?;
+
+        if selection >= count_mismatches.len() {
+            break;
+        }
+
+        let (pack_name, checklist_count, workflow_count) = &count_mismatches[selection];
+
+        if let Some(workflow) = workflows.get(pack_name) {
+            if let Some(ref detailed) = detailed_checklist {
+                let node_diff = crate::commands::diff::calculate_node_diff(pack_name, workflow, detailed);
+                show_node_diff_details(&node_diff, *checklist_count, *workflow_count)?;
+            } else {
+                clear_screen();
+                println!("\n{}", style(pack_name).bold());
+                println!("{}", style("─".repeat(70)).dim());
+                println!();
+                println!("{}", style("Cannot show detailed diff:").yellow());
+                println!("  checklist-detailed.md not found for project '{}'", project);
+                println!();
+                println!("Count mismatch: {} → {} nodes", checklist_count, workflow_count);
+                println!();
+                pause();
+            }
+        }
+    }
+
+    Ok(())
+}
+
+fn show_node_diff_details(
+    node_diff: &crate::commands::diff::NodeDiff,
+    checklist_count: usize,
+    workflow_count: usize,
+) -> Result<()> {
+    clear_screen();
+    println!("\n{}", style(&node_diff.pack_name).bold().cyan());
+    println!("{}", style("─".repeat(70)).dim());
+    println!();
+
+    let delta = workflow_count as i64 - checklist_count as i64;
+    let sign = if delta > 0 { "+" } else { "" };
+
+    println!("Count: {} → {} ({}{} nodes)",
+        checklist_count,
+        workflow_count,
+        sign,
+        delta
+    );
+    println!();
+
+    if !node_diff.missing_from_checklist.is_empty() {
+        println!("{} {} nodes in workflow but NOT in checklist:",
+            style("⚠").yellow(),
+            style(node_diff.missing_from_checklist.len()).bold()
+        );
+        for (i, node) in node_diff.missing_from_checklist.iter().enumerate() {
+            println!("  {}. {} {}", i + 1, style("+").green(), node);
+        }
+        println!();
+    }
+
+    if !node_diff.extra_in_checklist.is_empty() {
+        println!("{} {} nodes in checklist but NOT in workflow:",
+            style("⚠").yellow(),
+            style(node_diff.extra_in_checklist.len()).bold()
+        );
+        for (i, node) in node_diff.extra_in_checklist.iter().enumerate() {
+            println!("  {}. {} {}", i + 1, style("-").red(), node);
+        }
+        println!();
+    }
+
+    if node_diff.missing_from_checklist.is_empty() && node_diff.extra_in_checklist.is_empty() {
+        println!("{} No specific node differences found", style("ℹ").cyan());
+        println!("This might be a duplicate node or parsing issue.");
+        println!();
+    }
+
     pause();
     Ok(())
 }

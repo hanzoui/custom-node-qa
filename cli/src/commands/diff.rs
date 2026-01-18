@@ -1,4 +1,4 @@
-use crate::models::{Checklist, Workflow};
+use crate::models::{Checklist, DetailedChecklist, Workflow};
 use anyhow::{Context, Result};
 use colored::Colorize;
 use serde_json::json;
@@ -38,6 +38,46 @@ struct DiffResult {
     missing_workflows: Vec<(String, usize)>,
     new_packs: Vec<(String, usize)>,
     untested: Vec<(String, usize)>,
+}
+
+#[derive(Debug, Clone)]
+pub struct NodeDiff {
+    pub pack_name: String,
+    pub missing_from_checklist: Vec<String>,  // In workflow but not in checklist
+    pub extra_in_checklist: Vec<String>,      // In checklist but not in workflow
+}
+
+pub fn calculate_node_diff(
+    pack_name: &str,
+    workflow: &Workflow,
+    detailed_checklist: &DetailedChecklist,
+) -> NodeDiff {
+    let workflow_nodes = workflow.get_unique_node_types();
+    let checklist_nodes = detailed_checklist
+        .get_nodes(pack_name)
+        .cloned()
+        .unwrap_or_default();
+
+    let workflow_set: HashSet<_> = workflow_nodes.iter().collect();
+    let checklist_set: HashSet<_> = checklist_nodes.iter().collect();
+
+    let missing_from_checklist: Vec<String> = workflow_nodes
+        .iter()
+        .filter(|n| !checklist_set.contains(n))
+        .cloned()
+        .collect();
+
+    let extra_in_checklist: Vec<String> = checklist_nodes
+        .iter()
+        .filter(|n| !workflow_set.contains(n))
+        .cloned()
+        .collect();
+
+    NodeDiff {
+        pack_name: pack_name.to_string(),
+        missing_from_checklist,
+        extra_in_checklist,
+    }
 }
 
 fn calculate_diff(checklist: &Checklist, workflows: &HashMap<String, Workflow>) -> DiffResult {

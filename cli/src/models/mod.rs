@@ -4,7 +4,7 @@ mod metadata;
 mod node_pack;
 mod workflow;
 
-pub use checklist::Checklist;
+pub use checklist::{Checklist, DetailedChecklist};
 pub use export::Export;
 pub use metadata::{Metadata, Environment, PackMetadata, Stats};
 pub use node_pack::NodePack;
