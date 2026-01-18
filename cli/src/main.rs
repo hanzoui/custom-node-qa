@@ -64,6 +64,12 @@ enum Commands {
         dry_run: bool,
     },
 
+    /// Generate workflow from node search query
+    Generate {
+        /// Search query for node names (e.g., "sampler", "load")
+        query: Option<String>,
+    },
+
     /// Import browser export JSON and create/update project
     Import {
         /// Path to export JSON file
@@ -119,6 +125,8 @@ fn main() -> Result<()> {
         Commands::Diff { project, json } => commands::diff::run(project, json),
 
         Commands::Sync { project, dry_run } => commands::sync::run(project, dry_run),
+
+        Commands::Generate { query } => commands::generate::run(query),
 
         Commands::Import {
             export_file,

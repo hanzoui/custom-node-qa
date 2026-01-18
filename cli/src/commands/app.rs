@@ -81,6 +81,7 @@ fn run_dashboard_menu(initial_project: Option<String>) -> Result<()> {
             "Compare with repo",
             "Run validation",
             "Sync checklists",
+            "Generate workflow from search",
             "",
             "📖 Help - How does this work?",
             "Switch project",
@@ -117,17 +118,20 @@ fn run_dashboard_menu(initial_project: Option<String>) -> Result<()> {
             5 => {
                 run_sync_interactive(&project_name)?;
             }
-            7 => {
-                show_help_guide()?;
+            6 => {
+                crate::commands::generate::run(None)?;
             }
             8 => {
-                current_project = None;
+                show_help_guide()?;
             }
             9 => {
+                current_project = None;
+            }
+            10 => {
                 run_cleanup()?;
                 pause();
             }
-            10 => break,
+            11 => break,
             _ => {}
         }
     }
