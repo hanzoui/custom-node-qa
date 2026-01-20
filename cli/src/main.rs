@@ -65,6 +65,12 @@ enum Commands {
         query: Option<String>,
     },
 
+    /// Generate API test script for nodes
+    GenerateApiTest {
+        /// Project name (optional)
+        project: Option<String>,
+    },
+
     /// Import browser export JSON and create/update project
     Import {
         /// Path to export JSON file
@@ -122,6 +128,8 @@ fn main() -> Result<()> {
         Commands::Sync { project, dry_run } => commands::sync::run(project, dry_run),
 
         Commands::Generate { query } => commands::generate::run(query),
+
+        Commands::GenerateApiTest { project } => commands::generate_api_test::run(project),
 
         Commands::Import {
             export_file,

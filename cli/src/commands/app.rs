@@ -85,6 +85,7 @@ fn run_dashboard_menu(initial_project: Option<String>) -> Result<()> {
             "Run validation",
             "Sync checklists",
             "Generate workflow from search",
+            "Generate API test script",
         ];
 
         if git_available {
@@ -136,6 +137,9 @@ fn run_dashboard_menu(initial_project: Option<String>) -> Result<()> {
             }
             "Generate workflow from search" => {
                 crate::commands::generate::run(None)?;
+            }
+            "Generate API test script" => {
+                crate::commands::generate_api_test::run(Some(project_name.clone()))?;
             }
             "🔄 Pull latest from team" => {
                 crate::git::git_pull()?;

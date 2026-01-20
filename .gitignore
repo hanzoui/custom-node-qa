@@ -26,3 +26,6 @@ cli/target/
 
 # Generated workflows (local only)
 workflows/generated-local/
+
+# Generated API tests (local only)
+api-tests/generated-local/
