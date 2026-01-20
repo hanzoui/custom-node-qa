@@ -1,6 +1,7 @@
 use crate::models::{Checklist, DetailedChecklist, Workflow};
 use anyhow::{Context, Result};
 use colored::Colorize;
+use comfy_table::{Table, Cell, Color as TableColor, Attribute, presets::UTF8_FULL};
 use serde_json::json;
 use std::collections::{HashMap, HashSet};
 use std::path::PathBuf;
@@ -137,64 +138,80 @@ fn calculate_diff(checklist: &Checklist, workflows: &HashMap<String, Workflow>) 
 }
 
 fn print_text_diff(project: &str, diff: &DiffResult) {
-    println!("📊 Comparing {} checklist vs workflow files...\n", project.bold());
+    println!("\n📊 Comparing {} checklist vs workflow files\n", project.bold());
 
-    if !diff.matches.is_empty() {
-        println!("{} ({}):", "✅ Matches".green(), diff.matches.len());
-        for (pack, count) in &diff.matches {
-            println!("   ✓ {} ({} nodes)", pack, count);
-        }
-        println!();
+    // Create comprehensive table
+    let mut table = Table::new();
+    table.load_preset(UTF8_FULL);
+    table.set_header(vec![
+        Cell::new("Pack Name").add_attribute(Attribute::Bold).fg(TableColor::Cyan),
+        Cell::new("Status").add_attribute(Attribute::Bold).fg(TableColor::Cyan),
+        Cell::new("Checklist").add_attribute(Attribute::Bold).fg(TableColor::Cyan),
+        Cell::new("Workflow").add_attribute(Attribute::Bold).fg(TableColor::Cyan),
+        Cell::new("Delta").add_attribute(Attribute::Bold).fg(TableColor::Cyan),
+    ]);
+
+    // Add matches
+    for (pack, count) in &diff.matches {
+        table.add_row(vec![
+            Cell::new(pack),
+            Cell::new("✓ Match").fg(TableColor::Green),
+            Cell::new(count.to_string()),
+            Cell::new(count.to_string()),
+            Cell::new("±0").fg(TableColor::DarkGrey),
+        ]);
     }
 
-    if !diff.count_mismatches.is_empty() {
-        println!(
-            "{} ({}):",
-            "⚠️  Count Mismatches".yellow(),
-            diff.count_mismatches.len()
-        );
-        for (pack, checklist_count, workflow_count) in &diff.count_mismatches {
-            let delta = *workflow_count as i64 - *checklist_count as i64;
-            let sign = if delta > 0 { "+" } else { "" };
-            println!(
-                "   • {}: checklist has {}, workflow has {} ({}{})",
-                pack, checklist_count, workflow_count, sign, delta
-            );
-        }
-        println!();
+    // Add count mismatches
+    for (pack, checklist_count, workflow_count) in &diff.count_mismatches {
+        let delta = *workflow_count as i64 - *checklist_count as i64;
+        let sign = if delta > 0 { "+" } else { "" };
+        let delta_str = format!("{}{}", sign, delta);
+
+        table.add_row(vec![
+            Cell::new(pack),
+            Cell::new("⚠ Mismatch").fg(TableColor::Yellow),
+            Cell::new(checklist_count.to_string()),
+            Cell::new(workflow_count.to_string()),
+            Cell::new(&delta_str).fg(if delta > 0 { TableColor::Green } else { TableColor::Red }),
+        ]);
     }
 
-    if !diff.missing_workflows.is_empty() {
-        println!(
-            "{} ({}):",
-            "❌ Missing Workflows".red(),
-            diff.missing_workflows.len()
-        );
-        for (pack, count) in &diff.missing_workflows {
-            println!("   • {} ({} nodes)", pack, count);
-        }
-        println!();
+    // Add missing workflows
+    for (pack, count) in &diff.missing_workflows {
+        table.add_row(vec![
+            Cell::new(pack),
+            Cell::new("❌ No Workflow").fg(TableColor::Red),
+            Cell::new(count.to_string()),
+            Cell::new("-"),
+            Cell::new("-"),
+        ]);
     }
 
-    if !diff.new_packs.is_empty() {
-        println!(
-            "{} ({}):",
-            "🆕 New Packs Not in Checklist".cyan(),
-            diff.new_packs.len()
-        );
-        for (pack, count) in &diff.new_packs {
-            println!("   • {} ({} nodes)", pack, count);
-        }
-        println!();
+    // Add new packs
+    for (pack, count) in &diff.new_packs {
+        table.add_row(vec![
+            Cell::new(pack),
+            Cell::new("🆕 New").fg(TableColor::Cyan),
+            Cell::new("-"),
+            Cell::new(count.to_string()),
+            Cell::new("-"),
+        ]);
     }
 
-    if !diff.untested.is_empty() {
-        println!("{} ({}):", "⏳ Untested".yellow(), diff.untested.len());
-        for (pack, count) in &diff.untested {
-            println!("   • {} ({} nodes)", pack, count);
-        }
-        println!();
+    // Add untested
+    for (pack, count) in &diff.untested {
+        table.add_row(vec![
+            Cell::new(pack),
+            Cell::new("⏳ Untested").fg(TableColor::Yellow),
+            Cell::new(count.to_string()),
+            Cell::new("-"),
+            Cell::new("-"),
+        ]);
     }
+
+    println!("{}", table);
+    println!();
 
     // Summary
     let total_packs = diff.matches.len() + diff.count_mismatches.len() + diff.untested.len();

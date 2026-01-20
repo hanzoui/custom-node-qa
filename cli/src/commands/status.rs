@@ -2,6 +2,7 @@ use crate::generators::ReportGenerator;
 use crate::models::{Checklist, Metadata};
 use anyhow::{Context, Result};
 use colored::Colorize;
+use comfy_table::{Table, Cell, Color as TableColor, Attribute, presets::UTF8_FULL};
 use std::fs;
 use std::path::PathBuf;
 use walkdir::WalkDir;
@@ -104,7 +105,17 @@ fn show_all_projects(checklists_dir: &PathBuf, format: &str) -> Result<()> {
 
         println!("{}", serde_json::to_string_pretty(&all_statuses)?);
     } else {
-        println!("{}\n", "📊 All Projects".bold());
+        println!("\n{}\n", "📊 All Projects".bold());
+
+        let mut table = Table::new();
+        table.load_preset(UTF8_FULL);
+        table.set_header(vec![
+            Cell::new("Project").add_attribute(Attribute::Bold).fg(TableColor::Cyan),
+            Cell::new("Tested").add_attribute(Attribute::Bold).fg(TableColor::Cyan),
+            Cell::new("Total").add_attribute(Attribute::Bold).fg(TableColor::Cyan),
+            Cell::new("Progress").add_attribute(Attribute::Bold).fg(TableColor::Cyan),
+            Cell::new("ComfyUI Version").add_attribute(Attribute::Bold).fg(TableColor::Cyan),
+        ]);
 
         for project_name in &projects {
             let project_dir = checklists_dir.join(project_name);
@@ -114,7 +125,13 @@ fn show_all_projects(checklists_dir: &PathBuf, format: &str) -> Result<()> {
             let checklist = match Checklist::from_file(&checklist_path) {
                 Ok(c) => c,
                 Err(_) => {
-                    println!("⚠️  {} - failed to load", project_name.yellow());
+                    table.add_row(vec![
+                        Cell::new(project_name).fg(TableColor::Yellow),
+                        Cell::new("Error").fg(TableColor::Red),
+                        Cell::new("-"),
+                        Cell::new("-"),
+                        Cell::new("-"),
+                    ]);
                     continue;
                 }
             };
@@ -133,16 +150,31 @@ fn show_all_projects(checklists_dir: &PathBuf, format: &str) -> Result<()> {
                 0.0
             };
 
-            println!("  {} - {}/{} tested ({:.0}%)", project_name.bold(), tested, total, percent);
+            let progress_bar = create_mini_progress_bar(percent);
+            let progress_cell = if percent == 100.0 {
+                Cell::new(&progress_bar).fg(TableColor::Green)
+            } else if percent >= 50.0 {
+                Cell::new(&progress_bar).fg(TableColor::Yellow)
+            } else {
+                Cell::new(&progress_bar).fg(TableColor::Red)
+            };
 
-            if let Some(meta) = &metadata {
-                if let Some(version) = &meta.environment.comfyui_version {
-                    println!("    ComfyUI: {}", version);
-                }
-            }
+            let version_str = metadata
+                .as_ref()
+                .and_then(|m| m.environment.comfyui_version.as_deref())
+                .unwrap_or("-");
+
+            table.add_row(vec![
+                Cell::new(project_name),
+                Cell::new(tested.to_string()).fg(if tested == total { TableColor::Green } else { TableColor::White }),
+                Cell::new(total.to_string()),
+                progress_cell,
+                Cell::new(version_str).fg(TableColor::DarkGrey),
+            ]);
         }
 
-        println!("\n💡 Run {} to see details", "comfy-qa status <project>".cyan());
+        println!("{}", table);
+        println!("\n💡 Run {} to see details\n", "comfy-qa status <project>".cyan());
     }
 
     Ok(())
@@ -178,6 +210,17 @@ fn generate_json_status(
             "tested": p.tested,
         })).collect::<Vec<_>>()
     })
+}
+
+fn create_mini_progress_bar(percent: f64) -> String {
+    let bar_width = 15;
+    let filled = (bar_width as f64 * percent / 100.0) as usize;
+    format!(
+        "[{}{}] {:.0}%",
+        "█".repeat(filled),
+        "░".repeat(bar_width - filled),
+        percent
+    )
 }
 
 fn find_repo_root() -> Result<PathBuf> {
