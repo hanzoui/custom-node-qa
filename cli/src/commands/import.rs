@@ -1,4 +1,4 @@
-use crate::models::{Export, Metadata, PackMetadata, Environment};
+use crate::models::{Environment, Export, Metadata, PackMetadata};
 use anyhow::{Context, Result};
 use chrono::Utc;
 use colored::Colorize;
@@ -14,7 +14,11 @@ pub fn run(export_file: String, project: String) -> Result<()> {
     let export = Export::from_file(&export_file)
         .with_context(|| format!("Failed to load export file: {}", export_file))?;
 
-    println!("📦 Importing {} packs from {}", export.packs.len(), export_file.bold());
+    println!(
+        "📦 Importing {} packs from {}",
+        export.packs.len(),
+        export_file.bold()
+    );
 
     // Create project directory
     let project_dir = checklists_dir.join(&project);
@@ -51,7 +55,7 @@ pub fn run(export_file: String, project: String) -> Result<()> {
     };
 
     let metadata_path = project_dir.join("metadata.json");
-    metadata.to_file(&metadata_path)?;
+    metadata.to_file(metadata_path)?;
 
     // Generate checklists
     let mut checklist_lines = vec!["# Node Pack QA Checklist".to_string(), String::new()];
@@ -87,12 +91,18 @@ pub fn run(export_file: String, project: String) -> Result<()> {
     }
 
     let checklist_detailed_md = detailed_lines.join("\n");
-    fs::write(project_dir.join("checklist-detailed.md"), checklist_detailed_md)?;
+    fs::write(
+        project_dir.join("checklist-detailed.md"),
+        checklist_detailed_md,
+    )?;
 
     println!("✅ Created project: {}", project.bold());
     println!("   📄 {}", project_dir.join("metadata.json").display());
     println!("   📄 {}", project_dir.join("checklist.md").display());
-    println!("   📄 {}", project_dir.join("checklist-detailed.md").display());
+    println!(
+        "   📄 {}",
+        project_dir.join("checklist-detailed.md").display()
+    );
     println!("\n💡 Next steps:");
     println!("   1. Test node packs in browser using QA.testPack()");
     println!("   2. Save workflow files to workflows/");

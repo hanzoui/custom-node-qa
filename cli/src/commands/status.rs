@@ -2,7 +2,7 @@ use crate::generators::ReportGenerator;
 use crate::models::{Checklist, Metadata};
 use anyhow::{Context, Result};
 use colored::Colorize;
-use comfy_table::{Table, Cell, Color as TableColor, Attribute, presets::UTF8_FULL};
+use comfy_table::{presets::UTF8_FULL, Attribute, Cell, Color as TableColor, Table};
 use std::fs;
 use std::path::PathBuf;
 use walkdir::WalkDir;
@@ -30,7 +30,7 @@ fn show_single_project(checklists_dir: &PathBuf, project_name: &str, format: &st
     let checklist_path = project_dir.join("checklist.md");
     let metadata_path = project_dir.join("metadata.json");
 
-    let checklist = Checklist::from_file(&checklist_path)
+    let checklist = Checklist::from_file(checklist_path)
         .with_context(|| format!("Failed to load checklist for '{}'", project_name))?;
 
     let metadata = if metadata_path.exists() {
@@ -110,11 +110,21 @@ fn show_all_projects(checklists_dir: &PathBuf, format: &str) -> Result<()> {
         let mut table = Table::new();
         table.load_preset(UTF8_FULL);
         table.set_header(vec![
-            Cell::new("Project").add_attribute(Attribute::Bold).fg(TableColor::Cyan),
-            Cell::new("Tested").add_attribute(Attribute::Bold).fg(TableColor::Cyan),
-            Cell::new("Total").add_attribute(Attribute::Bold).fg(TableColor::Cyan),
-            Cell::new("Progress").add_attribute(Attribute::Bold).fg(TableColor::Cyan),
-            Cell::new("ComfyUI Version").add_attribute(Attribute::Bold).fg(TableColor::Cyan),
+            Cell::new("Project")
+                .add_attribute(Attribute::Bold)
+                .fg(TableColor::Cyan),
+            Cell::new("Tested")
+                .add_attribute(Attribute::Bold)
+                .fg(TableColor::Cyan),
+            Cell::new("Total")
+                .add_attribute(Attribute::Bold)
+                .fg(TableColor::Cyan),
+            Cell::new("Progress")
+                .add_attribute(Attribute::Bold)
+                .fg(TableColor::Cyan),
+            Cell::new("ComfyUI Version")
+                .add_attribute(Attribute::Bold)
+                .fg(TableColor::Cyan),
         ]);
 
         for project_name in &projects {
@@ -166,7 +176,11 @@ fn show_all_projects(checklists_dir: &PathBuf, format: &str) -> Result<()> {
 
             table.add_row(vec![
                 Cell::new(project_name),
-                Cell::new(tested.to_string()).fg(if tested == total { TableColor::Green } else { TableColor::White }),
+                Cell::new(tested.to_string()).fg(if tested == total {
+                    TableColor::Green
+                } else {
+                    TableColor::White
+                }),
                 Cell::new(total.to_string()),
                 progress_cell,
                 Cell::new(version_str).fg(TableColor::DarkGrey),
@@ -174,16 +188,16 @@ fn show_all_projects(checklists_dir: &PathBuf, format: &str) -> Result<()> {
         }
 
         println!("{}", table);
-        println!("\n💡 Run {} to see details\n", "comfy-qa status <project>".cyan());
+        println!(
+            "\n💡 Run {} to see details\n",
+            "comfy-qa status <project>".cyan()
+        );
     }
 
     Ok(())
 }
 
-fn generate_json_status(
-    checklist: &Checklist,
-    metadata: Option<&Metadata>,
-) -> serde_json::Value {
+fn generate_json_status(checklist: &Checklist, metadata: Option<&Metadata>) -> serde_json::Value {
     let tested = checklist.packs.iter().filter(|p| p.tested).count();
     let total = checklist.packs.len();
     let percent = if total > 0 {

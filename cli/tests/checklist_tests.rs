@@ -1,4 +1,4 @@
-use comfy_qa::models::{Checklist, NodePack};
+use comfy_qa::models::{Checklist};
 use std::fs;
 use tempfile::TempDir;
 

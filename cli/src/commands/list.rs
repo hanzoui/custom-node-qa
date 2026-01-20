@@ -1,7 +1,7 @@
+use crate::models::Checklist;
 use anyhow::Result;
 use colored::Colorize;
-use comfy_table::{Table, Cell, Color as TableColor, Attribute, presets::UTF8_FULL};
-use crate::models::Checklist;
+use comfy_table::{presets::UTF8_FULL, Attribute, Cell, Color as TableColor, Table};
 use std::path::PathBuf;
 use walkdir::WalkDir;
 
@@ -30,7 +30,10 @@ pub fn run() -> Result<()> {
 
     if projects.is_empty() {
         println!("No projects found in checklists/");
-        println!("💡 Create one with: {}", "comfy-qa new <project-name>".cyan());
+        println!(
+            "💡 Create one with: {}",
+            "comfy-qa new <project-name>".cyan()
+        );
         return Ok(());
     }
 
@@ -41,9 +44,15 @@ pub fn run() -> Result<()> {
     let mut table = Table::new();
     table.load_preset(UTF8_FULL);
     table.set_header(vec![
-        Cell::new("Project").add_attribute(Attribute::Bold).fg(TableColor::Cyan),
-        Cell::new("Packs").add_attribute(Attribute::Bold).fg(TableColor::Cyan),
-        Cell::new("Status").add_attribute(Attribute::Bold).fg(TableColor::Cyan),
+        Cell::new("Project")
+            .add_attribute(Attribute::Bold)
+            .fg(TableColor::Cyan),
+        Cell::new("Packs")
+            .add_attribute(Attribute::Bold)
+            .fg(TableColor::Cyan),
+        Cell::new("Status")
+            .add_attribute(Attribute::Bold)
+            .fg(TableColor::Cyan),
     ]);
 
     for project in &projects {
@@ -63,7 +72,7 @@ pub fn run() -> Result<()> {
                 };
                 (total, status)
             }
-            Err(_) => (0, "⚠ Error".to_string())
+            Err(_) => (0, "⚠ Error".to_string()),
         };
 
         let status_cell = if status.contains("Complete") {

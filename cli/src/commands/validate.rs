@@ -12,7 +12,14 @@ pub fn run(project: Option<String>, json: bool, fix: bool, verbose: bool) -> Res
     let workflows_dir = repo_root.join("workflows");
 
     if let Some(project_name) = project {
-        validate_single_project(&checklists_dir, &workflows_dir, &project_name, json, fix, verbose)
+        validate_single_project(
+            &checklists_dir,
+            &workflows_dir,
+            &project_name,
+            json,
+            fix,
+            verbose,
+        )
     } else {
         validate_all_projects(&checklists_dir, &workflows_dir, json, fix, verbose)
     }
@@ -35,7 +42,7 @@ fn validate_single_project(
     let checklist_path = project_dir.join("checklist.md");
     let metadata_path = project_dir.join("metadata.json");
 
-    let checklist = Checklist::from_file(&checklist_path)
+    let checklist = Checklist::from_file(checklist_path)
         .with_context(|| format!("Failed to load checklist for '{}'", project_name))?;
 
     let metadata = if metadata_path.exists() {
@@ -148,7 +155,11 @@ fn validate_all_projects(
 
         let total_errors: usize = all_results
             .iter()
-            .map(|(_, r)| r.iter().filter(|res| res.severity == Severity::Error).count())
+            .map(|(_, r)| {
+                r.iter()
+                    .filter(|res| res.severity == Severity::Error)
+                    .count()
+            })
             .sum();
 
         let total_warnings: usize = all_results
@@ -180,7 +191,11 @@ fn validate_all_projects(
     Ok(())
 }
 
-fn print_text_results(project_name: &str, results: &[crate::validators::ValidationResult], verbose: bool) {
+fn print_text_results(
+    project_name: &str,
+    results: &[crate::validators::ValidationResult],
+    verbose: bool,
+) {
     println!("📋 Validating: {}", project_name.bold());
 
     let errors: Vec<_> = results

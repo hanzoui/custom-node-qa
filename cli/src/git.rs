@@ -15,7 +15,7 @@ pub fn check_git_installed() -> bool {
 
 pub fn check_in_repo() -> bool {
     Command::new("git")
-        .args(&["rev-parse", "--is-inside-work-tree"])
+        .args(["rev-parse", "--is-inside-work-tree"])
         .stdout(Stdio::null())
         .stderr(Stdio::null())
         .status()
@@ -29,7 +29,7 @@ pub fn git_pull() -> Result<()> {
     println!();
 
     let output = Command::new("git")
-        .args(&["pull", "origin", "main"])
+        .args(["pull", "origin", "main"])
         .output()
         .context("Failed to run git pull")?;
 
@@ -58,7 +58,7 @@ pub fn git_status() -> Result<()> {
     println!();
 
     let output = Command::new("git")
-        .args(&["status", "--short"])
+        .args(["status", "--short"])
         .output()
         .context("Failed to run git status")?;
 
@@ -72,7 +72,7 @@ pub fn git_status() -> Result<()> {
 
         // Show diff stats
         let diff_output = Command::new("git")
-            .args(&["diff", "--stat"])
+            .args(["diff", "--stat"])
             .output()
             .context("Failed to run git diff")?;
 
@@ -89,7 +89,7 @@ pub fn git_status() -> Result<()> {
 pub fn git_commit_and_push() -> Result<()> {
     // First check status
     let status_output = Command::new("git")
-        .args(&["status", "--short"])
+        .args(["status", "--short"])
         .output()
         .context("Failed to check git status")?;
 
@@ -116,7 +116,7 @@ pub fn git_commit_and_push() -> Result<()> {
     println!("{} Staging changes...", style("→").cyan());
 
     let add_output = Command::new("git")
-        .args(&["add", "."])
+        .args(["add", "."])
         .output()
         .context("Failed to stage changes")?;
 
@@ -129,7 +129,7 @@ pub fn git_commit_and_push() -> Result<()> {
     println!("{} Creating commit...", style("→").cyan());
 
     let commit_output = Command::new("git")
-        .args(&["commit", "-m", &commit_msg])
+        .args(["commit", "-m", &commit_msg])
         .output()
         .context("Failed to commit")?;
 
@@ -156,12 +156,15 @@ pub fn git_commit_and_push() -> Result<()> {
         println!("{} Pushing to GitHub...", style("→").cyan());
 
         let push_output = Command::new("git")
-            .args(&["push", "origin", "main"])
+            .args(["push", "origin", "main"])
             .output()
             .context("Failed to push")?;
 
         if push_output.status.success() {
-            println!("{} Push complete! Your work is now shared with the team.", style("✓").green());
+            println!(
+                "{} Push complete! Your work is now shared with the team.",
+                style("✓").green()
+            );
         } else {
             let stderr = String::from_utf8_lossy(&push_output.stderr);
             println!("{} Push failed:", style("✗").red());
@@ -185,7 +188,7 @@ pub fn git_commit_and_push() -> Result<()> {
 pub fn get_repo_status_summary() -> Option<String> {
     // Check if behind
     let fetch_output = Command::new("git")
-        .args(&["fetch", "origin", "main"])
+        .args(["fetch", "origin", "main"])
         .stdout(Stdio::null())
         .stderr(Stdio::null())
         .status();
@@ -195,7 +198,7 @@ pub fn get_repo_status_summary() -> Option<String> {
     }
 
     let behind_output = Command::new("git")
-        .args(&["rev-list", "--count", "HEAD..origin/main"])
+        .args(["rev-list", "--count", "HEAD..origin/main"])
         .output()
         .ok()?;
 
@@ -204,7 +207,7 @@ pub fn get_repo_status_summary() -> Option<String> {
 
     // Check for uncommitted changes
     let status_output = Command::new("git")
-        .args(&["status", "--short"])
+        .args(["status", "--short"])
         .output()
         .ok()?;
 

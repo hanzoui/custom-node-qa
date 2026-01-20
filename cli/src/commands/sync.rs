@@ -15,7 +15,7 @@ pub fn run(project: String, dry_run: bool) -> Result<()> {
         anyhow::bail!("Project '{}' not found", project);
     }
 
-    let workflows = Workflow::load_all(&workflows_dir)?;
+    let workflows = Workflow::load_all(workflows_dir)?;
 
     if workflows.is_empty() {
         anyhow::bail!("No workflow files found in workflows/");
@@ -33,7 +33,10 @@ pub fn run(project: String, dry_run: bool) -> Result<()> {
         println!("📄 {}", checklist_path.display());
         println!("📄 {}\n", checklist_detailed_path.display());
         println!("Preview of checklist.md:\n{}", "─".repeat(60));
-        println!("{}", checklist_md.lines().take(20).collect::<Vec<_>>().join("\n"));
+        println!(
+            "{}",
+            checklist_md.lines().take(20).collect::<Vec<_>>().join("\n")
+        );
         if checklist_md.lines().count() > 20 {
             println!("... ({} more lines)", checklist_md.lines().count() - 20);
         }
@@ -46,7 +49,11 @@ pub fn run(project: String, dry_run: bool) -> Result<()> {
         fs::write(&checklist_detailed_path, checklist_detailed_md)
             .with_context(|| format!("Failed to write {}", checklist_detailed_path.display()))?;
 
-        println!("✅ Synced {} from {} workflow files", project.bold(), workflows.len());
+        println!(
+            "✅ Synced {} from {} workflow files",
+            project.bold(),
+            workflows.len()
+        );
         println!("   📄 Updated: {}", checklist_path.display());
         println!("   📄 Updated: {}", checklist_detailed_path.display());
     }

@@ -31,7 +31,10 @@ fn test_metadata_parsing() {
     assert_eq!(metadata.project_name, "test-project");
     assert_eq!(metadata.environment.env_type, "cloud");
     assert_eq!(metadata.environment.url, "https://example.com");
-    assert_eq!(metadata.environment.comfyui_version, Some("v1.0.0".to_string()));
+    assert_eq!(
+        metadata.environment.comfyui_version,
+        Some("v1.0.0".to_string())
+    );
 }
 
 #[test]

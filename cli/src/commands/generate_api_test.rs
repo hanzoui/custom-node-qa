@@ -32,7 +32,11 @@ pub fn run(project: Option<String>) -> Result<()> {
     let checklist_path = project_dir.join("checklist.md");
 
     if !checklist_path.exists() {
-        println!("{} Checklist not found for project '{}'", style("✗").red(), project_name);
+        println!(
+            "{} Checklist not found for project '{}'",
+            style("✗").red(),
+            project_name
+        );
         return Ok(());
     }
 
@@ -56,13 +60,17 @@ pub fn run(project: Option<String>) -> Result<()> {
 
     // Get workflow file to extract node names
     let workflows_dir = repo_root.join("workflows");
-    let workflows = Workflow::load_all(&workflows_dir)?;
+    let workflows = Workflow::load_all(workflows_dir)?;
 
     let node_types = if let Some(workflow) = workflows.get(&selected_pack.name) {
         workflow.get_unique_node_types()
     } else {
         println!();
-        println!("{} No workflow file found for pack '{}'", style("⚠").yellow(), selected_pack.name);
+        println!(
+            "{} No workflow file found for pack '{}'",
+            style("⚠").yellow(),
+            selected_pack.name
+        );
         println!("Generating template with placeholder nodes.");
         println!();
         vec!["PlaceholderNode".to_string()]
@@ -71,11 +79,12 @@ pub fn run(project: Option<String>) -> Result<()> {
     // Select nodes to test
     println!();
     println!("Select nodes to include in API test (Space to toggle, Enter when done):");
-    let node_selections = MultiSelect::new()
-        .items(&node_types)
-        .interact()?;
+    let node_selections = MultiSelect::new().items(&node_types).interact()?;
 
-    let selected_nodes: Vec<_> = node_selections.iter().map(|&i| node_types[i].clone()).collect();
+    let selected_nodes: Vec<_> = node_selections
+        .iter()
+        .map(|&i| node_types[i].clone())
+        .collect();
 
     if selected_nodes.is_empty() {
         println!("{} No nodes selected", style("✗").red());
@@ -111,11 +120,12 @@ pub fn run(project: Option<String>) -> Result<()> {
     fs::create_dir_all(&output_dir)?;
 
     // Generate filename
-    let filename = format!("test_{}.py", selected_pack.name.replace("-", "_"));
-    let output_path = output_dir.join(&filename);
+    let filename = format!("test_{}.py", selected_pack.name.replace('-', "_"));
+    let output_path = output_dir.join(filename);
 
     // Generate Python script
-    let script_content = generate_api_test_script(&selected_pack.name, &selected_nodes, &server_url);
+    let script_content =
+        generate_api_test_script(&selected_pack.name, &selected_nodes, &server_url);
 
     fs::write(&output_path, script_content)?;
 
@@ -166,13 +176,16 @@ SERVER_URL = "{}"
 
 "#,
         pack_name,
-        format!("test_{}.py", pack_name.replace("-", "_")),
+        format!("test_{}.py", pack_name.replace('-', "_")),
         server_url
     );
 
     // Generate test functions for each node
     for node_type in node_types {
-        let test_fn_name = format!("test_{}", node_type.to_lowercase().replace(" ", "_").replace("-", "_"));
+        let test_fn_name = format!(
+            "test_{}",
+            node_type.to_lowercase().replace([' ', '-'], "_")
+        );
         script.push_str(&format!(
             r#"
 def {}():
@@ -210,22 +223,23 @@ def {}():
         return False
 
 "#,
-            test_fn_name,
-            node_type,
-            node_type,
-            node_type,
-            node_type,
-            node_type,
-            node_type
+            test_fn_name, node_type, node_type, node_type, node_type, node_type, node_type
         ));
     }
 
     // Generate main function
     script.push_str("\ndef main():\n");
-    script.push_str(&format!("    print(\"Testing {} - {} nodes\\n\")\n\n", pack_name, node_types.len()));
+    script.push_str(&format!(
+        "    print(\"Testing {} - {} nodes\\n\")\n\n",
+        pack_name,
+        node_types.len()
+    ));
     script.push_str("    tests = [\n");
     for node_type in node_types {
-        let test_fn_name = format!("test_{}", node_type.to_lowercase().replace(" ", "_").replace("-", "_"));
+        let test_fn_name = format!(
+            "test_{}",
+            node_type.to_lowercase().replace([' ', '-'], "_")
+        );
         script.push_str(&format!("        {},\n", test_fn_name));
     }
     script.push_str("    ]\n\n");
@@ -253,7 +267,10 @@ fn show_instructions(file_path: &PathBuf, pack_name: &str) -> Result<()> {
     println!("  cd /path/to/ComfyUI");
     println!("  python main.py");
     println!();
-    println!("{}", style("Step 2: Install Dependencies (if needed)").bold());
+    println!(
+        "{}",
+        style("Step 2: Install Dependencies (if needed)").bold()
+    );
     println!("  pip install requests");
     println!();
     println!("{}", style("Step 3: Run Test Script").bold());
@@ -262,7 +279,10 @@ fn show_instructions(file_path: &PathBuf, pack_name: &str) -> Result<()> {
     println!("{}", style("Step 4: Mark in Checklist").bold());
     println!("  Open checklists/your-project/checklist.md");
     println!("  Find the pack: {}", pack_name);
-    println!("  Add marker: - [x] {} (count) <!-- API tested -->", pack_name);
+    println!(
+        "  Add marker: - [x] {} (count) <!-- API tested -->",
+        pack_name
+    );
     println!();
     println!("{}", style("Step 5: Commit").bold());
     println!("  git add .");

@@ -27,7 +27,10 @@ pub fn run() -> Result<()> {
 fn run_first_time_setup() -> Result<()> {
     clear_screen();
 
-    println!("\n{}", style("Welcome to ComfyUI Node Testing").bold().cyan());
+    println!(
+        "\n{}",
+        style("Welcome to ComfyUI Node Testing").bold().cyan()
+    );
     println!("{}", style("─".repeat(50)).dim());
     println!();
     println!("Let's set up your first testing project.");
@@ -200,7 +203,10 @@ fn create_new_project() -> Result<String> {
             if input.is_empty() {
                 return Err("Name cannot be empty");
             }
-            if !input.chars().all(|c| c.is_ascii_lowercase() || c == '-' || c.is_numeric()) {
+            if !input
+                .chars()
+                .all(|c| c.is_ascii_lowercase() || c == '-' || c.is_numeric())
+            {
                 return Err("Use only lowercase, numbers, and dashes");
             }
             Ok(())
@@ -358,7 +364,8 @@ fn show_pack_list(project: &str) -> Result<()> {
         println!("{}", style("─".repeat(70)).dim());
         println!();
 
-        let checklist = match crate::models::Checklist::from_file(project_dir.join("checklist.md")) {
+        let checklist = match crate::models::Checklist::from_file(project_dir.join("checklist.md"))
+        {
             Ok(c) => c,
             Err(e) => {
                 println!("{} Failed to load checklist: {}", style("✗").red(), e);
@@ -391,7 +398,11 @@ fn show_pack_list(project: &str) -> Result<()> {
         }
 
         println!("{}: {}", style("✓ Tested & OK").green(), tested_ok.len());
-        println!("{}: {}", style("⚠ Tested with Issues").yellow(), tested_issues.len());
+        println!(
+            "{}: {}",
+            style("⚠ Tested with Issues").yellow(),
+            tested_issues.len()
+        );
         println!("{}: {}", style("○ Not Tested").dim(), untested.len());
         println!();
 
@@ -419,7 +430,9 @@ fn show_pack_list(project: &str) -> Result<()> {
                     .with_prompt("Search for pack name")
                     .interact_text()?;
 
-                let matches: Vec<_> = checklist.packs.iter()
+                let matches: Vec<_> = checklist
+                    .packs
+                    .iter()
                     .filter(|p| p.name.to_lowercase().contains(&search.to_lowercase()))
                     .collect();
 
@@ -428,7 +441,12 @@ fn show_pack_list(project: &str) -> Result<()> {
                     println!("{} No packs found matching '{}'", style("✗").red(), search);
                     pause();
                 } else {
-                    show_pack_category(project, &format!("Search: {}", search), &matches, &workflows)?;
+                    show_pack_category(
+                        project,
+                        &format!("Search: {}", search),
+                        &matches,
+                        &workflows,
+                    )?;
                 }
             }
             4 => break,
@@ -457,18 +475,24 @@ fn show_pack_category(
 
     loop {
         clear_screen();
-        println!("\n{}", style(format!("{} ({})", category, packs.len())).bold());
+        println!(
+            "\n{}",
+            style(format!("{} ({})", category, packs.len())).bold()
+        );
         println!("{}", style("─".repeat(70)).dim());
         println!();
 
-        let mut items: Vec<String> = packs.iter().map(|p| {
-            let status = if p.tested {
-                style("✓").green().to_string()
-            } else {
-                style("○").dim().to_string()
-            };
-            format!("{} {} ({} nodes)", status, p.name, p.node_count)
-        }).collect();
+        let mut items: Vec<String> = packs
+            .iter()
+            .map(|p| {
+                let status = if p.tested {
+                    style("✓").green().to_string()
+                } else {
+                    style("○").dim().to_string()
+                };
+                format!("{} {} ({} nodes)", status, p.name, p.node_count)
+            })
+            .collect();
 
         items.push(style("← Back").dim().to_string());
 
@@ -504,27 +528,37 @@ fn show_packs_with_issues(
 
     loop {
         clear_screen();
-        println!("\n{}", style(format!("Packs with Issues ({})", packs_with_issues.len())).bold());
+        println!(
+            "\n{}",
+            style(format!("Packs with Issues ({})", packs_with_issues.len())).bold()
+        );
         println!("{}", style("─".repeat(70)).dim());
         println!();
 
-        let mut items: Vec<String> = packs_with_issues.iter().map(|(pack, workflow_count)| {
-            if *workflow_count == 0 {
-                format!("{} {} - missing workflow file", style("!").yellow(), pack.name)
-            } else {
-                let delta = *workflow_count as i64 - pack.node_count as i64;
-                let sign = if delta > 0 { "+" } else { "" };
-                format!(
-                    "{} {} - count mismatch (checklist: {}, workflow: {}, {}{})",
-                    style("!").yellow(),
-                    pack.name,
-                    pack.node_count,
-                    workflow_count,
-                    sign,
-                    delta
-                )
-            }
-        }).collect();
+        let mut items: Vec<String> = packs_with_issues
+            .iter()
+            .map(|(pack, workflow_count)| {
+                if *workflow_count == 0 {
+                    format!(
+                        "{} {} - missing workflow file",
+                        style("!").yellow(),
+                        pack.name
+                    )
+                } else {
+                    let delta = *workflow_count as i64 - pack.node_count as i64;
+                    let sign = if delta > 0 { "+" } else { "" };
+                    format!(
+                        "{} {} - count mismatch (checklist: {}, workflow: {}, {}{})",
+                        style("!").yellow(),
+                        pack.name,
+                        pack.node_count,
+                        workflow_count,
+                        sign,
+                        delta
+                    )
+                }
+            })
+            .collect();
 
         items.push(style("← Back").dim().to_string());
 
@@ -558,11 +592,14 @@ fn show_pack_details(
     println!("{}", style("─".repeat(70)).dim());
     println!();
 
-    println!("Status: {}", if pack.tested {
-        style("✓ Tested").green()
-    } else {
-        style("○ Not Tested").yellow()
-    });
+    println!(
+        "Status: {}",
+        if pack.tested {
+            style("✓ Tested").green()
+        } else {
+            style("○ Not Tested").yellow()
+        }
+    );
 
     println!("Checklist node count: {}", pack.node_count);
 
@@ -573,7 +610,8 @@ fn show_pack_details(
             let delta = workflow.node_count as i64 - pack.node_count as i64;
             let sign = if delta > 0 { "+" } else { "" };
             println!();
-            println!("{} Count mismatch: {}{} nodes",
+            println!(
+                "{} Count mismatch: {}{} nodes",
                 style("⚠").yellow(),
                 sign,
                 delta
@@ -710,7 +748,10 @@ fn run_diff_interactive(project: &str) -> Result<()> {
     loop {
         clear_screen();
 
-        println!("\n{}", style("Compare Checklist vs Workflows").bold().cyan());
+        println!(
+            "\n{}",
+            style("Compare Checklist vs Workflows").bold().cyan()
+        );
         println!("{}", style("─".repeat(70)).dim());
         println!();
         println!("This compares your checklist against actual workflow files to find:");
@@ -724,7 +765,8 @@ fn run_diff_interactive(project: &str) -> Result<()> {
         let workflows_dir = repo_root.join("workflows");
         let project_dir = checklists_dir.join(project);
 
-        let checklist = match crate::models::Checklist::from_file(project_dir.join("checklist.md")) {
+        let checklist = match crate::models::Checklist::from_file(project_dir.join("checklist.md"))
+        {
             Ok(c) => c,
             Err(e) => {
                 println!("{} Failed to load checklist: {}", style("✗").red(), e);
@@ -758,8 +800,16 @@ fn run_diff_interactive(project: &str) -> Result<()> {
 
         // Display summary
         println!("{}: {}", style("✓ Matches").green(), matches.len());
-        println!("{}: {}", style("⚠ Count Mismatches").yellow(), count_mismatches.len());
-        println!("{}: {}", style("✗ Missing Workflows").red(), missing_workflows.len());
+        println!(
+            "{}: {}",
+            style("⚠ Count Mismatches").yellow(),
+            count_mismatches.len()
+        );
+        println!(
+            "{}: {}",
+            style("✗ Missing Workflows").red(),
+            missing_workflows.len()
+        );
         println!();
 
         let mut options = vec![];
@@ -767,10 +817,16 @@ fn run_diff_interactive(project: &str) -> Result<()> {
             options.push(format!("View matching packs ({})", matches.len()));
         }
         if !count_mismatches.is_empty() {
-            options.push(format!("View count mismatches ({})", count_mismatches.len()));
+            options.push(format!(
+                "View count mismatches ({})",
+                count_mismatches.len()
+            ));
         }
         if !missing_workflows.is_empty() {
-            options.push(format!("View missing workflows ({})", missing_workflows.len()));
+            options.push(format!(
+                "View missing workflows ({})",
+                missing_workflows.len()
+            ));
         }
         options.push("Fix issues automatically (sync)".to_string());
         options.push("Back to dashboard".to_string());
@@ -794,7 +850,12 @@ fn run_diff_interactive(project: &str) -> Result<()> {
 
         if !count_mismatches.is_empty() {
             if selection == option_index {
-                show_count_mismatches_interactive(project, &count_mismatches, &workflows, &project_dir)?;
+                show_count_mismatches_interactive(
+                    project,
+                    &count_mismatches,
+                    &workflows,
+                    &project_dir,
+                )?;
                 option_index += 1;
                 continue;
             }
@@ -860,28 +921,37 @@ fn show_count_mismatches_interactive(
 ) -> Result<()> {
     let detailed_checklist_path = project_dir.join("checklist-detailed.md");
     let detailed_checklist = if detailed_checklist_path.exists() {
-        Some(crate::models::DetailedChecklist::from_file(&detailed_checklist_path)?)
+        Some(crate::models::DetailedChecklist::from_file(
+            &detailed_checklist_path,
+        )?)
     } else {
         None
     };
 
     loop {
         clear_screen();
-        println!("\n{}", style(format!("Count Mismatches ({})", count_mismatches.len())).bold());
+        println!(
+            "\n{}",
+            style(format!("Count Mismatches ({})", count_mismatches.len())).bold()
+        );
         println!("{}", style("─".repeat(70)).dim());
         println!();
 
-        let mut items: Vec<String> = count_mismatches.iter().map(|(name, checklist_count, workflow_count)| {
-            let delta = *workflow_count as i64 - *checklist_count as i64;
-            let sign = if delta > 0 { "+" } else { "" };
-            format!("{} - checklist: {}, workflow: {} ({}{})",
-                style(name).yellow(),
-                checklist_count,
-                workflow_count,
-                sign,
-                delta
-            )
-        }).collect();
+        let mut items: Vec<String> = count_mismatches
+            .iter()
+            .map(|(name, checklist_count, workflow_count)| {
+                let delta = *workflow_count as i64 - *checklist_count as i64;
+                let sign = if delta > 0 { "+" } else { "" };
+                format!(
+                    "{} - checklist: {}, workflow: {} ({}{})",
+                    style(name).yellow(),
+                    checklist_count,
+                    workflow_count,
+                    sign,
+                    delta
+                )
+            })
+            .collect();
 
         items.push(style("← Back").dim().to_string());
 
@@ -899,7 +969,8 @@ fn show_count_mismatches_interactive(
 
         if let Some(workflow) = workflows.get(pack_name) {
             if let Some(ref detailed) = detailed_checklist {
-                let node_diff = crate::commands::diff::calculate_node_diff(pack_name, workflow, detailed);
+                let node_diff =
+                    crate::commands::diff::calculate_node_diff(pack_name, workflow, detailed);
                 show_node_diff_details(&node_diff, *checklist_count, *workflow_count)?;
             } else {
                 clear_screen();
@@ -907,9 +978,15 @@ fn show_count_mismatches_interactive(
                 println!("{}", style("─".repeat(70)).dim());
                 println!();
                 println!("{}", style("Cannot show detailed diff:").yellow());
-                println!("  checklist-detailed.md not found for project '{}'", project);
+                println!(
+                    "  checklist-detailed.md not found for project '{}'",
+                    project
+                );
                 println!();
-                println!("Count mismatch: {} → {} nodes", checklist_count, workflow_count);
+                println!(
+                    "Count mismatch: {} → {} nodes",
+                    checklist_count, workflow_count
+                );
                 println!();
                 pause();
             }
@@ -932,16 +1009,15 @@ fn show_node_diff_details(
     let delta = workflow_count as i64 - checklist_count as i64;
     let sign = if delta > 0 { "+" } else { "" };
 
-    println!("Count: {} → {} ({}{} nodes)",
-        checklist_count,
-        workflow_count,
-        sign,
-        delta
+    println!(
+        "Count: {} → {} ({}{} nodes)",
+        checklist_count, workflow_count, sign, delta
     );
     println!();
 
     if !node_diff.missing_from_checklist.is_empty() {
-        println!("{} {} nodes in workflow but NOT in checklist:",
+        println!(
+            "{} {} nodes in workflow but NOT in checklist:",
             style("⚠").yellow(),
             style(node_diff.missing_from_checklist.len()).bold()
         );
@@ -952,7 +1028,8 @@ fn show_node_diff_details(
     }
 
     if !node_diff.extra_in_checklist.is_empty() {
-        println!("{} {} nodes in checklist but NOT in workflow:",
+        println!(
+            "{} {} nodes in checklist but NOT in workflow:",
             style("⚠").yellow(),
             style(node_diff.extra_in_checklist.len()).bold()
         );
@@ -1010,12 +1087,18 @@ fn run_validate_interactive(project: &str) -> Result<()> {
 
         let workflows = crate::models::Workflow::load_all(&workflows_dir).unwrap_or_default();
 
-        let results = crate::validators::Validator::validate_project(&checklist, &workflows, metadata.as_ref());
+        let results = crate::validators::Validator::validate_project(
+            &checklist,
+            &workflows,
+            metadata.as_ref(),
+        );
 
-        let errors: Vec<_> = results.iter()
+        let errors: Vec<_> = results
+            .iter()
             .filter(|r| r.severity == crate::validators::Severity::Error)
             .collect();
-        let warnings: Vec<_> = results.iter()
+        let warnings: Vec<_> = results
+            .iter()
             .filter(|r| r.severity == crate::validators::Severity::Warning)
             .collect();
 
@@ -1150,7 +1233,10 @@ fn show_help_overview() -> Result<()> {
     println!("{}", style("─".repeat(70)).dim());
     println!();
     println!("This tool helps QA teams track which ComfyUI custom node packs have");
-    println!("been tested. You work in a {} stored on GitHub,", style("shared repository").yellow());
+    println!(
+        "been tested. You work in a {} stored on GitHub,",
+        style("shared repository").yellow()
+    );
     println!("where multiple testers collaborate and share results.");
     println!();
     println!("{}", style("The Team Workflow:").bold());
@@ -1162,10 +1248,22 @@ fn show_help_overview() -> Result<()> {
     println!("  6. Others pull your updates");
     println!();
     println!("{}", style("Key Concepts:").bold());
-    println!("  • {} = Team collaboration through GitHub", style("Git").yellow());
-    println!("  • {} = what exists in ComfyUI", style("Workflow files").yellow());
-    println!("  • {} = what's been tested", style("Checklist files").yellow());
-    println!("  • This tool {} and helps collaboration", style("compares").yellow());
+    println!(
+        "  • {} = Team collaboration through GitHub",
+        style("Git").yellow()
+    );
+    println!(
+        "  • {} = what exists in ComfyUI",
+        style("Workflow files").yellow()
+    );
+    println!(
+        "  • {} = what's been tested",
+        style("Checklist files").yellow()
+    );
+    println!(
+        "  • This tool {} and helps collaboration",
+        style("compares").yellow()
+    );
     println!();
     pause();
     Ok(())
@@ -1217,14 +1315,27 @@ fn show_help_files() -> Result<()> {
     println!("{}", style("workflows/*.json").yellow().bold());
     println!("  • Generated by browser script");
     println!("  • Contains actual node definitions from ComfyUI");
-    println!("  • This is the {} - what really exists", style("source of truth").green());
+    println!(
+        "  • This is the {} - what really exists",
+        style("source of truth").green()
+    );
     println!();
-    println!("{}", style("checklists/your-project/checklist.md").yellow().bold());
+    println!(
+        "{}",
+        style("checklists/your-project/checklist.md")
+            .yellow()
+            .bold()
+    );
     println!("  • Manually edited by you");
     println!("  • Lists all packs with [ ] or [x]");
     println!("  • Shows node counts for each pack");
     println!();
-    println!("{}", style("checklists/your-project/checklist-detailed.md").yellow().bold());
+    println!(
+        "{}",
+        style("checklists/your-project/checklist-detailed.md")
+            .yellow()
+            .bold()
+    );
     println!("  • Detailed version with individual node names");
     println!("  • Also manually edited");
     println!();
@@ -1258,7 +1369,10 @@ fn show_help_commands() -> Result<()> {
     println!("  Checks for format errors, schema issues, consistency problems");
     println!();
     println!("{}", style("Sync checklists").cyan());
-    println!("  {} Regenerates entire checklist from workflow files", style("WARNING:").red());
+    println!(
+        "  {} Regenerates entire checklist from workflow files",
+        style("WARNING:").red()
+    );
     println!("  Useful when workflow files are correct but checklist is wrong");
     println!("  {} You'll lose your [x] marks!", style("DANGER:").red());
     println!();
@@ -1279,7 +1393,10 @@ fn show_help_git_basics() -> Result<()> {
     println!();
     println!("  {}", style("git pull origin main").cyan());
     println!("    Get everyone else's latest changes");
-    println!("    {} Run this every time before you start testing!", style("IMPORTANT:").yellow());
+    println!(
+        "    {} Run this every time before you start testing!",
+        style("IMPORTANT:").yellow()
+    );
     println!();
     println!("  {}", style("git status").cyan());
     println!("    See what files you changed");
@@ -1348,7 +1465,10 @@ fn show_help_troubleshooting() -> Result<()> {
     println!("\n{}", style("Troubleshooting").bold());
     println!("{}", style("─".repeat(70)).dim());
     println!();
-    println!("{}", style("'Count mismatch' - What does this mean?").bold());
+    println!(
+        "{}",
+        style("'Count mismatch' - What does this mean?").bold()
+    );
     println!("  Your checklist says X nodes, workflow file says Y nodes.");
     println!("  → Either workflow is outdated (re-test) OR checklist is wrong (edit/sync)");
     println!();
@@ -1376,7 +1496,12 @@ fn show_help_troubleshooting() -> Result<()> {
 fn run_sync_interactive(project: &str) -> Result<()> {
     clear_screen();
 
-    println!("\n{}", style("Sync: Regenerate Checklists from Workflow Files").bold().cyan());
+    println!(
+        "\n{}",
+        style("Sync: Regenerate Checklists from Workflow Files")
+            .bold()
+            .cyan()
+    );
     println!("{}", style("─".repeat(70)).dim());
     println!();
     println!("{}", style("What this does:").bold());
@@ -1399,11 +1524,7 @@ fn run_sync_interactive(project: &str) -> Result<()> {
     println!("  ✗ Checklist is correct, workflows are outdated");
     println!();
 
-    let options = vec![
-        "Preview changes (dry run)",
-        "Apply sync now",
-        "Cancel",
-    ];
+    let options = vec!["Preview changes (dry run)", "Apply sync now", "Cancel"];
 
     let selection = Select::new()
         .with_prompt("What would you like to do?")

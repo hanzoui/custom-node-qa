@@ -1,5 +1,5 @@
 use crate::models::Workflow;
-use anyhow::{Context, Result};
+use anyhow::{Result};
 use console::style;
 use dialoguer::{Input, Select};
 use serde_json::json;
@@ -20,7 +20,11 @@ pub fn run(search_query: Option<String>) -> Result<()> {
     };
 
     println!();
-    println!("{} Searching for nodes matching '{}'...", style("→").cyan(), query);
+    println!(
+        "{} Searching for nodes matching '{}'...",
+        style("→").cyan(),
+        query
+    );
     println!();
 
     // Load all workflows and find matching nodes
@@ -30,10 +34,8 @@ pub fn run(search_query: Option<String>) -> Result<()> {
 
     for workflow in workflows.values() {
         for node in &workflow.nodes {
-            if node.node_type.to_lowercase().contains(&query_lower) {
-                if !matching_nodes.contains(&node.node_type) {
-                    matching_nodes.push(node.node_type.clone());
-                }
+            if node.node_type.to_lowercase().contains(&query_lower) && !matching_nodes.contains(&node.node_type) {
+                matching_nodes.push(node.node_type.clone());
             }
         }
     }
@@ -45,7 +47,11 @@ pub fn run(search_query: Option<String>) -> Result<()> {
 
     matching_nodes.sort();
 
-    println!("{} Found {} matching nodes:", style("✓").green(), matching_nodes.len());
+    println!(
+        "{} Found {} matching nodes:",
+        style("✓").green(),
+        matching_nodes.len()
+    );
     for (i, node) in matching_nodes.iter().enumerate().take(20) {
         println!("  {}. {}", i + 1, node);
     }
@@ -91,13 +97,13 @@ pub fn run(search_query: Option<String>) -> Result<()> {
     fs::create_dir_all(&output_dir)?;
 
     // Get filename
-    let default_name = format!("search-{}.json", query.replace(" ", "-"));
+    let default_name = format!("search-{}.json", query.replace(' ', "-"));
     let filename = Input::<String>::new()
         .with_prompt("Filename")
         .default(default_name)
         .interact_text()?;
 
-    let output_path = output_dir.join(&filename);
+    let output_path = output_dir.join(filename);
 
     // Generate workflow JSON
     let workflow_json = generate_workflow_json(&matching_nodes);
@@ -167,12 +173,16 @@ fn generate_workflow_json(node_types: &[String]) -> serde_json::Value {
 fn show_load_instructions(file_path: &PathBuf) -> Result<()> {
     println!("{}", style("═".repeat(70)).cyan());
     println!();
-    println!("{}", style("How to Load This Workflow in ComfyUI:").bold().cyan());
+    println!(
+        "{}",
+        style("How to Load This Workflow in ComfyUI:").bold().cyan()
+    );
     println!();
     println!("{}", style("Method 1: Copy-Paste (Easiest)").bold());
     println!("  1. Open ComfyUI in your browser");
     println!("  2. Click {} on the canvas", style("anywhere").yellow());
-    println!("  3. Press {} (Windows/Linux) or {} (Mac)",
+    println!(
+        "  3. Press {} (Windows/Linux) or {} (Mac)",
         style("Ctrl+V").yellow(),
         style("Cmd+V").yellow()
     );

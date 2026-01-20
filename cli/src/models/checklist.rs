@@ -95,7 +95,7 @@ impl DetailedChecklist {
             if let Some(caps) = pack_header_re.captures(line) {
                 let pack_name = caps[1].trim().to_string();
                 current_pack = Some(pack_name.clone());
-                packs.entry(pack_name).or_insert_with(Vec::new);
+                packs.entry(pack_name).or_default();
             } else if let Some(caps) = node_re.captures(line) {
                 if let Some(pack_name) = &current_pack {
                     let node_name = caps[1].trim().to_string();

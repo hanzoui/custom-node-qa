@@ -147,4 +147,3 @@ fn main() -> Result<()> {
         Commands::List => commands::list::run(),
     }
 }
-

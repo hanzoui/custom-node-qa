@@ -20,8 +20,8 @@ pub fn run(project: String) -> Result<()> {
     }
 
     let checklist_path = project_dir.join("checklist.md");
-    let checklist = Checklist::from_file(&checklist_path)?;
-    let workflows = Workflow::load_all(&workflows_dir)?;
+    let checklist = Checklist::from_file(checklist_path)?;
+    let workflows = Workflow::load_all(workflows_dir)?;
 
     println!();
     println!("{}", style(format!("Testing Progress: {}", project)).bold());
@@ -90,7 +90,10 @@ pub fn run(project: String) -> Result<()> {
 
         println!();
         println!("{}", style("To test a pack:").dim());
-        println!("  1. In browser console: {}", style(format!("await QA.testPack('{}')", untested[0].name)).yellow());
+        println!(
+            "  1. In browser console: {}",
+            style(format!("await QA.testPack('{}')", untested[0].name)).yellow()
+        );
         println!("  2. Save the downloaded file to the 'workflows' folder");
         println!("  3. Mark it as tested in your checklist");
     } else {
@@ -159,10 +162,7 @@ pub fn run(project: String) -> Result<()> {
             "Back to dashboard",
         ];
 
-        let action = Select::new()
-            .items(&next_actions)
-            .default(0)
-            .interact()?;
+        let action = Select::new().items(&next_actions).default(0).interact()?;
 
         match action {
             0 => {

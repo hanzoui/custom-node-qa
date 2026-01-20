@@ -12,7 +12,10 @@ impl ReportGenerator {
 
         if let Some(meta) = metadata {
             if let Some(stats) = &meta.stats {
-                lines.push(format!("✅ Tested: {}/{}", stats.tested_packs, stats.total_packs));
+                lines.push(format!(
+                    "✅ Tested: {}/{}",
+                    stats.tested_packs, stats.total_packs
+                ));
                 lines.push(format!("📈 Progress: {:.1}%", stats.completion_percent));
                 lines.push(format!("🔢 Total Nodes: {}", stats.total_nodes));
                 lines.push(String::new());
@@ -53,7 +56,7 @@ impl ReportGenerator {
         lines.join("\n")
     }
 
-    pub fn generate_html(checklist: &Checklist, metadata: Option<&Metadata>) -> String {
+    pub fn generate_html(checklist: &Checklist, _metadata: Option<&Metadata>) -> String {
         let tested = checklist.packs.iter().filter(|p| p.tested).count();
         let total = checklist.packs.len();
         let percent = if total > 0 {
@@ -123,7 +126,11 @@ impl ReportGenerator {
                 .iter()
                 .map(|pack| {
                     let status_class = if pack.tested { "tested" } else { "untested" };
-                    let status_text = if pack.tested { "✅ Tested" } else { "⏳ Untested" };
+                    let status_text = if pack.tested {
+                        "✅ Tested"
+                    } else {
+                        "⏳ Untested"
+                    };
                     format!(
                         r#"<tr><td>{}</td><td>{}</td><td class="{}">{}</td></tr>"#,
                         pack.name, pack.node_count, status_class, status_text

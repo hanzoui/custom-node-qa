@@ -1,7 +1,7 @@
 use crate::models::{Checklist, DetailedChecklist, Workflow};
 use anyhow::{Context, Result};
 use colored::Colorize;
-use comfy_table::{Table, Cell, Color as TableColor, Attribute, presets::UTF8_FULL};
+use comfy_table::{presets::UTF8_FULL, Attribute, Cell, Color as TableColor, Table};
 use serde_json::json;
 use std::collections::{HashMap, HashSet};
 use std::path::PathBuf;
@@ -17,10 +17,10 @@ pub fn run(project: String, json: bool) -> Result<()> {
     }
 
     let checklist_path = project_dir.join("checklist.md");
-    let checklist = Checklist::from_file(&checklist_path)
+    let checklist = Checklist::from_file(checklist_path)
         .with_context(|| format!("Failed to load checklist for '{}'", project))?;
 
-    let workflows = Workflow::load_all(&workflows_dir)?;
+    let workflows = Workflow::load_all(workflows_dir)?;
 
     let diff = calculate_diff(&checklist, &workflows);
 
@@ -44,8 +44,8 @@ struct DiffResult {
 #[derive(Debug, Clone)]
 pub struct NodeDiff {
     pub pack_name: String,
-    pub missing_from_checklist: Vec<String>,  // In workflow but not in checklist
-    pub extra_in_checklist: Vec<String>,      // In checklist but not in workflow
+    pub missing_from_checklist: Vec<String>, // In workflow but not in checklist
+    pub extra_in_checklist: Vec<String>,     // In checklist but not in workflow
 }
 
 pub fn calculate_node_diff(
@@ -105,9 +105,7 @@ fn calculate_diff(checklist: &Checklist, workflows: &HashMap<String, Workflow>) 
                 if pack.tested {
                     result.matches.push((pack.name.clone(), pack.node_count));
                 } else {
-                    result
-                        .untested
-                        .push((pack.name.clone(), pack.node_count));
+                    result.untested.push((pack.name.clone(), pack.node_count));
                 }
             } else {
                 result.count_mismatches.push((
@@ -138,17 +136,30 @@ fn calculate_diff(checklist: &Checklist, workflows: &HashMap<String, Workflow>) 
 }
 
 fn print_text_diff(project: &str, diff: &DiffResult) {
-    println!("\n📊 Comparing {} checklist vs workflow files\n", project.bold());
+    println!(
+        "\n📊 Comparing {} checklist vs workflow files\n",
+        project.bold()
+    );
 
     // Create comprehensive table
     let mut table = Table::new();
     table.load_preset(UTF8_FULL);
     table.set_header(vec![
-        Cell::new("Pack Name").add_attribute(Attribute::Bold).fg(TableColor::Cyan),
-        Cell::new("Status").add_attribute(Attribute::Bold).fg(TableColor::Cyan),
-        Cell::new("Checklist").add_attribute(Attribute::Bold).fg(TableColor::Cyan),
-        Cell::new("Workflow").add_attribute(Attribute::Bold).fg(TableColor::Cyan),
-        Cell::new("Delta").add_attribute(Attribute::Bold).fg(TableColor::Cyan),
+        Cell::new("Pack Name")
+            .add_attribute(Attribute::Bold)
+            .fg(TableColor::Cyan),
+        Cell::new("Status")
+            .add_attribute(Attribute::Bold)
+            .fg(TableColor::Cyan),
+        Cell::new("Checklist")
+            .add_attribute(Attribute::Bold)
+            .fg(TableColor::Cyan),
+        Cell::new("Workflow")
+            .add_attribute(Attribute::Bold)
+            .fg(TableColor::Cyan),
+        Cell::new("Delta")
+            .add_attribute(Attribute::Bold)
+            .fg(TableColor::Cyan),
     ]);
 
     // Add matches
@@ -173,7 +184,11 @@ fn print_text_diff(project: &str, diff: &DiffResult) {
             Cell::new("⚠ Mismatch").fg(TableColor::Yellow),
             Cell::new(checklist_count.to_string()),
             Cell::new(workflow_count.to_string()),
-            Cell::new(&delta_str).fg(if delta > 0 { TableColor::Green } else { TableColor::Red }),
+            Cell::new(&delta_str).fg(if delta > 0 {
+                TableColor::Green
+            } else {
+                TableColor::Red
+            }),
         ]);
     }
 
@@ -222,11 +237,23 @@ fn print_text_diff(project: &str, diff: &DiffResult) {
     };
 
     println!("📈 Summary:");
-    println!("   Completion: {:.0}% ({}/{})", completion, diff.matches.len(), total_packs);
-    println!("   Drift: {} count mismatches, {} new packs", diff.count_mismatches.len(), diff.new_packs.len());
+    println!(
+        "   Completion: {:.0}% ({}/{})",
+        completion,
+        diff.matches.len(),
+        total_packs
+    );
+    println!(
+        "   Drift: {} count mismatches, {} new packs",
+        diff.count_mismatches.len(),
+        diff.new_packs.len()
+    );
 
     if !diff.count_mismatches.is_empty() || !diff.new_packs.is_empty() {
-        println!("\n💡 Run {} to update", format!("comfy-qa sync {}", project).cyan());
+        println!(
+            "\n💡 Run {} to update",
+            format!("comfy-qa sync {}", project).cyan()
+        );
     }
 }
 

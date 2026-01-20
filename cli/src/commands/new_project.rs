@@ -6,7 +6,10 @@ use std::path::PathBuf;
 
 pub fn run(project_name: String) -> Result<()> {
     if !NamingValidator::is_valid_project_name(&project_name) {
-        anyhow::bail!("Invalid project name '{}': must be kebab-case (e.g., vue-node-cloud)", project_name);
+        anyhow::bail!(
+            "Invalid project name '{}': must be kebab-case (e.g., vue-node-cloud)",
+            project_name
+        );
     }
 
     let repo_root = find_repo_root()?;
@@ -23,7 +26,10 @@ pub fn run(project_name: String) -> Result<()> {
     // Copy templates
     let template_dir = checklists_dir.join("templates");
     if !template_dir.exists() {
-        anyhow::bail!("Templates directory not found at {}", template_dir.display());
+        anyhow::bail!(
+            "Templates directory not found at {}",
+            template_dir.display()
+        );
     }
 
     let checklist_template = template_dir.join("checklist.md");
@@ -77,7 +83,10 @@ pub fn run(project_name: String) -> Result<()> {
     println!("\n💡 Next steps:");
     println!("   1. Open ComfyUI in browser");
     println!("   2. Run: QA.export('{}')", project_name);
-    println!("   3. Run: comfy-qa import {}-export.json {}", project_name, project_name);
+    println!(
+        "   3. Run: comfy-qa import {}-export.json {}",
+        project_name, project_name
+    );
 
     Ok(())
 }
