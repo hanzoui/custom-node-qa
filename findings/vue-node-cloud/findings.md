@@ -5,7 +5,7 @@
 ## comfyui_controlnet_aux
 
 - [ ] AIO Aux Preprocessor: 'preprocessor' widget defaults to 'none' despite having available options in the dropdown; suggest using 'undefined' (LiteGraph) or 'no available options' (Vue node) only when models are genuinely unavailable, as a 'none' option seems inappropriate here.
-- [ ] Preprocessor Selector: 'preprocessor' widget defaults to 'none' despite having available options in the dropdown; suggest using 'undefined' (LiteGraph) or 'no available options' (Vue node) only when models are genuinely unavailable, as a 'none' option seems inappropriate here.
+- [ ] Preprocessor Selector: 'preprocessor' widget defaults to 'none' despite having available options in the dropdown; suggest using 'undefined' (LiteGraph) or 'no available options' (Vue node) only when models are genuinely unavailable, as a 'none' option seems inappropriate here..
 
 ## comfyui-videohelpersuite
 
