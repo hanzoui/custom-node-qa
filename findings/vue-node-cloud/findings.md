@@ -139,4 +139,3 @@
 - [x] unable to set seed to a 'fixed' option with the options available in the new seed layout for Vue node.
 
   Austin - Fixed
-
