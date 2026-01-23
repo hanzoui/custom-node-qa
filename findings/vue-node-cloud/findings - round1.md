@@ -125,9 +125,9 @@
   ## comfy_extras
 
 - [x] Record Audio: difficult to use, unable to stop/start recording effectively + recording audio ui on node extends out of the node itself for Vue node.
-  
+
   Terry - layout issue fixed here https://github.com/Comfy-Org/ComfyUI_frontend/pull/8070
- 
+
 - [x] Preview as Text: markdown/plaintext widget value for 'previewmode' is hidden in Vue node (shows correctly in LiteGraph)
 
   Terry - should be fixed in https://github.com/Comfy-Org/ComfyUI_frontend/pull/7894
