@@ -1,0 +1,707 @@
+{
+  "id": "a1ab4baf-1a58-40c2-a05e-0b14aae6821d",
+  "revision": 0,
+  "last_node_id": 29,
+  "last_link_id": 56,
+  "nodes": [
+    {
+      "id": 6,
+      "type": "LineArtPreprocessor",
+      "pos": [
+        3376.602749136582,
+        1834.1780416161503
+      ],
+      "size": [
+        324,
+        114.65625
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 48
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            13
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LineArtPreprocessor"
+      },
+      "widgets_values": [
+        "disable",
+        512
+      ]
+    },
+    {
+      "id": 7,
+      "type": "ScribblePreprocessor",
+      "pos": [
+        3783.3857623734298,
+        1331.8660476218129
+      ],
+      "size": [
+        324,
+        80
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 13
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            33
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ScribblePreprocessor"
+      },
+      "widgets_values": [
+        512
+      ]
+    },
+    {
+      "id": 8,
+      "type": "Scribble_XDoG_Preprocessor",
+      "pos": [
+        3788.3577343919887,
+        1487.803785486977
+      ],
+      "size": [
+        324,
+        112
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 33
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            34
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Scribble_XDoG_Preprocessor"
+      },
+      "widgets_values": [
+        32,
+        512
+      ]
+    },
+    {
+      "id": 10,
+      "type": "Zoe-DepthMapPreprocessor",
+      "pos": [
+        3783.6128261285403,
+        1853.181957285407
+      ],
+      "size": [
+        324,
+        80
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 56
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            38
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Zoe-DepthMapPreprocessor"
+      },
+      "widgets_values": [
+        512
+      ]
+    },
+    {
+      "id": 13,
+      "type": "MiDaS-DepthMapPreprocessor",
+      "pos": [
+        4195.703294887042,
+        1736.6556498340833
+      ],
+      "size": [
+        324,
+        144
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 50
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            37
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiDaS-DepthMapPreprocessor"
+      },
+      "widgets_values": [
+        6.283185307179586,
+        0.1,
+        512
+      ]
+    },
+    {
+      "id": 4,
+      "type": "HEDPreprocessor",
+      "pos": [
+        3377.3112050929576,
+        1471.1520884365596
+      ],
+      "size": [
+        324,
+        114.65625
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 52
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            47
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "HEDPreprocessor"
+      },
+      "widgets_values": [
+        "enable",
+        512
+      ]
+    },
+    {
+      "id": 5,
+      "type": "M-LSDPreprocessor",
+      "pos": [
+        3374.240945274797,
+        1636.214551575095
+      ],
+      "size": [
+        324,
+        144
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 47
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            48
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "M-LSDPreprocessor"
+      },
+      "widgets_values": [
+        0.1,
+        0.1,
+        512
+      ]
+    },
+    {
+      "id": 11,
+      "type": "DepthAnythingV2Preprocessor",
+      "pos": [
+        4182.2047167549135,
+        1323.1873556535083
+      ],
+      "size": [
+        335.59375,
+        114.65625
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 38
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            49
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DepthAnythingV2Preprocessor"
+      },
+      "widgets_values": [
+        "depth_anything_v2_vitl.pth",
+        512
+      ]
+    },
+    {
+      "id": 12,
+      "type": "Metric3D-DepthMapPreprocessor",
+      "pos": [
+        4193.572388877545,
+        1503.7562923158657
+      ],
+      "size": [
+        324,
+        178.65625
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 49
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            50
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Metric3D-DepthMapPreprocessor"
+      },
+      "widgets_values": [
+        "vit-small",
+        1000,
+        1000,
+        512
+      ]
+    },
+    {
+      "id": 25,
+      "type": "SaveImage",
+      "pos": [
+        4638.489545654389,
+        1682.8213043600658
+      ],
+      "size": [
+        324,
+        264
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 37
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 9,
+      "type": "TEEDPreprocessor",
+      "pos": [
+        3785.4796054435365,
+        1670.5678492865661
+      ],
+      "size": [
+        324,
+        112
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 34
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            51
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TEEDPreprocessor"
+      },
+      "widgets_values": [
+        2,
+        512
+      ]
+    },
+    {
+      "id": 27,
+      "type": "SaveImage",
+      "pos": [
+        4634.4207165267,
+        1286.082134692368
+      ],
+      "size": [
+        324,
+        264
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 51
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "ColorPreprocessor",
+      "pos": [
+        3378.9645529983663,
+        1327.645452147486
+      ],
+      "size": [
+        324,
+        80
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 55
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            52
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ColorPreprocessor"
+      },
+      "widgets_values": [
+        512
+      ]
+    },
+    {
+      "id": 28,
+      "type": "LoadImageOutput",
+      "pos": [
+        2993.541705308815,
+        1318.4587643077575
+      ],
+      "size": [
+        282.796875,
+        464.796875
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            53
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImageOutput"
+      },
+      "widgets_values": [
+        "1b1656ecda5231d911f8c56288c711622402ddff7d63cd3a3086e2cf204fe3a6.png [output]",
+        false,
+        "refresh",
+        "image"
+      ]
+    },
+    {
+      "id": 29,
+      "type": "ImageResize+",
+      "pos": [
+        2979.581720515025,
+        1842.6763408965576
+      ],
+      "size": [
+        292.96875,
+        8
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 53
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            55,
+            56
+          ]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageResize+"
+      },
+      "widgets_values": [
+        512,
+        512,
+        "nearest",
+        "fill / crop",
+        "always",
+        0
+      ]
+    }
+  ],
+  "links": [
+    [
+      13,
+      6,
+      0,
+      7,
+      0,
+      "IMAGE"
+    ],
+    [
+      33,
+      7,
+      0,
+      8,
+      0,
+      "IMAGE"
+    ],
+    [
+      34,
+      8,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ],
+    [
+      37,
+      13,
+      0,
+      25,
+      0,
+      "IMAGE"
+    ],
+    [
+      38,
+      10,
+      0,
+      11,
+      0,
+      "IMAGE"
+    ],
+    [
+      47,
+      4,
+      0,
+      5,
+      0,
+      "IMAGE"
+    ],
+    [
+      48,
+      5,
+      0,
+      6,
+      0,
+      "IMAGE"
+    ],
+    [
+      49,
+      11,
+      0,
+      12,
+      0,
+      "IMAGE"
+    ],
+    [
+      50,
+      12,
+      0,
+      13,
+      0,
+      "IMAGE"
+    ],
+    [
+      51,
+      9,
+      0,
+      27,
+      0,
+      "IMAGE"
+    ],
+    [
+      52,
+      2,
+      0,
+      4,
+      0,
+      "IMAGE"
+    ],
+    [
+      53,
+      28,
+      0,
+      29,
+      0,
+      "IMAGE"
+    ],
+    [
+      55,
+      29,
+      0,
+      2,
+      0,
+      "IMAGE"
+    ],
+    [
+      56,
+      29,
+      0,
+      10,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.6934334949441365,
+      "offset": [
+        -2212.3846843909328,
+        -1040.8690581700562
+      ]
+    },
+    "frontendVersion": "1.37.10",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true,
+    "workflowRendererVersion": "Vue"
+  },
+  "version": 0.4
+}

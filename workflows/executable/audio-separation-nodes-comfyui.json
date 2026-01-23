@@ -1,0 +1,386 @@
+{
+  "id": "015efb3b-9c5f-4335-8c89-b9491419eff4",
+  "revision": 0,
+  "last_node_id": 12,
+  "last_link_id": 16,
+  "nodes": [
+    {
+      "id": 5,
+      "type": "AudioGetTempo",
+      "pos": [
+        2800.922607421875,
+        920.7175903320312
+      ],
+      "size": [
+        151.078125,
+        66
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "tempo_string",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "tempo_float",
+          "type": "FLOAT",
+          "links": []
+        },
+        {
+          "name": "tempo_integer",
+          "type": "INTEGER",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AudioGetTempo"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 2,
+      "type": "AudioCrop",
+      "pos": [
+        2680.208984375,
+        507.1952209472656
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            10
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AudioCrop"
+      },
+      "widgets_values": [
+        "0:00",
+        "0:02"
+      ]
+    },
+    {
+      "id": 1,
+      "type": "LoadAudio",
+      "pos": [
+        2320.890380859375,
+        487.4960632324219
+      ],
+      "size": [
+        274.080078125,
+        136
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            1,
+            11
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadAudio"
+      },
+      "widgets_values": [
+        "b15abdc3b8bc84e249d205be34b9171d332ef4acedf133305d2d363376093f73.mp3",
+        null,
+        null
+      ]
+    },
+    {
+      "id": 7,
+      "type": "AudioTempoMatch",
+      "pos": [
+        2794.898681640625,
+        655.4430541992188
+      ],
+      "size": [
+        155.85116577148438,
+        46
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio_1",
+          "type": "AUDIO",
+          "link": 10
+        },
+        {
+          "name": "audio_2",
+          "type": "AUDIO",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            12
+          ]
+        },
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            13
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AudioTempoMatch"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 4,
+      "type": "AudioCombine",
+      "pos": [
+        2683.383544921875,
+        768.4767456054688
+      ],
+      "size": [
+        270,
+        78
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio_1",
+          "type": "AUDIO",
+          "link": 12
+        },
+        {
+          "name": "audio_2",
+          "type": "AUDIO",
+          "link": 13
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            5,
+            14
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AudioCombine"
+      },
+      "widgets_values": [
+        "add"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "AudioSpeedShift",
+      "pos": [
+        2684.581298828125,
+        1055.1630859375
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 14
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            16
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AudioSpeedShift"
+      },
+      "widgets_values": [
+        1
+      ]
+    },
+    {
+      "id": 11,
+      "type": "SaveAudioMP3",
+      "pos": [
+        3016.96533203125,
+        491.400146484375
+      ],
+      "size": [
+        270,
+        136
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 16
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveAudioMP3"
+      },
+      "widgets_values": [
+        "audio/ComfyUI",
+        "V0"
+      ]
+    },
+    {
+      "id": 12,
+      "type": "Note",
+      "pos": [
+        2154.487548828125,
+        490.6839294433594
+      ],
+      "size": [
+        140,
+        60
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "placeholder mp3"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      2,
+      0,
+      "AUDIO"
+    ],
+    [
+      5,
+      4,
+      0,
+      5,
+      0,
+      "AUDIO"
+    ],
+    [
+      10,
+      2,
+      0,
+      7,
+      0,
+      "AUDIO"
+    ],
+    [
+      11,
+      1,
+      0,
+      7,
+      1,
+      "AUDIO"
+    ],
+    [
+      12,
+      7,
+      0,
+      4,
+      0,
+      "AUDIO"
+    ],
+    [
+      13,
+      7,
+      1,
+      4,
+      1,
+      "AUDIO"
+    ],
+    [
+      14,
+      4,
+      0,
+      8,
+      0,
+      "AUDIO"
+    ],
+    [
+      16,
+      8,
+      0,
+      11,
+      0,
+      "AUDIO"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.1167815779424772,
+      "offset": [
+        -1879.4103003735847,
+        -298.88273778543913
+      ]
+    },
+    "frontendVersion": "1.26.7",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
