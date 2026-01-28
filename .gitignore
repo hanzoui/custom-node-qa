@@ -5,6 +5,7 @@ Thumbs.db
 .vscode/
 node_modules/
 *.log
+AGENTS.md
 
 # Development/implementation notes (local only)
 TODO.md

@@ -1,19 +1,12 @@
 # Findings
 
-# Findings
-
-## comfyui_controlnet_aux
-
-- [ ] AIO Aux Preprocessor: 'preprocessor' widget defaults to 'none' despite having available options in the dropdown; suggest using 'undefined' (LiteGraph) or 'no available options' (Vue node) only when models are genuinely unavailable, as a 'none' option seems inappropriate here.
-- [ ] Preprocessor Selector: 'preprocessor' widget defaults to 'none' despite having available options in the dropdown; suggest using 'undefined' (LiteGraph) or 'no available options' (Vue node) only when models are genuinely unavailable, as a 'none' option seems inappropriate here.
-
 ## comfyui-videohelpersuite
 
 - [x] Load Video FFmpeg (Upload) 🎥🅥🅗🅢: some widgets didn't properly migrate to Vue Nodes, showing LiteGraph.
 
   Terry - should fix in https://github.com/Comfy-Org/ComfyUI_frontend/pull/7925 and https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite/pull/624, also regarding to "showing LiteGraph", this is not issue, this is because VHS implement its own widgets, we just keep display them properly would be good enough
 
-- [x] Load Audio (Upload) 🎥🅥🅗🅢: some widgets didn't properly migrate to Vue Nodes, showing LiteGraph + two audio players are present in the node (one for Vue node, one for LiteGraph), if resize node to be longer vertically.. the incorrectly migrated old audio player doesnt resize.. and instead extends out of the node itself.
+- [x] Load Audio (Upload) 🎥🅥🅗🅢: some widgets didn't properly migrate to Vue Nodes, showing LiteGraph + two audio players are present in the node (one for Vue node, one for LiteGraph)
 
   Terry - should fix in https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite/pull/626
 
@@ -57,7 +50,7 @@
 
   Terry - should fix in https://github.com/Comfy-Org/ComfyUI_frontend/pull/7925 and https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite/pull/624, also regarding to "showing LiteGraph", this is not issue, this is because VHS implement its own widgets, we just keep display them properly would be good enough
 
-  ## comfyui-animatediff-evolved
+## comfyui-animatediff-evolved
 
 - [x] Load CameraCtrl Poses (Path) 🎭🅐🅓②: cannot retrieve file path.
 
@@ -115,15 +108,6 @@
 
   ## comfyui-kjnodes
 
-- [ ] Conditioning Multi Combine: 'update inputs' do not update inputs of node after 'inputcount' is changed (only works if switch to LiteGraph --> back to Vue node)
-- [ ] Mask Batch Multi: 'update inputs' do not update inputs of node after 'inputcount' is changed (only works if switch to LiteGraph --> back to Vue node)
-- [ ] Cross Fade Images Multi: 'update inputs' do not update inputs of node after 'inputcount' is changed (only works if switch to LiteGraph --> back to Vue node)
-- [ ] Image Add Multi: 'update inputs' do not update inputs of node after 'inputcount' is changed (only works if switch to LiteGraph --> back to Vue node)
-- [ ] Image Batch Multi: 'update inputs' do not update inputs of node after 'inputcount' is changed (only works if switch to LiteGraph --> back to Vue node)
-- [ ] Image Concatenate Multi: 'update inputs' do not update inputs of node after 'inputcount' is changed (only works if switch to LiteGraph --> back to Vue node)
-- [ ] Transition Images Multi: 'update inputs' do not update inputs of node after 'inputcount' is changed (only works if switch to LiteGraph --> back to Vue node)
-- [ ] Join String Multi: 'update inputs' do not update inputs of node after 'inputcount' is changed (only works if switch to LiteGraph --> back to Vue node)
-- [ ] Empty Latent Image Custom Presets: no presets available from drop-down, seems unintuitive.
 - [x] Spline Editor: unable to interact with the node UI using Vue node (works correctly in LiteGraph)
 
   Terry - there are several issues for this node, need to fix one by one:
@@ -138,14 +122,15 @@
   - unexpected node dragable - https://github.com/Comfy-Org/ComfyUI_frontend/pull/7953
   - protovis coordinate issue requires both https://github.com/Comfy-Org/ComfyUI_frontend/pull/7963 and https://github.com/kijai/ComfyUI-KJNodes/pull/497
 
-- [ ] GGUFLoaderKJ: dropdown shows no model options.
-
   ## comfy_extras
 
-- [ ] Record Audio: difficult to use, unable to stop/start recording effectively + recording audio ui on node extends out of the node itself for Vue node.
-- [ ] Load 3D & Animation: uploaded file appears with random numbers/letters for filename on node.
-- [ ] Boolean: true/false widget value for 'value' is hidden in Vue node (shows correctly in LiteGraph)
-- [ ] Preview as Text: markdown/plaintext widget value for 'previewmode' is hidden in Vue node (shows correctly in LiteGraph)
+- [x] Record Audio: difficult to use, unable to stop/start recording effectively + recording audio ui on node extends out of the node itself for Vue node.
+
+  Terry - layout issue fixed here https://github.com/Comfy-Org/ComfyUI_frontend/pull/8070
+
+- [x] Preview as Text: markdown/plaintext widget value for 'previewmode' is hidden in Vue node (shows correctly in LiteGraph)
+
+  Terry - should be fixed in https://github.com/Comfy-Org/ComfyUI_frontend/pull/7894
 
   ## misc
 
