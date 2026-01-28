@@ -5,6 +5,7 @@
 ```bash
 git pull origin main
 ```
+
 **This gets your teammates' latest work. Always do this first!**
 
 ## Testing a Pack
@@ -38,35 +39,37 @@ git push origin main
 
 ## Essential Git Commands
 
-| Command | What It Does |
-|---------|-------------|
-| `git pull origin main` | Get everyone's latest work |
-| `git status` | See what files you changed |
-| `git add .` | Mark all changes to be saved |
+| Command                   | What It Does                  |
+| ------------------------- | ----------------------------- |
+| `git pull origin main`    | Get everyone's latest work    |
+| `git status`              | See what files you changed    |
+| `git add .`               | Mark all changes to be saved  |
 | `git commit -m "message"` | Save changes with description |
-| `git push origin main` | Share your work with team |
+| `git push origin main`    | Share your work with team     |
 
 ## Tool Commands (From Dashboard)
 
-| Command | What It Does |
-|---------|-------------|
-| Check testing progress | See how many packs tested, what's left |
-| Get browser script | Get JavaScript to paste in browser |
-| View all packs | Browse all packs, filter by status |
-| Compare with repo | Find mismatches between checklist and workflows |
-| Run validation | Check for format errors |
-| Sync checklists | ⚠️ Regenerate checklist from workflows (DESTRUCTIVE!) |
+| Command                | What It Does                                          |
+| ---------------------- | ----------------------------------------------------- |
+| Check testing progress | See how many packs tested, what's left                |
+| Get browser script     | Get JavaScript to paste in browser                    |
+| View all packs         | Browse all packs, filter by status                    |
+| Compare with repo      | Find mismatches between checklist and workflows       |
+| Run validation         | Check for format errors                               |
+| Sync checklists        | ⚠️ Regenerate checklist from workflows (DESTRUCTIVE!) |
 
 ## What the "Sync" Command Does
 
 **WARNING:** This overwrites your checklist with fresh data from workflow files.
 
 **When to use:**
+
 - Workflow files are correct
 - Checklist has wrong node counts
 - You want to start fresh
 
 **What you'll lose:**
+
 - Your `[x]` tested marks
 - Any manual edits to checklist
 
