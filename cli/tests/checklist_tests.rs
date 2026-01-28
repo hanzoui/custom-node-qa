@@ -1,4 +1,4 @@
-use comfy_qa::models::{Checklist};
+use comfy_qa::models::Checklist;
 use std::fs;
 use tempfile::TempDir;
 

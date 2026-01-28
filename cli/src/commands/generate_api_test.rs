@@ -182,10 +182,7 @@ SERVER_URL = "{}"
 
     // Generate test functions for each node
     for node_type in node_types {
-        let test_fn_name = format!(
-            "test_{}",
-            node_type.to_lowercase().replace([' ', '-'], "_")
-        );
+        let test_fn_name = format!("test_{}", node_type.to_lowercase().replace([' ', '-'], "_"));
         script.push_str(&format!(
             r#"
 def {}():
@@ -236,10 +233,7 @@ def {}():
     ));
     script.push_str("    tests = [\n");
     for node_type in node_types {
-        let test_fn_name = format!(
-            "test_{}",
-            node_type.to_lowercase().replace([' ', '-'], "_")
-        );
+        let test_fn_name = format!("test_{}", node_type.to_lowercase().replace([' ', '-'], "_"));
         script.push_str(&format!("        {},\n", test_fn_name));
     }
     script.push_str("    ]\n\n");
