@@ -1,0 +1,848 @@
+{
+  "id": "1f540751-4cc4-40e2-ac78-69c93187d27e",
+  "revision": 0,
+  "last_node_id": 20,
+  "last_link_id": 16,
+  "nodes": [
+    {
+      "id": 16,
+      "type": "LoadWanVideoT5TextEncoder",
+      "pos": [
+        1079.593505859375,
+        1415.85009765625
+      ],
+      "size": [
+        317.0298767089844,
+        130
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "wan_t5_model",
+          "type": "WANTEXTENCODER",
+          "links": [
+            5
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadWanVideoT5TextEncoder"
+      },
+      "widgets_values": [
+        "umt5-xxl-enc-bf16.safetensors",
+        "bf16",
+        "offload_device",
+        "disabled"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "WanVideoVAELoader",
+      "pos": [
+        1077.8516845703125,
+        1601.36181640625
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "compile_args",
+          "shape": 7,
+          "type": "WANCOMPILEARGS",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "vae",
+          "type": "WANVAE",
+          "links": [
+            11
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "WanVideoVAELoader"
+      },
+      "widgets_values": [
+        "wan_2.1_vae.safetensors",
+        "bf16"
+      ]
+    },
+    {
+      "id": 11,
+      "type": "WanVideoApplyNAG",
+      "pos": [
+        1545.3369140625,
+        1547.0155029296875
+      ],
+      "size": [
+        287.77734375,
+        126
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "original_text_embeds",
+          "type": "WANVIDEOTEXTEMBEDS",
+          "link": 3
+        },
+        {
+          "name": "nag_text_embeds",
+          "type": "WANVIDEOTEXTEMBEDS",
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text_embeds",
+          "type": "WANVIDEOTEXTEMBEDS",
+          "links": [
+            6
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "WanVideoApplyNAG"
+      },
+      "widgets_values": [
+        11,
+        2.5,
+        0.25
+      ]
+    },
+    {
+      "id": 4,
+      "type": "WanVideoTextEncode",
+      "pos": [
+        1482.22802734375,
+        1075.1976318359375
+      ],
+      "size": [
+        400,
+        234
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "t5",
+          "shape": 7,
+          "type": "WANTEXTENCODER",
+          "link": 5
+        },
+        {
+          "name": "model_to_offload",
+          "shape": 7,
+          "type": "WANVIDEOMODEL",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text_embeds",
+          "type": "WANVIDEOTEXTEMBEDS",
+          "links": [
+            3,
+            4
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "WanVideoTextEncode"
+      },
+      "widgets_values": [
+        "",
+        "",
+        true,
+        false,
+        "gpu"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "WanVideoLoraSelect",
+      "pos": [
+        696.8652954101562,
+        1101.491455078125
+      ],
+      "size": [
+        270,
+        150
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prev_lora",
+          "shape": 7,
+          "type": "WANVIDLORA",
+          "link": null
+        },
+        {
+          "name": "blocks",
+          "shape": 7,
+          "type": "SELECTEDBLOCKS",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "lora",
+          "type": "WANVIDLORA",
+          "links": [
+            7
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "WanVideoLoraSelect"
+      },
+      "widgets_values": [
+        "Wan2.1_T2V_1.3B_CineScale_ntk20_lora_rank16_fp16.safetensors",
+        1,
+        false,
+        true
+      ]
+    },
+    {
+      "id": 7,
+      "type": "WanVideoEmptyEmbeds",
+      "pos": [
+        1977.7728271484375,
+        1092.6627197265625
+      ],
+      "size": [
+        272.431640625,
+        126
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "control_embeds",
+          "shape": 7,
+          "type": "WANVIDIMAGE_EMBEDS",
+          "link": null
+        },
+        {
+          "name": "extra_latents",
+          "shape": 7,
+          "type": "LATENT",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image_embeds",
+          "type": "WANVIDIMAGE_EMBEDS",
+          "links": [
+            13
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "WanVideoEmptyEmbeds"
+      },
+      "widgets_values": [
+        832,
+        480,
+        81
+      ]
+    },
+    {
+      "id": 18,
+      "type": "WanVideoEasyCache",
+      "pos": [
+        1972.95947265625,
+        1541.4881591796875
+      ],
+      "size": [
+        270,
+        130
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "cache_args",
+          "type": "CACHEARGS",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "WanVideoEasyCache"
+      },
+      "widgets_values": [
+        0.015,
+        10,
+        -1,
+        "offload_device"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "WanVideoEnhanceAVideo",
+      "pos": [
+        1977.0712890625,
+        1314.5150146484375
+      ],
+      "size": [
+        277.0943298339844,
+        106
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "feta_args",
+          "type": "FETAARGS",
+          "links": [
+            12
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "WanVideoEnhanceAVideo"
+      },
+      "widgets_values": [
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "id": 6,
+      "type": "WanVideoSampler",
+      "pos": [
+        2429.961181640625,
+        1067.5704345703125
+      ],
+      "size": [
+        327.80859375,
+        690
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "WANVIDEOMODEL",
+          "link": 10
+        },
+        {
+          "name": "image_embeds",
+          "type": "WANVIDIMAGE_EMBEDS",
+          "link": 13
+        },
+        {
+          "name": "text_embeds",
+          "shape": 7,
+          "type": "WANVIDEOTEXTEMBEDS",
+          "link": 6
+        },
+        {
+          "name": "samples",
+          "shape": 7,
+          "type": "LATENT",
+          "link": null
+        },
+        {
+          "name": "feta_args",
+          "shape": 7,
+          "type": "FETAARGS",
+          "link": 12
+        },
+        {
+          "name": "context_options",
+          "shape": 7,
+          "type": "WANVIDCONTEXT",
+          "link": null
+        },
+        {
+          "name": "cache_args",
+          "shape": 7,
+          "type": "CACHEARGS",
+          "link": 9
+        },
+        {
+          "name": "flowedit_args",
+          "shape": 7,
+          "type": "FLOWEDITARGS",
+          "link": null
+        },
+        {
+          "name": "slg_args",
+          "shape": 7,
+          "type": "SLGARGS",
+          "link": null
+        },
+        {
+          "name": "loop_args",
+          "shape": 7,
+          "type": "LOOPARGS",
+          "link": null
+        },
+        {
+          "name": "experimental_args",
+          "shape": 7,
+          "type": "EXPERIMENTALARGS",
+          "link": null
+        },
+        {
+          "name": "sigmas",
+          "shape": 7,
+          "type": "SIGMAS",
+          "link": null
+        },
+        {
+          "name": "unianimate_poses",
+          "shape": 7,
+          "type": "UNIANIMATE_POSE",
+          "link": null
+        },
+        {
+          "name": "fantasytalking_embeds",
+          "shape": 7,
+          "type": "FANTASYTALKING_EMBEDS",
+          "link": null
+        },
+        {
+          "name": "uni3c_embeds",
+          "shape": 7,
+          "type": "UNI3C_EMBEDS",
+          "link": null
+        },
+        {
+          "name": "multitalk_embeds",
+          "shape": 7,
+          "type": "MULTITALK_EMBEDS",
+          "link": null
+        },
+        {
+          "name": "freeinit_args",
+          "shape": 7,
+          "type": "FREEINITARGS",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "links": [
+            14
+          ]
+        },
+        {
+          "name": "denoised_samples",
+          "type": "LATENT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "WanVideoSampler"
+      },
+      "widgets_values": [
+        1,
+        6,
+        5,
+        142044798132252,
+        "randomize",
+        true,
+        "unipc",
+        0,
+        1,
+        false,
+        "comfy",
+        0,
+        -1,
+        false
+      ]
+    },
+    {
+      "id": 5,
+      "type": "WanVideoDecode",
+      "pos": [
+        2814.46142578125,
+        1069.2176513671875
+      ],
+      "size": [
+        270,
+        198
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "vae",
+          "type": "WANVAE",
+          "link": 11
+        },
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 14
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            15
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "WanVideoDecode"
+      },
+      "widgets_values": [
+        false,
+        272,
+        272,
+        144,
+        128,
+        "default"
+      ]
+    },
+    {
+      "id": 19,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        2867.7578125,
+        1333.7984619140625
+      ],
+      "size": [
+        214.7587890625,
+        334
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 15
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 8,
+        "loop_count": 0,
+        "filename_prefix": "AnimateDiff",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 19,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "a03f691a5300c5a379ac20e6f8ae4e1b80812cfe3b31f7d0dacd07b30c4450fc.mp4",
+            "fullpath": "",
+            "subfolder": "",
+            "type": "output",
+            "workflow": ""
+          }
+        }
+      }
+    },
+    {
+      "id": 20,
+      "type": "WanVideoTorchCompileSettings",
+      "pos": [
+        662.4904174804688,
+        1331.3824462890625
+      ],
+      "size": [
+        342.74609375,
+        202
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "torch_compile_args",
+          "type": "WANCOMPILEARGS",
+          "links": [
+            16
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "WanVideoTorchCompileSettings"
+      },
+      "widgets_values": [
+        "inductor",
+        false,
+        "default",
+        false,
+        64,
+        true,
+        128
+      ]
+    },
+    {
+      "id": 1,
+      "type": "WanVideoModelLoader",
+      "pos": [
+        1089.5958251953125,
+        1057.118408203125
+      ],
+      "size": [
+        271.083984375,
+        294
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "compile_args",
+          "shape": 7,
+          "type": "WANCOMPILEARGS",
+          "link": 16
+        },
+        {
+          "name": "block_swap_args",
+          "shape": 7,
+          "type": "BLOCKSWAPARGS",
+          "link": null
+        },
+        {
+          "name": "lora",
+          "shape": 7,
+          "type": "WANVIDLORA",
+          "link": 7
+        },
+        {
+          "name": "vram_management_args",
+          "shape": 7,
+          "type": "VRAM_MANAGEMENTARGS",
+          "link": null
+        },
+        {
+          "name": "vace_model",
+          "shape": 7,
+          "type": "VACEPATH",
+          "link": null
+        },
+        {
+          "name": "fantasytalking_model",
+          "shape": 7,
+          "type": "FANTASYTALKINGMODEL",
+          "link": null
+        },
+        {
+          "name": "multitalk_model",
+          "shape": 7,
+          "type": "MULTITALKMODEL",
+          "link": null
+        },
+        {
+          "name": "fantasyportrait_model",
+          "shape": 7,
+          "type": "FANTASYPORTRAITMODEL",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "WANVIDEOMODEL",
+          "links": [
+            10
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "WanVideoModelLoader"
+      },
+      "widgets_values": [
+        "wan2.1_t2v_1.3B_fp16.safetensors",
+        "fp16_fast",
+        "fp8_e4m3fn_scaled_fast",
+        "main_device",
+        "sdpa"
+      ]
+    }
+  ],
+  "links": [
+    [
+      3,
+      4,
+      0,
+      11,
+      0,
+      "WANVIDEOTEXTEMBEDS"
+    ],
+    [
+      4,
+      4,
+      0,
+      11,
+      1,
+      "WANVIDEOTEXTEMBEDS"
+    ],
+    [
+      5,
+      16,
+      0,
+      4,
+      0,
+      "WANTEXTENCODER"
+    ],
+    [
+      6,
+      11,
+      0,
+      6,
+      2,
+      "WANVIDEOTEXTEMBEDS"
+    ],
+    [
+      7,
+      3,
+      0,
+      1,
+      2,
+      "WANVIDLORA"
+    ],
+    [
+      9,
+      18,
+      0,
+      6,
+      6,
+      "CACHEARGS"
+    ],
+    [
+      10,
+      1,
+      0,
+      6,
+      0,
+      "WANVIDEOMODEL"
+    ],
+    [
+      11,
+      2,
+      0,
+      5,
+      0,
+      "WANVAE"
+    ],
+    [
+      12,
+      8,
+      0,
+      6,
+      4,
+      "FETAARGS"
+    ],
+    [
+      13,
+      7,
+      0,
+      6,
+      1,
+      "WANVIDIMAGE_EMBEDS"
+    ],
+    [
+      14,
+      6,
+      0,
+      5,
+      1,
+      "LATENT"
+    ],
+    [
+      15,
+      5,
+      0,
+      19,
+      0,
+      "IMAGE"
+    ],
+    [
+      16,
+      20,
+      0,
+      1,
+      0,
+      "WANCOMPILEARGS"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.762776844438551,
+      "offset": [
+        -678.3839319415969,
+        -819.159349718546
+      ]
+    },
+    "frontendVersion": "1.26.7",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
