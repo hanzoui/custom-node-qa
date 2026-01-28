@@ -5,6 +5,7 @@ Collaborative QA tool for testing ComfyUI custom nodes. Team members test differ
 ## Quick Start
 
 **First time:**
+
 ```bash
 git clone https://github.com/Comfy-Org/comfyui-custom-node-qa.git
 cd comfyui-custom-node-qa
@@ -12,6 +13,7 @@ cd comfyui-custom-node-qa
 ```
 
 **Every day:**
+
 ```bash
 git pull origin main          # Get teammates' updates
 # Run tool, test packs

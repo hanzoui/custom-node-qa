@@ -3,6 +3,7 @@
 ## Fixes Based on Feedback
 
 ### Issue 1: "Should list all valid project names"
+
 **Fixed:** Setup now shows existing projects before asking for name.
 
 ```
@@ -14,12 +15,15 @@ Give your project a name...
 ```
 
 ### Issue 2: "Failed with 'No such file or directory'"
+
 **Fixed:**
+
 - Checks if Desktop exists before writing
 - Falls back to scripts/ folder if Desktop not found
 - Better error handling for all file operations
 
 ### Issue 3: "Why save to desktop? Can't you just print?"
+
 **Fixed:** Now asks user preference:
 
 ```
@@ -30,6 +34,7 @@ Default is 'N' (print to console) - user just copies from terminal.
 If they choose 'y', they pick Desktop or scripts/ folder.
 
 ### Issue 4: "Too many files being created"
+
 **Fixed:** Only creates files if user explicitly chooses to save them.
 Default behavior prints everything to console for easy copying.
 
@@ -49,6 +54,7 @@ Default behavior prints everything to console for easy copying.
 ## Testing
 
 All changes tested and working:
+
 - Shows existing projects correctly
 - Handles missing Desktop gracefully
 - Print-to-console works on all platforms

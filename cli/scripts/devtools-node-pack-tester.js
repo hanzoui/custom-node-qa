@@ -138,7 +138,7 @@ const QA = {
       packs: Object.entries(this._byMod).map(([mod, nodes]) => ({
         name: mod,
         node_count: nodes.length,
-        nodes: nodes.map(n => ({
+        nodes: nodes.map((n) => ({
           name: n.name,
           display_name: n.display_name,
           deprecated: !!n.deprecated,
@@ -147,7 +147,9 @@ const QA = {
       }))
     }
     this._download(JSON.stringify(data, null, 2), `${projectName}-export.json`, 'application/json')
-    console.log(`✅ Exported ${Object.keys(this._byMod).length} packs to ${projectName}-export.json`)
+    console.log(
+      `✅ Exported ${Object.keys(this._byMod).length} packs to ${projectName}-export.json`
+    )
     console.log(`📋 Import to CLI: comfy-qa import ${projectName}-export.json ${projectName}`)
     return data
   },
@@ -251,22 +253,23 @@ ${Object.entries(this._byMod)
       console.log(`\n✅ Matches: ${results.matches.length}`)
       console.log(`⚠️  Count Mismatches: ${results.count_mismatch.length}`)
       if (results.count_mismatch.length) {
-        results.count_mismatch.forEach(({pack, checklist, live}) => {
-          console.log(`   • ${pack}: checklist=${checklist}, live=${live} (${live > checklist ? '+' : ''}${live - checklist})`)
+        results.count_mismatch.forEach(({ pack, checklist, live }) => {
+          console.log(
+            `   • ${pack}: checklist=${checklist}, live=${live} (${live > checklist ? '+' : ''}${live - checklist})`
+          )
         })
       }
       console.log(`❌ Missing in Environment: ${results.missing_workflow.length}`)
       if (results.missing_workflow.length) {
-        results.missing_workflow.forEach(({pack}) => console.log(`   • ${pack}`))
+        results.missing_workflow.forEach(({ pack }) => console.log(`   • ${pack}`))
       }
       console.log(`🆕 New Packs (not in checklist): ${results.new_packs.length}`)
       if (results.new_packs.length) {
-        results.new_packs.forEach(({pack, count}) => console.log(`   • ${pack} (${count})`))
+        results.new_packs.forEach(({ pack, count }) => console.log(`   • ${pack} (${count})`))
       }
       console.log(`⏳ Untested (in checklist, unchecked): ${results.untested.length}`)
 
       return results
-
     } catch (err) {
       console.error(`❌ Error fetching checklist: ${err.message}`)
       console.log(`\n💡 Tip: First run QA.export('${projectName}') to create initial state`)
@@ -283,11 +286,11 @@ ${Object.entries(this._byMod)
       const response = await fetch(url)
       const dirs = await response.json()
       const projects = dirs
-        .filter(d => d.type === 'dir' && !['templates', 'schema'].includes(d.name))
-        .map(d => d.name)
+        .filter((d) => d.type === 'dir' && !['templates', 'schema'].includes(d.name))
+        .map((d) => d.name)
 
       console.log(`\n📁 Available Projects (${projects.length}):`)
-      projects.forEach(p => console.log(`   • ${p}`))
+      projects.forEach((p) => console.log(`   • ${p}`))
       console.log(`\n💡 Run QA.diff('project-name') to compare`)
       return projects
     } catch (err) {
