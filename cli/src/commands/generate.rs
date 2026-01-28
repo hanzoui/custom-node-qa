@@ -1,5 +1,5 @@
 use crate::models::Workflow;
-use anyhow::{Result};
+use anyhow::Result;
 use console::style;
 use dialoguer::{Input, Select};
 use serde_json::json;
@@ -34,7 +34,9 @@ pub fn run(search_query: Option<String>) -> Result<()> {
 
     for workflow in workflows.values() {
         for node in &workflow.nodes {
-            if node.node_type.to_lowercase().contains(&query_lower) && !matching_nodes.contains(&node.node_type) {
+            if node.node_type.to_lowercase().contains(&query_lower)
+                && !matching_nodes.contains(&node.node_type)
+            {
                 matching_nodes.push(node.node_type.clone());
             }
         }
