@@ -1,3 +1,6 @@
+#![allow(clippy::ptr_arg)]
+#![allow(unused_assignments)]
+
 use anyhow::Result;
 use console::style;
 use dialoguer::{Confirm, Input, Select};

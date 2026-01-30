@@ -4,23 +4,21 @@ use anyhow::{Context, Result};
 use colored::Colorize;
 use comfy_table::{presets::UTF8_FULL, Attribute, Cell, Color as TableColor, Table};
 use std::fs;
-use std::path::PathBuf;
+use std::path::{Path, PathBuf};
 use walkdir::WalkDir;
 
-pub fn run(project: Option<String>, format: String, all: bool) -> Result<()> {
+pub fn run(project: Option<String>, format: String, _all: bool) -> Result<()> {
     let repo_root = find_repo_root()?;
     let checklists_dir = repo_root.join("checklists");
 
     if let Some(project_name) = project {
         show_single_project(&checklists_dir, &project_name, &format)
-    } else if all {
-        show_all_projects(&checklists_dir, &format)
     } else {
         show_all_projects(&checklists_dir, &format)
     }
 }
 
-fn show_single_project(checklists_dir: &PathBuf, project_name: &str, format: &str) -> Result<()> {
+fn show_single_project(checklists_dir: &Path, project_name: &str, format: &str) -> Result<()> {
     let project_dir = checklists_dir.join(project_name);
 
     if !project_dir.exists() {

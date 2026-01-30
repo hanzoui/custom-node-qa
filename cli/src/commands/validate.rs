@@ -1,3 +1,5 @@
+#![allow(clippy::ptr_arg)]
+
 use crate::models::{Checklist, Metadata, Workflow};
 use crate::validators::{Severity, Validator};
 use anyhow::{Context, Result};

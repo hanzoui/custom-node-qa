@@ -1,3 +1,6 @@
+#![allow(clippy::ptr_arg)]
+#![allow(clippy::format_in_format_args)]
+
 use crate::models::{Checklist, Workflow};
 use anyhow::Result;
 use console::style;

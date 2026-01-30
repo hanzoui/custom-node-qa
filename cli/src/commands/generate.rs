@@ -1,3 +1,5 @@
+#![allow(clippy::ptr_arg)]
+
 use crate::models::Workflow;
 use anyhow::Result;
 use console::style;
