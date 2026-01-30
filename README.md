@@ -1,35 +1,63 @@
-# ComfyUI Custom Node QA
+# ComfyUI Node Testing
 
-Tools for batch testing custom nodes on ComfyUI Cloud.
+Collaborative QA tool for testing ComfyUI custom nodes. Team members test different packs, share results via git.
 
-## Scripts
+## Quick Start
 
-`scripts/devtools-node-pack-tester.js` - copy/paste into browser devtools console:
+**First time:**
 
-```js
-// 1. Open ComfyUI in browser
-// 2. Open devtools (F12)
-// 3. Paste entire script contents into console
-// 4. Run commands:
-
-await QA.listPacks() // list all packs
-await QA.checklist() // download markdown checklist
-await QA.testPack('comfyui-impact-pack') // clear, add all nodes, save
-await QA.testAllPacks() // test every pack
-QA.help() // full command list
+```bash
+git clone https://github.com/Comfy-Org/comfyui-custom-node-qa.git
+cd comfyui-custom-node-qa
+# Windows: Double-click START.bat | Mac: START.command | Linux: START.sh
 ```
 
-## Structure
+**Every day:**
 
-- `scripts/` - devtools scripts (paste into browser console)
-- `workflows/` - saved workflow files (`all-nodes-{pack}.json`)
-- `checklists/` - generated QA checklists
+```bash
+git pull origin main          # Get teammates' updates
+# Run tool, test packs
+git add . && git commit -m "Tested pack-name" && git push origin main
+```
+
+**Need help?** Dashboard → "📖 Help" or read [WORKFLOW_GUIDE.md](WORKFLOW_GUIDE.md)
+
+## Features
+
+- Track testing progress across team
+- Compare checklists vs actual ComfyUI workflows
+- Highlight mismatches (missing/extra nodes)
+- Validate file formats
+- Generate browser test scripts
+- Interactive exploration & filtering
+
+## Workflow
+
+1. `git pull origin main`
+2. Get browser script from dashboard
+3. ComfyUI → F12 → Console → Paste script
+4. Run `await QA.testPack('pack-name')`
+5. Save downloaded JSON to `workflows/`
+6. Mark `[x]` in `checklists/your-project/checklist.md`
+7. `git add . && git commit -m "Tested X" && git push`
+
+Full guide: [WORKFLOW_GUIDE.md](WORKFLOW_GUIDE.md) | Quick ref: [QUICK_REFERENCE.md](QUICK_REFERENCE.md)
+
+## Commands
+
+```bash
+comfy-qa                  # Interactive dashboard
+comfy-qa check <project>  # Testing progress
+comfy-qa diff <project>   # Compare checklist vs workflows
+comfy-qa validate         # Check file formats
+comfy-qa --help           # All commands
+```
 
 ## Development
 
-```sh
-npm install
-npm run format        # format all files
-npm run format:check  # check formatting
-npm run validate:json # validate workflow files
+```bash
+cargo build --release --manifest-path cli/Cargo.toml
+cargo test                # Run tests
+cargo clippy              # Linting
+cargo fmt                 # Format code
 ```
