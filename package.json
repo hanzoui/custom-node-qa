@@ -1,0 +1,12 @@
+{
+  "name": "comfyui-custom-node-qa",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "validate:json": "node scripts/validate-json.js"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2"
+  }
+}

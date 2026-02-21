@@ -1,0 +1,44 @@
+name: Validate QA Artifacts
+
+on:
+  pull_request:
+    paths:
+      - 'checklists/**'
+      - 'workflows/**'
+      - 'cli/**'
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache cargo
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/bin/
+            ~/.cargo/registry/
+            cli/target/
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+
+      - name: Build CLI
+        run: cargo build --release --manifest-path cli/Cargo.toml
+
+      - name: Validate all projects
+        run: cargo run --release --manifest-path cli/Cargo.toml -- validate
+
+      - name: Check for drift
+        run: |
+          for project in checklists/*/; do
+            project_name=$(basename "$project")
+            if [ "$project_name" != "templates" ] && [ "$project_name" != "schema" ]; then
+              echo "Checking drift for $project_name..."
+              cargo run --release --manifest-path cli/Cargo.toml -- diff "$project_name" || true
+            fi
+          done

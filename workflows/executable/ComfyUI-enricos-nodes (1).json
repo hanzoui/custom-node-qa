@@ -1,0 +1,769 @@
+{
+  "id": "46953e71-22a5-46f4-b689-f3ec193a222d",
+  "revision": 0,
+  "last_node_id": 43,
+  "last_link_id": 43,
+  "nodes": [
+    {
+      "id": 29,
+      "type": "CompositorTools3",
+      "pos": [
+        863.0856323242188,
+        1083.9559326171875
+      ],
+      "size": [
+        287.0943298339844,
+        106
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "tools",
+          "type": "BOOLEAN",
+          "links": [
+            21
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CompositorTools3"
+      }
+    },
+    {
+      "id": 31,
+      "type": "CreateShapeMask",
+      "pos": [
+        470.6055603027344,
+        899.1564331054688
+      ],
+      "size": [
+        270,
+        270
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "frame_width",
+          "type": "INT",
+          "widget": {
+            "name": "frame_width"
+          },
+          "link": 24
+        },
+        {
+          "name": "frame_height",
+          "type": "INT",
+          "widget": {
+            "name": "frame_height"
+          },
+          "link": 25
+        }
+      ],
+      "outputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": [
+            26
+          ]
+        },
+        {
+          "name": "mask_inverted",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CreateShapeMask"
+      },
+      "widgets_values": [
+        "circle",
+        1,
+        256,
+        256,
+        0,
+        512,
+        512,
+        128,
+        128
+      ]
+    },
+    {
+      "id": 28,
+      "type": "CompositorConfig3",
+      "pos": [
+        871.8857421875,
+        520.7562866210938
+      ],
+      "size": [
+        270,
+        502
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 22
+        },
+        {
+          "name": "mask1",
+          "shape": 7,
+          "type": "MASK",
+          "link": 26
+        },
+        {
+          "name": "image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 32
+        },
+        {
+          "name": "mask2",
+          "shape": 7,
+          "type": "MASK",
+          "link": 35
+        },
+        {
+          "name": "image3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "mask3",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "image4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "mask4",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "image5",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "mask5",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "image6",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "mask6",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "image7",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "mask7",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "image8",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "mask8",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 27
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 29
+        }
+      ],
+      "outputs": [
+        {
+          "name": "config",
+          "type": "COMPOSITOR_CONFIG",
+          "links": [
+            20
+          ]
+        },
+        {
+          "name": "extendedConfig",
+          "type": "COMPOSITOR_CONFIG",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CompositorConfig3"
+      },
+      "widgets_values": [
+        512,
+        512,
+        100,
+        false,
+        false,
+        false,
+        1757088190513
+      ]
+    },
+    {
+      "id": 35,
+      "type": "CreateShapeMask",
+      "pos": [
+        470.76556396484375,
+        1241.988525390625
+      ],
+      "size": [
+        270,
+        270
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "frame_width",
+          "type": "INT",
+          "widget": {
+            "name": "frame_width"
+          },
+          "link": 33
+        },
+        {
+          "name": "frame_height",
+          "type": "INT",
+          "widget": {
+            "name": "frame_height"
+          },
+          "link": 34
+        }
+      ],
+      "outputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": [
+            35
+          ]
+        },
+        {
+          "name": "mask_inverted",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CreateShapeMask"
+      },
+      "widgets_values": [
+        "circle",
+        1,
+        128,
+        128,
+        0,
+        512,
+        512,
+        128,
+        128
+      ]
+    },
+    {
+      "id": 32,
+      "type": "GetImageSize",
+      "pos": [
+        598.424560546875,
+        398.4361572265625
+      ],
+      "size": [
+        140,
+        66
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 23
+        }
+      ],
+      "outputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            24,
+            27,
+            33
+          ]
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            25,
+            29,
+            34
+          ]
+        },
+        {
+          "name": "batch_size",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GetImageSize"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 38,
+      "type": "Note",
+      "pos": [
+        214.585693359375,
+        519.8978271484375
+      ],
+      "size": [
+        210,
+        88
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "example.png"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 27,
+      "type": "Compositor3",
+      "pos": [
+        1220.1741943359375,
+        521.4761352539062
+      ],
+      "size": [
+        971,
+        731
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "config",
+          "type": "COMPOSITOR_CONFIG",
+          "link": 20
+        },
+        {
+          "name": "tools",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "link": 21
+        },
+        {
+          "name": "extendedConfig",
+          "shape": 7,
+          "type": "COMPOSITOR_CONFIG",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "transforms",
+          "type": "STRING",
+          "links": [
+            36
+          ]
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            39
+          ]
+        },
+        {
+          "name": "layer_outputs",
+          "type": "COMPOSITOR_OUTPUT_MASKS",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Compositor3"
+      },
+      "widgets_values": [
+        "{\"width\":750,\"height\":440,\"padding\":100,\"transforms\":[{\"left\":0,\"top\":0,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"originX\":\"left\",\"originY\":\"top\",\"xwidth\":750,\"xheight\":440,\"skewY\":0,\"skewX\":0},{\"left\":0,\"top\":0,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"originX\":\"left\",\"originY\":\"top\",\"xwidth\":750,\"xheight\":440,\"skewY\":0,\"skewX\":0},{\"left\":0,\"top\":0,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"originX\":\"left\",\"originY\":\"top\",\"xwidth\":0,\"xheight\":0,\"skewY\":0,\"skewX\":0},{\"left\":0,\"top\":0,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"originX\":\"left\",\"originY\":\"top\",\"xwidth\":0,\"xheight\":0,\"skewY\":0,\"skewX\":0},{\"left\":0,\"top\":0,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"originX\":\"left\",\"originY\":\"top\",\"xwidth\":0,\"xheight\":0,\"skewY\":0,\"skewX\":0},{\"left\":0,\"top\":0,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"originX\":\"left\",\"originY\":\"top\",\"xwidth\":0,\"xheight\":0,\"skewY\":0,\"skewX\":0},{\"left\":0,\"top\":0,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"originX\":\"left\",\"originY\":\"top\",\"xwidth\":0,\"xheight\":0,\"skewY\":0,\"skewX\":0},{\"left\":0,\"top\":0,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"originX\":\"left\",\"originY\":\"top\",\"xwidth\":0,\"xheight\":0,\"skewY\":0,\"skewX\":0}],\"bboxes\":[{\"left\":0,\"top\":0,\"xwidth\":440,\"xheight\":750},{\"left\":0,\"top\":0,\"xwidth\":440,\"xheight\":750},{\"left\":0,\"top\":0,\"xwidth\":0,\"xheight\":0},{\"left\":0,\"top\":0,\"xwidth\":0,\"xheight\":0},{\"left\":0,\"top\":0,\"xwidth\":0,\"xheight\":0},{\"left\":0,\"top\":0,\"xwidth\":0,\"xheight\":0},{\"left\":0,\"top\":0,\"xwidth\":0,\"xheight\":0},{\"left\":0,\"top\":0,\"xwidth\":0,\"xheight\":0}]}",
+        "compositor/1757088428139.png [temp]",
+        "",
+        "continue"
+      ]
+    },
+    {
+      "id": 30,
+      "type": "LoadImage",
+      "pos": [
+        466.42431640625,
+        518.99609375
+      ],
+      "size": [
+        274.080078125,
+        314.0000305175781
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            22,
+            23,
+            32
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "2c700a931ccfbb7a28e800c483e92b6618c8504cfb84582a651a8cdb0f092cf4.jfif",
+        "image"
+      ]
+    },
+    {
+      "id": 37,
+      "type": "CompositorTransformsOutV3",
+      "pos": [
+        2325.565673828125,
+        520.19140625
+      ],
+      "size": [
+        345.0025329589844,
+        242
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "transforms",
+          "type": "STRING",
+          "link": 36
+        }
+      ],
+      "outputs": [
+        {
+          "name": "x",
+          "type": "INT",
+          "links": []
+        },
+        {
+          "name": "y",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": []
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "angle",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "bbox x",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "bbox y",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "bbox width",
+          "type": "INT",
+          "links": [
+            43
+          ]
+        },
+        {
+          "name": "bbox height",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CompositorTransformsOutV3"
+      },
+      "widgets_values": [
+        1,
+        true
+      ]
+    },
+    {
+      "id": 42,
+      "type": "SaveImage",
+      "pos": [
+        2326.398681640625,
+        818.2867431640625
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 39
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 43,
+      "type": "PreviewAny",
+      "pos": [
+        2779.07275390625,
+        659.0637817382812
+      ],
+      "size": [
+        140,
+        76
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 43
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": []
+    }
+  ],
+  "links": [
+    [
+      20,
+      28,
+      0,
+      27,
+      0,
+      "COMPOSITOR_CONFIG"
+    ],
+    [
+      21,
+      29,
+      0,
+      27,
+      1,
+      "BOOLEAN"
+    ],
+    [
+      22,
+      30,
+      0,
+      28,
+      0,
+      "IMAGE"
+    ],
+    [
+      23,
+      30,
+      0,
+      32,
+      0,
+      "IMAGE"
+    ],
+    [
+      24,
+      32,
+      0,
+      31,
+      0,
+      "INT"
+    ],
+    [
+      25,
+      32,
+      1,
+      31,
+      1,
+      "INT"
+    ],
+    [
+      26,
+      31,
+      0,
+      28,
+      1,
+      "MASK"
+    ],
+    [
+      27,
+      32,
+      0,
+      28,
+      16,
+      "INT"
+    ],
+    [
+      29,
+      32,
+      1,
+      28,
+      17,
+      "INT"
+    ],
+    [
+      32,
+      30,
+      0,
+      28,
+      2,
+      "IMAGE"
+    ],
+    [
+      33,
+      32,
+      0,
+      35,
+      0,
+      "INT"
+    ],
+    [
+      34,
+      32,
+      1,
+      35,
+      1,
+      "INT"
+    ],
+    [
+      35,
+      35,
+      0,
+      28,
+      3,
+      "MASK"
+    ],
+    [
+      36,
+      27,
+      0,
+      37,
+      0,
+      "STRING"
+    ],
+    [
+      39,
+      27,
+      1,
+      42,
+      0,
+      "IMAGE"
+    ],
+    [
+      43,
+      37,
+      7,
+      43,
+      0,
+      "*"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.4665073802097333,
+      "offset": [
+        663.2362907627648,
+        -53.481775923907605
+      ]
+    },
+    "frontendVersion": "1.26.7",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
