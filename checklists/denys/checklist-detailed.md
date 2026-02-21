@@ -1,0 +1,372 @@
+# Node Pack QA Checklist - Denys (368 nodes)
+
+## comfy_extras
+
+- [x] LatentAdd
+- [x] LatentSubtract
+- [x] LatentMultiply
+- [x] LatentInterpolate
+- [x] LatentConcat
+- [x] LatentCut
+- [x] LatentCutToBatch
+- [x] LatentBatch ~~DEPRECATED~~
+- [x] LatentBatchSeedBehavior
+- [x] LatentApplyOperation
+- [x] LatentApplyOperationCFG
+- [x] LatentOperationTonemapReinhard
+- [x] LatentOperationSharpen
+- [x] ReplaceVideoLatentFrames
+- [x] HypernetworkLoader
+- [x] Load Upscale Model
+- [x] Upscale Image (using Model)
+- [x] ImageBlend
+- [x] ImageBlur
+- [x] ImageQuantize
+- [x] ImageSharpen
+- [x] ImageScaleToTotalPixels
+- [x] Resize Image/Mask
+- [x] Batch Images
+- [x] Batch Masks
+- [x] Batch Latents
+- [x] LatentCompositeMasked
+- [x] ImageCompositeMasked
+- [x] Convert Mask to Image
+- [x] Convert Image to Mask
+- [x] ImageColorToMask
+- [x] SolidMask
+- [x] InvertMask
+- [x] CropMask
+- [x] MaskComposite
+- [x] FeatherMask
+- [x] Grow Mask
+- [x] ThresholdMask
+- [x] Preview Mask
+- [x] Porter-Duff Image Composite
+- [x] Split Image with Alpha
+- [x] Join Image with Alpha
+- [x] Rebatch Latents
+- [x] Rebatch Images
+- [x] ModelMergeSimple
+- [x] ModelMergeBlocks
+- [x] ModelMergeSubtract
+- [x] ModelMergeAdd
+- [x] CLIPMergeSimple
+- [x] CLIPMergeSubtract
+- [x] CLIPMergeAdd
+- [x] TomePatchModel
+- [x] CLIPTextEncodeSDXLRefiner
+- [x] CLIPTextEncodeSDXL
+- [x] Canny
+- [x] FreeU
+- [x] FreeU_V2
+- [x] SamplerCustom
+- [x] BasicScheduler
+- [x] KarrasScheduler
+- [x] ExponentialScheduler
+- [x] PolyexponentialScheduler
+- [x] LaplaceScheduler
+- [x] VPScheduler
+- [x] BetaSamplingScheduler
+- [x] SDTurboScheduler
+- [x] KSamplerSelect
+- [x] SamplerEulerAncestral
+- [x] SamplerEulerAncestralCFG++
+- [x] SamplerLMS
+- [x] SamplerDPMPP_3M_SDE
+- [x] SamplerDPMPP_2M_SDE
+- [x] SamplerDPMPP_SDE
+- [x] SamplerDPMPP_2S_Ancestral
+- [x] SamplerDPMAdaptative
+- [x] SamplerER_SDE
+- [x] SamplerSASolver
+- [x] SamplerSEEDS2
+- [x] SplitSigmas
+- [x] SplitSigmasDenoise
+- [x] FlipSigmas
+- [x] SetFirstSigma
+- [x] ExtendIntermediateSigmas
+- [x] SamplingPercentToSigma
+- [x] CFGGuider
+- [x] DualCFGGuider
+- [x] BasicGuider
+- [x] RandomNoise
+- [x] DisableNoise
+- [x] AddNoise
+- [x] SamplerCustomAdvanced
+- [x] ManualSigmas
+- [x] HyperTile
+- [x] ModelSamplingDiscrete
+- [x] ModelSamplingContinuousEDM
+- [x] ModelSamplingContinuousV
+- [x] ModelSamplingStableCascade
+- [x] ModelSamplingSD3
+- [x] ModelSamplingAuraFlow
+- [x] ModelSamplingFlux
+- [x] RescaleCFG
+- [x] ModelComputeDtype
+- [x] PatchModelAddDownscale (Kohya Deep Shrink)
+- [x] Image Crop
+- [x] RepeatImageBatch
+- [x] ImageFromBatch
+- [x] ImageAddNoise
+- [x] SaveAnimatedWEBP
+- [x] SaveAnimatedPNG
+- [x] SaveSVGNode
+- [x] Image Stitch
+- [x] ResizeAndPadImage
+- [x] Get Image Size
+- [x] ImageRotate
+- [x] ImageFlip
+- [x] ImageScaleToMaxDimension
+- [x] Image Only Checkpoint Loader (img2vid model)
+- [x] SVD_img2vid_Conditioning
+- [x] VideoLinearCFGGuidance
+- [x] VideoTriangleCFGGuidance
+- [x] ConditioningSetAreaPercentageVideo
+- [x] Train LoRA
+- [x] Load LoRA Model
+- [x] Plot Loss Graph
+- [x] Resize Images by Shorter Edge
+- [x] Resize Images by Longer Edge
+- [x] Center Crop Images
+- [x] Random Crop Images
+- [x] Normalize Images
+- [x] Adjust Brightness
+- [x] Adjust Contrast
+- [x] Shuffle Image Dataset
+- [x] Shuffle Image-Text Dataset
+- [x] Text to Lowercase
+- [x] Text to Uppercase
+- [x] Truncate Text
+- [x] Add Text Prefix
+- [x] Add Text Suffix
+- [x] Replace Text
+- [x] Strip Whitespace
+- [x] Image Deduplication
+- [x] Image Grid
+- [x] Merge Image Lists
+- [x] Merge Text Lists
+- [x] Make Training Dataset
+- [x] Resolution Bucket
+- [x] Self-Attention Guidance
+- [x] Perp-Neg (DEPRECATED by PerpNegGuider) ~~DEPRECATED~~
+- [x] PerpNegGuider
+- [x] StableZero123_Conditioning
+- [x] StableZero123_Conditioning_Batched
+- [x] SV3D_Conditioning
+- [x] SD_4XUpscale_Conditioning
+- [x] PhotoMakerLoader
+- [x] PhotoMakerEncode
+- [x] CLIPTextEncodePixArtAlpha
+- [x] CLIPTextEncodeControlnet
+- [x] T5TokenizerOptions
+- [x] ImageMorphology
+- [x] ImageRGBToYUV
+- [x] ImageYUVToRGB
+- [x] StableCascade_EmptyLatentImage
+- [x] StableCascade_StageB_Conditioning
+- [x] StableCascade_StageC_VAEEncode
+- [x] StableCascade_SuperResolutionControlnet
+- [x] Differential Diffusion
+- [x] InstructPixToPixConditioning
+- [x] ModelMergeSD1
+- [x] ModelMergeSD2
+- [x] ModelMergeSDXL
+- [x] ModelMergeSD3_2B
+- [x] ModelMergeAuraflow
+- [x] ModelMergeFlux1
+- [x] ModelMergeSD35_Large
+- [x] ModelMergeMochiPreview
+- [x] ModelMergeLTXV
+- [x] ModelMergeCosmos7B
+- [x] ModelMergeCosmos14B
+- [x] ModelMergeWAN2_1
+- [x] ModelMergeCosmosPredict2_2B
+- [x] ModelMergeCosmosPredict2_14B
+- [x] ModelMergeQwenImage
+- [x] PerturbedAttentionGuidance
+- [x] AlignYourStepsScheduler
+- [x] UNetSelfAttentionMultiply
+- [x] UNetCrossAttentionMultiply
+- [x] CLIPAttentionMultiply
+- [x] UNetTemporalAttentionMultiply
+- [x] SamplerLCMUpscale
+- [x] SamplerEulerCFG++
+- [x] Webcam Capture
+- [x] Empty Latent Audio
+- [x] VAE Encode Audio
+- [x] VAE Decode Audio
+- [x] Save Audio (FLAC)
+- [x] Save Audio (MP3)
+- [x] Save Audio (Opus)
+- [x] Load Audio
+- [x] Preview Audio
+- [x] ConditioningStableAudio
+- [x] Record Audio
+- [x] Trim Audio Duration
+- [x] Split Audio Channels
+- [x] Audio Concat
+- [x] Audio Merge
+- [x] Audio Adjust Volume
+- [x] Empty Audio
+- [x] TripleCLIPLoader
+- [x] EmptySD3LatentImage
+- [x] CLIPTextEncodeSD3
+- [x] Apply Controlnet with VAE ~~DEPRECATED~~
+- [x] SkipLayerGuidanceSD3
+- [x] GITSScheduler
+- [x] SetUnionControlNetType
+- [x] ControlNetInpaintingAliMamaApply
+- [x] CLIPTextEncodeHunyuanDiT
+- [x] TextEncodeHunyuanVideo_ImageToVideo
+- [x] Empty HunyuanVideo 1.0 Latent
+- [x] Empty HunyuanVideo 1.5 Latent
+- [x] HunyuanVideo15ImageToVideo
+- [x] HunyuanVideo15SuperResolution
+- [x] Hunyuan Video 15 Latent Upscale With Model
+- [x] Load Latent Upscale Model
+- [x] HunyuanImageToVideo
+- [x] EmptyHunyuanImageLatent
+- [x] HunyuanRefinerLatent
+- [x] Epsilon Scaling
+- [x] TSR - Temporal Score Rescaling
+- [x] CLIPTextEncodeFlux
+- [x] FluxGuidance
+- [x] FluxDisableGuidance
+- [x] FluxKontextImageScale
+- [x] Edit Model Reference Method
+- [x] Empty Flux 2 Latent
+- [x] Flux2Scheduler
+- [x] TorchCompileModel
+- [x] EmptyMochiLatentVideo
+- [x] SkipLayerGuidanceDiT
+- [x] SkipLayerGuidanceDiTSimple
+- [x] Mahiro is so cute that she deserves a better guidance function!! (。・ω・。)
+- [x] LTXVLatentUpsampler
+- [x] LTXV Audio VAE Loader
+- [x] LTXV Audio VAE Encode
+- [x] LTXV Audio VAE Decode
+- [x] LTXV Empty Latent Audio
+- [x] LTXV Audio Text Encoder Loader
+- [x] EmptyLTXVLatentVideo
+- [x] LTXVImgToVideo
+- [x] LTXVImgToVideoInplace
+- [x] ModelSamplingLTXV
+- [x] LTXVConditioning
+- [x] LTXVScheduler
+- [x] LTXVAddGuide
+- [x] LTXVPreprocess
+- [x] LTXVCropGuides
+- [x] LTXVConcatAVLatent
+- [x] LTXVSeparateAVLatent
+- [x] Create Hook LoRA
+- [x] Create Hook LoRA (MO)
+- [x] Create Hook Model as LoRA
+- [x] Create Hook Model as LoRA (MO)
+- [x] Set Hook Keyframes
+- [x] Create Hook Keyframe
+- [x] Create Hook Keyframes Interp.
+- [x] Create Hook Keyframes From Floats
+- [x] Combine Hooks [2]
+- [x] Combine Hooks [4]
+- [x] Combine Hooks [8]
+- [x] Cond Set Props
+- [x] Cond Set Props Combine
+- [x] Cond Pair Set Props
+- [x] Cond Pair Set Props Combine
+- [x] Cond Set Default Combine
+- [x] Cond Pair Set Default Combine
+- [x] Cond Pair Combine
+- [x] Set CLIP Hooks
+- [x] Timesteps Range
+- [x] Load 3D & Animation
+- [x] Preview 3D & Animation
+- [x] EmptyCosmosLatentVideo
+- [x] CosmosImageToVideoLatent
+- [x] CosmosPredict2ImageToVideoLatent
+- [x] SaveWEBM
+- [x] Save Video
+- [x] Create Video
+- [x] Get Video Components
+- [x] Load Video
+- [x] CLIP Text Encode for Lumina2
+- [x] RenormCFG
+- [x] WanTrackToVideo
+- [x] WanImageToVideo
+- [x] WanFunControlToVideo
+- [x] Wan22FunControlToVideo
+- [x] WanFunInpaintToVideo
+- [x] WanFirstLastFrameToVideo
+- [x] WanVaceToVideo
+- [x] TrimVideoLatent
+- [x] WanCameraImageToVideo
+- [x] WanPhantomSubjectToVideo
+- [x] WanSoundImageToVideo
+- [x] WanSoundImageToVideoExtend
+- [x] WanHuMoImageToVideo
+- [x] WanAnimateToVideo
+- [x] Wan22ImageToVideoLatent
+- [x] LotusConditioning
+- [x] EmptyLatentHunyuan3Dv2
+- [x] Hunyuan3Dv2Conditioning
+- [x] Hunyuan3Dv2ConditioningMultiView
+- [x] VAEDecodeHunyuan3D
+- [x] VoxelToMeshBasic
+- [x] VoxelToMesh
+- [x] SaveGLB
+- [x] String
+- [x] String (Multiline)
+- [x] Int
+- [x] Float
+- [x] Boolean
+- [x] CFGZeroStar
+- [x] CFGNorm
+- [x] OptimalStepsScheduler
+- [x] QuadrupleCLIPLoader
+- [x] CLIPTextEncodeHiDream
+- [x] FreSca
+- [x] Adaptive Projected Guidance
+- [x] Preview as Text
+- [x] TextEncodeAceStepAudio
+- [x] EmptyAceStepLatentAudio
+- [x] Concatenate
+- [x] Substring
+- [x] Length
+- [x] Case Converter
+- [x] Trim
+- [x] Replace
+- [x] Contains
+- [x] Compare
+- [x] Regex Match
+- [x] Regex Extract
+- [x] Regex Replace
+- [x] WanCameraEmbedding
+- [x] ReferenceLatent
+- [x] Tangential Damping CFG
+- [x] Context Windows (Manual)
+- [x] WAN Context Windows (Manual)
+- [x] TextEncodeQwenImageEdit
+- [x] TextEncodeQwenImageEditPlus
+- [x] Empty Qwen Image Layered Latent
+- [x] EmptyChromaRadianceLatentImage
+- [x] ChromaRadianceOptions
+- [x] ModelPatchLoader
+- [x] QwenImageDiffsynthControlnet
+- [x] ZImageFunControlnet
+- [x] USOStyleReference
+- [x] EasyCache
+- [x] LazyCache
+- [x] AudioEncoderLoader
+- [x] AudioEncoderEncode
+- [x] ScaleROPE
+- [x] Switch
+- [x] Custom Combo
+- [x] wanBlockSwap ~~DEPRECATED~~
+- [x] Kandinsky5ImageToVideo
+- [x] NormalizeVideoLatentStart
+- [x] CLIPTextEncodeKandinsky5
+- [x] WanMoveTrackToVideo
+- [x] WanMoveTracksFromCoords
+- [x] WanMoveConcatTrack
+- [x] WanMoveVisualizeTracks
+- [x] GenerateTracks
