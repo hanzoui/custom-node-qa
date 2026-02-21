@@ -1,14 +1,22 @@
-# Node Pack QA Checklist - Ali (709 nodes)
+# Node Pack QA Checklist - Ali (745 nodes)
 
-- [ ] comfy_extras (368)
-- [ ] comfyui-kjnodes (193)
-- [ ] comfyui_controlnet_aux (64)
-- [ ] comfyui-advanced-controlnet (43)
-- [ ] comfyui-supir (10)
-- [ ] comfyui-frame-interpolation (9)
-- [ ] audio-separation-nodes-comfyui (7)
-- [ ] ComfyUI_Fill-ChatterBox (5)
-- [ ] comfyui-florence2 (4)
-- [ ] ComfyUI-SCAIL-Pose (3)
-- [ ] comfyui-depthanythingv2 (2)
-- [ ] websocket_image_save (1)
+- [x] comfyui-kjnodes (193)
+- [x] comfyui_controlnet_aux (64)
+- [x] comfyui-advanced-controlnet (43)
+- [x] comfyui-supir (10)
+- [x] comfyui-frame-interpolation (9)
+- [x] audio-separation-nodes-comfyui (7)
+- [x] ComfyUI_Fill-ChatterBox (5)
+- [x] comfyui-florence2 (4)
+- [x] ComfyUI-SCAIL-Pose (3)
+- [x] comfyui-depthanythingv2 (2)
+- [x] websocket_image_save (1)
+- [x] comfyui-animatediff-evolved (145), re-run for chae
+- [x] comfy_api_nodes (122), re-run for chae
+- [x] comfyui_essentials (62), re-run for chae
+- [x] comfyui-videohelpersuite (33), re-run for chae
+- [x] comfyui_ipadapter_plus (29), re-run for chae
+- [x] comfyui-inpaint-cropandstitch (6), re-run for chae
+- [x] ComfyUI-WanAnimatePreprocess (4), re-run for chae
+- [x] ComfyUI-Lotus (2), re-run for chae
+- [x] comfyui-fl-path-animator (1), re-run for chae

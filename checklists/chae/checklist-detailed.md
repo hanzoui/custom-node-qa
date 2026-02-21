@@ -2,725 +2,725 @@
 
 ## RES4LYF
 
-- [ ] FluxLoader
-- [ ] SD35Loader
-- [ ] ClownModelLoader
-- [ ] TextBox1
-- [ ] TextBox2
-- [ ] TextBox3
-- [ ] TextConcatenate
-- [ ] TextBoxConcatenate
-- [ ] TextLoadFile
-- [ ] TextShuffle
-- [ ] TextShuffleAndTruncate
-- [ ] TextTruncateTokens
-- [ ] SeedGenerator
-- [ ] ClownRegionalConditioning
-- [ ] ClownRegionalConditionings
-- [ ] ClownRegionalConditioning2
-- [ ] ClownRegionalConditioning3
-- [ ] ClownRegionalConditioning_AB
-- [ ] ClownRegionalConditioning_ABC
-- [ ] CLIPTextEncodeFluxUnguided
-- [ ] ConditioningOrthoCollin
-- [ ] ConditioningAverageScheduler
-- [ ] ConditioningMultiply
-- [ ] ConditioningAdd
-- [ ] Conditioning Recast FP64
-- [ ] StableCascade_StageB_Conditioning64
-- [ ] ConditioningZeroAndTruncate
-- [ ] ConditioningTruncate
-- [ ] StyleModelApplyStyle
-- [ ] CrossAttn_EraseReplace_HiDream
-- [ ] ConditioningDownsample (T5)
-- [ ] ConditioningBatch4
-- [ ] ConditioningBatch8
-- [ ] TemporalMaskGenerator
-- [ ] TemporalSplitAttnMask
-- [ ] TemporalSplitAttnMask (Midframe)
-- [ ] TemporalCrossAttnMask
-- [ ] Set Precision
-- [ ] Set Precision Universal
-- [ ] Set Precision Advanced
-- [ ] LatentUpscaleWithVAE
-- [ ] LatentNoised
-- [ ] LatentNoiseList
-- [ ] AdvancedNoise
-- [ ] LatentNoiseBatch_perlin
-- [ ] LatentNoiseBatch_fractal
-- [ ] LatentNoiseBatch_gaussian
-- [ ] LatentNoiseBatch_gaussian_channels
-- [ ] LatentBatch_channels
-- [ ] LatentBatch_channels_16
-- [ ] Latent Get Channel Means
-- [ ] Latent Match Channelwise
-- [ ] Latent to RawX
-- [ ] Latent Clear State Info
-- [ ] Latent Replace State Info
-- [ ] Latent Display State Info
-- [ ] Latent Transfer State Info
-- [ ] Latent TrimVideo State Info
-- [ ] Latent to Cuda
-- [ ] Latent Batcher
-- [ ] Latent Normalize Channels
-- [ ] Latent Channels From To
-- [ ] LatentPhaseMagnitude
-- [ ] LatentPhaseMagnitudeMultiply
-- [ ] LatentPhaseMagnitudeOffset
-- [ ] LatentPhaseMagnitudePower
-- [ ] MaskFloatToBoolean
-- [ ] MaskToggle
-- [ ] MaskEdge
-- [ ] Frames Masks Uninterpolate
-- [ ] Frames Masks ZeroOut
-- [ ] Frames Latent ReverseOrder
-- [ ] EmptyLatentImage64
-- [ ] EmptyLatentImageCustom
-- [ ] StableCascade_StageC_VAEEncode_Exact
-- [ ] PrepForUnsampling
-- [ ] VAEEncodeAdvanced
-- [ ] VAEStyleTransferLatent
-- [ ] SigmasPreview
-- [ ] SigmasSchedulePreview
-- [ ] TorchCompileModelFluxAdv
-- [ ] TorchCompileModelAura
-- [ ] TorchCompileModelSD35
-- [ ] TorchCompileModels
-- [ ] ClownpileModelWanVideo
-- [ ] ModelTimestepPatcher
-- [ ] ModelSamplingAdvanced
-- [ ] ModelSamplingAdvancedResolution
-- [ ] FluxGuidanceDisable
-- [ ] ReWanPatcher
-- [ ] ReFluxPatcher
-- [ ] ReChromaPatcher
-- [ ] ReSD35Patcher
-- [ ] ReAuraPatcher
-- [ ] ReLTXVPatcher
-- [ ] ReHiDreamPatcher
-- [ ] ReSDPatcher
-- [ ] ReReduxPatcher
-- [ ] ReWanPatcherAdvanced
-- [ ] ReFluxPatcherAdvanced
-- [ ] ReChromaPatcherAdvanced
-- [ ] ReSD35PatcherAdvanced
-- [ ] ReAuraPatcherAdvanced
-- [ ] ReLTXVPatcherAdvanced
-- [ ] ReHiDreamPatcherAdvanced
-- [ ] LayerPatcher
-- [ ] FluxOrthoCFGPatcher
-- [ ] Sigmas Recast
-- [ ] Sigmas Noise Inversion
-- [ ] Sigmas From Text
-- [ ] Sigmas Variance Floor
-- [ ] Sigmas Truncate
-- [ ] Sigmas Start
-- [ ] Sigmas Split
-- [ ] Sigmas Split Value
-- [ ] Sigmas Concat
-- [ ] Sigmas Pad
-- [ ] Sigmas Unpad
-- [ ] Sigmas SetFloor
-- [ ] Sigmas DeleteBelowFloor
-- [ ] Sigmas DeleteDuplicates
-- [ ] Sigmas Cleanup
-- [ ] Sigmas Mult
-- [ ] Sigmas Modulus
-- [ ] Sigmas Quotient
-- [ ] Sigmas Add
-- [ ] Sigmas Power
-- [ ] Sigmas Abs
-- [ ] Sigmas2 Mult
-- [ ] Sigmas2 Add
-- [ ] Sigmas Rescale
-- [ ] Sigmas Count
-- [ ] Sigmas Resample
-- [ ] Sigmas Math1
-- [ ] Sigmas Math3
-- [ ] Sigmas Iteration Karras
-- [ ] Sigmas Iteration Polyexp
-- [ ] Sigmas Lerp
-- [ ] Sigmas InvLerp
-- [ ] Sigmas ArcSine
-- [ ] Sigmas LinearSine
-- [ ] Sigmas Append
-- [ ] Sigmas ArcCosine
-- [ ] Sigmas ArcTangent
-- [ ] Sigmas CrossProduct
-- [ ] Sigmas DotProduct
-- [ ] Sigmas Fmod
-- [ ] Sigmas Frac
-- [ ] Sigmas If
-- [ ] Sigmas Logarithm2
-- [ ] Sigmas SmoothStep
-- [ ] Sigmas SquareRoot
-- [ ] Sigmas TimeStep
-- [ ] Sigmas Sigmoid
-- [ ] Sigmas Easing
-- [ ] Sigmas Hyperbolic
-- [ ] Sigmas Gaussian
-- [ ] Sigmas Percentile
-- [ ] Sigmas KernelSmooth
-- [ ] Sigmas QuantileNorm
-- [ ] Sigmas AdaptiveStep
-- [ ] Sigmas Chaos
-- [ ] Sigmas ReactionDiffusion
-- [ ] Sigmas Attractor
-- [ ] Sigmas CatmullRom
-- [ ] Sigmas LambertW
-- [ ] Sigmas ZetaEta
-- [ ] Sigmas GammaBeta
-- [ ] Sigmas GaussianCDF
-- [ ] Sigmas StepwiseMultirate
-- [ ] Sigmas HarmonicDecay
-- [ ] Sigmas AdaptiveNoiseFloor
-- [ ] Sigmas CollatzIteration
-- [ ] Sigmas ConwaySequence
-- [ ] Sigmas GilbreathSequence
-- [ ] Sigmas CNFInverse
-- [ ] Sigmas RiemannianFlow
-- [ ] Sigmas LangevinDynamics
-- [ ] Sigmas PersistentHomology
-- [ ] Sigmas NormalizingFlows
-- [ ] ClownScheduler
-- [ ] Tan Scheduler
-- [ ] Tan Scheduler 2
-- [ ] Tan Scheduler 2 Simple
-- [ ] Constant Scheduler
-- [ ] Linear Quadratic Advanced
-- [ ] SetImageSizeWithScale
-- [ ] SetImageSize
-- [ ] Mask Bounding Box Aspect Ratio
-- [ ] Image Get Color Swatches
-- [ ] Masks From Color Swatches
-- [ ] Masks From Colors
-- [ ] Masks Unpack 4
-- [ ] Masks Unpack 8
-- [ ] Masks Unpack 16
-- [ ] Image Sharpen FS
-- [ ] Image Channels LAB
-- [ ] Image Median Blur
-- [ ] Image Gaussian Blur
-- [ ] Image Pair Split
-- [ ] Image Crop Location Exact
-- [ ] Film Grain
-- [ ] Frequency Separation Linear Light
-- [ ] Frequency Separation Hard Light
-- [ ] Frequency Separation Hard Light LAB
-- [ ] Frame Select
-- [ ] Frames Slice
-- [ ] Frames Concat
-- [ ] Mask Sketch
-- [ ] Image Grain Add
-- [ ] Image Repeat Tile To Size
-- [ ] Frames Concat Masks
-- [ ] Frame Select Latent
-- [ ] Frames Slice Latent
-- [ ] Frames Concat Latent
-- [ ] Frame Select Latent Raw
-- [ ] Frames Slice Latent Raw
-- [ ] Frames Concat Latent Raw
-- [ ] SharkOptions
-- [ ] ClownOptions SDE
-- [ ] ClownOptions Detail Boost
-- [ ] ClownGuide Style
-- [ ] ClownGuide_Style_EdgeWidth
-- [ ] ClownGuide_Style_TileSize
-- [ ] ClownGuide
-- [ ] ClownGuides
-- [ ] ClownGuidesAB
-- [ ] ClownGuides Sync
-- [ ] ClownGuides Sync_Advanced
-- [ ] ClownGuide_FrequencySeparation
-- [ ] SharkOptions Guider Input
-- [ ] ClownOptions Implicit Steps
-- [ ] ClownOptions Cycles
-- [ ] SharkOptions Guide Cond
-- [ ] SharkOptions Guide Conds
-- [ ] ClownOptions Tile
-- [ ] ClownOptions Tile Advanced
-- [ ] ClownGuide Mean
-- [ ] ClownGuide AdaIN (HiDream)
-- [ ] ClownGuide AttnInj (HiDream)
-- [ ] ClownGuide_StyleNorm_Advanced_HiDream
-- [ ] ClownOptions SDE Mask
-- [ ] ClownOptions Step Size
-- [ ] ClownOptions Sigma Scaling
-- [ ] ClownOptions Momentum
-- [ ] ClownOptions Swap Sampler
-- [ ] ClownOptions Extra Options
-- [ ] ClownOptions Automation
-- [ ] SharkOptions UltraCascade Latent
-- [ ] SharkOptions Start Step
-- [ ] ClownOptions Combine
-- [ ] ClownOptions Frameweights
-- [ ] ClownOptions_FlowGuide
-- [ ] ClownStyle_Block_MMDiT
-- [ ] ClownStyle_MMDiT
-- [ ] ClownStyle_Attn_MMDiT
-- [ ] ClownStyle_Boost
-- [ ] ClownStyle_UNet
-- [ ] ClownStyle_Block_UNet
-- [ ] ClownStyle_Attn_UNet
-- [ ] ClownStyle_ResBlock_UNet
-- [ ] ClownStyle_SpatialBlock_UNet
-- [ ] ClownStyle_TransformerBlock_UNet
-- [ ] ClownSamplerSelector
-- [ ] SharkSampler
-- [ ] SharkChainsampler
-- [ ] ClownsharKSampler
-- [ ] ClownsharkChainsampler
-- [ ] ClownSampler
-- [ ] ClownSamplerAdvanced
-- [ ] BongSampler
-- [ ] Legacy_ClownSampler ~~DEPRECATED~~
-- [ ] Legacy_SharkSampler ~~DEPRECATED~~
-- [ ] Legacy_ClownsharKSampler ~~DEPRECATED~~
-- [ ] Legacy_ClownsharKSamplerGuides ~~DEPRECATED~~
-- [ ] Legacy2_ClownSampler ~~DEPRECATED~~
-- [ ] Legacy2_ClownSamplerAdvanced ~~DEPRECATED~~
-- [ ] Legacy2_ClownsharKSampler ~~DEPRECATED~~
-- [ ] Legacy2_ClownsharKSamplerGuides ~~DEPRECATED~~
-- [ ] Legacy2_ClownsharKSamplerGuide ~~DEPRECATED~~
-- [ ] Legacy2_ClownOptions_SDE_Noise ~~DEPRECATED~~
-- [ ] Legacy2_ClownOptions_FrameWeights ~~DEPRECATED~~
-- [ ] Legacy2_ClownInpaint ~~DEPRECATED~~
-- [ ] Legacy2_ClownInpaintSimple ~~DEPRECATED~~
-- [ ] Legacy2_ClownsharKSamplerOptions ~~DEPRECATED~~
-- [ ] Legacy2_ClownsharKSamplerAutomation ~~DEPRECATED~~
-- [ ] Legacy2_ClownsharKSamplerAutomation_Advanced ~~DEPRECATED~~
-- [ ] Legacy2_SamplerOptions_TimestepScaling ~~DEPRECATED~~
-- [ ] Legacy2_SamplerOptions_GarbageCollection ~~DEPRECATED~~
-- [ ] Legacy2_UltraSharkSampler ~~DEPRECATED~~
-- [ ] UltraSharkSampler Tiled ~~DEPRECATED~~
+- [x] FluxLoader
+- [x] SD35Loader
+- [x] ClownModelLoader
+- [x] TextBox1
+- [x] TextBox2
+- [x] TextBox3
+- [x] TextConcatenate
+- [x] TextBoxConcatenate
+- [x] TextLoadFile
+- [x] TextShuffle
+- [x] TextShuffleAndTruncate
+- [x] TextTruncateTokens
+- [x] SeedGenerator
+- [x] ClownRegionalConditioning
+- [x] ClownRegionalConditionings
+- [x] ClownRegionalConditioning2
+- [x] ClownRegionalConditioning3
+- [x] ClownRegionalConditioning_AB
+- [x] ClownRegionalConditioning_ABC
+- [x] CLIPTextEncodeFluxUnguided
+- [x] ConditioningOrthoCollin
+- [x] ConditioningAverageScheduler
+- [x] ConditioningMultiply
+- [x] ConditioningAdd
+- [x] Conditioning Recast FP64
+- [x] StableCascade_StageB_Conditioning64
+- [x] ConditioningZeroAndTruncate
+- [x] ConditioningTruncate
+- [x] StyleModelApplyStyle
+- [x] CrossAttn_EraseReplace_HiDream
+- [x] ConditioningDownsample (T5)
+- [x] ConditioningBatch4
+- [x] ConditioningBatch8
+- [x] TemporalMaskGenerator
+- [x] TemporalSplitAttnMask
+- [x] TemporalSplitAttnMask (Midframe)
+- [x] TemporalCrossAttnMask
+- [x] Set Precision
+- [x] Set Precision Universal
+- [x] Set Precision Advanced
+- [x] LatentUpscaleWithVAE
+- [x] LatentNoised
+- [x] LatentNoiseList
+- [x] AdvancedNoise
+- [x] LatentNoiseBatch_perlin
+- [x] LatentNoiseBatch_fractal
+- [x] LatentNoiseBatch_gaussian
+- [x] LatentNoiseBatch_gaussian_channels
+- [x] LatentBatch_channels
+- [x] LatentBatch_channels_16
+- [x] Latent Get Channel Means
+- [x] Latent Match Channelwise
+- [x] Latent to RawX
+- [x] Latent Clear State Info
+- [x] Latent Replace State Info
+- [x] Latent Display State Info
+- [x] Latent Transfer State Info
+- [x] Latent TrimVideo State Info
+- [x] Latent to Cuda
+- [x] Latent Batcher
+- [x] Latent Normalize Channels
+- [x] Latent Channels From To
+- [x] LatentPhaseMagnitude
+- [x] LatentPhaseMagnitudeMultiply
+- [x] LatentPhaseMagnitudeOffset
+- [x] LatentPhaseMagnitudePower
+- [x] MaskFloatToBoolean
+- [x] MaskToggle
+- [x] MaskEdge
+- [x] Frames Masks Uninterpolate
+- [x] Frames Masks ZeroOut
+- [x] Frames Latent ReverseOrder
+- [x] EmptyLatentImage64
+- [x] EmptyLatentImageCustom
+- [x] StableCascade_StageC_VAEEncode_Exact
+- [x] PrepForUnsampling
+- [x] VAEEncodeAdvanced
+- [x] VAEStyleTransferLatent
+- [x] SigmasPreview
+- [x] SigmasSchedulePreview
+- [x] TorchCompileModelFluxAdv
+- [x] TorchCompileModelAura
+- [x] TorchCompileModelSD35
+- [x] TorchCompileModels
+- [x] ClownpileModelWanVideo
+- [x] ModelTimestepPatcher
+- [x] ModelSamplingAdvanced
+- [x] ModelSamplingAdvancedResolution
+- [x] FluxGuidanceDisable
+- [x] ReWanPatcher
+- [x] ReFluxPatcher
+- [x] ReChromaPatcher
+- [x] ReSD35Patcher
+- [x] ReAuraPatcher
+- [x] ReLTXVPatcher
+- [x] ReHiDreamPatcher
+- [x] ReSDPatcher
+- [x] ReReduxPatcher
+- [x] ReWanPatcherAdvanced
+- [x] ReFluxPatcherAdvanced
+- [x] ReChromaPatcherAdvanced
+- [x] ReSD35PatcherAdvanced
+- [x] ReAuraPatcherAdvanced
+- [x] ReLTXVPatcherAdvanced
+- [x] ReHiDreamPatcherAdvanced
+- [x] LayerPatcher
+- [x] FluxOrthoCFGPatcher
+- [x] Sigmas Recast
+- [x] Sigmas Noise Inversion
+- [x] Sigmas From Text
+- [x] Sigmas Variance Floor
+- [x] Sigmas Truncate
+- [x] Sigmas Start
+- [x] Sigmas Split
+- [x] Sigmas Split Value
+- [x] Sigmas Concat
+- [x] Sigmas Pad
+- [x] Sigmas Unpad
+- [x] Sigmas SetFloor
+- [x] Sigmas DeleteBelowFloor
+- [x] Sigmas DeleteDuplicates
+- [x] Sigmas Cleanup
+- [x] Sigmas Mult
+- [x] Sigmas Modulus
+- [x] Sigmas Quotient
+- [x] Sigmas Add
+- [x] Sigmas Power
+- [x] Sigmas Abs
+- [x] Sigmas2 Mult
+- [x] Sigmas2 Add
+- [x] Sigmas Rescale
+- [x] Sigmas Count
+- [x] Sigmas Resample
+- [x] Sigmas Math1
+- [x] Sigmas Math3
+- [x] Sigmas Iteration Karras
+- [x] Sigmas Iteration Polyexp
+- [x] Sigmas Lerp
+- [x] Sigmas InvLerp
+- [x] Sigmas ArcSine
+- [x] Sigmas LinearSine
+- [x] Sigmas Append
+- [x] Sigmas ArcCosine
+- [x] Sigmas ArcTangent
+- [x] Sigmas CrossProduct
+- [x] Sigmas DotProduct
+- [x] Sigmas Fmod
+- [x] Sigmas Frac
+- [x] Sigmas If
+- [x] Sigmas Logarithm2
+- [x] Sigmas SmoothStep
+- [x] Sigmas SquareRoot
+- [x] Sigmas TimeStep
+- [x] Sigmas Sigmoid
+- [x] Sigmas Easing
+- [x] Sigmas Hyperbolic
+- [x] Sigmas Gaussian
+- [x] Sigmas Percentile
+- [x] Sigmas KernelSmooth
+- [x] Sigmas QuantileNorm
+- [x] Sigmas AdaptiveStep
+- [x] Sigmas Chaos
+- [x] Sigmas ReactionDiffusion
+- [x] Sigmas Attractor
+- [x] Sigmas CatmullRom
+- [x] Sigmas LambertW
+- [x] Sigmas ZetaEta
+- [x] Sigmas GammaBeta
+- [x] Sigmas GaussianCDF
+- [x] Sigmas StepwiseMultirate
+- [x] Sigmas HarmonicDecay
+- [x] Sigmas AdaptiveNoiseFloor
+- [x] Sigmas CollatzIteration
+- [x] Sigmas ConwaySequence
+- [x] Sigmas GilbreathSequence
+- [x] Sigmas CNFInverse
+- [x] Sigmas RiemannianFlow
+- [x] Sigmas LangevinDynamics
+- [x] Sigmas PersistentHomology
+- [x] Sigmas NormalizingFlows
+- [x] ClownScheduler
+- [x] Tan Scheduler
+- [x] Tan Scheduler 2
+- [x] Tan Scheduler 2 Simple
+- [x] Constant Scheduler
+- [x] Linear Quadratic Advanced
+- [x] SetImageSizeWithScale
+- [x] SetImageSize
+- [x] Mask Bounding Box Aspect Ratio
+- [x] Image Get Color Swatches
+- [x] Masks From Color Swatches
+- [x] Masks From Colors
+- [x] Masks Unpack 4
+- [x] Masks Unpack 8
+- [x] Masks Unpack 16
+- [x] Image Sharpen FS
+- [x] Image Channels LAB
+- [x] Image Median Blur
+- [x] Image Gaussian Blur
+- [x] Image Pair Split
+- [x] Image Crop Location Exact
+- [x] Film Grain
+- [x] Frequency Separation Linear Light
+- [x] Frequency Separation Hard Light
+- [x] Frequency Separation Hard Light LAB
+- [x] Frame Select
+- [x] Frames Slice
+- [x] Frames Concat
+- [x] Mask Sketch
+- [x] Image Grain Add
+- [x] Image Repeat Tile To Size
+- [x] Frames Concat Masks
+- [x] Frame Select Latent
+- [x] Frames Slice Latent
+- [x] Frames Concat Latent
+- [x] Frame Select Latent Raw
+- [x] Frames Slice Latent Raw
+- [x] Frames Concat Latent Raw
+- [x] SharkOptions
+- [x] ClownOptions SDE
+- [x] ClownOptions Detail Boost
+- [x] ClownGuide Style
+- [x] ClownGuide_Style_EdgeWidth
+- [x] ClownGuide_Style_TileSize
+- [x] ClownGuide
+- [x] ClownGuides
+- [x] ClownGuidesAB
+- [x] ClownGuides Sync
+- [x] ClownGuides Sync_Advanced
+- [x] ClownGuide_FrequencySeparation
+- [x] SharkOptions Guider Input
+- [x] ClownOptions Implicit Steps
+- [x] ClownOptions Cycles
+- [x] SharkOptions Guide Cond
+- [x] SharkOptions Guide Conds
+- [x] ClownOptions Tile
+- [x] ClownOptions Tile Advanced
+- [x] ClownGuide Mean
+- [x] ClownGuide AdaIN (HiDream)
+- [x] ClownGuide AttnInj (HiDream)
+- [x] ClownGuide_StyleNorm_Advanced_HiDream
+- [x] ClownOptions SDE Mask
+- [x] ClownOptions Step Size
+- [x] ClownOptions Sigma Scaling
+- [x] ClownOptions Momentum
+- [x] ClownOptions Swap Sampler
+- [x] ClownOptions Extra Options
+- [x] ClownOptions Automation
+- [x] SharkOptions UltraCascade Latent
+- [x] SharkOptions Start Step
+- [x] ClownOptions Combine
+- [x] ClownOptions Frameweights
+- [x] ClownOptions_FlowGuide
+- [x] ClownStyle_Block_MMDiT
+- [x] ClownStyle_MMDiT
+- [x] ClownStyle_Attn_MMDiT
+- [x] ClownStyle_Boost
+- [x] ClownStyle_UNet
+- [x] ClownStyle_Block_UNet
+- [x] ClownStyle_Attn_UNet
+- [x] ClownStyle_ResBlock_UNet
+- [x] ClownStyle_SpatialBlock_UNet
+- [x] ClownStyle_TransformerBlock_UNet
+- [x] ClownSamplerSelector
+- [x] SharkSampler
+- [x] SharkChainsampler
+- [x] ClownsharKSampler
+- [x] ClownsharkChainsampler
+- [x] ClownSampler
+- [x] ClownSamplerAdvanced
+- [x] BongSampler
+- [x] Legacy_ClownSampler ~~DEPRECATED~~
+- [x] Legacy_SharkSampler ~~DEPRECATED~~
+- [x] Legacy_ClownsharKSampler ~~DEPRECATED~~
+- [x] Legacy_ClownsharKSamplerGuides ~~DEPRECATED~~
+- [x] Legacy2_ClownSampler ~~DEPRECATED~~
+- [x] Legacy2_ClownSamplerAdvanced ~~DEPRECATED~~
+- [x] Legacy2_ClownsharKSampler ~~DEPRECATED~~
+- [x] Legacy2_ClownsharKSamplerGuides ~~DEPRECATED~~
+- [x] Legacy2_ClownsharKSamplerGuide ~~DEPRECATED~~
+- [x] Legacy2_ClownOptions_SDE_Noise ~~DEPRECATED~~
+- [x] Legacy2_ClownOptions_FrameWeights ~~DEPRECATED~~
+- [x] Legacy2_ClownInpaint ~~DEPRECATED~~
+- [x] Legacy2_ClownInpaintSimple ~~DEPRECATED~~
+- [x] Legacy2_ClownsharKSamplerOptions ~~DEPRECATED~~
+- [x] Legacy2_ClownsharKSamplerAutomation ~~DEPRECATED~~
+- [x] Legacy2_ClownsharKSamplerAutomation_Advanced ~~DEPRECATED~~
+- [x] Legacy2_SamplerOptions_TimestepScaling ~~DEPRECATED~~
+- [x] Legacy2_SamplerOptions_GarbageCollection ~~DEPRECATED~~
+- [x] Legacy2_UltraSharkSampler ~~DEPRECATED~~
+- [x] UltraSharkSampler Tiled ~~DEPRECATED~~
 
 ## comfyui-animatediff-evolved
 
-- [ ] Load AnimateDiff LoRA 🎭🅐🅓
-- [ ] Sample Settings 🎭🅐🅓
-- [ ] AnimateDiff Keyframe 🎭🅐🅓
-- [ ] Multival 🎭🅐🅓
-- [ ] Multival [Float List] 🎭🅐🅓
-- [ ] Multival [Floats] 🎭🅐🅓
-- [ ] Multival Scaled Mask 🎭🅐🅓
-- [ ] Multival to Mask 🎭🅐🅓
-- [ ] Context Options◆Standard Static 🎭🅐🅓
-- [ ] Context Options◆Standard Uniform 🎭🅐🅓
-- [ ] Context Options◆Looped Uniform 🎭🅐🅓
-- [ ] Context Options◆Views Only [VRAM⇈] 🎭🅐🅓
-- [ ] Context Options◆Batched [Non-AD] 🎭🅐🅓
-- [ ] Context Options◆Looped Uniform 🎭🅐🅓
-- [ ] Visualize Context Options (K.) 🎭🅐🅓
-- [ ] Visualize Context Options (K.Adv.) 🎭🅐🅓
-- [ ] Visualize Context Options (S.Cus.) 🎭🅐🅓
-- [ ] View Options◆Standard Static 🎭🅐🅓
-- [ ] View Options◆Standard Uniform 🎭🅐🅓
-- [ ] View Options◆Looped Uniform 🎭🅐🅓
-- [ ] Set Context Extras 🎭🅐🅓
-- [ ] Context Extras◆ContextRef 🎭🅐🅓
-- [ ] ContextRef Mode◆First 🎭🅐🅓
-- [ ] ContextRef Mode◆Sliding 🎭🅐🅓
-- [ ] ContextRef Mode◆Indexes 🎭🅐🅓
-- [ ] ContextRef Tune◆Attn 🎭🅐🅓
-- [ ] ContextRef Tune◆Attn+Adain 🎭🅐🅓
-- [ ] ContextRef Keyframe 🎭🅐🅓
-- [ ] ContextRef Keyframes Interp. 🎭🅐🅓
-- [ ] ContextRef Keyframes From List 🎭🅐🅓
-- [ ] Context Extras◆NaiveReuse 🎭🅐🅓
-- [ ] NaiveReuse Keyframe 🎭🅐🅓
-- [ ] NaiveReuse Keyframes Interp. 🎭🅐🅓
-- [ ] NaiveReuse Keyframes From List 🎭🅐🅓
-- [ ] Default Iteration Options 🎭🅐🅓
-- [ ] FreeInit Iteration Options 🎭🅐🅓
-- [ ] Register LoRA Hook 🎭🅐🅓 ~~DEPRECATED~~
-- [ ] Register LoRA Hook (Model Only) 🎭🅐🅓 ~~DEPRECATED~~
-- [ ] Register Model as LoRA Hook 🎭🅐🅓 ~~DEPRECATED~~
-- [ ] Register Model as LoRA Hook (MO) 🎭🅐🅓 ~~DEPRECATED~~
-- [ ] Combine LoRA Hooks [2] 🎭🅐🅓 ~~DEPRECATED~~
-- [ ] Combine LoRA Hooks [4] 🎭🅐🅓 ~~DEPRECATED~~
-- [ ] Combine LoRA Hooks [8] 🎭🅐🅓 ~~DEPRECATED~~
-- [ ] Set LoRA Hook Keyframes 🎭🅐🅓 ~~DEPRECATED~~
-- [ ] Set CLIP LoRA Hook 🎭🅐🅓 ~~DEPRECATED~~
-- [ ] LoRA Hook Keyframe 🎭🅐🅓 ~~DEPRECATED~~
-- [ ] LoRA Hook Keyframes Interp. 🎭🅐🅓 ~~DEPRECATED~~
-- [ ] LoRA Hook Keyframes From List 🎭🅐🅓 ~~DEPRECATED~~
-- [ ] Set Model LoRA Hook 🎭🅐🅓 ~~DEPRECATED~~
-- [ ] Set Props on Conds 🎭🅐🅓 ~~DEPRECATED~~
-- [ ] Set Props on Cond 🎭🅐🅓 ~~DEPRECATED~~
-- [ ] Set Props and Combine Conds 🎭🅐🅓 ~~DEPRECATED~~
-- [ ] Set Props and Combine Cond 🎭🅐🅓 ~~DEPRECATED~~
-- [ ] Set Unmasked Conds 🎭🅐🅓 ~~DEPRECATED~~
-- [ ] Set Unmasked Cond 🎭🅐🅓 ~~DEPRECATED~~
-- [ ] Manual Combine Conds 🎭🅐🅓 ~~DEPRECATED~~
-- [ ] Manual Combine Cond 🎭🅐🅓 ~~DEPRECATED~~
-- [ ] Timesteps Conditioning 🎭🅐🅓 ~~DEPRECATED~~
-- [ ] Noise Layer [Add] 🎭🅐🅓
-- [ ] Noise Layer [Add Weighted] 🎭🅐🅓
-- [ ] Noise Layer [Normalized Sum] 🎭🅐🅓
-- [ ] Noise Layer [Replace] 🎭🅐🅓
-- [ ] AnimateDiff Settings 🎭🅐🅓
-- [ ] Adjust PE [Sweetspot] 🎭🅐🅓
-- [ ] Adjust PE [Full Stretch] 🎭🅐🅓
-- [ ] Adjust PE [Manual] 🎭🅐🅓
-- [ ] Adjust Weight [All◆Add] 🎭🅐🅓
-- [ ] Adjust Weight [All◆Mult] 🎭🅐🅓
-- [ ] Adjust Weight [Indiv◆Add] 🎭🅐🅓
-- [ ] Adjust Weight [Indiv◆Mult] 🎭🅐🅓
-- [ ] Adjust Weight [Indiv-Attn◆Add] 🎭🅐🅓
-- [ ] Adjust Weight [Indiv-Attn◆Mult] 🎭🅐🅓
-- [ ] Custom CFG 🎭🅐🅓
-- [ ] Custom CFG [Multival] 🎭🅐🅓
-- [ ] Custom CFG Keyframe 🎭🅐🅓
-- [ ] Custom CFG Keyframe [Multival] 🎭🅐🅓
-- [ ] Custom CFG Keyframes Interp. 🎭🅐🅓
-- [ ] Custom CFG Keyframes From List 🎭🅐🅓
-- [ ] CFG Extras◆PAG 🎭🅐🅓
-- [ ] CFG Extras◆PAG [Multival] 🎭🅐🅓
-- [ ] CFG Extras◆RescaleCFG 🎭🅐🅓
-- [ ] CFG Extras◆RescaleCFG [Multival] 🎭🅐🅓
-- [ ] Create Sigma Schedule 🎭🅐🅓
-- [ ] Create Raw Sigma Schedule 🎭🅐🅓
-- [ ] Sigma Schedule Weighted Mean 🎭🅐🅓
-- [ ] Sigma Schedule Interp. Mean 🎭🅐🅓
-- [ ] Sigma Schedule Split Combine 🎭🅐🅓
-- [ ] Sigma Schedule To Sigmas 🎭🅐🅓
-- [ ] Image Injection 🎭🅐🅓
-- [ ] Image Injection Options 🎭🅐🅓
-- [ ] Ancestral Options 🎭🅐🅓
-- [ ] Prompt Scheduling 🎭🅐🅓
-- [ ] Prompt Scheduling [Latents] 🎭🅐🅓
-- [ ] Value Scheduling 🎭🅐🅓
-- [ ] Value Scheduling [Latents] 🎭🅐🅓
-- [ ] Condition Step Extraction 🎭🅐🅓
-- [ ] Add Values Replace 🎭🅐🅓
-- [ ] Float to Floats 🎭🅐🅓
-- [ ] AD Block 🎭🅐🅓
-- [ ] AD Block+ 🎭🅐🅓
-- [ ] AD Per Block 🎭🅐🅓
-- [ ] AD Per Block+ (SD1.5) 🎭🅐🅓
-- [ ] AD Per Block++ (SD1.5) 🎭🅐🅓
-- [ ] AD Per Block Floats (SD1.5) 🎭🅐🅓
-- [ ] AD Per Block+ (SDXL) 🎭🅐🅓
-- [ ] AD Per Block++ (SDXL) 🎭🅐🅓
-- [ ] AD Per Block Floats (SDXL) 🎭🅐🅓
-- [ ] AnimateDiff Unload 🎭🅐🅓
-- [ ] Empty Latent Image (Big Batch) 🎭🅐🅓
-- [ ] Load Checkpoint w/ Noise Select 🎭🅐🅓
-- [ ] PerturbedAttnGuide [Multival] 🎭🅐🅓
-- [ ] RescaleCFG [Multival] 🎭🅐🅓
-- [ ] AnimateDiff Loader 🎭🅐🅓①
-- [ ] Use Evolved Sampling 🎭🅐🅓②
-- [ ] Apply AnimateDiff Model 🎭🅐🅓②
-- [ ] Apply AnimateDiff Model (Adv.) 🎭🅐🅓②
-- [ ] Load AnimateDiff Model 🎭🅐🅓②
-- [ ] Apply AnimateLCM-I2V Model 🎭🅐🅓②
-- [ ] Load AnimateLCM-I2V Model 🎭🅐🅓②
-- [ ] Scale Ref Image and VAE Encode 🎭🅐🅓②
-- [ ] 🧪Inject I2V into AnimateDiff Model 🎭🅐🅓②
-- [ ] Apply AnimateDiff+CameraCtrl Model 🎭🅐🅓②
-- [ ] Load AnimateDiff+CameraCtrl Model 🎭🅐🅓②
-- [ ] AnimateDiff+CameraCtrl Keyframe 🎭🅐🅓
-- [ ] Load CameraCtrl Poses (File) 🎭🅐🅓②
-- [ ] Load CameraCtrl Poses (Path) 🎭🅐🅓②
-- [ ] Create CameraCtrl Poses 🎭🅐🅓②
-- [ ] Create CameraCtrl Poses (Combo) 🎭🅐🅓②
-- [ ] Create CameraCtrl Poses (Adv.) 🎭🅐🅓②
-- [ ] Manual Append CameraCtrl Poses 🎭🅐🅓②
-- [ ] Replace Camera Parameters 🎭🅐🅓②
-- [ ] Replace Orig. Pose Aspect Ratio 🎭🅐🅓②
-- [ ] Apply AnimateDiff-PIA Model 🎭🅐🅓②
-- [ ] PIA Input [Multival] 🎭🅐🅓②
-- [ ] PIA Input [Paper Presets] 🎭🅐🅓②
-- [ ] AnimateDiff-PIA Keyframe 🎭🅐🅓
-- [ ] 🧪Inject PIA into AnimateDiff Model 🎭🅐🅓②
-- [ ] AnimateDiff Loader [Legacy] 🎭🅐🅓① ~~DEPRECATED~~
-- [ ] 🚫AnimateDiff Loader [DEPRECATED] 🎭🅐🅓 ~~DEPRECATED~~
-- [ ] 🚫AnimateDiff Loader (Advanced) [DEPRECATED] 🎭🅐🅓 ~~DEPRECATED~~
-- [ ] 🚫AnimateDiff Combine [DEPRECATED, Use Video Combine (VHS) Instead!] 🎭🅐🅓 ~~DEPRECATED~~
-- [ ] 🚫[DEPR] Motion Model Settings 🎭🅐🅓① ~~DEPRECATED~~
-- [ ] 🚫[DEPR] Motion Model Settings (Simple) 🎭🅐🅓① ~~DEPRECATED~~
-- [ ] 🚫[DEPR] Motion Model Settings (Advanced) 🎭🅐🅓① ~~DEPRECATED~~
-- [ ] 🚫[DEPR] Motion Model Settings (Adv. Attn) 🎭🅐🅓① ~~DEPRECATED~~
+- [x] Load AnimateDiff LoRA 🎭🅐🅓
+- [x] Sample Settings 🎭🅐🅓
+- [x] AnimateDiff Keyframe 🎭🅐🅓
+- [x] Multival 🎭🅐🅓
+- [x] Multival [Float List] 🎭🅐🅓
+- [x] Multival [Floats] 🎭🅐🅓
+- [x] Multival Scaled Mask 🎭🅐🅓
+- [x] Multival to Mask 🎭🅐🅓
+- [x] Context Options◆Standard Static 🎭🅐🅓
+- [x] Context Options◆Standard Uniform 🎭🅐🅓
+- [x] Context Options◆Looped Uniform 🎭🅐🅓
+- [x] Context Options◆Views Only [VRAM⇈] 🎭🅐🅓
+- [x] Context Options◆Batched [Non-AD] 🎭🅐🅓
+- [x] Context Options◆Looped Uniform 🎭🅐🅓
+- [x] Visualize Context Options (K.) 🎭🅐🅓
+- [x] Visualize Context Options (K.Adv.) 🎭🅐🅓
+- [x] Visualize Context Options (S.Cus.) 🎭🅐🅓
+- [x] View Options◆Standard Static 🎭🅐🅓
+- [x] View Options◆Standard Uniform 🎭🅐🅓
+- [x] View Options◆Looped Uniform 🎭🅐🅓
+- [x] Set Context Extras 🎭🅐🅓
+- [x] Context Extras◆ContextRef 🎭🅐🅓
+- [x] ContextRef Mode◆First 🎭🅐🅓
+- [x] ContextRef Mode◆Sliding 🎭🅐🅓
+- [x] ContextRef Mode◆Indexes 🎭🅐🅓
+- [x] ContextRef Tune◆Attn 🎭🅐🅓
+- [x] ContextRef Tune◆Attn+Adain 🎭🅐🅓
+- [x] ContextRef Keyframe 🎭🅐🅓
+- [x] ContextRef Keyframes Interp. 🎭🅐🅓
+- [x] ContextRef Keyframes From List 🎭🅐🅓
+- [x] Context Extras◆NaiveReuse 🎭🅐🅓
+- [x] NaiveReuse Keyframe 🎭🅐🅓
+- [x] NaiveReuse Keyframes Interp. 🎭🅐🅓
+- [x] NaiveReuse Keyframes From List 🎭🅐🅓
+- [x] Default Iteration Options 🎭🅐🅓
+- [x] FreeInit Iteration Options 🎭🅐🅓
+- [x] Register LoRA Hook 🎭🅐🅓 ~~DEPRECATED~~
+- [x] Register LoRA Hook (Model Only) 🎭🅐🅓 ~~DEPRECATED~~
+- [x] Register Model as LoRA Hook 🎭🅐🅓 ~~DEPRECATED~~
+- [x] Register Model as LoRA Hook (MO) 🎭🅐🅓 ~~DEPRECATED~~
+- [x] Combine LoRA Hooks [2] 🎭🅐🅓 ~~DEPRECATED~~
+- [x] Combine LoRA Hooks [4] 🎭🅐🅓 ~~DEPRECATED~~
+- [x] Combine LoRA Hooks [8] 🎭🅐🅓 ~~DEPRECATED~~
+- [x] Set LoRA Hook Keyframes 🎭🅐🅓 ~~DEPRECATED~~
+- [x] Set CLIP LoRA Hook 🎭🅐🅓 ~~DEPRECATED~~
+- [x] LoRA Hook Keyframe 🎭🅐🅓 ~~DEPRECATED~~
+- [x] LoRA Hook Keyframes Interp. 🎭🅐🅓 ~~DEPRECATED~~
+- [x] LoRA Hook Keyframes From List 🎭🅐🅓 ~~DEPRECATED~~
+- [x] Set Model LoRA Hook 🎭🅐🅓 ~~DEPRECATED~~
+- [x] Set Props on Conds 🎭🅐🅓 ~~DEPRECATED~~
+- [x] Set Props on Cond 🎭🅐🅓 ~~DEPRECATED~~
+- [x] Set Props and Combine Conds 🎭🅐🅓 ~~DEPRECATED~~
+- [x] Set Props and Combine Cond 🎭🅐🅓 ~~DEPRECATED~~
+- [x] Set Unmasked Conds 🎭🅐🅓 ~~DEPRECATED~~
+- [x] Set Unmasked Cond 🎭🅐🅓 ~~DEPRECATED~~
+- [x] Manual Combine Conds 🎭🅐🅓 ~~DEPRECATED~~
+- [x] Manual Combine Cond 🎭🅐🅓 ~~DEPRECATED~~
+- [x] Timesteps Conditioning 🎭🅐🅓 ~~DEPRECATED~~
+- [x] Noise Layer [Add] 🎭🅐🅓
+- [x] Noise Layer [Add Weighted] 🎭🅐🅓
+- [x] Noise Layer [Normalized Sum] 🎭🅐🅓
+- [x] Noise Layer [Replace] 🎭🅐🅓
+- [x] AnimateDiff Settings 🎭🅐🅓
+- [x] Adjust PE [Sweetspot] 🎭🅐🅓
+- [x] Adjust PE [Full Stretch] 🎭🅐🅓
+- [x] Adjust PE [Manual] 🎭🅐🅓
+- [x] Adjust Weight [All◆Add] 🎭🅐🅓
+- [x] Adjust Weight [All◆Mult] 🎭🅐🅓
+- [x] Adjust Weight [Indiv◆Add] 🎭🅐🅓
+- [x] Adjust Weight [Indiv◆Mult] 🎭🅐🅓
+- [x] Adjust Weight [Indiv-Attn◆Add] 🎭🅐🅓
+- [x] Adjust Weight [Indiv-Attn◆Mult] 🎭🅐🅓
+- [x] Custom CFG 🎭🅐🅓
+- [x] Custom CFG [Multival] 🎭🅐🅓
+- [x] Custom CFG Keyframe 🎭🅐🅓
+- [x] Custom CFG Keyframe [Multival] 🎭🅐🅓
+- [x] Custom CFG Keyframes Interp. 🎭🅐🅓
+- [x] Custom CFG Keyframes From List 🎭🅐🅓
+- [x] CFG Extras◆PAG 🎭🅐🅓
+- [x] CFG Extras◆PAG [Multival] 🎭🅐🅓
+- [x] CFG Extras◆RescaleCFG 🎭🅐🅓
+- [x] CFG Extras◆RescaleCFG [Multival] 🎭🅐🅓
+- [x] Create Sigma Schedule 🎭🅐🅓
+- [x] Create Raw Sigma Schedule 🎭🅐🅓
+- [x] Sigma Schedule Weighted Mean 🎭🅐🅓
+- [x] Sigma Schedule Interp. Mean 🎭🅐🅓
+- [x] Sigma Schedule Split Combine 🎭🅐🅓
+- [x] Sigma Schedule To Sigmas 🎭🅐🅓
+- [x] Image Injection 🎭🅐🅓
+- [x] Image Injection Options 🎭🅐🅓
+- [x] Ancestral Options 🎭🅐🅓
+- [x] Prompt Scheduling 🎭🅐🅓
+- [x] Prompt Scheduling [Latents] 🎭🅐🅓
+- [x] Value Scheduling 🎭🅐🅓
+- [x] Value Scheduling [Latents] 🎭🅐🅓
+- [x] Condition Step Extraction 🎭🅐🅓
+- [x] Add Values Replace 🎭🅐🅓
+- [x] Float to Floats 🎭🅐🅓
+- [x] AD Block 🎭🅐🅓
+- [x] AD Block+ 🎭🅐🅓
+- [x] AD Per Block 🎭🅐🅓
+- [x] AD Per Block+ (SD1.5) 🎭🅐🅓
+- [x] AD Per Block++ (SD1.5) 🎭🅐🅓
+- [x] AD Per Block Floats (SD1.5) 🎭🅐🅓
+- [x] AD Per Block+ (SDXL) 🎭🅐🅓
+- [x] AD Per Block++ (SDXL) 🎭🅐🅓
+- [x] AD Per Block Floats (SDXL) 🎭🅐🅓
+- [x] AnimateDiff Unload 🎭🅐🅓
+- [x] Empty Latent Image (Big Batch) 🎭🅐🅓
+- [x] Load Checkpoint w/ Noise Select 🎭🅐🅓
+- [x] PerturbedAttnGuide [Multival] 🎭🅐🅓
+- [x] RescaleCFG [Multival] 🎭🅐🅓
+- [x] AnimateDiff Loader 🎭🅐🅓①
+- [x] Use Evolved Sampling 🎭🅐🅓②
+- [x] Apply AnimateDiff Model 🎭🅐🅓②
+- [x] Apply AnimateDiff Model (Adv.) 🎭🅐🅓②
+- [x] Load AnimateDiff Model 🎭🅐🅓②
+- [x] Apply AnimateLCM-I2V Model 🎭🅐🅓②
+- [x] Load AnimateLCM-I2V Model 🎭🅐🅓②
+- [x] Scale Ref Image and VAE Encode 🎭🅐🅓②
+- [x] 🧪Inject I2V into AnimateDiff Model 🎭🅐🅓②
+- [x] Apply AnimateDiff+CameraCtrl Model 🎭🅐🅓②
+- [x] Load AnimateDiff+CameraCtrl Model 🎭🅐🅓②
+- [x] AnimateDiff+CameraCtrl Keyframe 🎭🅐🅓
+- [x] Load CameraCtrl Poses (File) 🎭🅐🅓②
+- [x] Load CameraCtrl Poses (Path) 🎭🅐🅓②
+- [x] Create CameraCtrl Poses 🎭🅐🅓②
+- [x] Create CameraCtrl Poses (Combo) 🎭🅐🅓②
+- [x] Create CameraCtrl Poses (Adv.) 🎭🅐🅓②
+- [x] Manual Append CameraCtrl Poses 🎭🅐🅓②
+- [x] Replace Camera Parameters 🎭🅐🅓②
+- [x] Replace Orig. Pose Aspect Ratio 🎭🅐🅓②
+- [x] Apply AnimateDiff-PIA Model 🎭🅐🅓②
+- [x] PIA Input [Multival] 🎭🅐🅓②
+- [x] PIA Input [Paper Presets] 🎭🅐🅓②
+- [x] AnimateDiff-PIA Keyframe 🎭🅐🅓
+- [x] 🧪Inject PIA into AnimateDiff Model 🎭🅐🅓②
+- [x] AnimateDiff Loader [Legacy] 🎭🅐🅓① ~~DEPRECATED~~
+- [x] 🚫AnimateDiff Loader [DEPRECATED] 🎭🅐🅓 ~~DEPRECATED~~
+- [x] 🚫AnimateDiff Loader (Advanced) [DEPRECATED] 🎭🅐🅓 ~~DEPRECATED~~
+- [x] 🚫AnimateDiff Combine [DEPRECATED, Use Video Combine (VHS) Instead!] 🎭🅐🅓 ~~DEPRECATED~~
+- [x] 🚫[DEPR] Motion Model Settings 🎭🅐🅓① ~~DEPRECATED~~
+- [x] 🚫[DEPR] Motion Model Settings (Simple) 🎭🅐🅓① ~~DEPRECATED~~
+- [x] 🚫[DEPR] Motion Model Settings (Advanced) 🎭🅐🅓① ~~DEPRECATED~~
+- [x] 🚫[DEPR] Motion Model Settings (Adv. Attn) 🎭🅐🅓① ~~DEPRECATED~~
 
 ## comfy_api_nodes
 
-- [ ] Ideogram V1
-- [ ] Ideogram V2
-- [ ] Ideogram V3
-- [ ] OpenAI DALL·E 2
-- [ ] OpenAI DALL·E 3
-- [ ] OpenAI GPT Image 1
-- [ ] OpenAI ChatGPT
-- [ ] OpenAI ChatGPT Input Files
-- [ ] OpenAI ChatGPT Advanced Options
-- [ ] MiniMax Text to Video
-- [ ] MiniMax Image to Video
-- [ ] MiniMax Hailuo Video
-- [ ] Google Veo 2 Video Generation
-- [ ] Google Veo 3 Video Generation
-- [ ] Google Veo 3 First-Last-Frame to Video
-- [ ] Kling Camera Controls
-- [ ] Kling Text to Video
-- [ ] Kling Image(First Frame) to Video
-- [ ] Kling Image to Video (Camera Control)
-- [ ] Kling Text to Video (Camera Control)
-- [ ] Kling Start-End Frame to Video
-- [ ] Kling Video Extend
-- [ ] Kling Lip Sync Video with Audio
-- [ ] Kling Lip Sync Video with Text
-- [ ] Kling Virtual Try On
-- [ ] Kling Image Generation
-- [ ] Kling Video Effects
-- [ ] Kling Dual Character Video Effects
-- [ ] Kling Omni Text to Video (Pro)
-- [ ] Kling Omni First-Last-Frame to Video (Pro)
-- [ ] Kling Omni Image to Video (Pro)
-- [ ] Kling Omni Video to Video (Pro)
-- [ ] Kling Omni Edit Video (Pro)
-- [ ] Kling Omni Image (Pro)
-- [ ] Kling Text to Video with Audio
-- [ ] Kling Image(First Frame) to Video with Audio
-- [ ] Kling Motion Control
-- [ ] Flux 1.1 [pro] Ultra Image
-- [ ] Flux.1 Kontext [pro] Image
-- [ ] Flux.1 Kontext [max] Image
-- [ ] Flux.1 Expand Image
-- [ ] Flux.1 Fill Image
-- [ ] Flux.2 [pro] Image
-- [ ] Flux.2 [max] Image
-- [ ] ByteDance Image
-- [ ] ByteDance Image Edit ~~DEPRECATED~~
-- [ ] ByteDance Seedream 4
-- [ ] ByteDance Text to Video
-- [ ] ByteDance Image to Video
-- [ ] ByteDance First-Last-Frame to Video
-- [ ] ByteDance Reference Images to Video
-- [ ] LTXV Text To Video
-- [ ] LTXV Image To Video
-- [ ] Luma Text to Image
-- [ ] Luma Image to Image
-- [ ] Luma Text to Video
-- [ ] Luma Image to Video
-- [ ] Luma Reference
-- [ ] Luma Concepts
-- [ ] Recraft Text to Image
-- [ ] Recraft Image to Image
-- [ ] Recraft Image Inpainting
-- [ ] Recraft Text to Vector
-- [ ] Recraft Vectorize Image
-- [ ] Recraft Remove Background
-- [ ] Recraft Replace Background
-- [ ] Recraft Crisp Upscale Image
-- [ ] Recraft Creative Upscale Image
-- [ ] Recraft Style - Realistic Image
-- [ ] Recraft Style - Digital Illustration
-- [ ] Recraft Style - Logo Raster
-- [ ] Recraft Style - Infinite Style Library
-- [ ] Recraft Color RGB
-- [ ] Recraft Controls
-- [ ] PixVerse Text to Video
-- [ ] PixVerse Image to Video
-- [ ] PixVerse Transition Video
-- [ ] PixVerse Template
-- [ ] Stability AI Stable Image Ultra
-- [ ] Stability AI Stable Diffusion 3.5 Image
-- [ ] Stability AI Upscale Conservative
-- [ ] Stability AI Upscale Creative
-- [ ] Stability AI Upscale Fast
-- [ ] Stability AI Text To Audio
-- [ ] Stability AI Audio To Audio
-- [ ] Stability AI Audio Inpaint
-- [ ] Runway First-Last-Frame to Video
-- [ ] Runway Image to Video (Gen3a Turbo)
-- [ ] Runway Image to Video (Gen4 Turbo)
-- [ ] Runway Text to Image
-- [ ] OpenAI Sora - Video
-- [ ] Topaz Image Enhance
-- [ ] Topaz Video Enhance
-- [ ] Tripo: Text to Model
-- [ ] Tripo: Image to Model
-- [ ] Tripo: Multiview to Model
-- [ ] Tripo: Texture model
-- [ ] Tripo: Refine Draft model
-- [ ] Tripo: Rig model
-- [ ] Tripo: Retarget rigged model
-- [ ] Tripo: Convert model
-- [ ] Moonvalley Marey Image to Video
-- [ ] Moonvalley Marey Text to Video
-- [ ] Moonvalley Marey Video to Video
-- [ ] Rodin 3D Generate - Regular Generate
-- [ ] Rodin 3D Generate - Detail Generate
-- [ ] Rodin 3D Generate - Smooth Generate
-- [ ] Rodin 3D Generate - Sketch Generate
-- [ ] Rodin 3D Generate - Gen-2 Generate
-- [ ] Google Gemini
-- [ ] Nano Banana (Google Gemini Image)
-- [ ] Nano Banana Pro (Google Gemini Image)
-- [ ] Gemini Input Files
-- [ ] Vidu Text To Video Generation
-- [ ] Vidu Image To Video Generation
-- [ ] Vidu Reference To Video Generation
-- [ ] Vidu Start End To Video Generation
-- [ ] Wan Text to Image
-- [ ] Wan Image to Image
-- [ ] Wan Text to Video
-- [ ] Wan Image to Video
-- [ ] Wan Reference to Video
+- [x] Ideogram V1
+- [x] Ideogram V2
+- [x] Ideogram V3
+- [x] OpenAI DALL·E 2
+- [x] OpenAI DALL·E 3
+- [x] OpenAI GPT Image 1
+- [x] OpenAI ChatGPT
+- [x] OpenAI ChatGPT Input Files
+- [x] OpenAI ChatGPT Advanced Options
+- [x] MiniMax Text to Video
+- [x] MiniMax Image to Video
+- [x] MiniMax Hailuo Video
+- [x] Google Veo 2 Video Generation
+- [x] Google Veo 3 Video Generation
+- [x] Google Veo 3 First-Last-Frame to Video
+- [x] Kling Camera Controls
+- [x] Kling Text to Video
+- [x] Kling Image(First Frame) to Video
+- [x] Kling Image to Video (Camera Control)
+- [x] Kling Text to Video (Camera Control)
+- [x] Kling Start-End Frame to Video
+- [x] Kling Video Extend
+- [x] Kling Lip Sync Video with Audio
+- [x] Kling Lip Sync Video with Text
+- [x] Kling Virtual Try On
+- [x] Kling Image Generation
+- [x] Kling Video Effects
+- [x] Kling Dual Character Video Effects
+- [x] Kling Omni Text to Video (Pro)
+- [x] Kling Omni First-Last-Frame to Video (Pro)
+- [x] Kling Omni Image to Video (Pro)
+- [x] Kling Omni Video to Video (Pro)
+- [x] Kling Omni Edit Video (Pro)
+- [x] Kling Omni Image (Pro)
+- [x] Kling Text to Video with Audio
+- [x] Kling Image(First Frame) to Video with Audio
+- [x] Kling Motion Control
+- [x] Flux 1.1 [pro] Ultra Image
+- [x] Flux.1 Kontext [pro] Image
+- [x] Flux.1 Kontext [max] Image
+- [x] Flux.1 Expand Image
+- [x] Flux.1 Fill Image
+- [x] Flux.2 [pro] Image
+- [x] Flux.2 [max] Image
+- [x] ByteDance Image
+- [x] ByteDance Image Edit ~~DEPRECATED~~
+- [x] ByteDance Seedream 4
+- [x] ByteDance Text to Video
+- [x] ByteDance Image to Video
+- [x] ByteDance First-Last-Frame to Video
+- [x] ByteDance Reference Images to Video
+- [x] LTXV Text To Video
+- [x] LTXV Image To Video
+- [x] Luma Text to Image
+- [x] Luma Image to Image
+- [x] Luma Text to Video
+- [x] Luma Image to Video
+- [x] Luma Reference
+- [x] Luma Concepts
+- [x] Recraft Text to Image
+- [x] Recraft Image to Image
+- [x] Recraft Image Inpainting
+- [x] Recraft Text to Vector
+- [x] Recraft Vectorize Image
+- [x] Recraft Remove Background
+- [x] Recraft Replace Background
+- [x] Recraft Crisp Upscale Image
+- [x] Recraft Creative Upscale Image
+- [x] Recraft Style - Realistic Image
+- [x] Recraft Style - Digital Illustration
+- [x] Recraft Style - Logo Raster
+- [x] Recraft Style - Infinite Style Library
+- [x] Recraft Color RGB
+- [x] Recraft Controls
+- [x] PixVerse Text to Video
+- [x] PixVerse Image to Video
+- [x] PixVerse Transition Video
+- [x] PixVerse Template
+- [x] Stability AI Stable Image Ultra
+- [x] Stability AI Stable Diffusion 3.5 Image
+- [x] Stability AI Upscale Conservative
+- [x] Stability AI Upscale Creative
+- [x] Stability AI Upscale Fast
+- [x] Stability AI Text To Audio
+- [x] Stability AI Audio To Audio
+- [x] Stability AI Audio Inpaint
+- [x] Runway First-Last-Frame to Video
+- [x] Runway Image to Video (Gen3a Turbo)
+- [x] Runway Image to Video (Gen4 Turbo)
+- [x] Runway Text to Image
+- [x] OpenAI Sora - Video
+- [x] Topaz Image Enhance
+- [x] Topaz Video Enhance
+- [x] Tripo: Text to Model
+- [x] Tripo: Image to Model
+- [x] Tripo: Multiview to Model
+- [x] Tripo: Texture model
+- [x] Tripo: Refine Draft model
+- [x] Tripo: Rig model
+- [x] Tripo: Retarget rigged model
+- [x] Tripo: Convert model
+- [x] Moonvalley Marey Image to Video
+- [x] Moonvalley Marey Text to Video
+- [x] Moonvalley Marey Video to Video
+- [x] Rodin 3D Generate - Regular Generate
+- [x] Rodin 3D Generate - Detail Generate
+- [x] Rodin 3D Generate - Smooth Generate
+- [x] Rodin 3D Generate - Sketch Generate
+- [x] Rodin 3D Generate - Gen-2 Generate
+- [x] Google Gemini
+- [x] Nano Banana (Google Gemini Image)
+- [x] Nano Banana Pro (Google Gemini Image)
+- [x] Gemini Input Files
+- [x] Vidu Text To Video Generation
+- [x] Vidu Image To Video Generation
+- [x] Vidu Reference To Video Generation
+- [x] Vidu Start End To Video Generation
+- [x] Wan Text to Image
+- [x] Wan Image to Image
+- [x] Wan Text to Video
+- [x] Wan Image to Video
+- [x] Wan Reference to Video
 
 ## comfyui_essentials
 
-- [ ] 🔧 SDXL CLIPTextEncode
-- [ ] 🔧 Cond Combine Multiple
-- [ ] 🔧 SD3 Negative Conditioning
-- [ ] 🔧 Image Enhance Difference
-- [ ] 🔧 Images Batch Multiple
-- [ ] 🔧 Image Expand Batch
-- [ ] 🔧 Image From Batch
-- [ ] 🔧 Image List To Batch
-- [ ] 🔧 Image Composite From Mask Batch
-- [ ] 🔧 Image Composite
-- [ ] 🔧 Image Crop
-- [ ] 🔧 Image Flip
-- [ ] 🔧 Image Random Transform
-- [ ] 🔧 Image Remove Alpha
-- [ ] 🔧 Image Remove Background
-- [ ] 🔧 Image Resize
-- [ ] 🔧 Image Seam Carving
-- [ ] 🔧 Image Tile
-- [ ] 🔧 Image Untile
-- [ ] 🔧 RemBG Session
-- [ ] 🔧 InSPyReNet TransparentBG
-- [ ] 🔧 Image Apply LUT
-- [ ] 🔧 Image Contrast Adaptive Sharpening
-- [ ] 🔧 Image Desaturate
-- [ ] 🔧 Pixelize
-- [ ] 🔧 Image Posterize
-- [ ] 🔧 Image Color Match
-- [ ] 🔧 Image Color Match Adobe
-- [ ] 🔧 Image Histogram Match
-- [ ] 🔧 Get Image Size
-- [ ] 🔧 Image To Device
-- [ ] 🔧 Image Preview From Latent
-- [ ] 🔧 Noise From Image
-- [ ] 🔧 Mask Blur
-- [ ] 🔧 Mask Bounding Box
-- [ ] 🔧 Mask Fix
-- [ ] 🔧 Mask Flip
-- [ ] 🔧 Mask From Color
-- [ ] 🔧 Mask From List
-- [ ] 🔧 Mask From RGB/CMY/BW
-- [ ] 🔧 Mask From Segmentation
-- [ ] 🔧 Mask Preview
-- [ ] 🔧 Mask Smooth
-- [ ] 🔧 Transition Mask
-- [ ] 🔧 Mask Batch
-- [ ] 🔧 Mask Expand Batch
-- [ ] 🔧 Mask From Batch
-- [ ] 🔧 KSampler Stochastic Variations
-- [ ] 🔧 KSampler Variations with Noise Injection
-- [ ] 🔧 Inject Latent Noise
-- [ ] 🔧 Flux Sampler Parameters
-- [ ] 🔧 Plot Sampler Parameters
-- [ ] 🔧 Apply CLIPSeg
-- [ ] 🔧 Load CLIPSeg Models
-- [ ] 🔧 Draw Text
-- [ ] 🔧 Batch Count
-- [ ] 🔧 Console Debug
-- [ ] 🔧 Debug Tensor Shape
-- [ ] 🔧 Model Compile
-- [ ] 🔧 Remove Latent Mask
-- [ ] 🔧 SDXL Empty Latent Size Picker
-- [ ] 🔧 Simple Math
+- [x] 🔧 SDXL CLIPTextEncode
+- [x] 🔧 Cond Combine Multiple
+- [x] 🔧 SD3 Negative Conditioning
+- [x] 🔧 Image Enhance Difference
+- [x] 🔧 Images Batch Multiple
+- [x] 🔧 Image Expand Batch
+- [x] 🔧 Image From Batch
+- [x] 🔧 Image List To Batch
+- [x] 🔧 Image Composite From Mask Batch
+- [x] 🔧 Image Composite
+- [x] 🔧 Image Crop
+- [x] 🔧 Image Flip
+- [x] 🔧 Image Random Transform
+- [x] 🔧 Image Remove Alpha
+- [x] 🔧 Image Remove Background
+- [x] 🔧 Image Resize
+- [x] 🔧 Image Seam Carving
+- [x] 🔧 Image Tile
+- [x] 🔧 Image Untile
+- [x] 🔧 RemBG Session
+- [x] 🔧 InSPyReNet TransparentBG
+- [x] 🔧 Image Apply LUT
+- [x] 🔧 Image Contrast Adaptive Sharpening
+- [x] 🔧 Image Desaturate
+- [x] 🔧 Pixelize
+- [x] 🔧 Image Posterize
+- [x] 🔧 Image Color Match
+- [x] 🔧 Image Color Match Adobe
+- [x] 🔧 Image Histogram Match
+- [x] 🔧 Get Image Size
+- [x] 🔧 Image To Device
+- [x] 🔧 Image Preview From Latent
+- [x] 🔧 Noise From Image
+- [x] 🔧 Mask Blur
+- [x] 🔧 Mask Bounding Box
+- [x] 🔧 Mask Fix
+- [x] 🔧 Mask Flip
+- [x] 🔧 Mask From Color
+- [x] 🔧 Mask From List
+- [x] 🔧 Mask From RGB/CMY/BW
+- [x] 🔧 Mask From Segmentation
+- [x] 🔧 Mask Preview
+- [x] 🔧 Mask Smooth
+- [x] 🔧 Transition Mask
+- [x] 🔧 Mask Batch
+- [x] 🔧 Mask Expand Batch
+- [x] 🔧 Mask From Batch
+- [x] 🔧 KSampler Stochastic Variations
+- [x] 🔧 KSampler Variations with Noise Injection
+- [x] 🔧 Inject Latent Noise
+- [x] 🔧 Flux Sampler Parameters
+- [x] 🔧 Plot Sampler Parameters
+- [x] 🔧 Apply CLIPSeg
+- [x] 🔧 Load CLIPSeg Models
+- [x] 🔧 Draw Text
+- [x] 🔧 Batch Count
+- [x] 🔧 Console Debug
+- [x] 🔧 Debug Tensor Shape
+- [x] 🔧 Model Compile
+- [x] 🔧 Remove Latent Mask
+- [x] 🔧 SDXL Empty Latent Size Picker
+- [x] 🔧 Simple Math
 
 ## comfyui-videohelpersuite
 
-- [ ] Video Combine 🎥🅥🅗🅢
-- [ ] Load Video (Upload) 🎥🅥🅗🅢
-- [ ] Load Video FFmpeg (Upload) 🎥🅥🅗🅢
-- [ ] Load Audio (Upload)🎥🅥🅗🅢
-- [ ] Audio to legacy VHS_AUDIO🎥🅥🅗🅢
-- [ ] Legacy VHS_AUDIO to Audio🎥🅥🅗🅢
-- [ ] Prune Outputs 🎥🅥🅗🅢
-- [ ] Meta Batch Manager 🎥🅥🅗🅢
-- [ ] Video Info 🎥🅥🅗🅢
-- [ ] Video Info (Source) 🎥🅥🅗🅢
-- [ ] Video Info (Loaded) 🎥🅥🅗🅢
-- [ ] VAE Encode Batched 🎥🅥🅗🅢
-- [ ] VAE Decode Batched 🎥🅥🅗🅢
-- [ ] Split Latents 🎥🅥🅗🅢
-- [ ] Split Images 🎥🅥🅗🅢
-- [ ] Split Masks 🎥🅥🅗🅢
-- [ ] Merge Latents 🎥🅥🅗🅢
-- [ ] Merge Images 🎥🅥🅗🅢
-- [ ] Merge Masks 🎥🅥🅗🅢
-- [ ] Get Latent Count 🎥🅥🅗🅢
-- [ ] Get Image Count 🎥🅥🅗🅢
-- [ ] Get Mask Count 🎥🅥🅗🅢
-- [ ] Repeat Latents 🎥🅥🅗🅢
-- [ ] Repeat Images 🎥🅥🅗🅢
-- [ ] Repeat Masks 🎥🅥🅗🅢
-- [ ] Select Every Nth Latent 🎥🅥🅗🅢
-- [ ] Select Every Nth Image 🎥🅥🅗🅢
-- [ ] Select Every Nth Mask 🎥🅥🅗🅢
-- [ ] Select Latents 🎥🅥🅗🅢
-- [ ] Select Images 🎥🅥🅗🅢
-- [ ] Select Masks 🎥🅥🅗🅢
-- [ ] Unbatch 🎥🅥🅗🅢
-- [ ] Select Latest 🎥🅥🅗🅢
+- [x] Video Combine 🎥🅥🅗🅢
+- [x] Load Video (Upload) 🎥🅥🅗🅢
+- [x] Load Video FFmpeg (Upload) 🎥🅥🅗🅢
+- [x] Load Audio (Upload)🎥🅥🅗🅢
+- [x] Audio to legacy VHS_AUDIO🎥🅥🅗🅢
+- [x] Legacy VHS_AUDIO to Audio🎥🅥🅗🅢
+- [x] Prune Outputs 🎥🅥🅗🅢
+- [x] Meta Batch Manager 🎥🅥🅗🅢
+- [x] Video Info 🎥🅥🅗🅢
+- [x] Video Info (Source) 🎥🅥🅗🅢
+- [x] Video Info (Loaded) 🎥🅥🅗🅢
+- [x] VAE Encode Batched 🎥🅥🅗🅢
+- [x] VAE Decode Batched 🎥🅥🅗🅢
+- [x] Split Latents 🎥🅥🅗🅢
+- [x] Split Images 🎥🅥🅗🅢
+- [x] Split Masks 🎥🅥🅗🅢
+- [x] Merge Latents 🎥🅥🅗🅢
+- [x] Merge Images 🎥🅥🅗🅢
+- [x] Merge Masks 🎥🅥🅗🅢
+- [x] Get Latent Count 🎥🅥🅗🅢
+- [x] Get Image Count 🎥🅥🅗🅢
+- [x] Get Mask Count 🎥🅥🅗🅢
+- [x] Repeat Latents 🎥🅥🅗🅢
+- [x] Repeat Images 🎥🅥🅗🅢
+- [x] Repeat Masks 🎥🅥🅗🅢
+- [x] Select Every Nth Latent 🎥🅥🅗🅢
+- [x] Select Every Nth Image 🎥🅥🅗🅢
+- [x] Select Every Nth Mask 🎥🅥🅗🅢
+- [x] Select Latents 🎥🅥🅗🅢
+- [x] Select Images 🎥🅥🅗🅢
+- [x] Select Masks 🎥🅥🅗🅢
+- [x] Unbatch 🎥🅥🅗🅢
+- [x] Select Latest 🎥🅥🅗🅢
 
 ## comfyui_ipadapter_plus
 
-- [ ] IPAdapter
-- [ ] IPAdapter Advanced
-- [ ] IPAdapter Batch (Adv.)
-- [ ] IPAdapter FaceID
-- [ ] IPAdapter FaceID Batch
-- [ ] IPAdapter Tiled
-- [ ] IPAdapter Tiled Batch
-- [ ] IPAdapter Embeds
-- [ ] IPAdapter Embeds Batch
-- [ ] IPAdapter Style & Composition SDXL
-- [ ] IPAdapter Style & Composition Batch SDXL
-- [ ] IPAdapter Mad Scientist
-- [ ] IPAdapter from Params
-- [ ] IPAdapter Unified Loader
-- [ ] IPAdapter Unified Loader FaceID
-- [ ] IPAdapter Model Loader
-- [ ] IPAdapter InsightFace Loader
-- [ ] IPAdapter Unified Loader Community
-- [ ] IPAdapter Encoder
-- [ ] IPAdapter Combine Embeds
-- [ ] IPAdapter Noise
-- [ ] Prep Image For ClipVision
-- [ ] IPAdapter Load Embeds
-- [ ] IPAdapter Weights
-- [ ] IPAdapter Combine Weights
-- [ ] IPAdapter Weights From Strategy
-- [ ] Prompt Schedule From Weights Strategy
-- [ ] IPAdapter Regional Conditioning
-- [ ] IPAdapter Combine Params
+- [x] IPAdapter
+- [x] IPAdapter Advanced
+- [x] IPAdapter Batch (Adv.)
+- [x] IPAdapter FaceID
+- [x] IPAdapter FaceID Batch
+- [x] IPAdapter Tiled
+- [x] IPAdapter Tiled Batch
+- [x] IPAdapter Embeds
+- [x] IPAdapter Embeds Batch
+- [x] IPAdapter Style & Composition SDXL
+- [x] IPAdapter Style & Composition Batch SDXL
+- [x] IPAdapter Mad Scientist
+- [x] IPAdapter from Params
+- [x] IPAdapter Unified Loader
+- [x] IPAdapter Unified Loader FaceID
+- [x] IPAdapter Model Loader
+- [x] IPAdapter InsightFace Loader
+- [x] IPAdapter Unified Loader Community
+- [x] IPAdapter Encoder
+- [x] IPAdapter Combine Embeds
+- [x] IPAdapter Noise
+- [x] Prep Image For ClipVision
+- [x] IPAdapter Load Embeds
+- [x] IPAdapter Weights
+- [x] IPAdapter Combine Weights
+- [x] IPAdapter Weights From Strategy
+- [x] Prompt Schedule From Weights Strategy
+- [x] IPAdapter Regional Conditioning
+- [x] IPAdapter Combine Params
 
 ## comfyui-inpaint-cropandstitch
 
-- [ ] ✂️ Inpaint Crop (Improved)
-- [ ] ✂️ Inpaint Stitch (Improved)
-- [ ] (OLD 💀, use the new ✂️ Inpaint Crop node)
-- [ ] (OLD 💀, use the new ✂️ Inpaint Stitch node)
-- [ ] (OLD 💀 use Crop instead) Extend Image for Outpainting
-- [ ] (OLD 💀 use Crop instead) Resize Image Before Inpainting
+- [x] ✂️ Inpaint Crop (Improved)
+- [x] ✂️ Inpaint Stitch (Improved)
+- [x] (OLD 💀, use the new ✂️ Inpaint Crop node)
+- [x] (OLD 💀, use the new ✂️ Inpaint Stitch node)
+- [x] (OLD 💀 use Crop instead) Extend Image for Outpainting
+- [x] (OLD 💀 use Crop instead) Resize Image Before Inpainting
 
 ## ComfyUI-WanAnimatePreprocess
 
-- [ ] ONNX Detection Model Loader
-- [ ] Pose and Face Detection
-- [ ] Draw ViT Pose
-- [ ] Pose Retarget Prompt Helper
+- [x] ONNX Detection Model Loader
+- [x] Pose and Face Detection
+- [x] Draw ViT Pose
+- [x] Pose Retarget Prompt Helper
 
 ## ComfyUI-Lotus
 
-- [ ] Load Lotus Model
-- [ ] Lotus Sampler
+- [x] Load Lotus Model
+- [x] Lotus Sampler
 
 ## comfyui-fl-path-animator
 
-- [ ] FL Path Animator
+- [x] FL Path Animator
