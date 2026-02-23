@@ -1,6 +1,6 @@
 /**
  * Copy/paste this entire file into browser devtools console.
- * Then: QA.listPacks() | QA.testPack("comfyui-impact-pack") | QA.help()
+ * Then: QA.listPacks() | QA.testPack("hanzo-studio-impact-pack") | QA.help()
  */
 const QA = {
   _defs: null,
@@ -133,7 +133,7 @@ const QA = {
       environment: {
         url: window.location.origin,
         user_agent: navigator.userAgent,
-        comfyui_version: window.comfyAPI?.version || 'unknown'
+        hanzo_studio_version: window.comfyAPI?.version || 'unknown'
       },
       packs: Object.entries(this._byMod).map(([mod, nodes]) => ({
         name: mod,
@@ -196,7 +196,7 @@ ${Object.entries(this._byMod)
    */
   async diff(projectName, branch = 'main') {
     await this._init()
-    const repoUrl = `https://raw.githubusercontent.com/Comfy-Org/comfyui-custom-node-qa/${branch}/checklists/${projectName}/checklist.md`
+    const repoUrl = `https://raw.githubusercontent.com/hanzoui/hanzo-studio-custom-node-qa/${branch}/checklists/${projectName}/checklist.md`
 
     try {
       const response = await fetch(repoUrl)
@@ -281,7 +281,7 @@ ${Object.entries(this._byMod)
    * List available projects from repo
    */
   async projects(branch = 'main') {
-    const url = `https://api.github.com/repos/Comfy-Org/comfyui-custom-node-qa/contents/checklists?ref=${branch}`
+    const url = `https://api.github.com/repos/hanzoui/hanzo-studio-custom-node-qa/contents/checklists?ref=${branch}`
     try {
       const response = await fetch(url)
       const dirs = await response.json()

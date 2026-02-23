@@ -120,7 +120,7 @@ fn show_all_projects(checklists_dir: &PathBuf, format: &str) -> Result<()> {
             Cell::new("Progress")
                 .add_attribute(Attribute::Bold)
                 .fg(TableColor::Cyan),
-            Cell::new("ComfyUI Version")
+            Cell::new("Hanzo Studio Version")
                 .add_attribute(Attribute::Bold)
                 .fg(TableColor::Cyan),
         ]);
@@ -169,7 +169,7 @@ fn show_all_projects(checklists_dir: &PathBuf, format: &str) -> Result<()> {
 
             let version_str = metadata
                 .as_ref()
-                .and_then(|m| m.environment.comfyui_version.as_deref())
+                .and_then(|m| m.environment.hanzo_studio_version.as_deref())
                 .unwrap_or("-");
 
             table.add_row(vec![
@@ -214,7 +214,7 @@ fn generate_json_status(checklist: &Checklist, metadata: Option<&Metadata>) -> s
         "environment": metadata.map(|m| serde_json::json!({
             "type": m.environment.env_type,
             "url": m.environment.url,
-            "comfyui_version": m.environment.comfyui_version,
+            "hanzo_studio_version": m.environment.hanzo_studio_version,
         })),
         "packs": checklist.packs.iter().map(|p| serde_json::json!({
             "name": p.name,

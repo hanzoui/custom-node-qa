@@ -4,7 +4,7 @@ use comfy_qa::commands;
 
 #[derive(Parser)]
 #[command(name = "comfy-qa")]
-#[command(about = "ComfyUI Custom Node QA Tool", long_about = None)]
+#[command(about = "Hanzo Studio Custom Node QA Tool", long_about = None)]
 #[command(version)]
 struct Cli {
     #[command(subcommand)]

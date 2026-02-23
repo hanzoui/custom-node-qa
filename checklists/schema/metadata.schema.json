@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "ComfyUI Node Pack QA Metadata",
+  "title": "Hanzo Studio Node Pack QA Metadata",
   "type": "object",
   "required": ["project_name", "created_at", "environment", "packs"],
   "properties": {
@@ -28,7 +28,7 @@
           "type": "string",
           "format": "uri"
         },
-        "comfyui_version": {
+        "hanzo_studio_version": {
           "type": "string"
         },
         "frontend_version": {

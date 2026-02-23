@@ -47,7 +47,7 @@ pub fn run(export_file: String, project: String) -> Result<()> {
         environment: Environment {
             env_type: "unknown".to_string(),
             url: export.environment.url.clone(),
-            comfyui_version: export.environment.comfyui_version.clone(),
+            hanzo_studio_version: export.environment.hanzo_studio_version.clone(),
             frontend_version: None,
         },
         packs: packs_metadata,

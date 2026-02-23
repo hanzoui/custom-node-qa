@@ -22,8 +22,8 @@ impl ReportGenerator {
             }
 
             lines.push(format!("🌐 Environment: {}", meta.environment.url));
-            if let Some(version) = &meta.environment.comfyui_version {
-                lines.push(format!("   ComfyUI: {}", version));
+            if let Some(version) = &meta.environment.hanzo_studio_version {
+                lines.push(format!("   Hanzo Studio: {}", version));
             }
             lines.push(String::new());
         }

@@ -4,7 +4,7 @@ use tempfile::TempDir;
 
 #[test]
 fn test_checklist_parsing() {
-    let checklist_content = r#"# ComfyUI QA Test - test-project
+    let checklist_content = r#"# Hanzo Studio QA Test - test-project
 
 - [x] Pack One (20)
 - [ ] Pack Two (15)
@@ -30,7 +30,7 @@ fn test_checklist_parsing() {
 
 #[test]
 fn test_checklist_tested_status() {
-    let checklist_content = r#"# ComfyUI QA Test - test-project
+    let checklist_content = r#"# Hanzo Studio QA Test - test-project
 
 - [x] TestedPack (10)
 - [ ] UntestedPack (5)
@@ -51,7 +51,7 @@ fn test_checklist_tested_status() {
 
 #[test]
 fn test_checklist_empty_project() {
-    let checklist_content = r#"# ComfyUI QA Test - empty-project
+    let checklist_content = r#"# Hanzo Studio QA Test - empty-project
 "#;
 
     let temp_dir = TempDir::new().unwrap();
@@ -68,7 +68,7 @@ fn test_checklist_empty_project() {
 
 #[test]
 fn test_checklist_with_special_characters() {
-    let checklist_content = r#"# ComfyUI QA Test - test-project
+    let checklist_content = r#"# Hanzo Studio QA Test - test-project
 
 - [x] Pack-With-Dashes (5)
 - [ ] Pack_With_Underscores (10)

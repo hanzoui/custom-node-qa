@@ -1,14 +1,14 @@
-# ComfyUI Node Testing
+# Hanzo Studio Node Testing
 
-Collaborative QA tool for testing ComfyUI custom nodes. Team members test different packs, share results via git.
+Collaborative QA tool for testing Hanzo Studio custom nodes. Team members test different packs, share results via git.
 
 ## Quick Start
 
 **First time:**
 
 ```bash
-git clone https://github.com/Comfy-Org/comfyui-custom-node-qa.git
-cd comfyui-custom-node-qa
+git clone https://github.com/hanzoui/hanzo-studio-custom-node-qa.git
+cd hanzo-studio-custom-node-qa
 # Windows: Double-click START.bat | Mac: START.command | Linux: START.sh
 ```
 
@@ -25,7 +25,7 @@ git add . && git commit -m "Tested pack-name" && git push origin main
 ## Features
 
 - Track testing progress across team
-- Compare checklists vs actual ComfyUI workflows
+- Compare checklists vs actual Hanzo Studio workflows
 - Highlight mismatches (missing/extra nodes)
 - Validate file formats
 - Generate browser test scripts
@@ -35,7 +35,7 @@ git add . && git commit -m "Tested pack-name" && git push origin main
 
 1. `git pull origin main`
 2. Get browser script from dashboard
-3. ComfyUI → F12 → Console → Paste script
+3. Hanzo Studio → F12 → Console → Paste script
 4. Run `await QA.testPack('pack-name')`
 5. Save downloaded JSON to `workflows/`
 6. Mark `[x]` in `checklists/your-project/checklist.md`
