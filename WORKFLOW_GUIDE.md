@@ -368,7 +368,7 @@ git push origin main
 
 1. **Always pull before testing** - See what teammates just finished
 2. **Test frequently, commit frequently** - Don't wait until you've tested 50 packs
-3. **Write clear commit messages** - "Tested Hanzo Studio-Lotus: 2 nodes verified"
+3. **Write clear commit messages** - "Tested HanzoStudio-Lotus: 2 nodes verified"
 4. **Check "Compare with repo" often** - Catch mistakes early
 5. **Preview before sync** - Always dry run first
 6. **Use git branches** - Keep experiments separate from main work (advanced)

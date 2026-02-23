@@ -1,10 +1,10 @@
 # Node Pack QA Checklist
 
-- [ ] Hanzo Studio-Lotus (2)
-- [ ] Hanzo Studio-NormalCrafterWrapper (2)
-- [ ] Hanzo Studio-SCAIL-Pose (3)
-- [ ] Hanzo Studio-WanAnimatePreprocess (4)
-- [ ] Hanzo Studio-WanVideoWrapper (135)
+- [ ] HanzoStudio-Lotus (2)
+- [ ] HanzoStudio-NormalCrafterWrapper (2)
+- [ ] HanzoStudio-SCAIL-Pose (3)
+- [ ] HanzoStudio-WanAnimatePreprocess (4)
+- [ ] HanzoStudio-WanVideoWrapper (135)
 - [ ] HanzoStudio_AudioTools (28)
 - [ ] HanzoStudio_Fill-ChatterBox (5)
 - [ ] ControlAltAI-Nodes (21)
