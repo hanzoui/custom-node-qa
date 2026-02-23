@@ -227,7 +227,7 @@ std::process::Command::new("git")
 - Sees summary: "3 new packs tested by Alice"
 - Continues testing
 - Clicks "Commit and share my work"
-- Enters message: "Tested ComfyUI-Lotus"
+- Enters message: "Tested Hanzo Studio-Lotus"
 - App commits and pushes automatically
 - Success message with what was shared
 

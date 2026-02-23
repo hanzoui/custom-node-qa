@@ -179,11 +179,11 @@ fn show_load_instructions(file_path: &PathBuf) -> Result<()> {
     println!();
     println!(
         "{}",
-        style("How to Load This Workflow in ComfyUI:").bold().cyan()
+        style("How to Load This Workflow in Hanzo Studio:").bold().cyan()
     );
     println!();
     println!("{}", style("Method 1: Copy-Paste (Easiest)").bold());
-    println!("  1. Open ComfyUI in your browser");
+    println!("  1. Open Hanzo Studio in your browser");
     println!("  2. Click {} on the canvas", style("anywhere").yellow());
     println!(
         "  3. Press {} (Windows/Linux) or {} (Mac)",
@@ -196,11 +196,11 @@ fn show_load_instructions(file_path: &PathBuf) -> Result<()> {
     println!("  1. Open the file in a text editor:");
     println!("     {}", style(file_path.display()).dim());
     println!("  2. Select all (Ctrl+A) and copy (Ctrl+C)");
-    println!("  3. Go to ComfyUI canvas");
+    println!("  3. Go to Hanzo Studio canvas");
     println!("  4. Press Ctrl+V");
     println!();
     println!("{}", style("Method 3: Drag & Drop").bold());
-    println!("  1. Drag this file onto the ComfyUI canvas");
+    println!("  1. Drag this file onto the Hanzo Studio canvas");
     println!("  2. It will load automatically");
     println!();
     println!("{}", style("═".repeat(70)).cyan());

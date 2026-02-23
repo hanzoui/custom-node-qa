@@ -11,7 +11,7 @@ fn test_metadata_parsing() {
         "environment": {
             "type": "cloud",
             "url": "https://example.com",
-            "comfyui_version": "v1.0.0"
+            "hanzo_studio_version": "v1.0.0"
         },
         "packs": {},
         "stats": {
@@ -32,7 +32,7 @@ fn test_metadata_parsing() {
     assert_eq!(metadata.environment.env_type, "cloud");
     assert_eq!(metadata.environment.url, "https://example.com");
     assert_eq!(
-        metadata.environment.comfyui_version,
+        metadata.environment.hanzo_studio_version,
         Some("v1.0.0".to_string())
     );
 }
@@ -58,7 +58,7 @@ fn test_metadata_with_optional_fields() {
     let metadata = Metadata::from_file(&metadata_path).unwrap();
 
     assert_eq!(metadata.project_name, "minimal-project");
-    assert_eq!(metadata.environment.comfyui_version, None);
+    assert_eq!(metadata.environment.hanzo_studio_version, None);
     assert!(metadata.stats.is_none());
 }
 
@@ -71,7 +71,7 @@ fn test_metadata_serialization() {
         "environment": {
             "type": "local",
             "url": "http://localhost:8188",
-            "comfyui_version": "v1.2.3"
+            "hanzo_studio_version": "v1.2.3"
         },
         "packs": {},
         "stats": {

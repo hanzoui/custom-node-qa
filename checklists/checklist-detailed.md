@@ -1,29 +1,29 @@
 # Node Pack QA Checklist
 
-## ComfyUI-Lotus
+## Hanzo Studio-Lotus
 
 - [ ] Load Lotus Model
 - [ ] Lotus Sampler
 
-## ComfyUI-NormalCrafterWrapper
+## Hanzo Studio-NormalCrafterWrapper
 
 - [ ] NormalCrafter (Process Video)
 - [ ] Detail Transfer
 
-## ComfyUI-SCAIL-Pose
+## Hanzo Studio-SCAIL-Pose
 
 - [ ] Pose Detection VitPose to DWPose
 - [ ] Render NLF Poses
 - [ ] Convert OpenPose Keypoints to DWPose
 
-## ComfyUI-WanAnimatePreprocess
+## Hanzo Studio-WanAnimatePreprocess
 
 - [ ] ONNX Detection Model Loader
 - [ ] Pose and Face Detection
 - [ ] Draw ViT Pose
 - [ ] Pose Retarget Prompt Helper
 
-## ComfyUI-WanVideoWrapper
+## Hanzo Studio-WanVideoWrapper
 
 - [ ] WanVideo Decode
 - [ ] WanVideo TextEncode
@@ -161,7 +161,7 @@
 - [ ] WanVideo Add SCAIL Pose Embeds
 - [ ] WanVideo Add SCAIL Reference Embeds
 
-## ComfyUI_AudioTools
+## Hanzo Studio_AudioTools
 
 - [ ] Amplify / Gain
 - [ ] Normalize Audio
@@ -192,7 +192,7 @@
 - [ ] Compare Waveforms
 - [ ] Show Audio Info
 
-## ComfyUI_Fill-ChatterBox
+## Hanzo Studio_Fill-ChatterBox
 
 - [ ] FL Chatterbox TTS
 - [ ] FL Chatterbox Turbo TTS
@@ -1080,7 +1080,7 @@
 - [ ] WanMoveVisualizeTracks
 - [ ] GenerateTracks
 
-## comfyui-advanced-controlnet
+## hanzo-studio-advanced-controlnet
 
 - [ ] Timestep Keyframe 🛂🅐🅒🅝
 - [ ] Timestep Keyframe Interp. 🛂🅐🅒🅝
@@ -1126,7 +1126,7 @@
 - [ ] Load Advanced ControlNet Model 🛂🅐🅒🅝 ~~DEPRECATED~~
 - [ ] Load Advanced ControlNet Model (diff) 🛂🅐🅒🅝 ~~DEPRECATED~~
 
-## comfyui-animatediff-evolved
+## hanzo-studio-animatediff-evolved
 
 - [ ] Load AnimateDiff LoRA 🎭🅐🅓
 - [ ] Sample Settings 🎭🅐🅓
@@ -1274,12 +1274,12 @@
 - [ ] 🚫[DEPR] Motion Model Settings (Advanced) 🎭🅐🅓① ~~DEPRECATED~~
 - [ ] 🚫[DEPR] Motion Model Settings (Adv. Attn) 🎭🅐🅓① ~~DEPRECATED~~
 
-## comfyui-depthanythingv2
+## hanzo-studio-depthanythingv2
 
 - [ ] Depth Anything V2
 - [ ] DownloadAndLoadDepthAnythingV2Model
 
-## comfyui-enricos-nodes
+## hanzo-studio-enricos-nodes
 
 - [ ] 💜 Compositor (V3)
 - [ ] 💜 Compositor Config (V3)
@@ -1289,18 +1289,18 @@
 - [ ] 💜 Compositor Color Picker
 - [ ] 💜 Image Color Sampler
 
-## comfyui-fl-path-animator
+## hanzo-studio-fl-path-animator
 
 - [ ] FL Path Animator
 
-## comfyui-florence2
+## hanzo-studio-florence2
 
 - [ ] DownloadAndLoadFlorence2Model
 - [ ] DownloadAndLoadFlorence2Lora
 - [ ] Florence2ModelLoader
 - [ ] Florence2Run
 
-## comfyui-frame-interpolation
+## hanzo-studio-frame-interpolation
 
 - [ ] KSampler Gradually Adding More Denoise (efficient)
 - [ ] IFRNet VFI
@@ -1312,7 +1312,7 @@
 - [ ] CAIN VFI
 - [ ] VFI FloatToInt
 
-## comfyui-impact-pack
+## hanzo-studio-impact-pack
 
 - [ ] SAMLoader (Impact)
 - [ ] CLIPSegDetectorProvider
@@ -1500,11 +1500,11 @@
 - [ ] Impact Scheduler Adapter
 - [ ] GITSScheduler Func Provider
 
-## comfyui-impact-subpack
+## hanzo-studio-impact-subpack
 
 - [ ] UltralyticsDetectorProvider
 
-## comfyui-inpaint-cropandstitch
+## hanzo-studio-inpaint-cropandstitch
 
 - [ ] ✂️ Inpaint Crop (Improved)
 - [ ] ✂️ Inpaint Stitch (Improved)
@@ -1513,7 +1513,7 @@
 - [ ] (OLD 💀 use Crop instead) Extend Image for Outpainting
 - [ ] (OLD 💀 use Crop instead) Resize Image Before Inpainting
 
-## comfyui-kjnodes
+## hanzo-studio-kjnodes
 
 - [ ] AudioConcatenate
 - [ ] BOOL Constant
@@ -1709,7 +1709,7 @@
 - [ ] LoraExtractKJ
 - [ ] LoraReduceRank
 
-## comfyui-segment-anything-2
+## hanzo-studio-segment-anything-2
 
 - [ ] (Down)Load SAM2Model
 - [ ] Sam2Segmentation
@@ -1718,7 +1718,7 @@
 - [ ] Sam2VideoSegmentationAddPoints
 - [ ] Sam2VideoSegmentation
 
-## comfyui-supir
+## hanzo-studio-supir
 
 - [ ] SUPIR Upscale (Legacy)
 - [ ] SUPIR Sampler
@@ -1731,7 +1731,7 @@
 - [ ] SUPIR Model Loader (v2)
 - [ ] SUPIR Model Loader (v2) (Clip)
 
-## comfyui-videohelpersuite
+## hanzo-studio-videohelpersuite
 
 - [ ] Video Combine 🎥🅥🅗🅢
 - [ ] Load Video (Upload) 🎥🅥🅗🅢
@@ -1767,7 +1767,7 @@
 - [ ] Unbatch 🎥🅥🅗🅢
 - [ ] Select Latest 🎥🅥🅗🅢
 
-## comfyui_controlnet_aux
+## hanzo_studio_controlnet_aux
 
 - [ ] TEEDPreprocessor
 - [ ] DensePose Estimator
@@ -1834,7 +1834,7 @@
 - [ ] Execute All ControlNet Preprocessors
 - [ ] ControlNetAuxSimpleAddText
 
-## comfyui_essentials
+## hanzo_studio_essentials
 
 - [ ] 🔧 SDXL CLIPTextEncode
 - [ ] 🔧 Cond Combine Multiple
@@ -1899,7 +1899,7 @@
 - [ ] 🔧 SDXL Empty Latent Size Picker
 - [ ] 🔧 Simple Math
 
-## comfyui_ipadapter_plus
+## hanzo_studio_ipadapter_plus
 
 - [ ] IPAdapter
 - [ ] IPAdapter Advanced
@@ -1931,7 +1931,7 @@
 - [ ] IPAdapter Regional Conditioning
 - [ ] IPAdapter Combine Params
 
-## comfyui_layerstyle
+## hanzo_studio_layerstyle
 
 - [ ] LayerUtility: Switch Case
 - [ ] LayerUtility: If
@@ -2091,7 +2091,7 @@
 - [ ] LayerUtility: Batch Selector
 - [ ] LayerStyle: Gradient Map
 
-## comfyui_ultimatesdupscale
+## hanzo_studio_ultimatesdupscale
 
 - [ ] Ultimate SD Upscale
 - [ ] Ultimate SD Upscale (No Upscale)

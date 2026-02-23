@@ -17,7 +17,7 @@ pub struct Export {
 pub struct ExportEnvironment {
     pub url: String,
     pub user_agent: Option<String>,
-    pub comfyui_version: Option<String>,
+    pub hanzo_studio_version: Option<String>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]

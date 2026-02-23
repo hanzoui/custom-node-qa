@@ -12,7 +12,7 @@ git pull origin main
 
 1. Double-click `START.bat` (Windows) or `START.command` (Mac)
 2. Select "Get browser script" → Copy it
-3. Open ComfyUI in browser → Press F12 → Console tab → Paste script
+3. Open Hanzo Studio in browser → Press F12 → Console tab → Paste script
 4. Run: `await QA.testPack('pack-name')`
 5. Save the downloaded `.json` file to `workflows/` folder
 6. Open `checklists/your-project/checklist.md`
@@ -93,4 +93,4 @@ git push origin main
 ✅ **Do:** `git push origin main` after each testing session
 
 ❌ **Don't:** Commit without a message → Hard to track what changed
-✅ **Do:** Write clear messages: "Tested ComfyUI-Lotus: 2 nodes"
+✅ **Do:** Write clear messages: "Tested Hanzo Studio-Lotus: 2 nodes"

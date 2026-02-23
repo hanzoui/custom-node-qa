@@ -20,7 +20,7 @@ pub struct Environment {
     #[serde(rename = "type")]
     pub env_type: String,
     pub url: String,
-    pub comfyui_version: Option<String>,
+    pub hanzo_studio_version: Option<String>,
     pub frontend_version: Option<String>,
 }
 

@@ -64,7 +64,7 @@ pub fn run(project_name: String) -> Result<()> {
   "created_at": "{}",
   "environment": {{
     "type": "cloud",
-    "url": "https://app.comfy.org"
+    "url": "https://app.hanzo.ai"
   }},
   "packs": {{}}
 }}
@@ -81,7 +81,7 @@ pub fn run(project_name: String) -> Result<()> {
     println!("   📄 checklist-detailed.md");
     println!("   📄 metadata.json");
     println!("\n💡 Next steps:");
-    println!("   1. Open ComfyUI in browser");
+    println!("   1. Open Hanzo Studio in browser");
     println!("   2. Run: QA.export('{}')", project_name);
     println!(
         "   3. Run: comfy-qa import {}-export.json {}",

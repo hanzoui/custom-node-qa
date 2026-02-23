@@ -3,7 +3,7 @@ name = "comfy-qa"
 version = "0.1.0"
 edition = "2021"
 authors = ["Comfy Org"]
-description = "CLI tool for ComfyUI custom node QA validation and management"
+description = "CLI tool for Hanzo Studio custom node QA validation and management"
 license = "MIT"
 
 [[bin]]

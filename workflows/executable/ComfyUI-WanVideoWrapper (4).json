@@ -52,7 +52,7 @@
       ],
       "properties": {
         "Node name for S&R": "VHS_VideoCombine",
-        "cnr_id": "comfyui-videohelpersuite",
+        "cnr_id": "hanzo-studio-videohelpersuite",
         "ver": "0a75c7958fe320efcb052f1d9f8451fd20c730a8"
       },
       "widgets_values": {
@@ -76,7 +76,7 @@
             "format": "video/h264-mp4",
             "frame_rate": 16,
             "workflow": "WanVideoWrapper_VACE_startendframe_00005.png",
-            "fullpath": "N:\\AI\\ComfyUI\\temp\\WanVideoWrapper_VACE_startendframe_00005.mp4"
+            "fullpath": "N:\\AI\\Hanzo Studio\\temp\\WanVideoWrapper_VACE_startendframe_00005.mp4"
           }
         }
       }
@@ -118,7 +118,7 @@
       ],
       "properties": {
         "Node name for S&R": "WanVideoDecode",
-        "cnr_id": "ComfyUI-WanVideoWrapper",
+        "cnr_id": "Hanzo Studio-WanVideoWrapper",
         "ver": "d9b1f4d1a5aea91d101ae97a54714a5861af3f50"
       },
       "widgets_values": [
@@ -158,7 +158,7 @@
       ],
       "properties": {
         "Node name for S&R": "WanVideoSLG",
-        "cnr_id": "ComfyUI-WanVideoWrapper",
+        "cnr_id": "Hanzo Studio-WanVideoWrapper",
         "ver": "2d2a184723dae88388e130659f51c36fcadeaba8"
       },
       "widgets_values": [
@@ -247,7 +247,7 @@
       ],
       "properties": {
         "Node name for S&R": "WanVideoVACEEncode",
-        "cnr_id": "ComfyUI-WanVideoWrapper",
+        "cnr_id": "Hanzo Studio-WanVideoWrapper",
         "ver": "3869b0482b615b6a8fd6f346467c5ef6627eed72"
       },
       "widgets_values": [
@@ -318,7 +318,7 @@
       ],
       "properties": {
         "Node name for S&R": "GetImageSizeAndCount",
-        "cnr_id": "comfyui-kjnodes",
+        "cnr_id": "hanzo-studio-kjnodes",
         "ver": "2aa4da0f587f68c1c255b0152ed8f5c334ebe4b4"
       },
       "widgets_values": []
@@ -383,7 +383,7 @@
       ],
       "properties": {
         "Node name for S&R": "WanVideoVACEStartToEndFrame",
-        "cnr_id": "ComfyUI-WanVideoWrapper",
+        "cnr_id": "Hanzo Studio-WanVideoWrapper",
         "ver": "ce8d908ed64df328e5bcb692eddc4fa53ad82c49"
       },
       "widgets_values": [
@@ -448,7 +448,7 @@
       ],
       "properties": {
         "Node name for S&R": "ImageResizeKJv2",
-        "cnr_id": "comfyui-kjnodes",
+        "cnr_id": "hanzo-studio-kjnodes",
         "ver": "5dcda71011870278c35d92ff77a677ed2e538f2d"
       },
       "widgets_values": [
@@ -668,7 +668,7 @@
       ],
       "properties": {
         "Node name for S&R": "WanVideoSampler",
-        "cnr_id": "ComfyUI-WanVideoWrapper",
+        "cnr_id": "Hanzo Studio-WanVideoWrapper",
         "ver": "2d2a184723dae88388e130659f51c36fcadeaba8"
       },
       "widgets_values": [
@@ -715,7 +715,7 @@
       ],
       "properties": {
         "Node name for S&R": "LoadWanVideoT5TextEncoder",
-        "cnr_id": "ComfyUI-WanVideoWrapper",
+        "cnr_id": "Hanzo Studio-WanVideoWrapper",
         "ver": "3869b0482b615b6a8fd6f346467c5ef6627eed72"
       },
       "widgets_values": [
@@ -762,7 +762,7 @@
       ],
       "properties": {
         "Node name for S&R": "WanVideoVAELoader",
-        "cnr_id": "ComfyUI-WanVideoWrapper",
+        "cnr_id": "Hanzo Studio-WanVideoWrapper",
         "ver": "3869b0482b615b6a8fd6f346467c5ef6627eed72"
       },
       "widgets_values": [
@@ -812,7 +812,7 @@
       ],
       "properties": {
         "Node name for S&R": "WanVideoTextEncode",
-        "cnr_id": "ComfyUI-WanVideoWrapper",
+        "cnr_id": "Hanzo Studio-WanVideoWrapper",
         "ver": "3869b0482b615b6a8fd6f346467c5ef6627eed72"
       },
       "widgets_values": [
@@ -901,7 +901,7 @@
       ],
       "properties": {
         "Node name for S&R": "WanVideoModelLoader",
-        "cnr_id": "ComfyUI-WanVideoWrapper",
+        "cnr_id": "Hanzo Studio-WanVideoWrapper",
         "ver": "3869b0482b615b6a8fd6f346467c5ef6627eed72"
       },
       "widgets_values": [
@@ -1089,9 +1089,9 @@
     },
     "frontendVersion": "1.26.7",
     "node_versions": {
-      "ComfyUI-WanVideoWrapper": "5a2383621a05825d0d0437781afcb8552d9590fd",
+      "Hanzo Studio-WanVideoWrapper": "5a2383621a05825d0d0437781afcb8552d9590fd",
       "comfy-core": "0.3.26",
-      "ComfyUI-VideoHelperSuite": "0a75c7958fe320efcb052f1d9f8451fd20c730a8"
+      "Hanzo Studio-VideoHelperSuite": "0a75c7958fe320efcb052f1d9f8451fd20c730a8"
     },
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
