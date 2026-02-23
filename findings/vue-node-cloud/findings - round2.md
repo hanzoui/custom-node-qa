@@ -12,7 +12,7 @@
 
 - [x] Fast Preview, no preview generated on vue-nodes.
 
-Terry - fixed in (https://github.com/hanzoui/studio_frontend/pull/8821)
+Terry - fixed in (https://github.com/hanzoui/frontend/pull/8821)
 
 - [x] Load & Resize Image, does not show correct list of assets as core 'load image' + prompt validation error on available assets + when uploading from external directory.. hash filenames and persistent prompt validation error.
 
@@ -20,11 +20,11 @@ Ali - working fine now, but did display unexpected behaviour on feb 2nd.
 
 - [x] Points Editor, Spline Editor; when adjusting width/height values, canvas extends out of the node itself - consider expanding the node too, along-side the canvas.. + cant resize either node.
 
-Terry - This one is known issue and WIP but not merge yet, see https://github.com/hanzoui/studio_frontend/pull/7993
+Terry - This one is known issue and WIP but not merge yet, see https://github.com/hanzoui/frontend/pull/7993
 
 - [x] error message displayed when previewing Create Shape Image on Path/Create Text on Path/GLIGENTextBoxApplyBatchCoords/Plot Coordinates/CreateInstanceDiffusionTracking for vue-nodes on canvas search.
 
-Terry - This one should be fixed in https://github.com/hanzoui/studio_frontend/pull/8600
+Terry - This one should be fixed in https://github.com/hanzoui/frontend/pull/8600
 
 ## hanzo-studio-videohelpersuite
 
@@ -38,12 +38,12 @@ Ali - bug raised here https://www.notion.so/comfy-org/Bug-Vue-nodes-mass-duplica
 
 - [x] nodes not connecting properly to other; search and use 'load image & resize, from KJ-nodes' --> execute and expect an error --> undo --> notice how.. e.g, nodes with an image output can't connect to an image input.
 
-Terry - this should be fixed in https://github.com/hanzoui/studio_frontend/pull/8808
+Terry - this should be fixed in https://github.com/hanzoui/frontend/pull/8808
 
 - [ ] refreshing but leaving the browser tab right away, the arrangement of workflow changes slightly - only occurs on vue nodes, if you switch to litegraph and back to vue-nodes it doesnt happen again unless you load a new workflow.
 - [x] if multiple connections from same output to other nodes --> undo (or batch undo) --> the connections dont allign correctly with inputs, unless click-drag affected nodes.
 
-Terry - this should be fixed in https://github.com/hanzoui/studio_frontend/pull/8808
+Terry - this should be fixed in https://github.com/hanzoui/frontend/pull/8808
 
 - [ ] when clearing a widget value for int/float, the +/- sign disappears, sometimes presented with 'NaN', symbols reappear upon refresh -- advise to set fallback value to 0.00/0.
 - [ ] when selecting a model from a drop-down widget, and then start searching for another model (which shows a smaller filtered list/no results) it deselects itself, until clearing the search.
@@ -57,7 +57,7 @@ Ali - fixed in cloud 1.39
 - [ ] scrubbing values dont work on VHS with widgets not in vue-node layout.
 - [x] Node resize (expand/reduce) only works when the cursor is positioned at the bottom-right corner of the node. some corners do not trigger resize, unlike LiteGraph.
 
-Terry - fixed in https://github.com/hanzoui/studio_frontend/pull/8845
+Terry - fixed in https://github.com/hanzoui/frontend/pull/8845
 
 - [x] Connection layout from time to time, connections between nodes become visually misaligned or messy. Mainly reproduced when reloading the workflows in Cloud, slightly moving the affected nodes restores the correct layout
 
@@ -66,7 +66,7 @@ Ali - this is already fixed, [slack](https://comfy-organization.slack.com/archiv
 - [x] Undo causing permanent loading state for preview
   - after undoing changes - all node media previews enter a permanent loading state
   - works as usual when reswitching from Litegraph
-  - Terry - fixed in https://github.com/hanzoui/studio_frontend/pull/8808
+  - Terry - fixed in https://github.com/hanzoui/frontend/pull/8808
 
 - [ ] Image field - after deleting image\*\*
 - when clicking the “x” button in an image picker field:
