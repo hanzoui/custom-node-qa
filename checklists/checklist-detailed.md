@@ -161,7 +161,7 @@
 - [ ] WanVideo Add SCAIL Pose Embeds
 - [ ] WanVideo Add SCAIL Reference Embeds
 
-## Hanzo Studio_AudioTools
+## HanzoStudio_AudioTools
 
 - [ ] Amplify / Gain
 - [ ] Normalize Audio
@@ -192,7 +192,7 @@
 - [ ] Compare Waveforms
 - [ ] Show Audio Info
 
-## Hanzo Studio_Fill-ChatterBox
+## HanzoStudio_Fill-ChatterBox
 
 - [ ] FL Chatterbox TTS
 - [ ] FL Chatterbox Turbo TTS
