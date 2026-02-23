@@ -93,4 +93,4 @@ git push origin main
 ✅ **Do:** `git push origin main` after each testing session
 
 ❌ **Don't:** Commit without a message → Hard to track what changed
-✅ **Do:** Write clear messages: "Tested Hanzo Studio-Lotus: 2 nodes"
+✅ **Do:** Write clear messages: "Tested HanzoStudio-Lotus: 2 nodes"

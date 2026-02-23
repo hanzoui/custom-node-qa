@@ -1,29 +1,29 @@
 # Node Pack QA Checklist
 
-## Hanzo Studio-Lotus
+## HanzoStudio-Lotus
 
 - [ ] Load Lotus Model
 - [ ] Lotus Sampler
 
-## Hanzo Studio-NormalCrafterWrapper
+## HanzoStudio-NormalCrafterWrapper
 
 - [ ] NormalCrafter (Process Video)
 - [ ] Detail Transfer
 
-## Hanzo Studio-SCAIL-Pose
+## HanzoStudio-SCAIL-Pose
 
 - [ ] Pose Detection VitPose to DWPose
 - [ ] Render NLF Poses
 - [ ] Convert OpenPose Keypoints to DWPose
 
-## Hanzo Studio-WanAnimatePreprocess
+## HanzoStudio-WanAnimatePreprocess
 
 - [ ] ONNX Detection Model Loader
 - [ ] Pose and Face Detection
 - [ ] Draw ViT Pose
 - [ ] Pose Retarget Prompt Helper
 
-## Hanzo Studio-WanVideoWrapper
+## HanzoStudio-WanVideoWrapper
 
 - [ ] WanVideo Decode
 - [ ] WanVideo TextEncode
