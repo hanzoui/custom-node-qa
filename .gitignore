@@ -30,3 +30,7 @@ workflows/generated-local/
 
 # Generated API tests (local only)
 api-tests/generated-local/
+dist/
+.next/
+target/
+.turbo/
